@@ -1,0 +1,8 @@
+C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceirgeDinning.Core.Models\bin\Debug\netcoreapp2.2\ConceirgeDinning.Core.Models.deps.json
+C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceirgeDinning.Core.Models\bin\Debug\netcoreapp2.2\ConceirgeDinning.Core.Models.dll
+C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceirgeDinning.Core.Models\bin\Debug\netcoreapp2.2\ConceirgeDinning.Core.Models.pdb
+C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceirgeDinning.Core.Models\obj\Debug\netcoreapp2.2\ConceirgeDinning.Core.Models.csprojAssemblyReference.cache
+C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceirgeDinning.Core.Models\obj\Debug\netcoreapp2.2\ConceirgeDinning.Core.Models.AssemblyInfoInputs.cache
+C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceirgeDinning.Core.Models\obj\Debug\netcoreapp2.2\ConceirgeDinning.Core.Models.AssemblyInfo.cs
+C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceirgeDinning.Core.Models\obj\Debug\netcoreapp2.2\ConceirgeDinning.Core.Models.dll
+C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceirgeDinning.Core.Models\obj\Debug\netcoreapp2.2\ConceirgeDinning.Core.Models.pdb

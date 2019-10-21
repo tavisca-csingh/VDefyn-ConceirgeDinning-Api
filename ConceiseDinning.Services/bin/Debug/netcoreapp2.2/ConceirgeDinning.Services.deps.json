@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.2",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.2": {
+      "ConceirgeDinning.Services/1.0.0": {
+        "dependencies": {
+          "ConceirgeDinning.Core.Models": "1.0.0"
+        },
+        "runtime": {
+          "ConceirgeDinning.Services.dll": {}
+        }
+      },
+      "ConceirgeDinning.Core.Models/1.0.0": {
+        "runtime": {
+          "ConceirgeDinning.Core.Models.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ConceirgeDinning.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ConceirgeDinning.Core.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

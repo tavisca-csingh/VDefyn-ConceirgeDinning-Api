@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.757
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29411.108
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{8521F99A-CC51-45F0-83F8-89B3968F62E6}"
 EndProject
@@ -11,19 +11,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{6E28B232-C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{A0CE9DAD-4171-4CCF-BF21-95548C6FC329}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConceirgeDinning.Adapter.Zomato", "ConceirgeDinning.Adapter.Zomato\ConceirgeDinning.Adapter.Zomato.csproj", "{6CDC17AD-DF88-446D-A99D-7FC9276C97DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConceirgeDinning.Adapter.Zomato", "ConceirgeDinning.Adapter.Zomato\ConceirgeDinning.Adapter.Zomato.csproj", "{6CDC17AD-DF88-446D-A99D-7FC9276C97DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConceirgeDinning.Adapter.USRestaraunt", "ConceirgeDinning.Adapter.USRestaraunt\ConceirgeDinning.Adapter.USRestaraunt.csproj", "{7D9538C7-0BAB-4384-8433-4F43E3120859}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConceirgeDinning.Adapter.USRestaraunt", "ConceirgeDinning.Adapter.USRestaraunt\ConceirgeDinning.Adapter.USRestaraunt.csproj", "{7D9538C7-0BAB-4384-8433-4F43E3120859}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConceirgeDinning.Adapter.Geocoder.xyz", "ConceirgeDinning.Adapter.Geocoder.xyz\ConceirgeDinning.Adapter.Geocoder.xyz.csproj", "{F0EA01C4-1360-4FD7-B885-21B149B0D410}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConceirgeDinning.Adapter.Geocoder.xyz", "ConceirgeDinning.Adapter.Geocoder.xyz\ConceirgeDinning.Adapter.Geocoder.xyz.csproj", "{F0EA01C4-1360-4FD7-B885-21B149B0D410}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConceirgeDinning.API", "ConceirgeDinning.API\ConceirgeDinning.API.csproj", "{5867FB6C-6FC8-4F39-A1CB-8FCB1C57E453}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConceirgeDinning.API", "ConceirgeDinning.API\ConceirgeDinning.API.csproj", "{5867FB6C-6FC8-4F39-A1CB-8FCB1C57E453}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConceirgeDinning.Core.Models", "ConceirgeDinning.Core.Models\ConceirgeDinning.Core.Models.csproj", "{83C13CFD-3ECD-4B6D-9B47-94D6E021F208}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConceirgeDinning.Core.Models", "ConceirgeDinning.Core.Models\ConceirgeDinning.Core.Models.csproj", "{83C13CFD-3ECD-4B6D-9B47-94D6E021F208}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConceirgeDinning.Core.ServicesImplementation", "ConceirgeDinning.Core.ServicesImplementation\ConceirgeDinning.Core.ServicesImplementation.csproj", "{01E9023F-236F-4D8B-82D7-47737C4D09A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConceirgeDinning.Core.ServicesImplementation", "ConceirgeDinning.Core.ServicesImplementation\ConceirgeDinning.Core.ServicesImplementation.csproj", "{01E9023F-236F-4D8B-82D7-47737C4D09A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConceiseDinning.Services", "ConceiseDinning.Services\ConceiseDinning.Services.csproj", "{045D5A28-69DB-4799-9BAF-3181F4721418}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConceirgeDinning.Services", "ConceiseDinning.Services\ConceirgeDinning.Services.csproj", "{045D5A28-69DB-4799-9BAF-3181F4721418}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

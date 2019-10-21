@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ConceiseDinning.Services
+namespace ConceirgeDinning.Services
 {
-    interface IBookTable
+    public interface IBookTable
     {
+       
     }
 }

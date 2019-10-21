@@ -2859,7 +2859,7 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "Newtonsoft.Json/11.0.2": {
+      "Newtonsoft.Json/12.0.2": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
@@ -4719,6 +4719,57 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
+        }
+      },
+      "ConceirgeDinning.Adapter.Geocoder.xyz/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "ConceirgeDinning.Core.Models": "1.0.0",
+          "ConceirgeDinning.Services": "1.0.0",
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "compile": {
+          "bin/placeholder/ConceirgeDinning.Adapter.Geocoder.xyz.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ConceirgeDinning.Adapter.Geocoder.xyz.dll": {}
+        }
+      },
+      "ConceirgeDinning.Core.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "compile": {
+          "bin/placeholder/ConceirgeDinning.Core.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ConceirgeDinning.Core.Models.dll": {}
+        }
+      },
+      "ConceirgeDinning.Core.ServicesImplementation/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "ConceirgeDinning.Adapter.Geocoder.xyz": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ConceirgeDinning.Core.ServicesImplementation.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ConceirgeDinning.Core.ServicesImplementation.dll": {}
+        }
+      },
+      "ConceirgeDinning.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "ConceirgeDinning.Core.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ConceirgeDinning.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ConceirgeDinning.Services.dll": {}
         }
       }
     }
@@ -8038,10 +8089,10 @@
         "netstandard.library.nuspec"
       ]
     },
-    "Newtonsoft.Json/11.0.2": {
-      "sha512": "IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
+    "Newtonsoft.Json/12.0.2": {
+      "sha512": "rTK0s2EKlfHsQsH6Yx2smvcTCeyoDNgCW7FEYyV01drPlh2T243PR2DiDXqtC5N4GDm4Ma/lkxfW5a/4793vbA==",
       "type": "package",
-      "path": "newtonsoft.json/11.0.2",
+      "path": "newtonsoft.json/12.0.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -8064,7 +8115,7 @@
         "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "newtonsoft.json.11.0.2.nupkg.sha512",
+        "newtonsoft.json.12.0.2.nupkg.sha512",
         "newtonsoft.json.nuspec"
       ]
     },
@@ -12924,10 +12975,31 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "ConceirgeDinning.Adapter.Geocoder.xyz/1.0.0": {
+      "type": "project",
+      "path": "../ConceirgeDinning.Adapter.Geocoder.xyz/ConceirgeDinning.Adapter.Geocoder.xyz.csproj",
+      "msbuildProject": "../ConceirgeDinning.Adapter.Geocoder.xyz/ConceirgeDinning.Adapter.Geocoder.xyz.csproj"
+    },
+    "ConceirgeDinning.Core.Models/1.0.0": {
+      "type": "project",
+      "path": "../ConceirgeDinning.Core.Models/ConceirgeDinning.Core.Models.csproj",
+      "msbuildProject": "../ConceirgeDinning.Core.Models/ConceirgeDinning.Core.Models.csproj"
+    },
+    "ConceirgeDinning.Core.ServicesImplementation/1.0.0": {
+      "type": "project",
+      "path": "../ConceirgeDinning.Core.ServicesImplementation/ConceirgeDinning.Core.ServicesImplementation.csproj",
+      "msbuildProject": "../ConceirgeDinning.Core.ServicesImplementation/ConceirgeDinning.Core.ServicesImplementation.csproj"
+    },
+    "ConceirgeDinning.Services/1.0.0": {
+      "type": "project",
+      "path": "../ConceiseDinning.Services/ConceirgeDinning.Services.csproj",
+      "msbuildProject": "../ConceiseDinning.Services/ConceirgeDinning.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
+      "ConceirgeDinning.Core.ServicesImplementation >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
@@ -12963,7 +13035,11 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\csingh\\source\\repos\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning\\ConceirgeDinning.Core.ServicesImplementation\\ConceirgeDinning.Core.ServicesImplementation.csproj": {
+              "projectPath": "C:\\Users\\csingh\\source\\repos\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning\\ConceirgeDinning.Core.ServicesImplementation\\ConceirgeDinning.Core.ServicesImplementation.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -12998,10 +13074,16 @@
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
