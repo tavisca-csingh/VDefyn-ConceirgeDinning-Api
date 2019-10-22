@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ConceirgeDinning.Core.ServicesImplementation;
+using ConceirgeDinning.Core.Models;
 
 namespace ConceirgeDinning.API.Controllers
 {
@@ -13,10 +14,10 @@ namespace ConceirgeDinning.API.Controllers
     public class BookingTableController : ControllerBase
     {
         [HttpGet]
-        public ActionResult<IEnumerable<string>> GetGeoCode(string locality)
+        public List<RestarauntDetails> GetGeoCode(string locality)
         {
-            BookingTable findLatLong = new BookingTable();
-            return findLatLong.FetchLAt(locality).Latitude == 0.00 ? new string[] { "false" } : new string[] { "true" };
+            BookingTable Fetch = new BookingTable();
+            return Fetch.fetchRestarauntDetails(locality);
         }
     }
 }

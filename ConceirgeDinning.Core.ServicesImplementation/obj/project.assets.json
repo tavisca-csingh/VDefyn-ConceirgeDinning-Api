@@ -232,6 +232,20 @@
           "bin/placeholder/ConceirgeDinning.Adapter.Geocoder.xyz.dll": {}
         }
       },
+      "ConceirgeDinning.Adapter.Zomato/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "ConceirgeDinning.Services": "1.0.0",
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "compile": {
+          "bin/placeholder/ConceirgeDinning.Adapter.Zomato.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ConceirgeDinning.Adapter.Zomato.dll": {}
+        }
+      },
       "ConceirgeDinning.Core.Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
@@ -761,6 +775,11 @@
       "path": "../ConceirgeDinning.Adapter.Geocoder.xyz/ConceirgeDinning.Adapter.Geocoder.xyz.csproj",
       "msbuildProject": "../ConceirgeDinning.Adapter.Geocoder.xyz/ConceirgeDinning.Adapter.Geocoder.xyz.csproj"
     },
+    "ConceirgeDinning.Adapter.Zomato/1.0.0": {
+      "type": "project",
+      "path": "../ConceirgeDinning.Adapter.Zomato/ConceirgeDinning.Adapter.Zomato.csproj",
+      "msbuildProject": "../ConceirgeDinning.Adapter.Zomato/ConceirgeDinning.Adapter.Zomato.csproj"
+    },
     "ConceirgeDinning.Core.Models/1.0.0": {
       "type": "project",
       "path": "../ConceirgeDinning.Core.Models/ConceirgeDinning.Core.Models.csproj",
@@ -775,6 +794,8 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
       "ConceirgeDinning.Adapter.Geocoder.xyz >= 1.0.0",
+      "ConceirgeDinning.Adapter.Zomato >= 1.0.0",
+      "ConceirgeDinning.Services >= 1.0.0",
       "Microsoft.NETCore.App >= 2.2.0"
     ]
   },
@@ -810,6 +831,12 @@
           "projectReferences": {
             "C:\\Users\\csingh\\source\\repos\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning\\ConceirgeDinning.Adapter.Geocoder.xyz\\ConceirgeDinning.Adapter.Geocoder.xyz.csproj": {
               "projectPath": "C:\\Users\\csingh\\source\\repos\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning\\ConceirgeDinning.Adapter.Geocoder.xyz\\ConceirgeDinning.Adapter.Geocoder.xyz.csproj"
+            },
+            "C:\\Users\\csingh\\source\\repos\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning\\ConceirgeDinning.Adapter.Zomato\\ConceirgeDinning.Adapter.Zomato.csproj": {
+              "projectPath": "C:\\Users\\csingh\\source\\repos\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning\\ConceirgeDinning.Adapter.Zomato\\ConceirgeDinning.Adapter.Zomato.csproj"
+            },
+            "C:\\Users\\csingh\\source\\repos\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning\\ConceiseDinning.Services\\ConceirgeDinning.Services.csproj": {
+              "projectPath": "C:\\Users\\csingh\\source\\repos\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning\\ConceiseDinning.Services\\ConceirgeDinning.Services.csproj"
             }
           }
         }
@@ -831,16 +858,10 @@
           }
         },
         "imports": [
-          "net461",
-          "net462",
-          "net47",
-          "net471",
-          "net472",
-          "net48"
+          "net461"
         ],
         "assetTargetFallback": true,
-        "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        "warn": true
       }
     }
   }

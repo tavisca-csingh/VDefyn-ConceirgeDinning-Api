@@ -6,6 +6,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ConceirgeDinning.Adapter.Geocoder.xyz\ConceirgeDinning.Adapter.Geocoder.xyz.csproj" />
+    <ProjectReference Include="..\ConceirgeDinning.Adapter.Zomato\ConceirgeDinning.Adapter.Zomato.csproj" />
+    <ProjectReference Include="..\ConceiseDinning.Services\ConceirgeDinning.Services.csproj" />
   </ItemGroup>
 
 </Project>

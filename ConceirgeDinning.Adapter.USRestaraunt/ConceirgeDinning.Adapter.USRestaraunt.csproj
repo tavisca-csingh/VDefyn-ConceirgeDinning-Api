@@ -5,8 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
-    <Folder Include="Translator\" />
+    <ProjectReference Include="..\ConceirgeDinning.Core.Models\ConceirgeDinning.Core.Models.csproj" />
   </ItemGroup>
 
 </Project>

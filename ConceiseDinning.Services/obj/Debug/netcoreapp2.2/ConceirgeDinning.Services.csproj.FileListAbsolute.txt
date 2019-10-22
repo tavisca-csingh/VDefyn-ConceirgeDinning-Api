@@ -9,3 +9,4 @@ C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\Concei
 C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceiseDinning.Services\obj\Debug\netcoreapp2.2\ConceirgeDinning.Services.csproj.CopyComplete
 C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceiseDinning.Services\obj\Debug\netcoreapp2.2\ConceirgeDinning.Services.dll
 C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceiseDinning.Services\obj\Debug\netcoreapp2.2\ConceirgeDinning.Services.pdb
+C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceiseDinning.Services\obj\Debug\netcoreapp2.2\ConceirgeDinning.Services.csproj.CoreCompileInputs.cache

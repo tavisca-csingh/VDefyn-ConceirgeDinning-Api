@@ -1,14 +1,16 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": ""
+    "signature": "4bf20b3f4b187ddd01af96ea47dda577c5263775"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.2": {
       "ConceirgeDinning.Core.ServicesImplementation/1.0.0": {
         "dependencies": {
-          "ConceirgeDinning.Adapter.Geocoder.xyz": "1.0.0"
+          "ConceirgeDinning.Adapter.Geocoder.xyz": "1.0.0",
+          "ConceirgeDinning.Adapter.Zomato": "1.0.0",
+          "ConceirgeDinning.Services": "1.0.0"
         },
         "runtime": {
           "ConceirgeDinning.Core.ServicesImplementation.dll": {}
@@ -30,6 +32,15 @@
         },
         "runtime": {
           "ConceirgeDinning.Adapter.Geocoder.xyz.dll": {}
+        }
+      },
+      "ConceirgeDinning.Adapter.Zomato/1.0.0": {
+        "dependencies": {
+          "ConceirgeDinning.Services": "1.0.0",
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "runtime": {
+          "ConceirgeDinning.Adapter.Zomato.dll": {}
         }
       },
       "ConceirgeDinning.Core.Models/1.0.0": {
@@ -61,6 +72,11 @@
       "hashPath": "newtonsoft.json.12.0.2.nupkg.sha512"
     },
     "ConceirgeDinning.Adapter.Geocoder.xyz/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ConceirgeDinning.Adapter.Zomato/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
