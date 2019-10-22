@@ -742,23 +742,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\csingh\\.nuget\\packages\\": {},
+    "C:\\Users\\vmattapalli\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\csingh\\source\\repos\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning\\ConceirgeDinning.Adapter.USRestaraunt\\ConceirgeDinning.Adapter.USRestaraunt.csproj",
+      "projectUniqueName": "C:\\Users\\vmattapalli\\Desktop\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.USRestaraunt\\ConceirgeDinning.Adapter.USRestaraunt.csproj",
       "projectName": "ConceirgeDinning.Adapter.USRestaraunt",
-      "projectPath": "C:\\Users\\csingh\\source\\repos\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning\\ConceirgeDinning.Adapter.USRestaraunt\\ConceirgeDinning.Adapter.USRestaraunt.csproj",
-      "packagesPath": "C:\\Users\\csingh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\csingh\\source\\repos\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning\\ConceirgeDinning.Adapter.USRestaraunt\\obj\\",
+      "projectPath": "C:\\Users\\vmattapalli\\Desktop\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.USRestaraunt\\ConceirgeDinning.Adapter.USRestaraunt.csproj",
+      "packagesPath": "C:\\Users\\vmattapalli\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\vmattapalli\\Desktop\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.USRestaraunt\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\csingh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\vmattapalli\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -771,8 +771,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\csingh\\source\\repos\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Core.Models.csproj": {
-              "projectPath": "C:\\Users\\csingh\\source\\repos\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Core.Models.csproj"
+            "C:\\Users\\vmattapalli\\Desktop\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Core.Models.csproj": {
+              "projectPath": "C:\\Users\\vmattapalli\\Desktop\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Core.Models.csproj"
             }
           }
         }

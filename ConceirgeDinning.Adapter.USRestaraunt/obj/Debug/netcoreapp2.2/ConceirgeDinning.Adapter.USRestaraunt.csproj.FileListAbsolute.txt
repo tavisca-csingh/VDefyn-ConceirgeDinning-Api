@@ -9,4 +9,19 @@ C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\Concei
 C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceirgeDinning.Adapter.USRestaraunt\bin\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.USRestaraunt.pdb
 C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceirgeDinning.Adapter.USRestaraunt\obj\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.USRestaraunt.dll
 C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceirgeDinning.Adapter.USRestaraunt\obj\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.USRestaraunt.pdb
+<<<<<<< HEAD
 C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceirgeDinning.Adapter.USRestaraunt\obj\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.USRestaraunt.csproj.CoreCompileInputs.cache
+=======
+C:\Users\vmattapalli\Desktop\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.USRestaraunt\bin\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.USRestaraunt.deps.json
+C:\Users\vmattapalli\Desktop\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.USRestaraunt\bin\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.USRestaraunt.dll
+C:\Users\vmattapalli\Desktop\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.USRestaraunt\bin\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.USRestaraunt.pdb
+C:\Users\vmattapalli\Desktop\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.USRestaraunt\bin\Debug\netcoreapp2.2\ConceirgeDinning.Core.Models.dll
+C:\Users\vmattapalli\Desktop\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.USRestaraunt\bin\Debug\netcoreapp2.2\ConceirgeDinning.Core.Models.pdb
+C:\Users\vmattapalli\Desktop\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.USRestaraunt\obj\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.USRestaraunt.csprojAssemblyReference.cache
+C:\Users\vmattapalli\Desktop\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.USRestaraunt\obj\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.USRestaraunt.csproj.CoreCompileInputs.cache
+C:\Users\vmattapalli\Desktop\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.USRestaraunt\obj\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.USRestaraunt.AssemblyInfoInputs.cache
+C:\Users\vmattapalli\Desktop\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.USRestaraunt\obj\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.USRestaraunt.AssemblyInfo.cs
+C:\Users\vmattapalli\Desktop\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.USRestaraunt\obj\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.USRestaraunt.csproj.CopyComplete
+C:\Users\vmattapalli\Desktop\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.USRestaraunt\obj\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.USRestaraunt.dll
+C:\Users\vmattapalli\Desktop\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.USRestaraunt\obj\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.USRestaraunt.pdb
+>>>>>>> b864ed960eb9a983c4bb55d56d7e5dde258ba981

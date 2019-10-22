@@ -6,4 +6,16 @@ C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\Concei
 C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceirgeDinning.Core.Models\obj\Debug\netcoreapp2.2\ConceirgeDinning.Core.Models.AssemblyInfo.cs
 C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceirgeDinning.Core.Models\obj\Debug\netcoreapp2.2\ConceirgeDinning.Core.Models.dll
 C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceirgeDinning.Core.Models\obj\Debug\netcoreapp2.2\ConceirgeDinning.Core.Models.pdb
+<<<<<<< HEAD
 C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceirgeDinning.Core.Models\obj\Debug\netcoreapp2.2\ConceirgeDinning.Core.Models.csproj.CoreCompileInputs.cache
+=======
+C:\Users\vmattapalli\Desktop\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Core.Models\bin\Debug\netcoreapp2.2\ConceirgeDinning.Core.Models.deps.json
+C:\Users\vmattapalli\Desktop\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Core.Models\bin\Debug\netcoreapp2.2\ConceirgeDinning.Core.Models.dll
+C:\Users\vmattapalli\Desktop\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Core.Models\bin\Debug\netcoreapp2.2\ConceirgeDinning.Core.Models.pdb
+C:\Users\vmattapalli\Desktop\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Core.Models\obj\Debug\netcoreapp2.2\ConceirgeDinning.Core.Models.csprojAssemblyReference.cache
+C:\Users\vmattapalli\Desktop\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Core.Models\obj\Debug\netcoreapp2.2\ConceirgeDinning.Core.Models.csproj.CoreCompileInputs.cache
+C:\Users\vmattapalli\Desktop\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Core.Models\obj\Debug\netcoreapp2.2\ConceirgeDinning.Core.Models.AssemblyInfoInputs.cache
+C:\Users\vmattapalli\Desktop\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Core.Models\obj\Debug\netcoreapp2.2\ConceirgeDinning.Core.Models.AssemblyInfo.cs
+C:\Users\vmattapalli\Desktop\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Core.Models\obj\Debug\netcoreapp2.2\ConceirgeDinning.Core.Models.dll
+C:\Users\vmattapalli\Desktop\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Core.Models\obj\Debug\netcoreapp2.2\ConceirgeDinning.Core.Models.pdb
+>>>>>>> b864ed960eb9a983c4bb55d56d7e5dde258ba981

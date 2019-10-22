@@ -9,4 +9,19 @@ C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\Concei
 C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceiseDinning.Services\obj\Debug\netcoreapp2.2\ConceirgeDinning.Services.csproj.CopyComplete
 C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceiseDinning.Services\obj\Debug\netcoreapp2.2\ConceirgeDinning.Services.dll
 C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceiseDinning.Services\obj\Debug\netcoreapp2.2\ConceirgeDinning.Services.pdb
+<<<<<<< HEAD
 C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceiseDinning.Services\obj\Debug\netcoreapp2.2\ConceirgeDinning.Services.csproj.CoreCompileInputs.cache
+=======
+C:\Users\vmattapalli\Desktop\VDefyn-ConceirgeDinning-Api\ConceiseDinning.Services\bin\Debug\netcoreapp2.2\ConceirgeDinning.Services.deps.json
+C:\Users\vmattapalli\Desktop\VDefyn-ConceirgeDinning-Api\ConceiseDinning.Services\bin\Debug\netcoreapp2.2\ConceirgeDinning.Services.dll
+C:\Users\vmattapalli\Desktop\VDefyn-ConceirgeDinning-Api\ConceiseDinning.Services\bin\Debug\netcoreapp2.2\ConceirgeDinning.Services.pdb
+C:\Users\vmattapalli\Desktop\VDefyn-ConceirgeDinning-Api\ConceiseDinning.Services\bin\Debug\netcoreapp2.2\ConceirgeDinning.Core.Models.dll
+C:\Users\vmattapalli\Desktop\VDefyn-ConceirgeDinning-Api\ConceiseDinning.Services\bin\Debug\netcoreapp2.2\ConceirgeDinning.Core.Models.pdb
+C:\Users\vmattapalli\Desktop\VDefyn-ConceirgeDinning-Api\ConceiseDinning.Services\obj\Debug\netcoreapp2.2\ConceirgeDinning.Services.csprojAssemblyReference.cache
+C:\Users\vmattapalli\Desktop\VDefyn-ConceirgeDinning-Api\ConceiseDinning.Services\obj\Debug\netcoreapp2.2\ConceirgeDinning.Services.csproj.CoreCompileInputs.cache
+C:\Users\vmattapalli\Desktop\VDefyn-ConceirgeDinning-Api\ConceiseDinning.Services\obj\Debug\netcoreapp2.2\ConceirgeDinning.Services.AssemblyInfoInputs.cache
+C:\Users\vmattapalli\Desktop\VDefyn-ConceirgeDinning-Api\ConceiseDinning.Services\obj\Debug\netcoreapp2.2\ConceirgeDinning.Services.AssemblyInfo.cs
+C:\Users\vmattapalli\Desktop\VDefyn-ConceirgeDinning-Api\ConceiseDinning.Services\obj\Debug\netcoreapp2.2\ConceirgeDinning.Services.csproj.CopyComplete
+C:\Users\vmattapalli\Desktop\VDefyn-ConceirgeDinning-Api\ConceiseDinning.Services\obj\Debug\netcoreapp2.2\ConceirgeDinning.Services.dll
+C:\Users\vmattapalli\Desktop\VDefyn-ConceirgeDinning-Api\ConceiseDinning.Services\obj\Debug\netcoreapp2.2\ConceirgeDinning.Services.pdb
+>>>>>>> b864ed960eb9a983c4bb55d56d7e5dde258ba981
