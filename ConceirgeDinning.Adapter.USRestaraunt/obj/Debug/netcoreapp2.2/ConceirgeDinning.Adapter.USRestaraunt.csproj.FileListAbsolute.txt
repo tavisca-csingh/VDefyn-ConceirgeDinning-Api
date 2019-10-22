@@ -1,0 +1,11 @@
+C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceirgeDinning.Adapter.USRestaraunt\bin\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.USRestaraunt.deps.json
+C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceirgeDinning.Adapter.USRestaraunt\bin\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.USRestaraunt.dll
+C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceirgeDinning.Adapter.USRestaraunt\bin\Debug\netcoreapp2.2\ConceirgeDinning.Core.Models.dll
+C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceirgeDinning.Adapter.USRestaraunt\bin\Debug\netcoreapp2.2\ConceirgeDinning.Core.Models.pdb
+C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceirgeDinning.Adapter.USRestaraunt\obj\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.USRestaraunt.csprojAssemblyReference.cache
+C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceirgeDinning.Adapter.USRestaraunt\obj\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.USRestaraunt.AssemblyInfoInputs.cache
+C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceirgeDinning.Adapter.USRestaraunt\obj\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.USRestaraunt.AssemblyInfo.cs
+C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceirgeDinning.Adapter.USRestaraunt\obj\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.USRestaraunt.csproj.CopyComplete
+C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceirgeDinning.Adapter.USRestaraunt\bin\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.USRestaraunt.pdb
+C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceirgeDinning.Adapter.USRestaraunt\obj\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.USRestaraunt.dll
+C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceirgeDinning.Adapter.USRestaraunt\obj\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.USRestaraunt.pdb

@@ -4,6 +4,7 @@ using ConceirgeDinning.Adapter.Geocoder.xyz.Translator;
 using ConceirgeDinning.Services;
 using System.Collections.Generic;
 using ConceirgeDinning.Adapter.Zomato.Translator;
+using ConceirgeDinning.Adapter.USRestaraunt.Translator;
 
 namespace ConceirgeDinning.Core.ServicesImplementation
 {
@@ -13,8 +14,12 @@ namespace ConceirgeDinning.Core.ServicesImplementation
         {
             RestarauntGeocodeFetcher restarauntGeocodeFetcher = new RestarauntGeocodeFetcher();
             var response= restarauntGeocodeFetcher.FetchCordinates(locality);
-            RestarauntByLocalityFetcher restarauntByLocalityFetcher = new RestarauntByLocalityFetcher();
-            return restarauntByLocalityFetcher.FetchRestarauntDetails(response.Latitude,response.Longitude,response.CountryName);
+            RestarauntByLocalityFetcherZomato restarauntByLocalityFetcherZomato = new RestarauntByLocalityFetcherZomato();
+            var reply=restarauntByLocalityFetcherZomato.FetchRestarauntDetails(response.Latitude,response.Longitude,response.CountryName);
+            RestarauntByLocalityFetcherUSRestaraunt restarauntByLocalityFetcherUSRestaraunt = new RestarauntByLocalityFetcherUSRestaraunt();
+            var reply2=restarauntByLocalityFetcherUSRestaraunt.FetchRestarauntDetails(response.Latitude, response.Longitude, response.CountryName);
+            reply.AddRange(reply2);
+            return reply;
         }
 
     }

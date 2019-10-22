@@ -11,7 +11,7 @@ namespace ConceirgeDinning.Core.Models
         public string SupplierName { get; set; }
         public string RestarauntAddress { get; set; }
         public double User_Rating { get; set; }
-        public string Cuisines { get; set; }
+        public List<object> Cuisines { get; set; }
         public string ThumbURL { get; set; }
     }
 }

@@ -4736,6 +4736,20 @@
           "bin/placeholder/ConceirgeDinning.Adapter.Geocoder.xyz.dll": {}
         }
       },
+      "ConceirgeDinning.Adapter.USRestaraunt/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "ConceirgeDinning.Core.Models": "1.0.0",
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "compile": {
+          "bin/placeholder/ConceirgeDinning.Adapter.USRestaraunt.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ConceirgeDinning.Adapter.USRestaraunt.dll": {}
+        }
+      },
       "ConceirgeDinning.Adapter.Zomato/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
@@ -4765,6 +4779,7 @@
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
           "ConceirgeDinning.Adapter.Geocoder.xyz": "1.0.0",
+          "ConceirgeDinning.Adapter.USRestaraunt": "1.0.0",
           "ConceirgeDinning.Adapter.Zomato": "1.0.0",
           "ConceirgeDinning.Services": "1.0.0"
         },
@@ -12997,6 +13012,11 @@
       "path": "../ConceirgeDinning.Adapter.Geocoder.xyz/ConceirgeDinning.Adapter.Geocoder.xyz.csproj",
       "msbuildProject": "../ConceirgeDinning.Adapter.Geocoder.xyz/ConceirgeDinning.Adapter.Geocoder.xyz.csproj"
     },
+    "ConceirgeDinning.Adapter.USRestaraunt/1.0.0": {
+      "type": "project",
+      "path": "../ConceirgeDinning.Adapter.USRestaraunt/ConceirgeDinning.Adapter.USRestaraunt.csproj",
+      "msbuildProject": "../ConceirgeDinning.Adapter.USRestaraunt/ConceirgeDinning.Adapter.USRestaraunt.csproj"
+    },
     "ConceirgeDinning.Adapter.Zomato/1.0.0": {
       "type": "project",
       "path": "../ConceirgeDinning.Adapter.Zomato/ConceirgeDinning.Adapter.Zomato.csproj",
@@ -13095,10 +13115,16 @@
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
