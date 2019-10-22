@@ -220,6 +220,9 @@
       "ConceirgeDinning.Core.Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.2"
+        },
         "compile": {
           "bin/placeholder/ConceirgeDinning.Core.Models.dll": {}
         },
@@ -231,7 +234,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
-          "ConceirgeDinning.Core.Models": "1.0.0"
+          "ConceirgeDinning.Core.Models": "1.0.0",
+          "Newtonsoft.Json": "12.0.2"
         },
         "compile": {
           "bin/placeholder/ConceirgeDinning.Services.dll": {}
@@ -761,23 +765,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\csingh\\.nuget\\packages\\": {},
+    "C:\\Users\\rogupta\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\csingh\\source\\repos\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning\\ConceirgeDinning.Adapter.Geocoder.xyz\\ConceirgeDinning.Adapter.Geocoder.xyz.csproj",
+      "projectUniqueName": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.Geocoder.xyz\\ConceirgeDinning.Adapter.Geocoder.xyz.csproj",
       "projectName": "ConceirgeDinning.Adapter.Geocoder.xyz",
-      "projectPath": "C:\\Users\\csingh\\source\\repos\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning\\ConceirgeDinning.Adapter.Geocoder.xyz\\ConceirgeDinning.Adapter.Geocoder.xyz.csproj",
-      "packagesPath": "C:\\Users\\csingh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\csingh\\source\\repos\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning\\ConceirgeDinning.Adapter.Geocoder.xyz\\obj\\",
+      "projectPath": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.Geocoder.xyz\\ConceirgeDinning.Adapter.Geocoder.xyz.csproj",
+      "packagesPath": "C:\\Users\\rogupta\\.nuget\\packages\\",
+      "outputPath": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.Geocoder.xyz\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\csingh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rogupta\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -790,11 +794,11 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\csingh\\source\\repos\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Core.Models.csproj": {
-              "projectPath": "C:\\Users\\csingh\\source\\repos\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Core.Models.csproj"
+            "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Core.Models.csproj": {
+              "projectPath": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Core.Models.csproj"
             },
-            "C:\\Users\\csingh\\source\\repos\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning\\ConceiseDinning.Services\\ConceirgeDinning.Services.csproj": {
-              "projectPath": "C:\\Users\\csingh\\source\\repos\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning\\ConceiseDinning.Services\\ConceirgeDinning.Services.csproj"
+            "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceiseDinning.Services\\ConceirgeDinning.Services.csproj": {
+              "projectPath": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceiseDinning.Services\\ConceirgeDinning.Services.csproj"
             }
           }
         }

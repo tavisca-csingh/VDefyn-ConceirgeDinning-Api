@@ -11,10 +11,10 @@ namespace ConceirgeDinning.Adapter.Geocoder.xyz.Translator
 {
     public class RestarauntGeocodeFetcher : IFetchGeocode
     {
-        public RestarauntCoreGeocode FetchCordinates(string locality)
+        public LocalityGeocode FetchCordinates(string locality)
         {
             WebClient client = new WebClient();
-            RestarauntCoreGeocode restarauntCoreGeocode = new RestarauntCoreGeocode();
+            LocalityGeocode restarauntCoreGeocode = new LocalityGeocode();
             restarauntCoreGeocode.Longitude = 0.00; restarauntCoreGeocode.Latitude = 0.00;restarauntCoreGeocode.CountryName = string.Empty;
             string url = "https://geocode.xyz/?locate=" + locality + "&json=1";
             var reply = client.DownloadString(url);

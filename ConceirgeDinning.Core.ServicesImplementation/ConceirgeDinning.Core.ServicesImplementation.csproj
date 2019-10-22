@@ -5,9 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ConceirgeDinning.Adapter.Geocoder.xyz\ConceirgeDinning.Adapter.Geocoder.xyz.csproj" />
+    <ProjectReference Include="..\ConceirgeDinning.Adapter.USRestaraunt\ConceirgeDinning.Adapter.USRestaraunt.csproj" />
     <ProjectReference Include="..\ConceirgeDinning.Adapter.Zomato\ConceirgeDinning.Adapter.Zomato.csproj" />
-    <ProjectReference Include="..\ConceiseDinning.Services\ConceirgeDinning.Services.csproj" />
+    <ProjectReference Include="..\ConceirgeDinning.Core.Models\ConceirgeDinning.Core.Models.csproj" />
   </ItemGroup>
 
 </Project>

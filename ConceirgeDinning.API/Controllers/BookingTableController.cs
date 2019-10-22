@@ -14,7 +14,7 @@ namespace ConceirgeDinning.API.Controllers
     public class BookingTableController : ControllerBase
     {
         [HttpGet]
-        public List<RestarauntDetails> GetGeoCode(string locality)
+        public List<Restaurant> GetGeoCode(string locality)
         {
             BookingTable Fetch = new BookingTable();
             return Fetch.fetchRestarauntDetails(locality);

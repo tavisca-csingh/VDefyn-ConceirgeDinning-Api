@@ -7,6 +7,6 @@ namespace ConceirgeDinning.Services
 {
     public interface IBookTable
     {
-        List<RestarauntDetails> fetchRestarauntDetails(string locality);
+        List<Restaurant> fetchRestarauntDetails(string locality);
     }
 }

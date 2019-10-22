@@ -10,3 +10,15 @@ C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\Concei
 C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceiseDinning.Services\obj\Debug\netcoreapp2.2\ConceirgeDinning.Services.dll
 C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceiseDinning.Services\obj\Debug\netcoreapp2.2\ConceirgeDinning.Services.pdb
 C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceiseDinning.Services\obj\Debug\netcoreapp2.2\ConceirgeDinning.Services.csproj.CoreCompileInputs.cache
+C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceiseDinning.Services\bin\Debug\netcoreapp2.2\ConceirgeDinning.Services.deps.json
+C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceiseDinning.Services\bin\Debug\netcoreapp2.2\ConceirgeDinning.Services.dll
+C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceiseDinning.Services\bin\Debug\netcoreapp2.2\ConceirgeDinning.Services.pdb
+C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceiseDinning.Services\bin\Debug\netcoreapp2.2\ConceirgeDinning.Core.Models.dll
+C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceiseDinning.Services\bin\Debug\netcoreapp2.2\ConceirgeDinning.Core.Models.pdb
+C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceiseDinning.Services\obj\Debug\netcoreapp2.2\ConceirgeDinning.Services.csprojAssemblyReference.cache
+C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceiseDinning.Services\obj\Debug\netcoreapp2.2\ConceirgeDinning.Services.csproj.CoreCompileInputs.cache
+C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceiseDinning.Services\obj\Debug\netcoreapp2.2\ConceirgeDinning.Services.AssemblyInfoInputs.cache
+C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceiseDinning.Services\obj\Debug\netcoreapp2.2\ConceirgeDinning.Services.AssemblyInfo.cs
+C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceiseDinning.Services\obj\Debug\netcoreapp2.2\ConceirgeDinning.Services.csproj.CopyComplete
+C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceiseDinning.Services\obj\Debug\netcoreapp2.2\ConceirgeDinning.Services.dll
+C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceiseDinning.Services\obj\Debug\netcoreapp2.2\ConceirgeDinning.Services.pdb
