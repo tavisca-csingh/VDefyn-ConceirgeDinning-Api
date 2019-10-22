@@ -204,7 +204,7 @@ namespace ConceirgeDinning.Adapter.Zomato.Models
         public Restaurant2 restaurant { get; set; }
     }
 
-    public class RestarauntByLocality
+    public class RestarauntByLocalityZomato
     {
         public int results_found { get; set; }
         public int results_start { get; set; }

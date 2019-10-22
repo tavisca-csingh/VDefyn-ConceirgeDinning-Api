@@ -10,13 +10,13 @@ namespace ConceirgeDinning.Core.ServicesImplementation
 {
     public class BookingTable:IBookTable
     {
-        public List<RestarauntDetails> fetchRestarauntDetails(string locality)
+        public List<RestarauntByLocality> fetchRestarauntDetails(string locality)
         {
             RestarauntGeocodeFetcher restarauntGeocodeFetcher = new RestarauntGeocodeFetcher();
             var response= restarauntGeocodeFetcher.FetchCordinates(locality);
-            RestarauntByLocalityFetcherZomato restarauntByLocalityFetcherZomato = new RestarauntByLocalityFetcherZomato();
+            RestarauntFetcherByLocalityZomato restarauntByLocalityFetcherZomato = new RestarauntFetcherByLocalityZomato();
             var reply=restarauntByLocalityFetcherZomato.FetchRestarauntDetails(response.Latitude,response.Longitude,response.CountryName);
-            RestarauntByLocalityFetcherUSRestaraunt restarauntByLocalityFetcherUSRestaraunt = new RestarauntByLocalityFetcherUSRestaraunt();
+            RestarauntFetcherByLocalityUSRestaraunt restarauntByLocalityFetcherUSRestaraunt = new RestarauntFetcherByLocalityUSRestaraunt();
             var reply2=restarauntByLocalityFetcherUSRestaraunt.FetchRestarauntDetails(response.Latitude, response.Longitude, response.CountryName);
             reply.AddRange(reply2);
             return reply;

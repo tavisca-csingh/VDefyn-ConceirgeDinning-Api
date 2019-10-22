@@ -11,3 +11,4 @@ C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\Concei
 C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceirgeDinning.Adapter.Zomato\bin\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.Zomato.pdb
 C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceirgeDinning.Adapter.Zomato\obj\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.Zomato.dll
 C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceirgeDinning.Adapter.Zomato\obj\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.Zomato.pdb
+C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceirgeDinning.Adapter.Zomato\obj\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.Zomato.csproj.CoreCompileInputs.cache

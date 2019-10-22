@@ -22,8 +22,6 @@ C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\Concei
 C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceirgeDinning.API\obj\Debug\netcoreapp2.2\ConceirgeDinning.API.csproj.CopyComplete
 C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceirgeDinning.API\bin\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.Zomato.dll
 C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceirgeDinning.API\bin\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.Zomato.pdb
-C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceirgeDinning.API\bin\Debug\netcoreapp2.2\appsettings.Development.json
-C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceirgeDinning.API\bin\Debug\netcoreapp2.2\appsettings.json
-C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceirgeDinning.API\bin\Debug\netcoreapp2.2\Properties\launchSettings.json
 C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceirgeDinning.API\bin\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.USRestaraunt.dll
 C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceirgeDinning.API\bin\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.USRestaraunt.pdb
+C:\Users\csingh\source\repos\VDefyn-ConceirgeDinning-Api\ConceirgeDinning\ConceirgeDinning.API\obj\Debug\netcoreapp2.2\ConceirgeDinning.API.csproj.CoreCompileInputs.cache

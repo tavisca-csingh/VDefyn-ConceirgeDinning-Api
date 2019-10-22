@@ -43,7 +43,7 @@ namespace ConceirgeDinning.Adapter.USRestaraunt.Models
         public bool morePages { get; set; }
     }
 
-    public class RestarauntByLocality
+    public class RestarauntByLocalityUSRestaraunt
     {
         public Result result { get; set; }
     }

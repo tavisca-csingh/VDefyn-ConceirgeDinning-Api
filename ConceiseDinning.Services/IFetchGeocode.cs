@@ -7,6 +7,6 @@ namespace ConceirgeDinning.Services
 {
     public interface IFetchGeocode
     {
-        RestarauntCoreGeocode FetchCordinates(string locality);
+        RestarauntGeocode FetchCordinates(string locality);
     }
 }

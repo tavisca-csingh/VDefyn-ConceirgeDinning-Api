@@ -2,7 +2,7 @@
 
 namespace ConceirgeDinning.Core.Models
 {
-    public class MenuDetails
+    public class Menu
     {
     }
 }

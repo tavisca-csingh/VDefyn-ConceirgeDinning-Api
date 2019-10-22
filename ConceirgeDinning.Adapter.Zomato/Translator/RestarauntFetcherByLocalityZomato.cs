@@ -11,13 +11,13 @@ using Newtonsoft.Json;
 
 namespace ConceirgeDinning.Adapter.Zomato.Translator
 {
-    public class RestarauntByLocalityFetcherZomato
+    public class RestarauntFetcherByLocalityZomato
     {
-        public List<RestarauntDetails> FetchRestarauntDetails(double Latitude, double Longitude, string CountryName)
+        public List<Core.Models.RestarauntByLocality> FetchRestarauntDetails(double Latitude, double Longitude, string CountryName)
         {
-            WebClient client = new WebClient();
-            RestarauntDetails restarauntDetails = new RestarauntDetails();
-            List<RestarauntDetails> restaraunts = new List<RestarauntDetails>();
+
+            Core.Models.RestarauntByLocality restarauntDetails = new Core.Models.RestarauntByLocality();
+            List<Core.Models.RestarauntByLocality> restaraunts = new List<Core.Models.RestarauntByLocality>();
             
             string ApiUrl ="https://developers.zomato.com/api/v2.1/search?count=10&category=2&radius=1500&sort=real_distance";
             var request = System.Net.WebRequest.Create(ApiUrl + "&lat=" + Latitude + "&lon=" + Longitude);
@@ -32,13 +32,13 @@ namespace ConceirgeDinning.Adapter.Zomato.Translator
             // Read the content.  
             string responseFromServer = reader.ReadToEnd();
             // Display the content.  
-            var jobject = JsonConvert.DeserializeObject<RestarauntByLocality>(responseFromServer);
+            var jobject = JsonConvert.DeserializeObject<Models.RestarauntByLocalityZomato>(responseFromServer);
 
             foreach (var item in jobject.restaurants)
             {
                 List<object> cusineList = new List<object>();
                 cusineList.Add(item.restaurant.cuisines);
-                restaraunts.Add(new RestarauntDetails()
+                restaraunts.Add(new Core.Models.RestarauntByLocality()
                 {
 
                     RestarauntName = item.restaurant.name,

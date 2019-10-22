@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ConceirgeDinning.Core.Models
 {
-    public class RestarauntDetails
+    public class RestarauntByLocality
     {
         public int RestarauntId { get; set; }
         public string RestarauntName { get; set; }

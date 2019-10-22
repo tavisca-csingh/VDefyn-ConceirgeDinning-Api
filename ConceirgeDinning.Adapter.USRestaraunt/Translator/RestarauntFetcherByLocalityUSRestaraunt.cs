@@ -9,13 +9,12 @@ using ConceirgeDinning.Adapter.USRestaraunt.Models;
 
 namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
 {
-    public class RestarauntByLocalityFetcherUSRestaraunt
+    public class RestarauntFetcherByLocalityUSRestaraunt
     {
-        public List<RestarauntDetails> FetchRestarauntDetails(double Latitude, double Longitude, string CountryName)
+        public List<Core.Models.RestarauntByLocality> FetchRestarauntDetails(double Latitude, double Longitude, string CountryName)
         {
-            WebClient client = new WebClient();
-            RestarauntDetails restarauntDetails = new RestarauntDetails();
-            List<RestarauntDetails> restaraunts = new List<RestarauntDetails>();
+            Core.Models.RestarauntByLocality restarauntDetails = new Core.Models.RestarauntByLocality();
+            List<Core.Models.RestarauntByLocality> restaraunts = new List<Core.Models.RestarauntByLocality>();
             string ApiUri = @"https://us-restaurant-menus.p.rapidapi.com/restaurants/search?distance=2";
             var request = System.Net.WebRequest.Create(ApiUri + "&lat=" + Latitude + "&lon=" + Longitude);
             request.Method = "GET";
@@ -29,10 +28,10 @@ namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
                 // Read the content.  
             string responseFromServer = reader.ReadToEnd();
                 // Display the content.  
-            var jobject=JsonConvert.DeserializeObject<RestarauntByLocality>(responseFromServer);
+            var jobject= JsonConvert.DeserializeObject<Models.RestarauntByLocalityUSRestaraunt>(responseFromServer);
             foreach (var item in jobject.result.data)
             {
-                restaraunts.Add(new RestarauntDetails()
+                restaraunts.Add(new Core.Models.RestarauntByLocality()
                 {
                     RestarauntId = item.restaurant_id,
                     RestarauntName = item.restaurant_name,

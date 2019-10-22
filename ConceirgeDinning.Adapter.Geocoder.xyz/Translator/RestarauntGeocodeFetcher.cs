@@ -11,22 +11,22 @@ namespace ConceirgeDinning.Adapter.Geocoder.xyz.Translator
 {
     public class RestarauntGeocodeFetcher : IFetchGeocode
     {
-        public RestarauntCoreGeocode FetchCordinates(string locality)
+        public RestarauntGeocode FetchCordinates(string locality)
         {
             WebClient client = new WebClient();
-            RestarauntCoreGeocode restarauntCoreGeocode = new RestarauntCoreGeocode();
-            restarauntCoreGeocode.Longitude = 0.00; restarauntCoreGeocode.Latitude = 0.00;restarauntCoreGeocode.CountryName = string.Empty;
+            RestarauntGeocode restarauntGeocode = new RestarauntGeocode();
+            restarauntGeocode.Longitude = 0.00; restarauntGeocode.Latitude = 0.00;restarauntGeocode.CountryName = string.Empty;
             string url = "https://geocode.xyz/?locate=" + locality + "&json=1";
             var reply = client.DownloadString(url);
             if (!reply.Contains("\"0.00000\""))
             {
                 var jobject=JsonConvert.DeserializeObject<RestarauntGeocodebyLocalityVerbose>(reply);
-                restarauntCoreGeocode.Latitude = Convert.ToDouble(jobject.latt);
-                restarauntCoreGeocode.Longitude= Convert.ToDouble(jobject.longt);
-                restarauntCoreGeocode.CountryName =jobject.standard.countryname;
-                return restarauntCoreGeocode;
+                restarauntGeocode.Latitude = Convert.ToDouble(jobject.latt);
+                restarauntGeocode.Longitude= Convert.ToDouble(jobject.longt);
+                restarauntGeocode.CountryName =jobject.standard.countryname;
+                return restarauntGeocode;
             }
-            return restarauntCoreGeocode;
+            return restarauntGeocode;
         }
     }
 }
