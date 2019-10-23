@@ -820,23 +820,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\vmattapalli\\.nuget\\packages\\": {},
+    "C:\\Users\\csingh\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vmattapalli\\Desktop\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.ServicesImplementation\\ConceirgeDinning.Core.ServicesImplementation.csproj",
+      "projectUniqueName": "C:\\Users\\csingh\\source\\repos\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning\\ConceirgeDinning.Core.ServicesImplementation\\ConceirgeDinning.Core.ServicesImplementation.csproj",
       "projectName": "ConceirgeDinning.Core.ServicesImplementation",
-      "projectPath": "C:\\Users\\vmattapalli\\Desktop\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.ServicesImplementation\\ConceirgeDinning.Core.ServicesImplementation.csproj",
-      "packagesPath": "C:\\Users\\vmattapalli\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\vmattapalli\\Desktop\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.ServicesImplementation\\obj\\",
+      "projectPath": "C:\\Users\\csingh\\source\\repos\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning\\ConceirgeDinning.Core.ServicesImplementation\\ConceirgeDinning.Core.ServicesImplementation.csproj",
+      "packagesPath": "C:\\Users\\csingh\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\csingh\\source\\repos\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning\\ConceirgeDinning.Core.ServicesImplementation\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\vmattapalli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\csingh\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -849,17 +849,17 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\vmattapalli\\Desktop\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.Geocoder.xyz\\ConceirgeDinning.Adapter.Geocoder.xyz.csproj": {
-              "projectPath": "C:\\Users\\vmattapalli\\Desktop\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.Geocoder.xyz\\ConceirgeDinning.Adapter.Geocoder.xyz.csproj"
+            "C:\\Users\\csingh\\source\\repos\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning\\ConceirgeDinning.Adapter.Geocoder.xyz\\ConceirgeDinning.Adapter.Geocoder.xyz.csproj": {
+              "projectPath": "C:\\Users\\csingh\\source\\repos\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning\\ConceirgeDinning.Adapter.Geocoder.xyz\\ConceirgeDinning.Adapter.Geocoder.xyz.csproj"
             },
-            "C:\\Users\\vmattapalli\\Desktop\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.USRestaraunt\\ConceirgeDinning.Adapter.USRestaraunt.csproj": {
-              "projectPath": "C:\\Users\\vmattapalli\\Desktop\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.USRestaraunt\\ConceirgeDinning.Adapter.USRestaraunt.csproj"
+            "C:\\Users\\csingh\\source\\repos\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning\\ConceirgeDinning.Adapter.USRestaraunt\\ConceirgeDinning.Adapter.USRestaraunt.csproj": {
+              "projectPath": "C:\\Users\\csingh\\source\\repos\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning\\ConceirgeDinning.Adapter.USRestaraunt\\ConceirgeDinning.Adapter.USRestaraunt.csproj"
             },
-            "C:\\Users\\vmattapalli\\Desktop\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.Zomato\\ConceirgeDinning.Adapter.Zomato.csproj": {
-              "projectPath": "C:\\Users\\vmattapalli\\Desktop\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.Zomato\\ConceirgeDinning.Adapter.Zomato.csproj"
+            "C:\\Users\\csingh\\source\\repos\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning\\ConceirgeDinning.Adapter.Zomato\\ConceirgeDinning.Adapter.Zomato.csproj": {
+              "projectPath": "C:\\Users\\csingh\\source\\repos\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning\\ConceirgeDinning.Adapter.Zomato\\ConceirgeDinning.Adapter.Zomato.csproj"
             },
-            "C:\\Users\\vmattapalli\\Desktop\\VDefyn-ConceirgeDinning-Api\\ConceiseDinning.Services\\ConceirgeDinning.Services.csproj": {
-              "projectPath": "C:\\Users\\vmattapalli\\Desktop\\VDefyn-ConceirgeDinning-Api\\ConceiseDinning.Services\\ConceirgeDinning.Services.csproj"
+            "C:\\Users\\csingh\\source\\repos\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning\\ConceiseDinning.Services\\ConceirgeDinning.Services.csproj": {
+              "projectPath": "C:\\Users\\csingh\\source\\repos\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning\\ConceiseDinning.Services\\ConceirgeDinning.Services.csproj"
             }
           }
         }

@@ -5,6 +5,7 @@ using ConceirgeDinning.Services;
 using System.Collections.Generic;
 using ConceirgeDinning.Adapter.Zomato.Translator;
 using ConceirgeDinning.Adapter.USRestaraunt.Translator;
+using System.Threading.Tasks;
 
 namespace ConceirgeDinning.Core.ServicesImplementation
 {
@@ -14,12 +15,15 @@ namespace ConceirgeDinning.Core.ServicesImplementation
         {
             RestarauntGeocodeFetcher restarauntGeocodeFetcher = new RestarauntGeocodeFetcher();
             var response= restarauntGeocodeFetcher.FetchCordinates(locality);
+
             RestarauntFetcherByLocalityZomato restarauntByLocalityFetcherZomato = new RestarauntFetcherByLocalityZomato();
-            var reply=restarauntByLocalityFetcherZomato.FetchRestarauntDetails(response.Latitude,response.Longitude,response.CountryName);
+            var reply= Task.Run(async ()=>restarauntByLocalityFetcherZomato.FetchRestarauntDetails(response.Latitude,response.Longitude,response.CountryName)).Result;
+
             RestarauntFetcherByLocalityUSRestaraunt restarauntByLocalityFetcherUSRestaraunt = new RestarauntFetcherByLocalityUSRestaraunt();
-            var reply2=restarauntByLocalityFetcherUSRestaraunt.FetchRestarauntDetails(response.Latitude, response.Longitude, response.CountryName);
+            var reply2 =Task.Run(async ()=> restarauntByLocalityFetcherUSRestaraunt.FetchRestarauntDetails(response.Latitude, response.Longitude, response.CountryName)).Result;
             reply.AddRange(reply2);
             return reply;
+            
         }
 
     }

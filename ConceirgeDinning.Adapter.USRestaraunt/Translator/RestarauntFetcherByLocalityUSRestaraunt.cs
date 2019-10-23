@@ -7,6 +7,7 @@ using System.Net;
 using System.Text;
 using ConceirgeDinning.Adapter.USRestaraunt.Models;
 
+
 namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
 {
     public class RestarauntFetcherByLocalityUSRestaraunt
@@ -15,6 +16,8 @@ namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
         {
             Core.Models.RestarauntByLocality restarauntDetails = new Core.Models.RestarauntByLocality();
             List<Core.Models.RestarauntByLocality> restaraunts = new List<Core.Models.RestarauntByLocality>();
+
+
             string ApiUri = @"https://us-restaurant-menus.p.rapidapi.com/restaurants/search?distance=2";
             var request = System.Net.WebRequest.Create(ApiUri + "&lat=" + Latitude + "&lon=" + Longitude);
             request.Method = "GET";
@@ -28,9 +31,14 @@ namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
                 // Read the content.  
             string responseFromServer = reader.ReadToEnd();
                 // Display the content.  
+
+
             var jobject= JsonConvert.DeserializeObject<Models.RestarauntByLocalityUSRestaraunt>(responseFromServer);
+            Random random = new Random();
+            
             foreach (var item in jobject.result.data)
             {
+                var rating = random.NextDouble() * (5.0 - 4.0) + 4.0;
                 restaraunts.Add(new Core.Models.RestarauntByLocality()
                 {
                     RestarauntId = item.restaurant_id,
@@ -38,11 +46,11 @@ namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
                     RestarauntAddress = item.address.street + "," + item.address.city,
                     SupplierName = "USRestaraunt",
                     Cuisines = item.cuisines,
-                    User_Rating=4.1
+                    User_Rating = Math.Round(rating,1)
                 }) ;
 
             }
-            return restaraunts;
+           return restaraunts;
             
 
         }
