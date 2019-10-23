@@ -11,7 +11,7 @@ using Newtonsoft.Json;
 
 namespace ConceirgeDinning.Adapter.Zomato.Translator
 {
-    public class ZomatoRestarauntByLocalityFetcher
+    public class ZomatoRestarauntByLocalityFetcher:IRestaurantByLocalityFetcher
     {
         public List<Restaurant> FetchRestarauntDetails(LocalityGeocode locality)
         {

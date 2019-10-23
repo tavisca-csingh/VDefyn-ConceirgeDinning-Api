@@ -11,6 +11,11 @@ namespace ConceirgeDinning.Core.ServicesImplementation
 {
     public class BookingTable:IBookTable
     {
+        List<IRestaurantByLocalityFetcher> restaurantByLocalityFetchers = new List<IRestaurantByLocalityFetcher>()
+        {
+            new ZomatoRestarauntByLocalityFetcher(),
+            new USRestarauntByLocalityFetcher()
+        };
         public List<Restaurant> fetchRestarauntDetails(string locality)
         {
             RestarauntGeocodeFetcher restarauntGeocodeFetcher = new RestarauntGeocodeFetcher();

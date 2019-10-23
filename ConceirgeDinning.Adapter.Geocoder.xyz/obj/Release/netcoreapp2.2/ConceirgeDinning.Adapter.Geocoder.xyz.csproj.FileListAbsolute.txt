@@ -1,0 +1,14 @@
+C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Geocoder.xyz\bin\Release\netcoreapp2.2\ConceirgeDinning.Adapter.Geocoder.xyz.deps.json
+C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Geocoder.xyz\bin\Release\netcoreapp2.2\ConceirgeDinning.Adapter.Geocoder.xyz.dll
+C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Geocoder.xyz\bin\Release\netcoreapp2.2\ConceirgeDinning.Adapter.Geocoder.xyz.pdb
+C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Geocoder.xyz\bin\Release\netcoreapp2.2\ConceirgeDinning.Core.Models.dll
+C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Geocoder.xyz\bin\Release\netcoreapp2.2\ConceirgeDinning.Services.dll
+C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Geocoder.xyz\bin\Release\netcoreapp2.2\ConceirgeDinning.Core.Models.pdb
+C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Geocoder.xyz\bin\Release\netcoreapp2.2\ConceirgeDinning.Services.pdb
+C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Geocoder.xyz\obj\Release\netcoreapp2.2\ConceirgeDinning.Adapter.Geocoder.xyz.csprojAssemblyReference.cache
+C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Geocoder.xyz\obj\Release\netcoreapp2.2\ConceirgeDinning.Adapter.Geocoder.xyz.csproj.CoreCompileInputs.cache
+C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Geocoder.xyz\obj\Release\netcoreapp2.2\ConceirgeDinning.Adapter.Geocoder.xyz.AssemblyInfoInputs.cache
+C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Geocoder.xyz\obj\Release\netcoreapp2.2\ConceirgeDinning.Adapter.Geocoder.xyz.AssemblyInfo.cs
+C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Geocoder.xyz\obj\Release\netcoreapp2.2\ConceirgeDinning.Adapter.Geocoder.xyz.csproj.CopyComplete
+C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Geocoder.xyz\obj\Release\netcoreapp2.2\ConceirgeDinning.Adapter.Geocoder.xyz.dll
+C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Geocoder.xyz\obj\Release\netcoreapp2.2\ConceirgeDinning.Adapter.Geocoder.xyz.pdb

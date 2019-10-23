@@ -59,13 +59,16 @@ namespace ConceirgeDinning.Adapter.Zomato.Translator
             List<string> RestaurantImages = new List<string>();
             if (responseFromSupplier.photos == null & responseFromSupplier.thumb == null)
                 RestaurantImages.Add("https://icon-library.net/images/no-image-available-icon/no-image-available-icon-6.jpg");
-            else if (responseFromSupplier.thumb != null)
+            else if (responseFromSupplier.photos == null & responseFromSupplier.thumb != null)
                 RestaurantImages.Add(responseFromSupplier.thumb);
 
             else
             {
+                int i = 0;
                 foreach (var photo in responseFromSupplier.photos)
                 {
+                    if (i++ == 9)
+                        break;
                     RestaurantImages.Add(photo.photo.url);
                 }
             }

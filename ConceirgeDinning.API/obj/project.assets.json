@@ -4727,6 +4727,7 @@
         "dependencies": {
           "ConceirgeDinning.Core.Models": "1.0.0",
           "ConceirgeDinning.Services": "1.0.0",
+          "Microsoft.AspNetCore.Cors": "2.2.0",
           "Newtonsoft.Json": "12.0.2"
         },
         "compile": {
@@ -4742,6 +4743,7 @@
         "dependencies": {
           "ConceirgeDinning.Core.Models": "1.0.0",
           "ConceirgeDinning.Services": "1.0.0",
+          "Microsoft.AspNetCore.Cors": "2.2.0",
           "Newtonsoft.Json": "12.0.2"
         },
         "compile": {
@@ -4757,6 +4759,7 @@
         "dependencies": {
           "ConceirgeDinning.Core.Models": "1.0.0",
           "ConceirgeDinning.Services": "1.0.0",
+          "Microsoft.AspNetCore.Cors": "2.2.0",
           "Newtonsoft.Json": "12.0.2"
         },
         "compile": {
@@ -4770,6 +4773,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
+          "Microsoft.AspNetCore.Cors": "2.2.0",
           "Newtonsoft.Json": "12.0.2"
         },
         "compile": {
@@ -4787,6 +4791,7 @@
           "ConceirgeDinning.Adapter.USRestaraunt": "1.0.0",
           "ConceirgeDinning.Adapter.Zomato": "1.0.0",
           "ConceirgeDinning.Core.Models": "1.0.0",
+          "Microsoft.AspNetCore.Cors": "2.2.0",
           "Newtonsoft.Json": "12.0.2"
         },
         "compile": {
@@ -4801,6 +4806,7 @@
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
           "ConceirgeDinning.Core.Models": "1.0.0",
+          "Microsoft.AspNetCore.Cors": "2.2.0",
           "Newtonsoft.Json": "12.0.2"
         },
         "compile": {
@@ -13050,6 +13056,7 @@
       "ConceirgeDinning.Core.Models >= 1.0.0",
       "ConceirgeDinning.Core.ServicesImplementation >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.2.0",
+      "Microsoft.AspNetCore.Cors >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.2.3",
@@ -13109,6 +13116,10 @@
             "target": "Package",
             "version": "[2.2.0, )",
             "autoReferenced": true
+          },
+          "Microsoft.AspNetCore.Cors": {
+            "target": "Package",
+            "version": "[2.2.0, )"
           },
           "Microsoft.AspNetCore.Razor.Design": {
             "suppressParent": "All",

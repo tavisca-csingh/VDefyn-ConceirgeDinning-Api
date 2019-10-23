@@ -1,5 +1,6 @@
 ﻿
 using ConceirgeDinning.Core.Models;
+using ConceirgeDinning.Services;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using System.Text;
 
 namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
 {
-    public class USRestarauntByLocalityFetcher
+    public class USRestarauntByLocalityFetcher : IRestaurantByLocalityFetcher
     {
         public List<Restaurant> FetchRestarauntDetails(LocalityGeocode locality)
         {
