@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ConceirgeDinning.Core.Models\ConceirgeDinning.Core.Models.csproj" />
     <ProjectReference Include="..\ConceirgeDinning.Core.ServicesImplementation\ConceirgeDinning.Core.ServicesImplementation.csproj" />
   </ItemGroup>
 

@@ -24,6 +24,7 @@
     ".NETCoreApp,Version=v2.2": {
       "ConceirgeDinning.API/1.0.0": {
         "dependencies": {
+          "ConceirgeDinning.Core.Models": "1.0.0",
           "ConceirgeDinning.Core.ServicesImplementation": "1.0.0",
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
@@ -371,6 +372,7 @@
       "ConceirgeDinning.Adapter.USRestaraunt/1.0.0": {
         "dependencies": {
           "ConceirgeDinning.Core.Models": "1.0.0",
+          "ConceirgeDinning.Services": "1.0.0",
           "Newtonsoft.Json": "12.0.2"
         },
         "runtime": {
@@ -382,6 +384,7 @@
       },
       "ConceirgeDinning.Adapter.Zomato/1.0.0": {
         "dependencies": {
+          "ConceirgeDinning.Core.Models": "1.0.0",
           "ConceirgeDinning.Services": "1.0.0",
           "Newtonsoft.Json": "12.0.2"
         },

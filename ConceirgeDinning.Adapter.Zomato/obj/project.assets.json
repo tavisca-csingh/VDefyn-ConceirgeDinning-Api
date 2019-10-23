@@ -758,6 +758,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
+      "ConceirgeDinning.Core.Models >= 1.0.0",
       "ConceirgeDinning.Services >= 1.0.0",
       "Microsoft.NETCore.App >= 2.2.0",
       "Newtonsoft.Json >= 12.0.2"
@@ -793,6 +794,9 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
+            "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Core.Models.csproj": {
+              "projectPath": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Core.Models.csproj"
+            },
             "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceiseDinning.Services\\ConceirgeDinning.Services.csproj": {
               "projectPath": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceiseDinning.Services\\ConceirgeDinning.Services.csproj"
             }

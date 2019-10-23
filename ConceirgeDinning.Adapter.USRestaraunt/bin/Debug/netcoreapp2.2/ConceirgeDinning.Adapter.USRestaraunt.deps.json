@@ -9,6 +9,7 @@
       "ConceirgeDinning.Adapter.USRestaraunt/1.0.0": {
         "dependencies": {
           "ConceirgeDinning.Core.Models": "1.0.0",
+          "ConceirgeDinning.Services": "1.0.0",
           "Newtonsoft.Json": "12.0.2"
         },
         "runtime": {
@@ -30,6 +31,15 @@
         "runtime": {
           "ConceirgeDinning.Core.Models.dll": {}
         }
+      },
+      "ConceirgeDinning.Services/1.0.0": {
+        "dependencies": {
+          "ConceirgeDinning.Core.Models": "1.0.0",
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "runtime": {
+          "ConceirgeDinning.Services.dll": {}
+        }
       }
     }
   },
@@ -47,6 +57,11 @@
       "hashPath": "newtonsoft.json.12.0.2.nupkg.sha512"
     },
     "ConceirgeDinning.Core.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ConceirgeDinning.Services/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

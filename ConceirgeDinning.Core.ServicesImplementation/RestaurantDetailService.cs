@@ -1,0 +1,19 @@
+﻿using ConceirgeDinning.Core.Models;
+using ConceirgeDinning.Services;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ConceirgeDinning.Core.ServicesImplementation
+{
+    public class RestaurantDetailService
+    {
+        public RestaurantDetails GetRestaurantDetails(int restaurantId,string supplierName)
+        {
+            RestaurantDetailServiceFactory Factory = new RestaurantDetailServiceFactory();
+            IRestaurantDetailService RestaurantDetailService = Factory.GetRestaurantDetailService(supplierName);
+            return RestaurantDetailService.GetRestaurantDetails(restaurantId);
+            
+        }
+    }
+}

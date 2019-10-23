@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ConceirgeDinning.Core.Models
 {
-    class RestaurantDetails
+    public class RestaurantDetails
     {
         public string SupplierName { get; set; }
         public int RestaurantId { get; set; }

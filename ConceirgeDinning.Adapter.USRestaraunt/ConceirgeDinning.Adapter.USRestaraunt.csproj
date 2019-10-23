@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ConceirgeDinning.Core.Models\ConceirgeDinning.Core.Models.csproj" />
+    <ProjectReference Include="..\ConceiseDinning.Services\ConceirgeDinning.Services.csproj" />
   </ItemGroup>
 
 </Project>

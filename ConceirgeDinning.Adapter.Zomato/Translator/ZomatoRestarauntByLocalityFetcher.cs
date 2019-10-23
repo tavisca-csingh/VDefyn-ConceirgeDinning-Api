@@ -34,7 +34,7 @@ namespace ConceirgeDinning.Adapter.Zomato.Translator
                     
                    
 
-                    var searchResults = SupplierModelsToUiModelsTranslator.Translate(Response);
+                    var searchResults = SupplierModelsToUiModelsTranslator.TranslateToRestaurant(Response);
 
 
 

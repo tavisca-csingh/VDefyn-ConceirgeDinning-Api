@@ -15,3 +15,4 @@ C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Core.Models
 C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Core.Models\obj\Debug\netcoreapp2.2\ConceirgeDinning.Core.Models.AssemblyInfo.cs
 C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Core.Models\obj\Debug\netcoreapp2.2\ConceirgeDinning.Core.Models.dll
 C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Core.Models\obj\Debug\netcoreapp2.2\ConceirgeDinning.Core.Models.pdb
+C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Core.Models\obj\Debug\netcoreapp2.2\ConceirgeDinning.Core.Models.csprojAssemblyReference.cache
