@@ -75,7 +75,7 @@ pipeline {
 		
 						steps {
 	
-							powershell "docker build --tag=rohit1998/conceirge-dinning-api ."
+						       powershell "docker build -t rohit1998/conceirge-dinning-api ."
 
 							powershell "docker login --username=${DOCKERHUB_USERNAME} --password=${DOCKERHUB_PASSWORD}"
 				             
