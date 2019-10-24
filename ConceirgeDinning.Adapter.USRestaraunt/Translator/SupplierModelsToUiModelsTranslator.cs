@@ -22,7 +22,7 @@ namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
                     RestaurantId = restaurant.restaurant_id,
                     RestaurantName = restaurant.restaurant_name,
                     ThumbURL = "https://icon-library.net/images/no-image-available-icon/no-image-available-icon-6.jpg",
-                    User_Rating = GetRating(3, 5),
+                    User_Rating = "4.2",
                     LocalityVerbose = restaurant.address.street + ", " + restaurant.address.city,
                     Cuisines = restaurant.cuisines
                 });
@@ -47,7 +47,7 @@ namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
             response.RestaurantName = responseFromSupplier.result.data[0].restaurant_name;
             response.RestaurantId = responseFromSupplier.result.data[0].restaurant_id;
             response.PricePerHead = GetPrice(responseFromSupplier.result.data[0].price_range);
-            response.User_Rating = GetRating(3,5);
+            response.User_Rating = "4.2";
             response.Cuisines = responseFromSupplier.result.data[0].cuisines;
             response.Address = responseFromSupplier.result.data[0].address.formatted;
             response.Images = new List<string>(){ "https://icon-library.net/images/no-image-available-icon/no-image-available-icon-6.jpg"};
