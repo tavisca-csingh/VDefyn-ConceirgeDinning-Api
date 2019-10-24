@@ -25,6 +25,7 @@ namespace ConceirgeDinning.Adapter.Zomato.Translator
 
             using (var response = request.GetResponse())
             {
+               
                 using (var stream = response.GetResponseStream())
                 {
                     var reader = new StreamReader(stream, System.Text.Encoding.UTF8);

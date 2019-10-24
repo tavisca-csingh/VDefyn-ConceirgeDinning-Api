@@ -15,14 +15,14 @@ namespace ConceirgeDinning.Adapter.Geocoder.xyz.Translator
         {
             WebClient client = new WebClient();
             LocalityGeocode restarauntCoreGeocode = new LocalityGeocode();
-            restarauntCoreGeocode.Longitude = 0.00; restarauntCoreGeocode.Latitude = 0.00;restarauntCoreGeocode.CountryName = string.Empty;
+            //restarauntCoreGeocode.Longitude = 0.00; restarauntCoreGeocode.Latitude = 0.00;restarauntCoreGeocode.CountryName = string.Empty;
             string url = "https://geocode.xyz/?locate=" + locality + "&json=1";
             var reply = client.DownloadString(url);
             if (!reply.Contains("\"0.00000\""))
             {
                 var jobject=JsonConvert.DeserializeObject<RestarauntGeocodebyLocalityVerbose>(reply);
-                restarauntCoreGeocode.Latitude = Convert.ToDouble(jobject.latt);
-                restarauntCoreGeocode.Longitude= Convert.ToDouble(jobject.longt);
+                restarauntCoreGeocode.Latitude = jobject.latt;
+                restarauntCoreGeocode.Longitude= jobject.longt;
                 restarauntCoreGeocode.CountryName =jobject.standard.countryname;
                 return restarauntCoreGeocode;
             }

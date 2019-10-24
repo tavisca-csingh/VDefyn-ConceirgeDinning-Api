@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using ConceirgeDinning.Core.Models;
 using ConceirgeDinning.Core.ServicesImplementation;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ConceirgeDinning.API.Controllers
@@ -19,7 +20,7 @@ namespace ConceirgeDinning.API.Controllers
             RestaurantDetailService restaurantDetailService = new RestaurantDetailService();
             var response=restaurantDetailService.GetRestaurantDetails(restaurantId, supplierName);
             if (response == null)
-                return NotFound();
+                return Ok(StatusCodes.Status404NotFound);
             return response;
             
         }

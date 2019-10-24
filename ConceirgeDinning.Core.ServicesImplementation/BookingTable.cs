@@ -20,6 +20,8 @@ namespace ConceirgeDinning.Core.ServicesImplementation
         {
             RestarauntGeocodeFetcher restarauntGeocodeFetcher = new RestarauntGeocodeFetcher();
             var coordinates= restarauntGeocodeFetcher.FetchCordinates(locality);
+            if (coordinates.CountryName is null)
+                return null;
 
 
            
