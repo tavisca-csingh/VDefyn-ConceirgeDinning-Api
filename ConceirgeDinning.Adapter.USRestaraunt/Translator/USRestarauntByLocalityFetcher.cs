@@ -18,7 +18,7 @@ namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
             var request = System.Net.WebRequest.Create(ApiUri + "&lat=" + locality.Latitude + "&lon=" + locality.Longitude);
             request.Method = "GET";
             request.Headers.Add("X-RapidAPI-Host", "us-restaurant-menus.p.rapidapi.com");
-            request.Headers.Add("X-RapidAPI-Key", "0416d26f02msh589cf430c166051p1c0a3djsn6029f7f1a261");
+            request.Headers.Add("X-RapidAPI-Key", "01545b0594mshdb9591ceda3d162p1716b7jsn43e523b10b95");
 
             request.ContentType = "application/json";
 
