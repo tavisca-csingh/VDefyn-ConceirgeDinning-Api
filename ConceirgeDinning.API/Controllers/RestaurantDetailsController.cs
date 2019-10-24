@@ -12,12 +12,16 @@ namespace ConceirgeDinning.API.Controllers
     [ApiController]
     public class RestaurantDetailsController : ControllerBase
     {
-        // GET api/values
+       
         [HttpGet]
         public ActionResult<RestaurantDetails> GetRestaurantDetails(int restaurantId,string supplierName)
         {
             RestaurantDetailService restaurantDetailService = new RestaurantDetailService();
-            return restaurantDetailService.GetRestaurantDetails(restaurantId, supplierName);
+            var response=restaurantDetailService.GetRestaurantDetails(restaurantId, supplierName);
+            if (response == null)
+                return NotFound();
+            return response;
+            
         }
 
         // GET api/values/5

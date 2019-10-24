@@ -17,7 +17,7 @@ namespace ConceirgeDinning.Core.ServicesImplementation
             else if (supplierName == "USRestaurant")
                 return new USRestaurantDetailService();
             else
-                throw new Exception("Invalid Supplier");
+                return null;
         }
     }
 }

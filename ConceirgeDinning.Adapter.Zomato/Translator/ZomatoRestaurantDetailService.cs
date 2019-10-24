@@ -4,6 +4,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Net;
 using System.Text;
 
 namespace ConceirgeDinning.Adapter.Zomato.Translator
@@ -19,30 +20,46 @@ namespace ConceirgeDinning.Adapter.Zomato.Translator
 
             request.ContentType = "application/json";
 
-
-            using (var response = request.GetResponse())
+            try
             {
-                using (var stream = response.GetResponseStream())
+
+                using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
                 {
-                    var reader = new StreamReader(stream, System.Text.Encoding.UTF8);
-                    var result = reader.ReadToEnd();
+                    if (response.StatusCode == HttpStatusCode.NotFound)
+                        return null;
 
-                    Models.RestaurantDetails Response = JsonConvert.DeserializeObject<Models.RestaurantDetails>(result);
+                    using (var stream = response.GetResponseStream())
+                    {
+                        var reader = new StreamReader(stream, System.Text.Encoding.UTF8);
+                        var result = reader.ReadToEnd();
 
-
-
-                    var searchResults = SupplierModelsToUiModelsTranslator.TranslateToRestaurantDetails(Response);
-
-
-
-
-
-
-
-
-                    return searchResults;
+                        Models.RestaurantDetails Response = JsonConvert.DeserializeObject<Models.RestaurantDetails>(result);
+                        var searchResults = SupplierModelsToUiModelsTranslator.TranslateToRestaurantDetails(Response);
+                        return searchResults;
+                    }
                 }
             }
+
+            catch (System.Net.WebException ex)
+            {
+                return null;
+            }
+
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          

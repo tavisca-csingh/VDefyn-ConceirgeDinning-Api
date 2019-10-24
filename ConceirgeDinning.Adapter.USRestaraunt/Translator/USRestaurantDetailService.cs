@@ -4,6 +4,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Net;
 using System.Text;
 
 namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
@@ -21,8 +22,10 @@ namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
             request.ContentType = "application/json";
 
 
-            using (var response = request.GetResponse())
+            using (HttpWebResponse response =(HttpWebResponse)request.GetResponse())
             {
+                if (response.StatusCode == HttpStatusCode.NotFound)
+                    return null;
                 using (var stream = response.GetResponseStream())
                 {
                     var reader = new StreamReader(stream, System.Text.Encoding.UTF8);

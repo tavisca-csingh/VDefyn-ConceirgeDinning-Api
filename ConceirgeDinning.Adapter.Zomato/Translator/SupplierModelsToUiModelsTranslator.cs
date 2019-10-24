@@ -49,6 +49,8 @@ namespace ConceirgeDinning.Adapter.Zomato.Translator
             response.User_Rating = responseFromSupplier.user_rating.aggregate_rating;
             response.PricePerHead = (responseFromSupplier.average_cost_for_two)/2;
             response.Images = GetImages(responseFromSupplier);
+            response.Lat = responseFromSupplier.location.latitude;
+            response.Lon = responseFromSupplier.location.longitude;
             
             return response;
             

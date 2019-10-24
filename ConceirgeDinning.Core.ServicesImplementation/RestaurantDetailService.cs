@@ -11,8 +11,12 @@ namespace ConceirgeDinning.Core.ServicesImplementation
         public RestaurantDetails GetRestaurantDetails(int restaurantId,string supplierName)
         {
             RestaurantDetailServiceFactory Factory = new RestaurantDetailServiceFactory();
+           
             IRestaurantDetailService RestaurantDetailService = Factory.GetRestaurantDetailService(supplierName);
-            return RestaurantDetailService.GetRestaurantDetails(restaurantId);
+            if (RestaurantDetailService == null)
+                return null;
+            else
+                return RestaurantDetailService.GetRestaurantDetails(restaurantId);
             
         }
     }

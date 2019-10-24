@@ -1,0 +1,490 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.ServiceImplementation.Test\\ConceirgeDinning.Core.ServiceImplementation.Test.csproj": {}
+  },
+  "projects": {
+    "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.Geocoder.xyz\\ConceirgeDinning.Adapter.Geocoder.xyz.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.Geocoder.xyz\\ConceirgeDinning.Adapter.Geocoder.xyz.csproj",
+        "projectName": "ConceirgeDinning.Adapter.Geocoder.xyz",
+        "projectPath": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.Geocoder.xyz\\ConceirgeDinning.Adapter.Geocoder.xyz.csproj",
+        "packagesPath": "C:\\Users\\rogupta\\.nuget\\packages\\",
+        "outputPath": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.Geocoder.xyz\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\rogupta\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Core.Models.csproj": {
+                "projectPath": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Core.Models.csproj"
+              },
+              "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceiseDinning.Services\\ConceirgeDinning.Services.csproj": {
+                "projectPath": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceiseDinning.Services\\ConceirgeDinning.Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Cors": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.USRestaraunt\\ConceirgeDinning.Adapter.USRestaraunt.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.USRestaraunt\\ConceirgeDinning.Adapter.USRestaraunt.csproj",
+        "projectName": "ConceirgeDinning.Adapter.USRestaraunt",
+        "projectPath": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.USRestaraunt\\ConceirgeDinning.Adapter.USRestaraunt.csproj",
+        "packagesPath": "C:\\Users\\rogupta\\.nuget\\packages\\",
+        "outputPath": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.USRestaraunt\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\rogupta\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Core.Models.csproj": {
+                "projectPath": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Core.Models.csproj"
+              },
+              "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceiseDinning.Services\\ConceirgeDinning.Services.csproj": {
+                "projectPath": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceiseDinning.Services\\ConceirgeDinning.Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Cors": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.Zomato\\ConceirgeDinning.Adapter.Zomato.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.Zomato\\ConceirgeDinning.Adapter.Zomato.csproj",
+        "projectName": "ConceirgeDinning.Adapter.Zomato",
+        "projectPath": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.Zomato\\ConceirgeDinning.Adapter.Zomato.csproj",
+        "packagesPath": "C:\\Users\\rogupta\\.nuget\\packages\\",
+        "outputPath": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.Zomato\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\rogupta\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Core.Models.csproj": {
+                "projectPath": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Core.Models.csproj"
+              },
+              "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceiseDinning.Services\\ConceirgeDinning.Services.csproj": {
+                "projectPath": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceiseDinning.Services\\ConceirgeDinning.Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Cors": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Core.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Core.Models.csproj",
+        "projectName": "ConceirgeDinning.Core.Models",
+        "projectPath": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Core.Models.csproj",
+        "packagesPath": "C:\\Users\\rogupta\\.nuget\\packages\\",
+        "outputPath": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\rogupta\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Cors": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.ServiceImplementation.Test\\ConceirgeDinning.Core.ServiceImplementation.Test.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.ServiceImplementation.Test\\ConceirgeDinning.Core.ServiceImplementation.Test.csproj",
+        "projectName": "ConceirgeDinning.Core.ServiceImplementation.Test",
+        "projectPath": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.ServiceImplementation.Test\\ConceirgeDinning.Core.ServiceImplementation.Test.csproj",
+        "packagesPath": "C:\\Users\\rogupta\\.nuget\\packages\\",
+        "outputPath": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.ServiceImplementation.Test\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\rogupta\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.USRestaraunt\\ConceirgeDinning.Adapter.USRestaraunt.csproj": {
+                "projectPath": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.USRestaraunt\\ConceirgeDinning.Adapter.USRestaraunt.csproj"
+              },
+              "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.Zomato\\ConceirgeDinning.Adapter.Zomato.csproj": {
+                "projectPath": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.Zomato\\ConceirgeDinning.Adapter.Zomato.csproj"
+              },
+              "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Core.Models.csproj": {
+                "projectPath": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Core.Models.csproj"
+              },
+              "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.ServicesImplementation\\ConceirgeDinning.Core.ServicesImplementation.csproj": {
+                "projectPath": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.ServicesImplementation\\ConceirgeDinning.Core.ServicesImplementation.csproj"
+              },
+              "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceiseDinning.Services\\ConceirgeDinning.Services.csproj": {
+                "projectPath": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceiseDinning.Services\\ConceirgeDinning.Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.0.1, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.13.1, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.ServicesImplementation\\ConceirgeDinning.Core.ServicesImplementation.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.ServicesImplementation\\ConceirgeDinning.Core.ServicesImplementation.csproj",
+        "projectName": "ConceirgeDinning.Core.ServicesImplementation",
+        "projectPath": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.ServicesImplementation\\ConceirgeDinning.Core.ServicesImplementation.csproj",
+        "packagesPath": "C:\\Users\\rogupta\\.nuget\\packages\\",
+        "outputPath": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.ServicesImplementation\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\rogupta\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.Geocoder.xyz\\ConceirgeDinning.Adapter.Geocoder.xyz.csproj": {
+                "projectPath": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.Geocoder.xyz\\ConceirgeDinning.Adapter.Geocoder.xyz.csproj"
+              },
+              "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.USRestaraunt\\ConceirgeDinning.Adapter.USRestaraunt.csproj": {
+                "projectPath": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.USRestaraunt\\ConceirgeDinning.Adapter.USRestaraunt.csproj"
+              },
+              "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.Zomato\\ConceirgeDinning.Adapter.Zomato.csproj": {
+                "projectPath": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.Zomato\\ConceirgeDinning.Adapter.Zomato.csproj"
+              },
+              "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Core.Models.csproj": {
+                "projectPath": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Core.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Cors": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceiseDinning.Services\\ConceirgeDinning.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceiseDinning.Services\\ConceirgeDinning.Services.csproj",
+        "projectName": "ConceirgeDinning.Services",
+        "projectPath": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceiseDinning.Services\\ConceirgeDinning.Services.csproj",
+        "packagesPath": "C:\\Users\\rogupta\\.nuget\\packages\\",
+        "outputPath": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceiseDinning.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\rogupta\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Core.Models.csproj": {
+                "projectPath": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Core.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Cors": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

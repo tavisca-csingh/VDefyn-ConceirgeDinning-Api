@@ -40,6 +40,8 @@ namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
 
         public static RestaurantDetails TranslateToRestaurantDetails(RestaurantDetailResponse responseFromSupplier)
         {
+            if (responseFromSupplier.result.totalResults == 0)
+                return null;
             RestaurantDetails response = new RestaurantDetails();
             response.SupplierName = "USRestaurant";
             response.RestaurantName = responseFromSupplier.result.data[0].restaurant_name;
@@ -49,6 +51,8 @@ namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
             response.Cuisines = responseFromSupplier.result.data[0].cuisines;
             response.Address = responseFromSupplier.result.data[0].address.formatted;
             response.Images = new List<string>(){ "https://icon-library.net/images/no-image-available-icon/no-image-available-icon-6.jpg"};
+            response.Lat=responseFromSupplier.result.data[0].geo.lat.ToString();
+            response.Lon = responseFromSupplier.result.data[0].geo.lon.ToString();
 
             return response;
         }
