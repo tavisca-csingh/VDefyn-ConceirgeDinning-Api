@@ -26,3 +26,17 @@ C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Zom
 C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Zomato\obj\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.Zomato.csproj.CopyComplete
 C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Zomato\obj\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.Zomato.dll
 C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Zomato\obj\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.Zomato.pdb
+C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Zomato\bin\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.Zomato.deps.json
+C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Zomato\bin\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.Zomato.dll
+C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Zomato\bin\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.Zomato.pdb
+C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Zomato\bin\Debug\netcoreapp2.2\ConceirgeDinning.Core.Models.dll
+C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Zomato\bin\Debug\netcoreapp2.2\ConceirgeDinning.Services.dll
+C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Zomato\bin\Debug\netcoreapp2.2\ConceirgeDinning.Core.Models.pdb
+C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Zomato\bin\Debug\netcoreapp2.2\ConceirgeDinning.Services.pdb
+C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Zomato\obj\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.Zomato.csprojAssemblyReference.cache
+C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Zomato\obj\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.Zomato.AssemblyInfoInputs.cache
+C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Zomato\obj\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.Zomato.AssemblyInfo.cs
+C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Zomato\obj\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.Zomato.csproj.CopyComplete
+C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Zomato\obj\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.Zomato.dll
+C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Zomato\obj\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.Zomato.pdb
+C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Zomato\obj\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.Zomato.csproj.CoreCompileInputs.cache

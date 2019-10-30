@@ -2745,7 +2745,7 @@
       ]
     },
     "Microsoft.Win32.Registry/4.0.0": {
-      "sha512": "GR+JqQi3OrGcKtM6F/FAIQsA8jpfgUXzZKxXnkHshCyimzOzxhzGsZpU7HPtehSl6Fu0FAPatRZH7jQdlz/toA==",
+      "sha512": "b23EVEpPVoLxg9foZ6uYo2ZHt/V+5sNpjW0cLH+axMaydU+zdmNlj2RcwTfsYqYIhdvMhX0WiRNDXp9idM1HOA==",
       "type": "package",
       "path": "microsoft.win32.registry/4.0.0",
       "files": [
@@ -3177,7 +3177,7 @@
       ]
     },
     "System.Collections.Immutable/1.2.0": {
-      "sha512": "9Qr+RMO/+wxuZFrL20vzR87GtYnLIA3HLrsTnUGjLzEJ7Sk4XRkFs/R+3xF0monvty6qJVaWEu4dKnhy8tlPVg==",
+      "sha512": "Cma8cBW6di16ZLibL8LYQ+cLjGzoKxpOTu/faZfDcx94ZjAGq6Nv5RO7+T1YZXqEXTZP9rt1wLVEONVpURtUqw==",
       "type": "package",
       "path": "system.collections.immutable/1.2.0",
       "files": [
@@ -3193,7 +3193,7 @@
       ]
     },
     "System.Collections.NonGeneric/4.3.0": {
-      "sha512": "prtjIEMhGUnQq6RnPEYLpFt8AtLbp9yq2zxOSrY7KJJZrw25Fi97IzBqY7iqssbM61Ek5b8f3MG/sG1N2sN5KA==",
+      "sha512": "VmgNKFr0f1ci4bpbS1Yk5uGBiCtrXYDeL+ozeFnq2tj26ZTTPhcL/gpzRi3mKbchWgAZae6cIfXIsMGUz+c0lw==",
       "type": "package",
       "path": "system.collections.nongeneric/4.3.0",
       "files": [
@@ -3231,7 +3231,7 @@
       ]
     },
     "System.Collections.Specialized/4.3.0": {
-      "sha512": "Epx8PoVZR0iuOnJJDzp7pWvdfMMOAvpUo95pC4ScH2mJuXkKA2Y4aR3cG9qt2klHgSons1WFh4kcGW7cSXvrxg==",
+      "sha512": "MGWtqPSv18r+ZLWRxSykrgyw40NQWR6cY3dskOTnlq1mf7RJgtypHSn5zVsJflMwZWNDOxj3CFzCSzg/58+p9w==",
       "type": "package",
       "path": "system.collections.specialized/4.3.0",
       "files": [
@@ -3485,7 +3485,7 @@
       ]
     },
     "System.ComponentModel.Primitives/4.3.0": {
-      "sha512": "j8GUkCpM8V4d4vhLIIoBLGey2Z5bCkMVNjEZseyAlm4n5arcsJOeI3zkUP+zvZgzsbLTYh4lYeP/ZD/gdIAPrw==",
+      "sha512": "g2pO6wNHVD87aqCGyMRXXFeZEmYtea2XNeX9Gzx+MxUwT9SA3sQgCwd1z3+HzsT55KlMamrcEWN6ZZNQ4q+c8w==",
       "type": "package",
       "path": "system.componentmodel.primitives/4.3.0",
       "files": [
@@ -3523,7 +3523,7 @@
       ]
     },
     "System.ComponentModel.TypeConverter/4.3.0": {
-      "sha512": "16pQ6P+EdhcXzPiEK4kbA953Fu0MNG2ovxTZU81/qsCd1zPRsKc3uif5NgvllCY598k6bI0KUyKW8fanlfaDQg==",
+      "sha512": "IHTEVXTJNtZ8Ybxwaab0x7bmh5FDWUPEsqaLVnpLYqkkO7oNbnPQEOSWkgLa4c7P5cEmNNMyXOnYLJbhWgq+QA==",
       "type": "package",
       "path": "system.componentmodel.typeconverter/4.3.0",
       "files": [
@@ -3642,7 +3642,7 @@
       ]
     },
     "System.Diagnostics.Process/4.1.0": {
-      "sha512": "wMVrKCbo1UOapx71H013St/95ZlBenAFPHJ3fyvU6vtpNy0Q4qxs1han3n6MCxm+vSILNghYJpliunBgc++2/w==",
+      "sha512": "fcKW/l5i1cVjVx7Afr1OfBkuEX2GaIkv9BHsHjyrFsfc6dmpreYGn1qbLXEwTZvudT/cbo6unnxGGFWVHDuSFw==",
       "type": "package",
       "path": "system.diagnostics.process/4.1.0",
       "files": [
@@ -4720,7 +4720,7 @@
       ]
     },
     "System.Reflection.Metadata/1.3.0": {
-      "sha512": "H26BUccijzDBv0i+5xIR73LEgzSCN9cDUW4zlqjbUA6N4Yrp0sqBUdAmunkjMewrVuaG4+BfxvDlcLe1H3VEVA==",
+      "sha512": "jMSCxA4LSyKBGRDm/WtfkO03FkcgRzHxwvQRib1bm2GZ8ifKM1MX1al6breGCEQK280mdl9uQS7JNPXRYk90jw==",
       "type": "package",
       "path": "system.reflection.metadata/1.3.0",
       "files": [
@@ -5226,7 +5226,7 @@
       ]
     },
     "System.Runtime.InteropServices.RuntimeInformation/4.0.0": {
-      "sha512": "hWPhJxc453RCa8Z29O91EmfGeZIHX1ZH2A8L6lYQVSaKzku2DfArSfMEb1/MYYzPQRJZeu0c9dmYeJKxW5Fgng==",
+      "sha512": "/1b8Cpsl6nQBASpDB6z012NiR78c2EdgM4Z0rF+d5gT8rHT02SfEV+fE/pYim7+b7UDzZhm7lwe6Me+2eiRz/w==",
       "type": "package",
       "path": "system.runtime.interopservices.runtimeinformation/4.0.0",
       "files": [
@@ -5259,7 +5259,7 @@
       ]
     },
     "System.Runtime.Loader/4.0.0": {
-      "sha512": "fF2rg7G4PTpQz4zkWhdKl6odWBhQxcaUtuplH2A2HwStQ0lz9KcO81F9eAGpe47fa33FMBSDLgwLvc6EWKo6yQ==",
+      "sha512": "e0nAEDcmjf4gn38F+PfcUnpVyhSjU0g6jfP6Ai3QuPm+zMqvz3N1MfzHnhIHBLx+snX/bKVLwM1JLk6AZyiGxQ==",
       "type": "package",
       "path": "system.runtime.loader/4.0.0",
       "files": [
@@ -5826,7 +5826,7 @@
       ]
     },
     "System.Threading.Thread/4.0.0": {
-      "sha512": "NgFfTojlfIVYHJg6N9zcN20YHmus2x2Bp3iQgYRxuu7jhzqfSvm6TQoDSEEt2213+GoC6k2ArGneyi6JL5CmzA==",
+      "sha512": "9NATiQLtbEdGT5nz7vfxf2aY2yf7KTg7DF8d/bCKVQU2rAK6KOLnU0TCjlNkPZx19kKkSGKsJ2smhlS6Ascvsg==",
       "type": "package",
       "path": "system.threading.thread/4.0.0",
       "files": [
@@ -5865,7 +5865,7 @@
       ]
     },
     "System.Threading.ThreadPool/4.0.10": {
-      "sha512": "IMXgB5Vf/5Qw1kpoVgJMOvUO1l32aC+qC3OaIZjWJOjvcxuxNWOK2ZTWWYXfij22NHxT2j1yWX5vlAeQWld9vA==",
+      "sha512": "WJeRIl3Cv96J9jGxxsjeOmlM8Z4UAzSYcndXScvbOOpkyjl6EO/5lNnxflq6nXnW4d9282TcjvjN5YiWq2s7yg==",
       "type": "package",
       "path": "system.threading.threadpool/4.0.10",
       "files": [
@@ -6342,23 +6342,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rogupta\\.nuget\\packages\\": {},
+    "C:\\Users\\csingh\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.ServiceImplementation.Test\\ConceirgeDinning.Core.ServiceImplementation.Test.csproj",
+      "projectUniqueName": "C:\\Users\\csingh\\Desktop\\hololo\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.ServiceImplementation.Test\\ConceirgeDinning.Core.ServiceImplementation.Test.csproj",
       "projectName": "ConceirgeDinning.Core.ServiceImplementation.Test",
-      "projectPath": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.ServiceImplementation.Test\\ConceirgeDinning.Core.ServiceImplementation.Test.csproj",
-      "packagesPath": "C:\\Users\\rogupta\\.nuget\\packages\\",
-      "outputPath": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.ServiceImplementation.Test\\obj\\",
+      "projectPath": "C:\\Users\\csingh\\Desktop\\hololo\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.ServiceImplementation.Test\\ConceirgeDinning.Core.ServiceImplementation.Test.csproj",
+      "packagesPath": "C:\\Users\\csingh\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\csingh\\Desktop\\hololo\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.ServiceImplementation.Test\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\rogupta\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\csingh\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6371,20 +6371,20 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.USRestaraunt\\ConceirgeDinning.Adapter.USRestaraunt.csproj": {
-              "projectPath": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.USRestaraunt\\ConceirgeDinning.Adapter.USRestaraunt.csproj"
+            "C:\\Users\\csingh\\Desktop\\hololo\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.USRestaraunt\\ConceirgeDinning.Adapter.USRestaraunt.csproj": {
+              "projectPath": "C:\\Users\\csingh\\Desktop\\hololo\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.USRestaraunt\\ConceirgeDinning.Adapter.USRestaraunt.csproj"
             },
-            "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.Zomato\\ConceirgeDinning.Adapter.Zomato.csproj": {
-              "projectPath": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.Zomato\\ConceirgeDinning.Adapter.Zomato.csproj"
+            "C:\\Users\\csingh\\Desktop\\hololo\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.Zomato\\ConceirgeDinning.Adapter.Zomato.csproj": {
+              "projectPath": "C:\\Users\\csingh\\Desktop\\hololo\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.Zomato\\ConceirgeDinning.Adapter.Zomato.csproj"
             },
-            "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Core.Models.csproj": {
-              "projectPath": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Core.Models.csproj"
+            "C:\\Users\\csingh\\Desktop\\hololo\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Core.Models.csproj": {
+              "projectPath": "C:\\Users\\csingh\\Desktop\\hololo\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Core.Models.csproj"
             },
-            "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.ServicesImplementation\\ConceirgeDinning.Core.ServicesImplementation.csproj": {
-              "projectPath": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.ServicesImplementation\\ConceirgeDinning.Core.ServicesImplementation.csproj"
+            "C:\\Users\\csingh\\Desktop\\hololo\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.ServicesImplementation\\ConceirgeDinning.Core.ServicesImplementation.csproj": {
+              "projectPath": "C:\\Users\\csingh\\Desktop\\hololo\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.ServicesImplementation\\ConceirgeDinning.Core.ServicesImplementation.csproj"
             },
-            "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceiseDinning.Services\\ConceirgeDinning.Services.csproj": {
-              "projectPath": "C:\\dev\\Training Project\\VDefyn-ConceirgeDinning-Api\\ConceiseDinning.Services\\ConceirgeDinning.Services.csproj"
+            "C:\\Users\\csingh\\Desktop\\hololo\\VDefyn-ConceirgeDinning-Api\\ConceiseDinning.Services\\ConceirgeDinning.Services.csproj": {
+              "projectPath": "C:\\Users\\csingh\\Desktop\\hololo\\VDefyn-ConceirgeDinning-Api\\ConceiseDinning.Services\\ConceirgeDinning.Services.csproj"
             }
           }
         }

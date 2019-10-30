@@ -27,15 +27,19 @@ namespace ConceirgeDinning.Core.ServicesImplementation
            
             ZomatoRestarauntByLocalityFetcher zomatoRestaurantList = new ZomatoRestarauntByLocalityFetcher();
             USRestarauntByLocalityFetcher usRestaurantList = new USRestarauntByLocalityFetcher();
-            Task<List<Restaurant>> fetchFromZomato = Task<List<Restaurant>>.Run(() => zomatoRestaurantList.FetchRestarauntDetails(coordinates));
-            Task<List<Restaurant>> fetchFromUS = Task<List<Restaurant>>.Run(() => usRestaurantList.FetchRestarauntDetails(coordinates));
-            Task[] searchTasks = { fetchFromUS, fetchFromZomato };
-            Task.WaitAll(searchTasks);
-            var zomatoResults = fetchFromZomato.Result;
-            var usRestaurantResults = fetchFromUS.Result;
-            zomatoResults.AddRange(usRestaurantResults);
+            //Task<List<Restaurant>> fetchFromZomato = Task<List<Restaurant>>.Run(() => zomatoRestaurantList.FetchRestarauntDetails(coordinates));
+            //Task<List<Restaurant>> fetchFromUS = Task<List<Restaurant>>.Run(() => usRestaurantList.FetchRestarauntDetails(coordinates));
+            //Task[] searchTasks = { fetchFromUS, fetchFromZomato };
+            //Task.WaitAll(searchTasks);
+
+           var fetchFromZomato = zomatoRestaurantList.FetchRestarauntDetails(coordinates);
+            var fetchFromUS = usRestaurantList.FetchRestarauntDetails(coordinates);
+            //var zomatoResults = fetchFromZomato.Result;
+            //var usRestaurantResults = fetchFromUS.Result;
+            //zomatoResults.AddRange(usRestaurantResults);
+            fetchFromZomato.AddRange(fetchFromUS);
             
-            return zomatoResults;
+            return fetchFromZomato;
         }
 
     }
