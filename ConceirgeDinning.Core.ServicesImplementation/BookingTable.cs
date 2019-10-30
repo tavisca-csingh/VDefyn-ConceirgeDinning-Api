@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using ConceirgeDinning.Adapter.Zomato.Translator;
 using ConceirgeDinning.Adapter.USRestaraunt.Translator;
 using System.Threading.Tasks;
+using ConceirgeDinning.Adapter.Geocoder.xyz.Models;
 
 namespace ConceirgeDinning.Core.ServicesImplementation
 {
@@ -27,19 +28,18 @@ namespace ConceirgeDinning.Core.ServicesImplementation
            
             ZomatoRestarauntAdapter zomatoRestaurantList = new ZomatoRestarauntAdapter();
             USRestarauntAdapter usRestaurantList = new USRestarauntAdapter();
-            //Task<List<Restaurant>> fetchFromZomato = Task<List<Restaurant>>.Run(() => zomatoRestaurantList.FetchRestarauntDetails(coordinates));
-            //Task<List<Restaurant>> fetchFromUS = Task<List<Restaurant>>.Run(() => usRestaurantList.FetchRestarauntDetails(coordinates));
-            //Task[] searchTasks = { fetchFromUS, fetchFromZomato };
-            //Task.WaitAll(searchTasks);
+            Task<List<Restaurant>> fetchFromZomato = Task<List<Restaurant>>.Run(() => zomatoRestaurantList.FetchRestarauntDetails(coordinates));
+            Task<List<Restaurant>> fetchFromUS = Task<List<Restaurant>>.Run(() => usRestaurantList.FetchRestarauntDetails(coordinates));
+            Task[] searchTasks = { fetchFromUS, fetchFromZomato };
+            Task.WaitAll(searchTasks);
 
-           var fetchFromZomato = zomatoRestaurantList.FetchRestarauntDetails(coordinates);
-            var fetchFromUS = usRestaurantList.FetchRestarauntDetails(coordinates);
-            //var zomatoResults = fetchFromZomato.Result;
-            //var usRestaurantResults = fetchFromUS.Result;
-            //zomatoResults.AddRange(usRestaurantResults);
-            fetchFromZomato.AddRange(fetchFromUS);
+           
+            var zomatoResults = fetchFromZomato.Result;
+            var usRestaurantResults = fetchFromUS.Result;
+            zomatoResults.AddRange(usRestaurantResults);
             
-            return fetchFromZomato;
+            
+            return zomatoResults;
         }
 
     }
