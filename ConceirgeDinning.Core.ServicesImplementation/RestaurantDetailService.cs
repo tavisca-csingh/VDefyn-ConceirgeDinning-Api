@@ -12,7 +12,7 @@ namespace ConceirgeDinning.Core.ServicesImplementation
         {
             RestaurantDetailServiceFactory Factory = new RestaurantDetailServiceFactory();
            
-            IRestaurantDetailService RestaurantDetailService = Factory.GetRestaurantDetailService(supplierName);
+            IFetchRestaurantDetails RestaurantDetailService = Factory.GetRestaurantDetailService(supplierName);
             if (RestaurantDetailService == null)
                 return null;
             else

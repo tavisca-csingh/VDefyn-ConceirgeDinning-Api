@@ -11,22 +11,22 @@ namespace ConceirgeDinning.Core.ServicesImplementation
 {
     public class BookingTable:IBookTable
     {
-        List<IRestaurantByLocalityFetcher> restaurantByLocalityFetchers = new List<IRestaurantByLocalityFetcher>()
+        List<IFetchRestaurant> restaurantByLocalityFetchers = new List<IFetchRestaurant>()
         {
-            new ZomatoRestarauntByLocalityFetcher(),
-            new USRestarauntByLocalityFetcher()
+            new ZomatoRestarauntAdapter(),
+            new USRestarauntAdapter()
         };
         public List<Restaurant> fetchRestarauntDetails(string locality)
         {
-            RestarauntGeocodeFetcher restarauntGeocodeFetcher = new RestarauntGeocodeFetcher();
-            var coordinates= restarauntGeocodeFetcher.FetchCordinates(locality);
+            LocalityGeocodeAdapter restarauntGeocodeFetcher = new LocalityGeocodeAdapter();
+            var coordinates= restarauntGeocodeFetcher.FetchCoordinates(locality);
             if (coordinates.CountryName is null)
                 return null;
 
 
            
-            ZomatoRestarauntByLocalityFetcher zomatoRestaurantList = new ZomatoRestarauntByLocalityFetcher();
-            USRestarauntByLocalityFetcher usRestaurantList = new USRestarauntByLocalityFetcher();
+            ZomatoRestarauntAdapter zomatoRestaurantList = new ZomatoRestarauntAdapter();
+            USRestarauntAdapter usRestaurantList = new USRestarauntAdapter();
             //Task<List<Restaurant>> fetchFromZomato = Task<List<Restaurant>>.Run(() => zomatoRestaurantList.FetchRestarauntDetails(coordinates));
             //Task<List<Restaurant>> fetchFromUS = Task<List<Restaurant>>.Run(() => usRestaurantList.FetchRestarauntDetails(coordinates));
             //Task[] searchTasks = { fetchFromUS, fetchFromZomato };

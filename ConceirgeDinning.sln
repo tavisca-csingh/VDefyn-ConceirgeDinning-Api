@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{8521F99A-CC5
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Adapter", "Adapter", "{061827A6-BA49-4296-9551-4734E40F815A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{6E28B232-C05B-428F-A9D7-CD8C6791D089}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Contracts", "Contracts", "{6E28B232-C05B-428F-A9D7-CD8C6791D089}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{A0CE9DAD-4171-4CCF-BF21-95548C6FC329}"
 EndProject
@@ -19,13 +19,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConceirgeDinning.Adapter.Ge
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConceirgeDinning.API", "ConceirgeDinning.API\ConceirgeDinning.API.csproj", "{5867FB6C-6FC8-4F39-A1CB-8FCB1C57E453}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConceirgeDinning.Core.Models", "ConceirgeDinning.Core.Models\ConceirgeDinning.Core.Models.csproj", "{83C13CFD-3ECD-4B6D-9B47-94D6E021F208}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConceirgeDinning.Contracts.Models", "ConceirgeDinning.Core.Models\ConceirgeDinning.Contracts.Models.csproj", "{83C13CFD-3ECD-4B6D-9B47-94D6E021F208}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConceirgeDinning.Core.ServicesImplementation", "ConceirgeDinning.Core.ServicesImplementation\ConceirgeDinning.Core.ServicesImplementation.csproj", "{01E9023F-236F-4D8B-82D7-47737C4D09A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConceirgeDinning.ServicesImplementation", "ConceirgeDinning.Core.ServicesImplementation\ConceirgeDinning.ServicesImplementation.csproj", "{01E9023F-236F-4D8B-82D7-47737C4D09A1}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConceirgeDinning.Services", "ConceiseDinning.Services\ConceirgeDinning.Services.csproj", "{045D5A28-69DB-4799-9BAF-3181F4721418}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConceirgeDinning.Core.ServiceImplementation.Test", "ConceirgeDinning.Core.ServiceImplementation.Test\ConceirgeDinning.Core.ServiceImplementation.Test.csproj", "{C4524B8D-1EEE-43FA-A648-90BB07295ACF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConceirgeDinning.API.Tests", "ConceirgeDinning.Core.ServiceImplementation.Test\ConceirgeDinning.API.Tests.csproj", "{C4524B8D-1EEE-43FA-A648-90BB07295ACF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,9 +75,9 @@ Global
 		{F0EA01C4-1360-4FD7-B885-21B149B0D410} = {061827A6-BA49-4296-9551-4734E40F815A}
 		{5867FB6C-6FC8-4F39-A1CB-8FCB1C57E453} = {8521F99A-CC51-45F0-83F8-89B3968F62E6}
 		{83C13CFD-3ECD-4B6D-9B47-94D6E021F208} = {6E28B232-C05B-428F-A9D7-CD8C6791D089}
-		{01E9023F-236F-4D8B-82D7-47737C4D09A1} = {6E28B232-C05B-428F-A9D7-CD8C6791D089}
-		{045D5A28-69DB-4799-9BAF-3181F4721418} = {A0CE9DAD-4171-4CCF-BF21-95548C6FC329}
-		{C4524B8D-1EEE-43FA-A648-90BB07295ACF} = {6E28B232-C05B-428F-A9D7-CD8C6791D089}
+		{01E9023F-236F-4D8B-82D7-47737C4D09A1} = {A0CE9DAD-4171-4CCF-BF21-95548C6FC329}
+		{045D5A28-69DB-4799-9BAF-3181F4721418} = {6E28B232-C05B-428F-A9D7-CD8C6791D089}
+		{C4524B8D-1EEE-43FA-A648-90BB07295ACF} = {8521F99A-CC51-45F0-83F8-89B3968F62E6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {138378C9-B37D-499B-AB20-4E8541DD5B2D}

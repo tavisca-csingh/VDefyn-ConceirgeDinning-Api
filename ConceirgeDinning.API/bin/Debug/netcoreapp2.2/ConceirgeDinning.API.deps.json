@@ -24,8 +24,8 @@
     ".NETCoreApp,Version=v2.2": {
       "ConceirgeDinning.API/1.0.0": {
         "dependencies": {
-          "ConceirgeDinning.Core.Models": "1.0.0",
-          "ConceirgeDinning.Core.ServicesImplementation": "1.0.0",
+          "ConceirgeDinning.Contracts.Models": "1.0.0",
+          "ConceirgeDinning.ServicesImplementation": "1.0.0",
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Cors": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
@@ -359,7 +359,7 @@
       },
       "ConceirgeDinning.Adapter.Geocoder.xyz/1.0.0": {
         "dependencies": {
-          "ConceirgeDinning.Core.Models": "1.0.0",
+          "ConceirgeDinning.Contracts.Models": "1.0.0",
           "ConceirgeDinning.Services": "1.0.0",
           "Microsoft.AspNetCore.Cors": "2.2.0",
           "Newtonsoft.Json": "12.0.2"
@@ -373,7 +373,7 @@
       },
       "ConceirgeDinning.Adapter.USRestaraunt/1.0.0": {
         "dependencies": {
-          "ConceirgeDinning.Core.Models": "1.0.0",
+          "ConceirgeDinning.Contracts.Models": "1.0.0",
           "ConceirgeDinning.Services": "1.0.0",
           "Microsoft.AspNetCore.Cors": "2.2.0",
           "Newtonsoft.Json": "12.0.2"
@@ -387,7 +387,7 @@
       },
       "ConceirgeDinning.Adapter.Zomato/1.0.0": {
         "dependencies": {
-          "ConceirgeDinning.Core.Models": "1.0.0",
+          "ConceirgeDinning.Contracts.Models": "1.0.0",
           "ConceirgeDinning.Services": "1.0.0",
           "Microsoft.AspNetCore.Cors": "2.2.0",
           "Newtonsoft.Json": "12.0.2"
@@ -399,37 +399,21 @@
           "ConceirgeDinning.Adapter.Zomato.dll": {}
         }
       },
-      "ConceirgeDinning.Core.Models/1.0.0": {
+      "ConceirgeDinning.Contracts.Models/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Cors": "2.2.0",
           "Newtonsoft.Json": "12.0.2"
         },
         "runtime": {
-          "ConceirgeDinning.Core.Models.dll": {}
+          "ConceirgeDinning.Contracts.Models.dll": {}
         },
         "compile": {
-          "ConceirgeDinning.Core.Models.dll": {}
-        }
-      },
-      "ConceirgeDinning.Core.ServicesImplementation/1.0.0": {
-        "dependencies": {
-          "ConceirgeDinning.Adapter.Geocoder.xyz": "1.0.0",
-          "ConceirgeDinning.Adapter.USRestaraunt": "1.0.0",
-          "ConceirgeDinning.Adapter.Zomato": "1.0.0",
-          "ConceirgeDinning.Core.Models": "1.0.0",
-          "Microsoft.AspNetCore.Cors": "2.2.0",
-          "Newtonsoft.Json": "12.0.2"
-        },
-        "runtime": {
-          "ConceirgeDinning.Core.ServicesImplementation.dll": {}
-        },
-        "compile": {
-          "ConceirgeDinning.Core.ServicesImplementation.dll": {}
+          "ConceirgeDinning.Contracts.Models.dll": {}
         }
       },
       "ConceirgeDinning.Services/1.0.0": {
         "dependencies": {
-          "ConceirgeDinning.Core.Models": "1.0.0",
+          "ConceirgeDinning.Contracts.Models": "1.0.0",
           "Microsoft.AspNetCore.Cors": "2.2.0",
           "Newtonsoft.Json": "12.0.2"
         },
@@ -438,6 +422,22 @@
         },
         "compile": {
           "ConceirgeDinning.Services.dll": {}
+        }
+      },
+      "ConceirgeDinning.ServicesImplementation/1.0.0": {
+        "dependencies": {
+          "ConceirgeDinning.Adapter.Geocoder.xyz": "1.0.0",
+          "ConceirgeDinning.Adapter.USRestaraunt": "1.0.0",
+          "ConceirgeDinning.Adapter.Zomato": "1.0.0",
+          "ConceirgeDinning.Contracts.Models": "1.0.0",
+          "Microsoft.AspNetCore.Cors": "2.2.0",
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "runtime": {
+          "ConceirgeDinning.ServicesImplementation.dll": {}
+        },
+        "compile": {
+          "ConceirgeDinning.ServicesImplementation.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -3784,17 +3784,17 @@
       "serviceable": false,
       "sha512": ""
     },
-    "ConceirgeDinning.Core.Models/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "ConceirgeDinning.Core.ServicesImplementation/1.0.0": {
+    "ConceirgeDinning.Contracts.Models/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
     "ConceirgeDinning.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ConceirgeDinning.ServicesImplementation/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

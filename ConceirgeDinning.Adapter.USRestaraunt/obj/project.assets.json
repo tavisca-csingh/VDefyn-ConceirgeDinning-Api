@@ -400,7 +400,7 @@
           "lib/netstandard2.0/System.Text.Encodings.Web.dll": {}
         }
       },
-      "ConceirgeDinning.Core.Models/1.0.0": {
+      "ConceirgeDinning.Contracts.Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
@@ -408,17 +408,17 @@
           "Newtonsoft.Json": "12.0.2"
         },
         "compile": {
-          "bin/placeholder/ConceirgeDinning.Core.Models.dll": {}
+          "bin/placeholder/ConceirgeDinning.Contracts.Models.dll": {}
         },
         "runtime": {
-          "bin/placeholder/ConceirgeDinning.Core.Models.dll": {}
+          "bin/placeholder/ConceirgeDinning.Contracts.Models.dll": {}
         }
       },
       "ConceirgeDinning.Services/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
-          "ConceirgeDinning.Core.Models": "1.0.0",
+          "ConceirgeDinning.Contracts.Models": "1.0.0",
           "Microsoft.AspNetCore.Cors": "2.2.0",
           "Newtonsoft.Json": "12.0.2"
         },
@@ -1260,10 +1260,10 @@
         "version.txt"
       ]
     },
-    "ConceirgeDinning.Core.Models/1.0.0": {
+    "ConceirgeDinning.Contracts.Models/1.0.0": {
       "type": "project",
-      "path": "../ConceirgeDinning.Core.Models/ConceirgeDinning.Core.Models.csproj",
-      "msbuildProject": "../ConceirgeDinning.Core.Models/ConceirgeDinning.Core.Models.csproj"
+      "path": "../ConceirgeDinning.Core.Models/ConceirgeDinning.Contracts.Models.csproj",
+      "msbuildProject": "../ConceirgeDinning.Core.Models/ConceirgeDinning.Contracts.Models.csproj"
     },
     "ConceirgeDinning.Services/1.0.0": {
       "type": "project",
@@ -1273,7 +1273,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
-      "ConceirgeDinning.Core.Models >= 1.0.0",
+      "ConceirgeDinning.Contracts.Models >= 1.0.0",
       "ConceirgeDinning.Services >= 1.0.0",
       "Microsoft.AspNetCore.Cors >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
@@ -1310,8 +1310,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\csingh\\Desktop\\hololo\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Core.Models.csproj": {
-              "projectPath": "C:\\Users\\csingh\\Desktop\\hololo\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Core.Models.csproj"
+            "C:\\Users\\csingh\\Desktop\\hololo\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Contracts.Models.csproj": {
+              "projectPath": "C:\\Users\\csingh\\Desktop\\hololo\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Contracts.Models.csproj"
             },
             "C:\\Users\\csingh\\Desktop\\hololo\\VDefyn-ConceirgeDinning-Api\\ConceiseDinning.Services\\ConceirgeDinning.Services.csproj": {
               "projectPath": "C:\\Users\\csingh\\Desktop\\hololo\\VDefyn-ConceirgeDinning-Api\\ConceiseDinning.Services\\ConceirgeDinning.Services.csproj"
