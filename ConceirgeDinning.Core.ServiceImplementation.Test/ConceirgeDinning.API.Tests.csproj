@@ -18,7 +18,7 @@
     <ProjectReference Include="..\ConceirgeDinning.Adapter.Zomato\ConceirgeDinning.Adapter.Zomato.csproj" />
     <ProjectReference Include="..\ConceirgeDinning.Core.Models\ConceirgeDinning.Contracts.Models.csproj" />
     <ProjectReference Include="..\ConceirgeDinning.Core.ServicesImplementation\ConceirgeDinning.ServicesImplementation.csproj" />
-    <ProjectReference Include="..\ConceiseDinning.Services\ConceirgeDinning.Services.csproj" />
+    <ProjectReference Include="..\ConceiseDinning.Services\ConceirgeDinningContracts.Services.csproj" />
   </ItemGroup>
 
 </Project>

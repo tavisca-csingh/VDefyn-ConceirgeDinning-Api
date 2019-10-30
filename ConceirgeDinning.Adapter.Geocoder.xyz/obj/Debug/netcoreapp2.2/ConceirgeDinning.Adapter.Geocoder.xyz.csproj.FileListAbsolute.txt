@@ -29,8 +29,6 @@ C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Geo
 C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Geocoder.xyz\bin\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.Geocoder.xyz.deps.json
 C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Geocoder.xyz\bin\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.Geocoder.xyz.dll
 C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Geocoder.xyz\bin\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.Geocoder.xyz.pdb
-C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Geocoder.xyz\bin\Debug\netcoreapp2.2\ConceirgeDinning.Services.dll
-C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Geocoder.xyz\bin\Debug\netcoreapp2.2\ConceirgeDinning.Services.pdb
 C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Geocoder.xyz\obj\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.Geocoder.xyz.csprojAssemblyReference.cache
 C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Geocoder.xyz\obj\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.Geocoder.xyz.AssemblyInfoInputs.cache
 C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Geocoder.xyz\obj\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.Geocoder.xyz.AssemblyInfo.cs
@@ -40,3 +38,5 @@ C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adap
 C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Geocoder.xyz\obj\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.Geocoder.xyz.csproj.CoreCompileInputs.cache
 C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Geocoder.xyz\bin\Debug\netcoreapp2.2\ConceirgeDinning.Contracts.Models.dll
 C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Geocoder.xyz\bin\Debug\netcoreapp2.2\ConceirgeDinning.Contracts.Models.pdb
+C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Geocoder.xyz\bin\Debug\netcoreapp2.2\ConceirgeDinningContracts.Services.dll
+C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Geocoder.xyz\bin\Debug\netcoreapp2.2\ConceirgeDinningContracts.Services.pdb

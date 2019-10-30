@@ -405,7 +405,7 @@
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
           "ConceirgeDinning.Contracts.Models": "1.0.0",
-          "ConceirgeDinning.Services": "1.0.0",
+          "ConceirgeDinningContracts.Services": "1.0.0",
           "Microsoft.AspNetCore.Cors": "2.2.0",
           "Newtonsoft.Json": "12.0.2"
         },
@@ -421,7 +421,7 @@
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
           "ConceirgeDinning.Contracts.Models": "1.0.0",
-          "ConceirgeDinning.Services": "1.0.0",
+          "ConceirgeDinningContracts.Services": "1.0.0",
           "Microsoft.AspNetCore.Cors": "2.2.0",
           "Newtonsoft.Json": "12.0.2"
         },
@@ -437,7 +437,7 @@
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
           "ConceirgeDinning.Contracts.Models": "1.0.0",
-          "ConceirgeDinning.Services": "1.0.0",
+          "ConceirgeDinningContracts.Services": "1.0.0",
           "Microsoft.AspNetCore.Cors": "2.2.0",
           "Newtonsoft.Json": "12.0.2"
         },
@@ -462,7 +462,7 @@
           "bin/placeholder/ConceirgeDinning.Contracts.Models.dll": {}
         }
       },
-      "ConceirgeDinning.Services/1.0.0": {
+      "ConceirgeDinningContracts.Services/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
@@ -471,10 +471,10 @@
           "Newtonsoft.Json": "12.0.2"
         },
         "compile": {
-          "bin/placeholder/ConceirgeDinning.Services.dll": {}
+          "bin/placeholder/ConceirgeDinningContracts.Services.dll": {}
         },
         "runtime": {
-          "bin/placeholder/ConceirgeDinning.Services.dll": {}
+          "bin/placeholder/ConceirgeDinningContracts.Services.dll": {}
         }
       }
     }
@@ -1328,10 +1328,10 @@
       "path": "../ConceirgeDinning.Core.Models/ConceirgeDinning.Contracts.Models.csproj",
       "msbuildProject": "../ConceirgeDinning.Core.Models/ConceirgeDinning.Contracts.Models.csproj"
     },
-    "ConceirgeDinning.Services/1.0.0": {
+    "ConceirgeDinningContracts.Services/1.0.0": {
       "type": "project",
-      "path": "../ConceiseDinning.Services/ConceirgeDinning.Services.csproj",
-      "msbuildProject": "../ConceiseDinning.Services/ConceirgeDinning.Services.csproj"
+      "path": "../ConceiseDinning.Services/ConceirgeDinningContracts.Services.csproj",
+      "msbuildProject": "../ConceiseDinning.Services/ConceirgeDinningContracts.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {

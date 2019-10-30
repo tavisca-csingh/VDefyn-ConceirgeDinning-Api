@@ -9,7 +9,7 @@
       "ConceirgeDinning.Adapter.Geocoder.xyz/1.0.0": {
         "dependencies": {
           "ConceirgeDinning.Contracts.Models": "1.0.0",
-          "ConceirgeDinning.Services": "1.0.0",
+          "ConceirgeDinningContracts.Services": "1.0.0",
           "Microsoft.AspNetCore.Cors": "2.2.0",
           "Newtonsoft.Json": "12.0.2"
         },
@@ -180,14 +180,14 @@
           "ConceirgeDinning.Contracts.Models.dll": {}
         }
       },
-      "ConceirgeDinning.Services/1.0.0": {
+      "ConceirgeDinningContracts.Services/1.0.0": {
         "dependencies": {
           "ConceirgeDinning.Contracts.Models": "1.0.0",
           "Microsoft.AspNetCore.Cors": "2.2.0",
           "Newtonsoft.Json": "12.0.2"
         },
         "runtime": {
-          "ConceirgeDinning.Services.dll": {}
+          "ConceirgeDinningContracts.Services.dll": {}
         }
       }
     }
@@ -322,7 +322,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "ConceirgeDinning.Services/1.0.0": {
+    "ConceirgeDinningContracts.Services/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

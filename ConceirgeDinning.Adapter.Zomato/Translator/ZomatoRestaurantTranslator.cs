@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ConceirgeDinning.Adapter.Zomato.Translator
 {
-    class ZomatoRestaurantTranslator
+    public static class ZomatoRestaurantTranslator
     {
         public static List<Restaurant> TranslateToRestaurant(Models.SearchResponse response)
         {
@@ -16,7 +16,7 @@ namespace ConceirgeDinning.Adapter.Zomato.Translator
                 responseObject.Add(new Restaurant()
                 {
                     SupplierName = "Zomato",
-                    RestaurantId = Convert.ToInt32(restaurant.restaurant.id),
+                    RestaurantId =Convert.ToInt32(restaurant.restaurant.R.res_id),
                     RestaurantName = restaurant.restaurant.name,
                     LocalityVerbose = restaurant.restaurant.location.locality_verbose,
                     User_Rating = restaurant.restaurant.user_rating.aggregate_rating,
@@ -34,6 +34,6 @@ namespace ConceirgeDinning.Adapter.Zomato.Translator
             return cuisinesList;
         }
 
-        
+
     }
 }

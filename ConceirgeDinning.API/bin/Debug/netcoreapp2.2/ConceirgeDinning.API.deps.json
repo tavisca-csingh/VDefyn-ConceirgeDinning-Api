@@ -360,7 +360,7 @@
       "ConceirgeDinning.Adapter.Geocoder.xyz/1.0.0": {
         "dependencies": {
           "ConceirgeDinning.Contracts.Models": "1.0.0",
-          "ConceirgeDinning.Services": "1.0.0",
+          "ConceirgeDinningContracts.Services": "1.0.0",
           "Microsoft.AspNetCore.Cors": "2.2.0",
           "Newtonsoft.Json": "12.0.2"
         },
@@ -374,7 +374,7 @@
       "ConceirgeDinning.Adapter.USRestaraunt/1.0.0": {
         "dependencies": {
           "ConceirgeDinning.Contracts.Models": "1.0.0",
-          "ConceirgeDinning.Services": "1.0.0",
+          "ConceirgeDinningContracts.Services": "1.0.0",
           "Microsoft.AspNetCore.Cors": "2.2.0",
           "Newtonsoft.Json": "12.0.2"
         },
@@ -388,7 +388,7 @@
       "ConceirgeDinning.Adapter.Zomato/1.0.0": {
         "dependencies": {
           "ConceirgeDinning.Contracts.Models": "1.0.0",
-          "ConceirgeDinning.Services": "1.0.0",
+          "ConceirgeDinningContracts.Services": "1.0.0",
           "Microsoft.AspNetCore.Cors": "2.2.0",
           "Newtonsoft.Json": "12.0.2"
         },
@@ -411,19 +411,6 @@
           "ConceirgeDinning.Contracts.Models.dll": {}
         }
       },
-      "ConceirgeDinning.Services/1.0.0": {
-        "dependencies": {
-          "ConceirgeDinning.Contracts.Models": "1.0.0",
-          "Microsoft.AspNetCore.Cors": "2.2.0",
-          "Newtonsoft.Json": "12.0.2"
-        },
-        "runtime": {
-          "ConceirgeDinning.Services.dll": {}
-        },
-        "compile": {
-          "ConceirgeDinning.Services.dll": {}
-        }
-      },
       "ConceirgeDinning.ServicesImplementation/1.0.0": {
         "dependencies": {
           "ConceirgeDinning.Adapter.Geocoder.xyz": "1.0.0",
@@ -438,6 +425,19 @@
         },
         "compile": {
           "ConceirgeDinning.ServicesImplementation.dll": {}
+        }
+      },
+      "ConceirgeDinningContracts.Services/1.0.0": {
+        "dependencies": {
+          "ConceirgeDinning.Contracts.Models": "1.0.0",
+          "Microsoft.AspNetCore.Cors": "2.2.0",
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "runtime": {
+          "ConceirgeDinningContracts.Services.dll": {}
+        },
+        "compile": {
+          "ConceirgeDinningContracts.Services.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -3789,12 +3789,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "ConceirgeDinning.Services/1.0.0": {
+    "ConceirgeDinning.ServicesImplementation/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "ConceirgeDinning.ServicesImplementation/1.0.0": {
+    "ConceirgeDinningContracts.Services/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

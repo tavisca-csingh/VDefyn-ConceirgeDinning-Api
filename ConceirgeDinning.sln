@@ -23,7 +23,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConceirgeDinning.Contracts.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConceirgeDinning.ServicesImplementation", "ConceirgeDinning.Core.ServicesImplementation\ConceirgeDinning.ServicesImplementation.csproj", "{01E9023F-236F-4D8B-82D7-47737C4D09A1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConceirgeDinning.Services", "ConceiseDinning.Services\ConceirgeDinning.Services.csproj", "{045D5A28-69DB-4799-9BAF-3181F4721418}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConceirgeDinningContracts.Services", "ConceiseDinning.Services\ConceirgeDinningContracts.Services.csproj", "{045D5A28-69DB-4799-9BAF-3181F4721418}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConceirgeDinning.API.Tests", "ConceirgeDinning.Core.ServiceImplementation.Test\ConceirgeDinning.API.Tests.csproj", "{C4524B8D-1EEE-43FA-A648-90BB07295ACF}"
 EndProject
