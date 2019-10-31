@@ -21,7 +21,7 @@ namespace ConceirgeDinning.Core.ServicesImplementation
         {
             LocalityGeocodeAdapter restarauntGeocodeFetcher = new LocalityGeocodeAdapter();
             var coordinates= restarauntGeocodeFetcher.FetchCoordinates(locality);
-            if (coordinates.CountryName is null)
+            if (coordinates is null)
                 return null;
 
 

@@ -12,7 +12,7 @@ namespace ConceirgeDinning.Adapter.Geocoder.xyz.Translator
 {
     public class LocalityGeocodeAdapter : IFetchGeocode
     {
-       public LocalityGeocode FetchCoordinates(string locality)
+        public LocalityGeocode FetchCoordinates(string locality)
         {
             string ApiUrl = "https://geocode.xyz/?locate=";
             var request = System.Net.WebRequest.Create(ApiUrl + locality + "&json=1");
@@ -26,16 +26,20 @@ namespace ConceirgeDinning.Adapter.Geocoder.xyz.Translator
                 {
                     var reader = new StreamReader(stream, System.Text.Encoding.UTF8);
                     var result = reader.ReadToEnd();
+                    try
+                    {
+                        var jobject = JsonConvert.DeserializeObject<LocalityVerboseGeocode>(result);
+                        var searchResults = LocalityGeocodeTranslator.GetLatLong(jobject);
+                        return searchResults;
+                    }
 
-                    var jobject = JsonConvert.DeserializeObject<LocalityVerboseGeocode>(result);
-
-
-                    var searchResults =LocalityGeocodeTranslator.GetLatLong(jobject);
-                    return searchResults;
+                    catch(Exception ex)
+                    {
+                        return null;
+                    }
+                    
                 }
             }
-
-           
         }
     }
 }

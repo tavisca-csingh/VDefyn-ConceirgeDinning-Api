@@ -11,15 +11,10 @@ namespace ConceirgeDinning.Adapter.Geocoder.xyz.Translator
         public static LocalityGeocode GetLatLong(LocalityVerboseGeocode reply)
         {
             LocalityGeocode localityGeocode = new LocalityGeocode();
-            if (reply.latt != null)
-            {
-                localityGeocode.Latitude = reply.latt;
-                localityGeocode.Latitude = reply.longt;
-                localityGeocode.CountryName = reply.standard.countryname;
-                return localityGeocode;
-            }
+            localityGeocode.Latitude = reply.latt;
+            localityGeocode.Longitude = reply.longt;
+            localityGeocode.CountryName = reply.standard.countryname;
             return localityGeocode;
-
         }
     }
 }

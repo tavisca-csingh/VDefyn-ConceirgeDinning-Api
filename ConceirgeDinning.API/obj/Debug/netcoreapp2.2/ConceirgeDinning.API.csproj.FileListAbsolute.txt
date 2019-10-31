@@ -74,6 +74,6 @@ C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.API\
 C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.API\bin\Debug\netcoreapp2.2\ConceirgeDinning.ServicesImplementation.dll
 C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.API\bin\Debug\netcoreapp2.2\ConceirgeDinning.Contracts.Models.pdb
 C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.API\bin\Debug\netcoreapp2.2\ConceirgeDinning.ServicesImplementation.pdb
-C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.API\obj\Debug\netcoreapp2.2\ConceirgeDinning.API.csproj.CoreCompileInputs.cache
 C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.API\bin\Debug\netcoreapp2.2\ConceirgeDinningContracts.Services.dll
 C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.API\bin\Debug\netcoreapp2.2\ConceirgeDinningContracts.Services.pdb
+C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.API\obj\Debug\netcoreapp2.2\ConceirgeDinning.API.csproj.CoreCompileInputs.cache
