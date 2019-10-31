@@ -27,6 +27,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConceirgeDinningContracts.S
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConceirgeDinning.API.Tests", "ConceirgeDinning.Core.ServiceImplementation.Test\ConceirgeDinning.API.Tests.csproj", "{C4524B8D-1EEE-43FA-A648-90BB07295ACF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{5A094FFA-D402-4A89-AC3C-E3F52137D0E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

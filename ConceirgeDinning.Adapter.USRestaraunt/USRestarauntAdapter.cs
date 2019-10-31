@@ -12,17 +12,17 @@ namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
 {
     public class USRestarauntAdapter : IFetchRestaurant
     {
-        public List<Restaurant> FetchRestarauntDetails(LocalityGeocode locality)
+        public List<Restaurant> FetchRestarauntDetails(string latitude,string longitude)
         {
             string ApiUri = @"https://us-restaurant-menus.p.rapidapi.com/restaurants/search?distance=2";
-            var request = System.Net.WebRequest.Create(ApiUri + "&lat=" + locality.Latitude + "&lon=" + locality.Longitude);
+            var request = System.Net.WebRequest.Create(ApiUri + "&lat=" + latitude + "&lon=" + longitude);
             request.Method = "GET";
             request.Headers.Add("X-RapidAPI-Host", "us-restaurant-menus.p.rapidapi.com");
             request.Headers.Add("X-RapidAPI-Key", "01545b0594mshdb9591ceda3d162p1716b7jsn43e523b10b95");
 
             request.ContentType = "application/json";
 
-
+            
             using (var response = request.GetResponse())
             {
                 using (var stream = response.GetResponseStream())
@@ -32,7 +32,6 @@ namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
 
                     Models.SearchResponse Response = JsonConvert.DeserializeObject<Models.SearchResponse>(result);
                     
-
                     var searchResults = USReataurantTranslator.TranslateToRestaurant(Response);
                     return searchResults;
                 }

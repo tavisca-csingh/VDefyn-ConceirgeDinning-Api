@@ -14,13 +14,16 @@ namespace ConceirgeDinning.API.Controllers
     public class RestaurantController : ControllerBase
     {
         [HttpGet]
-        public ActionResult<List<Restaurant>> GetGeoCode(string locality)
+        public ActionResult<List<Restaurant>> GetRestaurants(string locality, string latitude, string longitude)
         {
             BookingTable Fetch = new BookingTable();
-            var response= Fetch.fetchRestarauntDetails(locality);
+            var response = Fetch.fetchRestarauntDetails(locality,latitude,longitude);
             if (response == null)
                 return Ok(StatusCodes.Status404NotFound);
             return response;
+
         }
+
+
     }
 }

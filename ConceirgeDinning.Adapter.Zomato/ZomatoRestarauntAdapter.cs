@@ -13,10 +13,10 @@ namespace ConceirgeDinning.Adapter.Zomato.Translator
 {
     public class ZomatoRestarauntAdapter:IFetchRestaurant
     {
-        public List<Restaurant> FetchRestarauntDetails(LocalityGeocode locality)
+        public List<Restaurant> FetchRestarauntDetails(string latitude,string longitude)
         {
             string ApiUri = @"https://developers.zomato.com/api/v2.1/search?count=10&category=2&radius=1500&sort=real_distance";
-            var request = System.Net.WebRequest.Create(ApiUri + "&lat=" + locality.Latitude + "&lon=" + locality.Longitude);
+            var request = System.Net.WebRequest.Create(ApiUri + "&lat=" +latitude + "&lon=" +longitude);
             request.Method = "GET";
             request.Headers.Add("user-key", "3d95592a1bf9c01986d17292db075163");
 

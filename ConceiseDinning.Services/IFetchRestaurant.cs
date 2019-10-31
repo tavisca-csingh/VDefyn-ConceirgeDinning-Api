@@ -7,6 +7,6 @@ namespace ConceirgeDinning.Services
 {
     public interface IFetchRestaurant
     {
-        List<Restaurant> FetchRestarauntDetails(LocalityGeocode locality);
+        List<Restaurant> FetchRestarauntDetails(string latitude,string longitude);
     }
 }
