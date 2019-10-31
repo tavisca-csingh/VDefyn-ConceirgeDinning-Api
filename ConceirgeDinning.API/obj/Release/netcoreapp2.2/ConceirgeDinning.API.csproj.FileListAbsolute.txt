@@ -25,3 +25,30 @@ C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.API\obj\Rel
 C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.API\obj\Release\netcoreapp2.2\ConceirgeDinning.API.csproj.CopyComplete
 C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.API\obj\Release\netcoreapp2.2\ConceirgeDinning.API.dll
 C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.API\obj\Release\netcoreapp2.2\ConceirgeDinning.API.pdb
+C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.API\bin\Release\netcoreapp2.2\ConceirgeDinning.API.deps.json
+C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.API\bin\Release\netcoreapp2.2\ConceirgeDinning.API.runtimeconfig.json
+C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.API\bin\Release\netcoreapp2.2\ConceirgeDinning.API.runtimeconfig.dev.json
+C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.API\bin\Release\netcoreapp2.2\ConceirgeDinning.API.dll
+C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.API\bin\Release\netcoreapp2.2\ConceirgeDinning.API.pdb
+C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.API\bin\Release\netcoreapp2.2\ConceirgeDinning.Adapter.Geocoder.xyz.dll
+C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.API\bin\Release\netcoreapp2.2\ConceirgeDinning.Adapter.USRestaraunt.dll
+C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.API\bin\Release\netcoreapp2.2\ConceirgeDinning.Adapter.Zomato.dll
+C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.API\bin\Release\netcoreapp2.2\ConceirgeDinning.Contracts.Models.dll
+C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.API\bin\Release\netcoreapp2.2\ConceirgeDinning.ServicesImplementation.dll
+C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.API\bin\Release\netcoreapp2.2\ConceirgeDinningContracts.Services.dll
+C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.API\bin\Release\netcoreapp2.2\ConceirgeDinning.Contracts.Models.pdb
+C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.API\bin\Release\netcoreapp2.2\ConceirgeDinning.ServicesImplementation.pdb
+C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.API\bin\Release\netcoreapp2.2\ConceirgeDinning.Adapter.Geocoder.xyz.pdb
+C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.API\bin\Release\netcoreapp2.2\ConceirgeDinning.Adapter.USRestaraunt.pdb
+C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.API\bin\Release\netcoreapp2.2\ConceirgeDinning.Adapter.Zomato.pdb
+C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.API\bin\Release\netcoreapp2.2\ConceirgeDinningContracts.Services.pdb
+C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.API\obj\Release\netcoreapp2.2\ConceirgeDinning.API.csprojAssemblyReference.cache
+C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.API\obj\Release\netcoreapp2.2\ConceirgeDinning.API.csproj.CoreCompileInputs.cache
+C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.API\obj\Release\netcoreapp2.2\ConceirgeDinning.API.RazorAssemblyInfo.cache
+C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.API\obj\Release\netcoreapp2.2\ConceirgeDinning.API.RazorAssemblyInfo.cs
+C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.API\obj\Release\netcoreapp2.2\ConceirgeDinning.API.AssemblyInfoInputs.cache
+C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.API\obj\Release\netcoreapp2.2\ConceirgeDinning.API.AssemblyInfo.cs
+C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.API\obj\Release\netcoreapp2.2\ConceirgeDinning.API.RazorTargetAssemblyInfo.cache
+C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.API\obj\Release\netcoreapp2.2\ConceirgeDinning.API.csproj.CopyComplete
+C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.API\obj\Release\netcoreapp2.2\ConceirgeDinning.API.dll
+C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.API\obj\Release\netcoreapp2.2\ConceirgeDinning.API.pdb

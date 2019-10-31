@@ -14,5 +14,6 @@ namespace ConceirgeDinning.Core.Models
         public string User_Rating { get; set; }
         public List<String> Cuisines { get; set; }
         public string ThumbURL { get; set; }
+        public string PricePerHead { get; set; }
     }
 }

@@ -9,13 +9,13 @@ namespace ConceirgeDinning.Core.ServicesImplementation
 {
     public class RestaurantDetailServiceFactory
     {
-        public IRestaurantDetailService GetRestaurantDetailService(string supplierName)
+        public IFetchRestaurantDetails GetRestaurantDetailService(string supplierName)
         {
 
             if (supplierName == "Zomato")
-                return new ZomatoRestaurantDetailService();
+                return new ZomatoRestaurantDetailsAdapter();
             else if (supplierName == "USRestaurant")
-                return new USRestaurantDetailService();
+                return new USRestaurantDetailsAdapter();
             else
                 return null;
         }

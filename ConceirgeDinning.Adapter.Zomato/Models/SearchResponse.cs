@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ConceirgeDinning.Adapter.Zomato.Models
 {
-    class SearchResponse
+    public class SearchResponse
     {
         public int results_found { get; set; }
         public int results_start { get; set; }

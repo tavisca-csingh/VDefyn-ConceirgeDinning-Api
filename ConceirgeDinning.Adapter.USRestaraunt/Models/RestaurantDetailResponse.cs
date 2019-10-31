@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ConceirgeDinning.Adapter.USRestaraunt.Models
 {
-    class RestaurantDetailResponse
+    public class RestaurantDetailResponse
     {
         public RestaurantDetailResult result { get; set; }
     }
