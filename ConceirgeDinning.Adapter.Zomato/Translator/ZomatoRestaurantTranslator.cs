@@ -16,13 +16,13 @@ namespace ConceirgeDinning.Adapter.Zomato.Translator
                 responseObject.Add(new Restaurant()
                 {
                     SupplierName = "Zomato",
-                    RestaurantId =Convert.ToInt32(restaurant.restaurant.R.res_id),
+                    RestaurantId = Convert.ToInt32(restaurant.restaurant.R.res_id),
                     RestaurantName = restaurant.restaurant.name,
                     LocalityVerbose = restaurant.restaurant.location.locality_verbose,
                     User_Rating = restaurant.restaurant.user_rating.aggregate_rating,
                     ThumbURL = restaurant.restaurant.thumb,
-                    Cuisines = GetCuisines(restaurant.restaurant.cuisines)
-
+                    Cuisines = GetCuisines(restaurant.restaurant.cuisines),
+                    PricePerHead = (restaurant.restaurant.average_cost_for_two/2).ToString()
                 });
 
             }

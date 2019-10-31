@@ -17,10 +17,13 @@ namespace ConceirgeDinning.API.Controllers
         public ActionResult<List<Restaurant>> GetRestaurants(string locality, string latitude, string longitude)
         {
             BookingTable Fetch = new BookingTable();
+            if (locality is null)
+                locality = string.Empty;
             var response = Fetch.fetchRestarauntDetails(locality,latitude,longitude);
             if (response == null)
                 return Ok(StatusCodes.Status404NotFound);
-            return response;
+            List<Restaurant> sortedresponse = response.OrderByDescending(o => o.User_Rating).ToList();
+            return sortedresponse;
 
         }
 
