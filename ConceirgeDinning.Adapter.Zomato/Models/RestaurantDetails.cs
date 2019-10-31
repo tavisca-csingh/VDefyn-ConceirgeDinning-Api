@@ -15,7 +15,7 @@
         public int price_range { get; set; }
         public string currency { get; set; }
         public string[] highlights { get; set; }
-        public string[] offers { get; set; }
+        public object[] offers { get; set; }
         public int opentable_support { get; set; }
         public int is_zomato_book_res { get; set; }
         public string mezzo_provider { get; set; }
