@@ -26,14 +26,14 @@ namespace ConceirgeDinning.Core.ServicesImplementation
 
            
             ZomatoRestarauntByLocalityFetcher zomatoRestaurantList = new ZomatoRestarauntByLocalityFetcher();
-            USRestarauntByLocalityFetcher usRestaurantList = new USRestarauntByLocalityFetcher();
+           // USRestarauntByLocalityFetcher usRestaurantList = new USRestarauntByLocalityFetcher();
             Task<List<Restaurant>> fetchFromZomato = Task<List<Restaurant>>.Run(() => zomatoRestaurantList.FetchRestarauntDetails(coordinates));
-            Task<List<Restaurant>> fetchFromUS = Task<List<Restaurant>>.Run(() => usRestaurantList.FetchRestarauntDetails(coordinates));
-            Task[] searchTasks = { fetchFromUS, fetchFromZomato };
+           //Task<List<Restaurant>> fetchFromUS = Task<List<Restaurant>>.Run(() => usRestaurantList.FetchRestarauntDetails(coordinates));
+            Task[] searchTasks = { fetchFromZomato };
             Task.WaitAll(searchTasks);
             var zomatoResults = fetchFromZomato.Result;
-            var usRestaurantResults = fetchFromUS.Result;
-            zomatoResults.AddRange(usRestaurantResults);
+            //var usRestaurantResults = fetchFromUS.Result;
+            //zomatoResults.AddRange(usRestaurantResults);
             
             return zomatoResults;
         }
