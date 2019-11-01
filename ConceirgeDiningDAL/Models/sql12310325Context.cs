@@ -4,13 +4,13 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace ConceirgeDiningDAL.Models
 {
-    public partial class ConciergeContext : DbContext
+    public partial class sql12310325Context : DbContext
     {
-        public ConciergeContext()
+        public sql12310325Context()
         {
         }
 
-        public ConciergeContext(DbContextOptions<ConciergeContext> options)
+        public sql12310325Context(DbContextOptions<sql12310325Context> options)
             : base(options)
         {
         }
@@ -26,7 +26,7 @@ namespace ConceirgeDiningDAL.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Server=(localdb)\\ProjectsV13;Database=Concierge;Trusted_Connection=True;");
+                optionsBuilder.UseMySQL("Server=sql12.freesqldatabase.com; Database=sql12310325; Uid=sql12310325; Pwd=wR3wJZe8VG; Port=3306;");
             }
         }
 
@@ -36,11 +36,22 @@ namespace ConceirgeDiningDAL.Models
 
             modelBuilder.Entity<Booking>(entity =>
             {
+                entity.ToTable("Booking", "sql12310325");
+
+                entity.HasIndex(e => e.RestaurantId)
+                    .HasName("restaurantId");
+
+                entity.Property(e => e.BookingId).HasColumnType("int(11)");
+
                 entity.Property(e => e.Date)
                     .HasColumnName("date")
                     .HasColumnType("date");
 
-                entity.Property(e => e.LoyaltyPoints).HasColumnName("loyaltyPoints");
+                entity.Property(e => e.LoyaltyPoints)
+                    .HasColumnName("loyaltyPoints")
+                    .HasColumnType("bigint(20)");
+
+                entity.Property(e => e.PointPricePerPerson).HasColumnType("bigint(20)");
 
                 entity.Property(e => e.RestaurantId)
                     .IsRequired()
@@ -48,7 +59,9 @@ namespace ConceirgeDiningDAL.Models
                     .HasMaxLength(255)
                     .IsUnicode(false);
 
-                entity.Property(e => e.Seats).HasColumnName("seats");
+                entity.Property(e => e.Seats)
+                    .HasColumnName("seats")
+                    .HasColumnType("int(11)");
 
                 entity.Property(e => e.Status)
                     .IsRequired()
@@ -68,61 +81,72 @@ namespace ConceirgeDiningDAL.Models
                     .WithMany(p => p.Booking)
                     .HasForeignKey(d => d.RestaurantId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Booking__restaur__336AA144");
+                    .HasConstraintName("Booking_ibfk_1");
             });
 
             modelBuilder.Entity<BookingProgress>(entity =>
             {
-                entity.HasKey(e => e.BookingProgreeId)
-                    .HasName("PK__BookingP__42F797D7002D9E3F");
+                entity.HasKey(e => e.BookingProgreeId);
 
-                entity.Property(e => e.TimeStamp)
-                    .HasColumnType("datetime")
-                    .HasDefaultValueSql("(getdate())");
+                entity.ToTable("BookingProgress", "sql12310325");
+
+                entity.HasIndex(e => e.BookingId)
+                    .HasName("BookingId");
+
+                entity.Property(e => e.BookingProgreeId).HasColumnType("int(11)");
+
+                entity.Property(e => e.BookingId).HasColumnType("int(11)");
+
+                entity.Property(e => e.TimeStamp).HasDefaultValueSql("CURRENT_TIMESTAMP");
 
                 entity.HasOne(d => d.Booking)
                     .WithMany(p => p.BookingProgress)
                     .HasForeignKey(d => d.BookingId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__BookingPr__Booki__345EC57D");
+                    .HasConstraintName("BookingProgress_ibfk_1");
             });
 
             modelBuilder.Entity<LoginInfo>(entity =>
             {
-                entity.HasKey(e => e.SessionId)
-                    .HasName("PK__LoginInf__23DB122B5B8D11FD");
+                entity.HasKey(e => e.SessionId);
 
-                entity.Property(e => e.SessionId).HasColumnName("sessionId");
+                entity.ToTable("LoginInfo", "sql12310325");
+
+                entity.Property(e => e.SessionId)
+                    .HasColumnName("sessionId")
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever();
 
                 entity.Property(e => e.Bank)
                     .IsRequired()
                     .HasColumnName("bank")
-                    .HasMaxLength(255)
+                    .HasMaxLength(256)
                     .IsUnicode(false);
 
                 entity.Property(e => e.Locale)
                     .IsRequired()
                     .HasColumnName("locale")
-                    .HasMaxLength(255)
+                    .HasMaxLength(256)
                     .IsUnicode(false);
 
-                entity.Property(e => e.LoyaltyPoints).HasColumnName("loyaltyPoints");
+                entity.Property(e => e.LoyaltyPoints)
+                    .HasColumnName("loyaltyPoints")
+                    .HasColumnType("bigint(20)");
 
-                entity.Property(e => e.Timestamp)
-                    .HasColumnType("datetime")
-                    .HasDefaultValueSql("(getdate())");
+                entity.Property(e => e.Timestamp).HasDefaultValueSql("CURRENT_TIMESTAMP");
 
                 entity.Property(e => e.UserId)
                     .IsRequired()
                     .HasColumnName("userId")
-                    .HasMaxLength(255)
+                    .HasMaxLength(256)
                     .IsUnicode(false);
             });
 
             modelBuilder.Entity<RestaurantAvailability>(entity =>
             {
-                entity.HasKey(e => new { e.RestaurantId, e.BookingDate })
-                    .HasName("PK__Restaura__FA9480A9E250DC37");
+                entity.HasKey(e => new { e.RestaurantId, e.BookingDate });
+
+                entity.ToTable("RestaurantAvailability", "sql12310325");
 
                 entity.Property(e => e.RestaurantId)
                     .HasColumnName("restaurantId")
@@ -131,17 +155,20 @@ namespace ConceirgeDiningDAL.Models
 
                 entity.Property(e => e.BookingDate).HasColumnType("date");
 
+                entity.Property(e => e.BookedSeats).HasColumnType("int(11)");
+
                 entity.HasOne(d => d.Restaurant)
                     .WithMany(p => p.RestaurantAvailability)
                     .HasForeignKey(d => d.RestaurantId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Restauran__resta__3552E9B6");
+                    .HasConstraintName("RestaurantAvailability_ibfk_1");
             });
 
             modelBuilder.Entity<RestaurantNames>(entity =>
             {
-                entity.HasKey(e => e.RestaurantId)
-                    .HasName("PK__Restaura__87454C950518E80D");
+                entity.HasKey(e => e.RestaurantId);
+
+                entity.ToTable("RestaurantNames", "sql12310325");
 
                 entity.Property(e => e.RestaurantId)
                     .HasMaxLength(255)

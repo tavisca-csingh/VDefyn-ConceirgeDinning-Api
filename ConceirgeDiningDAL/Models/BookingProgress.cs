@@ -7,7 +7,7 @@ namespace ConceirgeDiningDAL.Models
     {
         public int BookingProgreeId { get; set; }
         public int BookingId { get; set; }
-        public DateTime? TimeStamp { get; set; }
+        public DateTimeOffset TimeStamp { get; set; }
 
         public virtual Booking Booking { get; set; }
     }

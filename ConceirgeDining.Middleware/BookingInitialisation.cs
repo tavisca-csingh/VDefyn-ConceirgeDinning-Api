@@ -12,6 +12,7 @@ namespace ConceirgeDining.Middleware
         {
             BookingValidation bookingValidation = new BookingValidation();
             BookingResponse bookingResponse = new BookingResponse();
+            bookingResponse.Error = new List<string>();
             bookingResponse.BookingId = 0;
             bookingResponse.Status = "BookingInitiated";
             bookingResponse.TotalPointPrice = 0;

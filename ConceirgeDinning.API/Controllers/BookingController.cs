@@ -26,7 +26,7 @@ namespace ConceirgeDinning.API.Controllers
                 bookingResponse=bookingInitialisation.Start(noOfGuests, date, time, restaurantId, restaurantName, userName, perPersonPoints, pointBalance);
 
             }
-            if(true)
+            if (true)
             {
                 bookingResponse.NoOfGuests = noOfGuests;
                 bookingResponse.Date = date;

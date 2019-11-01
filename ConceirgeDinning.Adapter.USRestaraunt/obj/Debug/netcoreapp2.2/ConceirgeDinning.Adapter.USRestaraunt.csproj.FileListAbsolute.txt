@@ -39,3 +39,4 @@ C:\Users\vmattapalli\Documents\GitHub\VDefyn-ConceirgeDinning-Api\ConceirgeDinni
 C:\Users\vmattapalli\Documents\GitHub\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.USRestaraunt\obj\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.USRestaraunt.csproj.CopyComplete
 C:\Users\vmattapalli\Documents\GitHub\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.USRestaraunt\obj\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.USRestaraunt.dll
 C:\Users\vmattapalli\Documents\GitHub\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.USRestaraunt\obj\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.USRestaraunt.pdb
+C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.USRestaraunt\obj\Debug\netcoreapp2.2\ConceirgeDinning.Adapter.USRestaraunt.csproj.CoreCompileInputs.cache

@@ -8,7 +8,7 @@ namespace ConceirgeDinning.ServicesImplementation
 {
     public class StartBooking
     {
-        ConciergeContext conceirgeContext = new ConciergeContext();
+        sql12310325Context sql12310325Context = new sql12310325Context();
         public int AddEntryInBookingTable(int noOfGuests, DateTime date, TimeSpan time, string restaurantId, string userName, string restaurantName, long perPersonPoints, long pointBalance)
         {
             Booking booking = new Booking();
@@ -21,30 +21,30 @@ namespace ConceirgeDinning.ServicesImplementation
             booking.LoyaltyPoints = pointBalance;
             booking.PointPricePerPerson = perPersonPoints;
 
-            conceirgeContext.Booking.Add(booking);
+            sql12310325Context.Booking.Add(booking);
 
-            conceirgeContext.SaveChanges();
-            conceirgeContext.Entry(booking).GetDatabaseValues();
-            var query = conceirgeContext.Booking
+            sql12310325Context.SaveChanges();
+            sql12310325Context.Entry(booking).GetDatabaseValues();
+            var query = sql12310325Context.Booking
                        .Where(b => b.Status == "BookingInitiated" && b.UserId == userName && b.RestaurantId == restaurantId && b.Time == time && b.Date == date)
                        .Last<Booking>();
-           // conceirgeContext.Query;
+           // sql12310325Context.Query;
             return query.BookingId;
         }
         public void UpdateSeats(string restaurantId,int noOfGuests, DateTime date)
         {
             RestaurantAvailability restaurantAvailability = new RestaurantAvailability();
-            restaurantAvailability = conceirgeContext.RestaurantAvailability.Find(restaurantId,date);
+            restaurantAvailability = sql12310325Context.RestaurantAvailability.Find(restaurantId,date);
             restaurantAvailability.BookedSeats += noOfGuests;
-            conceirgeContext.SaveChanges();
+            sql12310325Context.SaveChanges();
             
         }
         public void AddEntryInProgressTable(int bookingId)
         {
             BookingProgress bookingProgress = new BookingProgress();
             bookingProgress.BookingId = bookingId;
-            conceirgeContext.BookingProgress.Add(bookingProgress);
-            conceirgeContext.SaveChanges();
+            sql12310325Context.BookingProgress.Add(bookingProgress);
+            sql12310325Context.SaveChanges();
         }
     }
 }

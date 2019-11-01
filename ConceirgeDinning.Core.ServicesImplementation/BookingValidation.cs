@@ -9,7 +9,7 @@ namespace ConceirgeDinning.ServicesImplementation
     {
         public bool CheckAvailability(int noOfGuests, DateTime date, string restaurantId,string restaurantName)
         {
-            ConciergeContext conciergeContext = new ConciergeContext();
+            sql12310325Context conciergeContext = new sql12310325Context();
             var reply=conciergeContext.RestaurantNames.Find(restaurantId);
             if (reply == null)
             {
