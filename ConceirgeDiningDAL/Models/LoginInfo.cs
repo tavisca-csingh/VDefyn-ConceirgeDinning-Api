@@ -10,6 +10,6 @@ namespace ConceirgeDiningDAL.Models
         public long LoyaltyPoints { get; set; }
         public string Bank { get; set; }
         public string Locale { get; set; }
-        public byte[] Timestamp { get; set; }
+        public DateTime Timestamp { get; set; }
     }
 }

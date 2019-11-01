@@ -68,29 +68,29 @@ namespace ConceirgeDiningDAL.Models
                     .WithMany(p => p.Booking)
                     .HasForeignKey(d => d.RestaurantId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Booking__restaur__251C81ED");
+                    .HasConstraintName("FK__Booking__restaur__336AA144");
             });
 
             modelBuilder.Entity<BookingProgress>(entity =>
             {
                 entity.HasKey(e => e.BookingProgreeId)
-                    .HasName("PK__BookingP__42F797D76A7D7E34");
+                    .HasName("PK__BookingP__42F797D7002D9E3F");
 
                 entity.Property(e => e.TimeStamp)
-                    .IsRequired()
-                    .IsRowVersion();
+                    .HasColumnType("datetime")
+                    .HasDefaultValueSql("(getdate())");
 
                 entity.HasOne(d => d.Booking)
                     .WithMany(p => p.BookingProgress)
                     .HasForeignKey(d => d.BookingId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__BookingPr__Booki__2610A626");
+                    .HasConstraintName("FK__BookingPr__Booki__345EC57D");
             });
 
             modelBuilder.Entity<LoginInfo>(entity =>
             {
                 entity.HasKey(e => e.SessionId)
-                    .HasName("PK__LoginInf__23DB122B87A68AE8");
+                    .HasName("PK__LoginInf__23DB122B5B8D11FD");
 
                 entity.Property(e => e.SessionId).HasColumnName("sessionId");
 
@@ -109,8 +109,8 @@ namespace ConceirgeDiningDAL.Models
                 entity.Property(e => e.LoyaltyPoints).HasColumnName("loyaltyPoints");
 
                 entity.Property(e => e.Timestamp)
-                    .IsRequired()
-                    .IsRowVersion();
+                    .HasColumnType("datetime")
+                    .HasDefaultValueSql("(getdate())");
 
                 entity.Property(e => e.UserId)
                     .IsRequired()
@@ -122,7 +122,7 @@ namespace ConceirgeDiningDAL.Models
             modelBuilder.Entity<RestaurantAvailability>(entity =>
             {
                 entity.HasKey(e => new { e.RestaurantId, e.BookingDate })
-                    .HasName("PK__Restaura__FA9480A9E17F949F");
+                    .HasName("PK__Restaura__FA9480A9E250DC37");
 
                 entity.Property(e => e.RestaurantId)
                     .HasColumnName("restaurantId")
@@ -135,13 +135,13 @@ namespace ConceirgeDiningDAL.Models
                     .WithMany(p => p.RestaurantAvailability)
                     .HasForeignKey(d => d.RestaurantId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Restauran__resta__2704CA5F");
+                    .HasConstraintName("FK__Restauran__resta__3552E9B6");
             });
 
             modelBuilder.Entity<RestaurantNames>(entity =>
             {
                 entity.HasKey(e => e.RestaurantId)
-                    .HasName("PK__Restaura__87454C95FB55B7BD");
+                    .HasName("PK__Restaura__87454C950518E80D");
 
                 entity.Property(e => e.RestaurantId)
                     .HasMaxLength(255)

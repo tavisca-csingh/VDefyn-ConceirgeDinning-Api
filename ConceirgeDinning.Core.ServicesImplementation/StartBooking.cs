@@ -36,6 +36,7 @@ namespace ConceirgeDinning.ServicesImplementation
             RestaurantAvailability restaurantAvailability = new RestaurantAvailability();
             restaurantAvailability = conceirgeContext.RestaurantAvailability.Find(restaurantId,date);
             restaurantAvailability.BookedSeats += noOfGuests;
+            conceirgeContext.SaveChanges();
             
         }
         public void AddEntryInProgressTable(int bookingId)
@@ -43,6 +44,7 @@ namespace ConceirgeDinning.ServicesImplementation
             BookingProgress bookingProgress = new BookingProgress();
             bookingProgress.BookingId = bookingId;
             conceirgeContext.BookingProgress.Add(bookingProgress);
+            conceirgeContext.SaveChanges();
         }
     }
 }
