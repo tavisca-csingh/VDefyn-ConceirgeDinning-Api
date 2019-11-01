@@ -23,30 +23,35 @@ namespace ConceirgeDinning.Adapter.Zomato.Translator
             request.ContentType = "application/json";
 
 
-            using (var response = request.GetResponse())
+ try
             {
-               
-                using (var stream = response.GetResponseStream())
+
+                using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
                 {
-                    var reader = new StreamReader(stream, System.Text.Encoding.UTF8);
-                    var result = reader.ReadToEnd();
+                    if (response.StatusCode == HttpStatusCode.NotFound)
+                        return null;
 
-                    Models.SearchResponse Response = JsonConvert.DeserializeObject<Models.SearchResponse>(result);
-                    
-                   
-
-                    var searchResults = SupplierModelsToUiModelsTranslator.TranslateToRestaurant(Response);
-
-
-
-
+                    using (var stream = response.GetResponseStream())
+                    {
+                        var reader = new StreamReader(stream, System.Text.Encoding.UTF8);
+                        var result = reader.ReadToEnd();
+                        Models.SearchResponse Response = JsonConvert.DeserializeObject<Models.SearchResponse>(result);
+                        var searchResults = SupplierModelsToUiModelsTranslator.TranslateToRestaurant(Response);
+                         return searchResults;
 
 
-
-                  
-                    return searchResults;
+                      
+                    }
                 }
             }
+
+            catch (System.Net.WebException ex)
+            {
+                return null;
+            }
+
+
+           
 
         }
     }
