@@ -8,7 +8,7 @@ namespace ConceirgeDining.Middleware
 {
     public class BookingInitialisation
     {
-        public BookingResponse Validate(int noOfGuests, DateTime date, string restaurantId, string restaurantName, long perPersonPoints, long pointBalance)
+        public BookingResponse Validate(int noOfGuests, DateTime date,TimeSpan time, string restaurantId, string restaurantName, long perPersonPoints, long pointBalance)
         {
             BookingValidation bookingValidation = new BookingValidation();
             BookingResponse bookingResponse = new BookingResponse();
@@ -30,6 +30,11 @@ namespace ConceirgeDining.Middleware
             {
                 bookingResponse.Status = "BookingNotInitiated";
                 bookingResponse.Error.Add("Can't book for past dates");
+            }
+            else if(!bookingValidation.CheckTime(time))
+            {
+                bookingResponse.Status = "BookingNotInitiated";
+                bookingResponse.Error.Add("Can't book for past time");
             }
             if (!bookingValidation.CheckPointAvailability(noOfGuests, perPersonPoints, pointBalance))
             {

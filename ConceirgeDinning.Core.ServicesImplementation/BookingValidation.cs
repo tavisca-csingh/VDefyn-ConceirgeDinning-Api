@@ -61,6 +61,13 @@ namespace ConceirgeDinning.ServicesImplementation
                 return true;
             return false;
         }
+        public bool CheckTime(TimeSpan time)
+        {
+            TimeSpan currentTime = DateTime.Now.TimeOfDay;
+            if (currentTime < time)
+                return true;
+            return false;
+        }
         public bool CheckPointAvailability(int noOfGuests,long perPersonPoints, long pointBalance)
         {
             long totalPointsRequired = noOfGuests * perPersonPoints;

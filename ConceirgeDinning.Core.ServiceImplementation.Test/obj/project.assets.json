@@ -4352,7 +4352,7 @@
       ]
     },
     "System.Collections.NonGeneric/4.3.0": {
-      "sha512": "VmgNKFr0f1ci4bpbS1Yk5uGBiCtrXYDeL+ozeFnq2tj26ZTTPhcL/gpzRi3mKbchWgAZae6cIfXIsMGUz+c0lw==",
+      "sha512": "prtjIEMhGUnQq6RnPEYLpFt8AtLbp9yq2zxOSrY7KJJZrw25Fi97IzBqY7iqssbM61Ek5b8f3MG/sG1N2sN5KA==",
       "type": "package",
       "path": "system.collections.nongeneric/4.3.0",
       "files": [
@@ -4390,7 +4390,7 @@
       ]
     },
     "System.Collections.Specialized/4.3.0": {
-      "sha512": "MGWtqPSv18r+ZLWRxSykrgyw40NQWR6cY3dskOTnlq1mf7RJgtypHSn5zVsJflMwZWNDOxj3CFzCSzg/58+p9w==",
+      "sha512": "Epx8PoVZR0iuOnJJDzp7pWvdfMMOAvpUo95pC4ScH2mJuXkKA2Y4aR3cG9qt2klHgSons1WFh4kcGW7cSXvrxg==",
       "type": "package",
       "path": "system.collections.specialized/4.3.0",
       "files": [
@@ -4644,7 +4644,7 @@
       ]
     },
     "System.ComponentModel.Primitives/4.3.0": {
-      "sha512": "g2pO6wNHVD87aqCGyMRXXFeZEmYtea2XNeX9Gzx+MxUwT9SA3sQgCwd1z3+HzsT55KlMamrcEWN6ZZNQ4q+c8w==",
+      "sha512": "j8GUkCpM8V4d4vhLIIoBLGey2Z5bCkMVNjEZseyAlm4n5arcsJOeI3zkUP+zvZgzsbLTYh4lYeP/ZD/gdIAPrw==",
       "type": "package",
       "path": "system.componentmodel.primitives/4.3.0",
       "files": [
@@ -4682,7 +4682,7 @@
       ]
     },
     "System.ComponentModel.TypeConverter/4.3.0": {
-      "sha512": "IHTEVXTJNtZ8Ybxwaab0x7bmh5FDWUPEsqaLVnpLYqkkO7oNbnPQEOSWkgLa4c7P5cEmNNMyXOnYLJbhWgq+QA==",
+      "sha512": "16pQ6P+EdhcXzPiEK4kbA953Fu0MNG2ovxTZU81/qsCd1zPRsKc3uif5NgvllCY598k6bI0KUyKW8fanlfaDQg==",
       "type": "package",
       "path": "system.componentmodel.typeconverter/4.3.0",
       "files": [
@@ -4896,7 +4896,7 @@
       ]
     },
     "System.Diagnostics.DiagnosticSource/4.5.0": {
-      "sha512": "Aho/7IEJWcScBeBY82d9wouDWWCh9Bs8GIlHa0i2SKsKkHHxIdGGi2yejXAW7F4HYh/gmdzYldBxUnjS0bTJQQ==",
+      "sha512": "eIHRELiYDQvsMToML81QFkXEEYXUSUT2F28t1SGrevWqP+epFdw80SyAXIKTXOHrIEXReFOEnEr7XlGiC2GgOg==",
       "type": "package",
       "path": "system.diagnostics.diagnosticsource/4.5.0",
       "files": [
@@ -4921,11 +4921,12 @@
       ]
     },
     "System.Diagnostics.Process/4.1.0": {
-      "sha512": "fcKW/l5i1cVjVx7Afr1OfBkuEX2GaIkv9BHsHjyrFsfc6dmpreYGn1qbLXEwTZvudT/cbo6unnxGGFWVHDuSFw==",
+      "sha512": "mpVZ5bnlSs3tTeJ6jYyDJEIa6tavhAd88lxq1zbYhkkCu0Pno2+gHXcvZcoygq2d8JxW3gojXqNJMTAshduqZA==",
       "type": "package",
       "path": "system.diagnostics.process/4.1.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -6814,7 +6815,7 @@
       ]
     },
     "System.Runtime.InteropServices.RuntimeInformation/4.0.0": {
-      "sha512": "/1b8Cpsl6nQBASpDB6z012NiR78c2EdgM4Z0rF+d5gT8rHT02SfEV+fE/pYim7+b7UDzZhm7lwe6Me+2eiRz/w==",
+      "sha512": "hWPhJxc453RCa8Z29O91EmfGeZIHX1ZH2A8L6lYQVSaKzku2DfArSfMEb1/MYYzPQRJZeu0c9dmYeJKxW5Fgng==",
       "type": "package",
       "path": "system.runtime.interopservices.runtimeinformation/4.0.0",
       "files": [
@@ -6847,11 +6848,12 @@
       ]
     },
     "System.Runtime.Loader/4.0.0": {
-      "sha512": "e0nAEDcmjf4gn38F+PfcUnpVyhSjU0g6jfP6Ai3QuPm+zMqvz3N1MfzHnhIHBLx+snX/bKVLwM1JLk6AZyiGxQ==",
+      "sha512": "4UN78GOVU/mbDFcXkEWtetJT/sJ0yic2gGk1HSlSpWI0TDf421xnrZTDZnwNBapk1GQeYN7U1lTj/aQB1by6ow==",
       "type": "package",
       "path": "system.runtime.loader/4.0.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/net462/_._",
@@ -7771,11 +7773,12 @@
       ]
     },
     "System.Threading.Thread/4.0.0": {
-      "sha512": "9NATiQLtbEdGT5nz7vfxf2aY2yf7KTg7DF8d/bCKVQU2rAK6KOLnU0TCjlNkPZx19kKkSGKsJ2smhlS6Ascvsg==",
+      "sha512": "gIdJqDXlOr5W9zeqFErLw3dsOsiShSCYtF9SEHitACycmvNvY8odf9kiKvp6V7aibc8C4HzzNBkWXjyfn7plbQ==",
       "type": "package",
       "path": "system.threading.thread/4.0.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -7810,7 +7813,7 @@
       ]
     },
     "System.Threading.ThreadPool/4.0.10": {
-      "sha512": "WJeRIl3Cv96J9jGxxsjeOmlM8Z4UAzSYcndXScvbOOpkyjl6EO/5lNnxflq6nXnW4d9282TcjvjN5YiWq2s7yg==",
+      "sha512": "IMXgB5Vf/5Qw1kpoVgJMOvUO1l32aC+qC3OaIZjWJOjvcxuxNWOK2ZTWWYXfij22NHxT2j1yWX5vlAeQWld9vA==",
       "type": "package",
       "path": "system.threading.threadpool/4.0.10",
       "files": [
@@ -8346,23 +8349,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\csingh\\.nuget\\packages\\": {},
+    "C:\\Users\\rparkar\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\csingh\\Desktop\\hololo\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.ServiceImplementation.Test\\ConceirgeDinning.API.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\rparkar\\Desktop\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.ServiceImplementation.Test\\ConceirgeDinning.API.Tests.csproj",
       "projectName": "ConceirgeDinning.API.Tests",
-      "projectPath": "C:\\Users\\csingh\\Desktop\\hololo\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.ServiceImplementation.Test\\ConceirgeDinning.API.Tests.csproj",
-      "packagesPath": "C:\\Users\\csingh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\csingh\\Desktop\\hololo\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.ServiceImplementation.Test\\obj\\",
+      "projectPath": "C:\\Users\\rparkar\\Desktop\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.ServiceImplementation.Test\\ConceirgeDinning.API.Tests.csproj",
+      "packagesPath": "C:\\Users\\rparkar\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\rparkar\\Desktop\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.ServiceImplementation.Test\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\csingh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rparkar\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8375,20 +8378,20 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\csingh\\Desktop\\hololo\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.USRestaraunt\\ConceirgeDinning.Adapter.USRestaraunt.csproj": {
-              "projectPath": "C:\\Users\\csingh\\Desktop\\hololo\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.USRestaraunt\\ConceirgeDinning.Adapter.USRestaraunt.csproj"
+            "C:\\Users\\rparkar\\Desktop\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.USRestaraunt\\ConceirgeDinning.Adapter.USRestaraunt.csproj": {
+              "projectPath": "C:\\Users\\rparkar\\Desktop\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.USRestaraunt\\ConceirgeDinning.Adapter.USRestaraunt.csproj"
             },
-            "C:\\Users\\csingh\\Desktop\\hololo\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.Zomato\\ConceirgeDinning.Adapter.Zomato.csproj": {
-              "projectPath": "C:\\Users\\csingh\\Desktop\\hololo\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.Zomato\\ConceirgeDinning.Adapter.Zomato.csproj"
+            "C:\\Users\\rparkar\\Desktop\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.Zomato\\ConceirgeDinning.Adapter.Zomato.csproj": {
+              "projectPath": "C:\\Users\\rparkar\\Desktop\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.Zomato\\ConceirgeDinning.Adapter.Zomato.csproj"
             },
-            "C:\\Users\\csingh\\Desktop\\hololo\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Contracts.Models.csproj": {
-              "projectPath": "C:\\Users\\csingh\\Desktop\\hololo\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Contracts.Models.csproj"
+            "C:\\Users\\rparkar\\Desktop\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Contracts.Models.csproj": {
+              "projectPath": "C:\\Users\\rparkar\\Desktop\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Contracts.Models.csproj"
             },
-            "C:\\Users\\csingh\\Desktop\\hololo\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.ServicesImplementation\\ConceirgeDinning.ServicesImplementation.csproj": {
-              "projectPath": "C:\\Users\\csingh\\Desktop\\hololo\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.ServicesImplementation\\ConceirgeDinning.ServicesImplementation.csproj"
+            "C:\\Users\\rparkar\\Desktop\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.ServicesImplementation\\ConceirgeDinning.ServicesImplementation.csproj": {
+              "projectPath": "C:\\Users\\rparkar\\Desktop\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.ServicesImplementation\\ConceirgeDinning.ServicesImplementation.csproj"
             },
-            "C:\\Users\\csingh\\Desktop\\hololo\\VDefyn-ConceirgeDinning-Api\\ConceiseDinning.Services\\ConceirgeDinningContracts.Services.csproj": {
-              "projectPath": "C:\\Users\\csingh\\Desktop\\hololo\\VDefyn-ConceirgeDinning-Api\\ConceiseDinning.Services\\ConceirgeDinningContracts.Services.csproj"
+            "C:\\Users\\rparkar\\Desktop\\VDefyn-ConceirgeDinning-Api\\ConceiseDinning.Services\\ConceirgeDinningContracts.Services.csproj": {
+              "projectPath": "C:\\Users\\rparkar\\Desktop\\VDefyn-ConceirgeDinning-Api\\ConceiseDinning.Services\\ConceirgeDinningContracts.Services.csproj"
             }
           }
         }

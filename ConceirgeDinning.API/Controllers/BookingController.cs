@@ -20,7 +20,7 @@ namespace ConceirgeDinning.API.Controllers
             BookingInitialisation bookingInitialisation = new BookingInitialisation();
             BookingResponse bookingResponse = new BookingResponse();
             
-            bookingResponse=bookingInitialisation.Validate(noOfGuests, date, restaurantId,  restaurantName,  perPersonPoints,  pointBalance);
+            bookingResponse=bookingInitialisation.Validate(noOfGuests, date,time, restaurantId,  restaurantName,  perPersonPoints,  pointBalance);
             if(bookingResponse.Status== "BookingInitiated")
             {
                 bookingResponse=bookingInitialisation.Start(noOfGuests, date, time, restaurantId, restaurantName, userName, perPersonPoints, pointBalance);
