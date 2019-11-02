@@ -1,9 +1,0 @@
-C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Core.Models\bin\Release\netcoreapp2.2\ConceirgeDinning.Core.Models.deps.json
-C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Core.Models\bin\Release\netcoreapp2.2\ConceirgeDinning.Core.Models.dll
-C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Core.Models\bin\Release\netcoreapp2.2\ConceirgeDinning.Core.Models.pdb
-C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Core.Models\obj\Release\netcoreapp2.2\ConceirgeDinning.Core.Models.csprojAssemblyReference.cache
-C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Core.Models\obj\Release\netcoreapp2.2\ConceirgeDinning.Core.Models.csproj.CoreCompileInputs.cache
-C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Core.Models\obj\Release\netcoreapp2.2\ConceirgeDinning.Core.Models.AssemblyInfoInputs.cache
-C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Core.Models\obj\Release\netcoreapp2.2\ConceirgeDinning.Core.Models.AssemblyInfo.cs
-C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Core.Models\obj\Release\netcoreapp2.2\ConceirgeDinning.Core.Models.dll
-C:\dev\Training Project\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Core.Models\obj\Release\netcoreapp2.2\ConceirgeDinning.Core.Models.pdb
