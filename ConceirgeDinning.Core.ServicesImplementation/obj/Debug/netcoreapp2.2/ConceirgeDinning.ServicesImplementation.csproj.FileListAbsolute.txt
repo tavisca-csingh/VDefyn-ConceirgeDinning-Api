@@ -17,6 +17,7 @@ C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Core
 C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Core.ServicesImplementation\obj\Debug\netcoreapp2.2\ConceirgeDinning.ServicesImplementation.pdb
 C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Core.ServicesImplementation\bin\Debug\netcoreapp2.2\ConceirgeDinningContracts.Services.dll
 C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Core.ServicesImplementation\bin\Debug\netcoreapp2.2\ConceirgeDinningContracts.Services.pdb
+<<<<<<< HEAD
 C:\Users\vmattapalli\Documents\GitHub\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Core.ServicesImplementation\bin\Debug\netcoreapp2.2\ConceirgeDinning.ServicesImplementation.deps.json
 C:\Users\vmattapalli\Documents\GitHub\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Core.ServicesImplementation\bin\Debug\netcoreapp2.2\ConceirgeDinning.ServicesImplementation.dll
 C:\Users\vmattapalli\Documents\GitHub\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Core.ServicesImplementation\bin\Debug\netcoreapp2.2\ConceirgeDinning.ServicesImplementation.pdb
@@ -64,3 +65,6 @@ C:\Users\rparkar\Desktop\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Core.Servi
 C:\Users\rparkar\Desktop\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Core.ServicesImplementation\obj\Debug\netcoreapp2.2\ConceirgeDinning.ServicesImplementation.csproj.CopyComplete
 C:\Users\rparkar\Desktop\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Core.ServicesImplementation\obj\Debug\netcoreapp2.2\ConceirgeDinning.ServicesImplementation.dll
 C:\Users\rparkar\Desktop\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Core.ServicesImplementation\obj\Debug\netcoreapp2.2\ConceirgeDinning.ServicesImplementation.pdb
+=======
+C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Core.ServicesImplementation\obj\Debug\netcoreapp2.2\ConceirgeDinning.ServicesImplementation.csproj.CoreCompileInputs.cache
+>>>>>>> cf3a9312bb7a274c8c39555b145673071cfe7696

@@ -22,19 +22,25 @@ namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
 
             request.ContentType = "application/json";
 
-            
-            using (var response = request.GetResponse())
+            try
             {
-                using (var stream = response.GetResponseStream())
+                using (var response = request.GetResponse())
                 {
-                    var reader = new StreamReader(stream, System.Text.Encoding.UTF8);
-                    var result = reader.ReadToEnd();
+                    using (var stream = response.GetResponseStream())
+                    {
+                        var reader = new StreamReader(stream, System.Text.Encoding.UTF8);
+                        var result = reader.ReadToEnd();
 
-                    Models.SearchResponse Response = JsonConvert.DeserializeObject<Models.SearchResponse>(result);
-                    
-                    var searchResults = USReataurantTranslator.TranslateToRestaurant(Response);
-                    return searchResults;
+                        Models.SearchResponse Response = JsonConvert.DeserializeObject<Models.SearchResponse>(result);
+
+                        var searchResults = USReataurantTranslator.TranslateToRestaurant(Response);
+                        return searchResults;
+                    }
                 }
+            }
+            catch(System.Net.WebException ex)
+            {
+                return null;
             }
 
 

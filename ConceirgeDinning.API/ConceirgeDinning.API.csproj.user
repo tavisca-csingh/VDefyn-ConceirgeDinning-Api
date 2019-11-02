@@ -9,6 +9,10 @@
     <WebStackScaffolding_IsReferencingScriptLibrariesSelected>True</WebStackScaffolding_IsReferencingScriptLibrariesSelected>
     <WebStackScaffolding_LayoutPageFile />
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
+<<<<<<< HEAD
     <NameOfLastUsedPublishProfile>CustomProfile7</NameOfLastUsedPublishProfile>
+=======
+    <NameOfLastUsedPublishProfile>FolderProfile</NameOfLastUsedPublishProfile>
+>>>>>>> cf3a9312bb7a274c8c39555b145673071cfe7696
   </PropertyGroup>
 </Project>
