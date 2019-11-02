@@ -1,9 +1,0 @@
-C:\Users\vmattapalli\Documents\GitHub\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Core.Models\obj\Debug\netcoreapp2.2\ConceirgeDinning.Contracts.Models.csprojAssemblyReference.cache
-C:\Users\vmattapalli\Documents\GitHub\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Core.Models\obj\Debug\netcoreapp2.2\ConceirgeDinning.Contracts.Models.csproj.CoreCompileInputs.cache
-C:\Users\vmattapalli\Documents\GitHub\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Core.Models\obj\Debug\netcoreapp2.2\ConceirgeDinning.Contracts.Models.AssemblyInfoInputs.cache
-C:\Users\vmattapalli\Documents\GitHub\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Core.Models\obj\Debug\netcoreapp2.2\ConceirgeDinning.Contracts.Models.AssemblyInfo.cs
-C:\Users\vmattapalli\Documents\GitHub\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Core.Models\bin\Debug\netcoreapp2.2\ConceirgeDinning.Contracts.Models.deps.json
-C:\Users\vmattapalli\Documents\GitHub\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Core.Models\bin\Debug\netcoreapp2.2\ConceirgeDinning.Contracts.Models.dll
-C:\Users\vmattapalli\Documents\GitHub\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Core.Models\bin\Debug\netcoreapp2.2\ConceirgeDinning.Contracts.Models.pdb
-C:\Users\vmattapalli\Documents\GitHub\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Core.Models\obj\Debug\netcoreapp2.2\ConceirgeDinning.Contracts.Models.dll
-C:\Users\vmattapalli\Documents\GitHub\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Core.Models\obj\Debug\netcoreapp2.2\ConceirgeDinning.Contracts.Models.pdb
