@@ -31,6 +31,7 @@ namespace ConceirgeDining.Middleware
                 bookingResponse.Status = "BookingNotInitiated";
                 bookingResponse.Error.Add("Can't book for past dates");
             }
+
             else if(!bookingValidation.CheckTime(time)&&date==DateTime.Today)
             {
                 bookingResponse.Status = "BookingNotInitiated";
