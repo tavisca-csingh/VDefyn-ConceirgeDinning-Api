@@ -9532,7 +9532,7 @@
       ]
     },
     "System.Diagnostics.Contracts/4.3.0": {
-      "sha512": "eelRRbnm+OloiQvp9CXS0ixjNQldjjkHO4iIkR5XH2VIP8sUB/SIpa1TdUW6/+HDcQ+MlhP3pNa1u5SbzYuWGA==",
+      "sha512": "b7no3x+yvVs5/YbBLF1qVWiOwyIx0k2qE2hnKsxfn6SpmmeUrjm3ncI79DBF0YBS7XlfcFvYKGSZLMWWIm5ifA==",
       "type": "package",
       "path": "system.diagnostics.contracts/4.3.0",
       "files": [
@@ -9724,7 +9724,7 @@
       ]
     },
     "System.Diagnostics.StackTrace/4.3.0": {
-      "sha512": "BiHg0vgtd35/DM9jvtaC1eKRpWZxr0gcQd643ABG7GnvSlf5pOkY2uyd42mMOJoOmKvnpNj0F4tuoS1pacTwYw==",
+      "sha512": "v3aX7fGhKtrm5VuPLOPbcwwPJQ9YFPhyL/oR9egbVoTYfqo+2pSGb6enIv33ZcwqHxPo9vLY/4dtKIN9GKUoaw==",
       "type": "package",
       "path": "system.diagnostics.stacktrace/4.3.0",
       "files": [
@@ -10666,7 +10666,7 @@
       ]
     },
     "System.Linq.Queryable/4.0.1": {
-      "sha512": "Yn/WfYe9RoRfmSLvUt2JerP0BTGGykCZkQPgojaxgzF2N0oPo+/AhB8TXOpdCcNlrG3VRtsamtK2uzsp3cqRVw==",
+      "sha512": "16/zMs+Ja7aYhpOeqDd2FVAxhztinRi2WvsZq5YY9P6K716cZdYDJ4f797KX2ExW+S28Gq6x2U2xTzzL0urSCA==",
       "type": "package",
       "path": "system.linq.queryable/4.0.1",
       "files": [
@@ -10830,7 +10830,7 @@
       ]
     },
     "System.Net.NameResolution/4.0.0": {
-      "sha512": "JdqRdM1Qym3YehqdKIi5LHrpypP4JMfxKQSNCJ2z4WawkG0il+N3XfNeJOxll2XrTnG7WgYYPoeiu/KOwg0DQw==",
+      "sha512": "9yu0WXZYfBjxItI3WFfy3Mntk2ErSp79GkxriTY5XBoG72r3ngBCEfVYnaYP9oCr0hzv3vzfAapcQhCJee8J9Q==",
       "type": "package",
       "path": "system.net.nameresolution/4.0.0",
       "files": [
@@ -13824,23 +13824,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rparkar\\.nuget\\packages\\": {},
+    "C:\\Users\\vmattapalli\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rparkar\\Desktop\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.API\\ConceirgeDinning.API.csproj",
+      "projectUniqueName": "c:\\Users\\vmattapalli\\Documents\\GitHub\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.API\\ConceirgeDinning.API.csproj",
       "projectName": "ConceirgeDinning.API",
-      "projectPath": "C:\\Users\\rparkar\\Desktop\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.API\\ConceirgeDinning.API.csproj",
-      "packagesPath": "C:\\Users\\rparkar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rparkar\\Desktop\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.API\\obj\\",
+      "projectPath": "c:\\Users\\vmattapalli\\Documents\\GitHub\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.API\\ConceirgeDinning.API.csproj",
+      "packagesPath": "C:\\Users\\vmattapalli\\.nuget\\packages\\",
+      "outputPath": "c:\\Users\\vmattapalli\\Documents\\GitHub\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\rparkar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\vmattapalli\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -13853,14 +13853,14 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\rparkar\\Desktop\\VDefyn-ConceirgeDinning-Api\\ConceirgeDining.Middleware\\ConceirgeDining.Middleware.csproj": {
-              "projectPath": "C:\\Users\\rparkar\\Desktop\\VDefyn-ConceirgeDinning-Api\\ConceirgeDining.Middleware\\ConceirgeDining.Middleware.csproj"
+            "c:\\Users\\vmattapalli\\Documents\\GitHub\\VDefyn-ConceirgeDinning-Api\\ConceirgeDining.Middleware\\ConceirgeDining.Middleware.csproj": {
+              "projectPath": "c:\\Users\\vmattapalli\\Documents\\GitHub\\VDefyn-ConceirgeDinning-Api\\ConceirgeDining.Middleware\\ConceirgeDining.Middleware.csproj"
             },
-            "C:\\Users\\rparkar\\Desktop\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Contracts.Models.csproj": {
-              "projectPath": "C:\\Users\\rparkar\\Desktop\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Contracts.Models.csproj"
+            "c:\\Users\\vmattapalli\\Documents\\GitHub\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Contracts.Models.csproj": {
+              "projectPath": "c:\\Users\\vmattapalli\\Documents\\GitHub\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Contracts.Models.csproj"
             },
-            "C:\\Users\\rparkar\\Desktop\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.ServicesImplementation\\ConceirgeDinning.ServicesImplementation.csproj": {
-              "projectPath": "C:\\Users\\rparkar\\Desktop\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.ServicesImplementation\\ConceirgeDinning.ServicesImplementation.csproj"
+            "c:\\Users\\vmattapalli\\Documents\\GitHub\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.ServicesImplementation\\ConceirgeDinning.ServicesImplementation.csproj": {
+              "projectPath": "c:\\Users\\vmattapalli\\Documents\\GitHub\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.ServicesImplementation\\ConceirgeDinning.ServicesImplementation.csproj"
             }
           }
         }
