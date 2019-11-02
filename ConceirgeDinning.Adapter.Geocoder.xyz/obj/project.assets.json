@@ -1281,23 +1281,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\vmattapalli\\.nuget\\packages\\": {},
+    "C:\\Users\\csingh\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\vmattapalli\\Documents\\GitHub\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.Geocoder.xyz\\ConceirgeDinning.Adapter.Geocoder.xyz.csproj",
+      "projectUniqueName": "C:\\Users\\csingh\\Desktop\\hololo\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.Geocoder.xyz\\ConceirgeDinning.Adapter.Geocoder.xyz.csproj",
       "projectName": "ConceirgeDinning.Adapter.Geocoder.xyz",
-      "projectPath": "c:\\Users\\vmattapalli\\Documents\\GitHub\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.Geocoder.xyz\\ConceirgeDinning.Adapter.Geocoder.xyz.csproj",
-      "packagesPath": "C:\\Users\\vmattapalli\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\vmattapalli\\Documents\\GitHub\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.Geocoder.xyz\\obj\\",
+      "projectPath": "C:\\Users\\csingh\\Desktop\\hololo\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.Geocoder.xyz\\ConceirgeDinning.Adapter.Geocoder.xyz.csproj",
+      "packagesPath": "C:\\Users\\csingh\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\csingh\\Desktop\\hololo\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Adapter.Geocoder.xyz\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\vmattapalli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\csingh\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1310,11 +1310,11 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "c:\\Users\\vmattapalli\\Documents\\GitHub\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Contracts.Models.csproj": {
-              "projectPath": "c:\\Users\\vmattapalli\\Documents\\GitHub\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Contracts.Models.csproj"
+            "C:\\Users\\csingh\\Desktop\\hololo\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Contracts.Models.csproj": {
+              "projectPath": "C:\\Users\\csingh\\Desktop\\hololo\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Contracts.Models.csproj"
             },
-            "c:\\Users\\vmattapalli\\Documents\\GitHub\\VDefyn-ConceirgeDinning-Api\\ConceiseDinning.Services\\ConceirgeDinningContracts.Services.csproj": {
-              "projectPath": "c:\\Users\\vmattapalli\\Documents\\GitHub\\VDefyn-ConceirgeDinning-Api\\ConceiseDinning.Services\\ConceirgeDinningContracts.Services.csproj"
+            "C:\\Users\\csingh\\Desktop\\hololo\\VDefyn-ConceirgeDinning-Api\\ConceiseDinning.Services\\ConceirgeDinningContracts.Services.csproj": {
+              "projectPath": "C:\\Users\\csingh\\Desktop\\hololo\\VDefyn-ConceirgeDinning-Api\\ConceiseDinning.Services\\ConceirgeDinningContracts.Services.csproj"
             }
           }
         }
@@ -1344,10 +1344,16 @@
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

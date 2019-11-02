@@ -30,6 +30,9 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
+              "C:\\Users\\csingh\\Desktop\\hololo\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Contracts.Models.csproj": {
+                "projectPath": "C:\\Users\\csingh\\Desktop\\hololo\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Contracts.Models.csproj"
+              },
               "C:\\Users\\csingh\\Desktop\\hololo\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.ServicesImplementation\\ConceirgeDinning.ServicesImplementation.csproj": {
                 "projectPath": "C:\\Users\\csingh\\Desktop\\hololo\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.ServicesImplementation\\ConceirgeDinning.ServicesImplementation.csproj"
               }

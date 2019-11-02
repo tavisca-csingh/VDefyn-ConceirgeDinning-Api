@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ConceirgeDinning.Core.Models\ConceirgeDinning.Contracts.Models.csproj" />
     <ProjectReference Include="..\ConceirgeDinning.Core.ServicesImplementation\ConceirgeDinning.ServicesImplementation.csproj" />
   </ItemGroup>
 
