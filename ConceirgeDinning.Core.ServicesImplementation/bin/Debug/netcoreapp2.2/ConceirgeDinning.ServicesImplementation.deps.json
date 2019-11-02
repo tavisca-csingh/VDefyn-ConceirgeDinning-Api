@@ -1,11 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-<<<<<<< HEAD
     "signature": "b3bdc4a2c13a0ae18a4dc544d9856601aa9876d1"
-=======
-    "signature": "3cd7eaea24b01f0961fb28b149eed1397a17ac95"
->>>>>>> cf3a9312bb7a274c8c39555b145673071cfe7696
   },
   "compilationOptions": {},
   "targets": {
@@ -1525,7 +1521,7 @@
     "System.Linq.Queryable/4.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Yn/WfYe9RoRfmSLvUt2JerP0BTGGykCZkQPgojaxgzF2N0oPo+/AhB8TXOpdCcNlrG3VRtsamtK2uzsp3cqRVw==",
+      "sha512": "sha512-16/zMs+Ja7aYhpOeqDd2FVAxhztinRi2WvsZq5YY9P6K716cZdYDJ4f797KX2ExW+S28Gq6x2U2xTzzL0urSCA==",
       "path": "system.linq.queryable/4.0.1",
       "hashPath": "system.linq.queryable.4.0.1.nupkg.sha512"
     },
@@ -1539,7 +1535,7 @@
     "System.Net.NameResolution/4.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-JdqRdM1Qym3YehqdKIi5LHrpypP4JMfxKQSNCJ2z4WawkG0il+N3XfNeJOxll2XrTnG7WgYYPoeiu/KOwg0DQw==",
+      "sha512": "sha512-9yu0WXZYfBjxItI3WFfy3Mntk2ErSp79GkxriTY5XBoG72r3ngBCEfVYnaYP9oCr0hzv3vzfAapcQhCJee8J9Q==",
       "path": "system.net.nameresolution/4.0.0",
       "hashPath": "system.net.nameresolution.4.0.0.nupkg.sha512"
     },
@@ -1777,7 +1773,7 @@
     "System.Threading.Thread/4.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-gIdJqDXlOr5W9zeqFErLw3dsOsiShSCYtF9SEHitACycmvNvY8odf9kiKvp6V7aibc8C4HzzNBkWXjyfn7plbQ==",
+      "sha512": "sha512-TL4J8Oy3K5RtEfOTm3rPs2S0POH9hPDIKIyIuFYzYQLwIEah5qiJFwK6c3/z8QKVE6ZKdV7dfFwN9cK6Ml5BdQ==",
       "path": "system.threading.thread/4.0.0",
       "hashPath": "system.threading.thread.4.0.0.nupkg.sha512"
     },

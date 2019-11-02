@@ -1,11 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-<<<<<<< HEAD
     "signature": "e86d676d88d25ec8543e1e834addc8228db39cd6"
-=======
-    "signature": "b77af36bb2e7d5b5107d0cd1f1f30eee0b9f224d"
->>>>>>> cf3a9312bb7a274c8c39555b145673071cfe7696
   },
   "compilationOptions": {
     "defines": [
@@ -4291,14 +4287,14 @@
     "System.Linq.Queryable/4.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Yn/WfYe9RoRfmSLvUt2JerP0BTGGykCZkQPgojaxgzF2N0oPo+/AhB8TXOpdCcNlrG3VRtsamtK2uzsp3cqRVw==",
+      "sha512": "sha512-16/zMs+Ja7aYhpOeqDd2FVAxhztinRi2WvsZq5YY9P6K716cZdYDJ4f797KX2ExW+S28Gq6x2U2xTzzL0urSCA==",
       "path": "system.linq.queryable/4.0.1",
       "hashPath": "system.linq.queryable.4.0.1.nupkg.sha512"
     },
     "System.Net.NameResolution/4.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-JdqRdM1Qym3YehqdKIi5LHrpypP4JMfxKQSNCJ2z4WawkG0il+N3XfNeJOxll2XrTnG7WgYYPoeiu/KOwg0DQw==",
+      "sha512": "sha512-9yu0WXZYfBjxItI3WFfy3Mntk2ErSp79GkxriTY5XBoG72r3ngBCEfVYnaYP9oCr0hzv3vzfAapcQhCJee8J9Q==",
       "path": "system.net.nameresolution/4.0.0",
       "hashPath": "system.net.nameresolution.4.0.0.nupkg.sha512"
     },
@@ -5731,7 +5727,7 @@
     "System.Diagnostics.Contracts/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-eelRRbnm+OloiQvp9CXS0ixjNQldjjkHO4iIkR5XH2VIP8sUB/SIpa1TdUW6/+HDcQ+MlhP3pNa1u5SbzYuWGA==",
+      "sha512": "sha512-b7no3x+yvVs5/YbBLF1qVWiOwyIx0k2qE2hnKsxfn6SpmmeUrjm3ncI79DBF0YBS7XlfcFvYKGSZLMWWIm5ifA==",
       "path": "system.diagnostics.contracts/4.3.0",
       "hashPath": "system.diagnostics.contracts.4.3.0.nupkg.sha512"
     },
@@ -5759,7 +5755,7 @@
     "System.Diagnostics.StackTrace/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-BiHg0vgtd35/DM9jvtaC1eKRpWZxr0gcQd643ABG7GnvSlf5pOkY2uyd42mMOJoOmKvnpNj0F4tuoS1pacTwYw==",
+      "sha512": "sha512-v3aX7fGhKtrm5VuPLOPbcwwPJQ9YFPhyL/oR9egbVoTYfqo+2pSGb6enIv33ZcwqHxPo9vLY/4dtKIN9GKUoaw==",
       "path": "system.diagnostics.stacktrace/4.3.0",
       "hashPath": "system.diagnostics.stacktrace.4.3.0.nupkg.sha512"
     },

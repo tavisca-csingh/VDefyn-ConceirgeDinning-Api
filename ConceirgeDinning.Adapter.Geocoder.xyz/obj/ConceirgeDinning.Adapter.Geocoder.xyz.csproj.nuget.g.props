@@ -3,19 +3,11 @@
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <RestoreSuccess Condition=" '$(RestoreSuccess)' == '' ">True</RestoreSuccess>
     <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
-<<<<<<< HEAD
-    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">c:\Users\vmattapalli\Documents\GitHub\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Geocoder.xyz\obj\project.assets.json</ProjectAssetsFile>
-=======
-    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">C:\Users\csingh\Desktop\hololo\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Geocoder.xyz\obj\project.assets.json</ProjectAssetsFile>
->>>>>>> cf3a9312bb7a274c8c39555b145673071cfe7696
+    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">C:\Users\vmattapalli\Documents\GitHub\VDefyn-ConceirgeDinning-Api\ConceirgeDinning.Adapter.Geocoder.xyz\obj\project.assets.json</ProjectAssetsFile>
     <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
     <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\vmattapalli\.nuget\packages\;C:\Program Files\dotnet\sdk\NuGetFallbackFolder</NuGetPackageFolders>
     <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
-<<<<<<< HEAD
-    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">4.9.4</NuGetToolVersion>
-=======
     <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">4.9.3</NuGetToolVersion>
->>>>>>> cf3a9312bb7a274c8c39555b145673071cfe7696
   </PropertyGroup>
   <PropertyGroup>
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>

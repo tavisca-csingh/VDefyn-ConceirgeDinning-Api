@@ -1266,11 +1266,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\vmattapalli\\Documents\\GitHub\\VDefyn-ConceirgeDinning-Api\\ConceiseDinning.Services\\ConceirgeDinningContracts.Services.csproj",
+      "projectUniqueName": "C:\\Users\\vmattapalli\\Documents\\GitHub\\VDefyn-ConceirgeDinning-Api\\ConceiseDinning.Services\\ConceirgeDinningContracts.Services.csproj",
       "projectName": "ConceirgeDinningContracts.Services",
-      "projectPath": "c:\\Users\\vmattapalli\\Documents\\GitHub\\VDefyn-ConceirgeDinning-Api\\ConceiseDinning.Services\\ConceirgeDinningContracts.Services.csproj",
+      "projectPath": "C:\\Users\\vmattapalli\\Documents\\GitHub\\VDefyn-ConceirgeDinning-Api\\ConceiseDinning.Services\\ConceirgeDinningContracts.Services.csproj",
       "packagesPath": "C:\\Users\\vmattapalli\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\vmattapalli\\Documents\\GitHub\\VDefyn-ConceirgeDinning-Api\\ConceiseDinning.Services\\obj\\",
+      "outputPath": "C:\\Users\\vmattapalli\\Documents\\GitHub\\VDefyn-ConceirgeDinning-Api\\ConceiseDinning.Services\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -1289,8 +1289,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "c:\\Users\\vmattapalli\\Documents\\GitHub\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Contracts.Models.csproj": {
-              "projectPath": "c:\\Users\\vmattapalli\\Documents\\GitHub\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Contracts.Models.csproj"
+            "C:\\Users\\vmattapalli\\Documents\\GitHub\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Contracts.Models.csproj": {
+              "projectPath": "C:\\Users\\vmattapalli\\Documents\\GitHub\\VDefyn-ConceirgeDinning-Api\\ConceirgeDinning.Core.Models\\ConceirgeDinning.Contracts.Models.csproj"
             }
           }
         }
@@ -1326,5 +1326,13 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\vmattapalli\\Documents\\GitHub\\VDefyn-ConceirgeDinning-Api\\ConceiseDinning.Services\\obj\\ConceirgeDinningContracts.Services.csproj.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
