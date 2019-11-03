@@ -88,6 +88,7 @@ namespace ConceirgeDining.Middleware
             else
             {
                 paymentResponse.Status = "Already Booked";
+                paymentResponse.Error.Add("BookingId:" + booking.BookingId + " is already Booked");
             }
                 
             
