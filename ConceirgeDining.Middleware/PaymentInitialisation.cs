@@ -78,9 +78,19 @@ namespace ConceirgeDining.Middleware
             
             paymentResponse.Time = booking.Time;
             startPayment.DeleteEntryInBookingProcess(booking.BookingId);
-            startPayment.ChangeBookingStatus(booking);
-            paymentResponse.Status = "Booking Successful";
-            paymentResponse.PointBalance = booking.LoyaltyPoints- booking.Seats * booking.PointPricePerPerson;
+            var status=startPayment.ChangeBookingStatus(booking);
+            if (status)
+            {
+                paymentResponse.Status = "Booking Successful";
+                paymentResponse.PointBalance = booking.LoyaltyPoints - booking.Seats * booking.PointPricePerPerson;
+            }
+                
+            else
+            {
+                paymentResponse.Status = "Already Booked";
+            }
+                
+            
             paymentResponse.TotalPointPrice = booking.Seats * booking.PointPricePerPerson;
             return paymentResponse;
         }
