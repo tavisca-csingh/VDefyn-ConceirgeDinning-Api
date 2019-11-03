@@ -17,20 +17,24 @@ namespace ConceirgeDinning.ServicesImplementation
                 var query = sql12310325Context.BookingProgress
                        .Where(b => b.BookingId == bookingId)
                        .Last<BookingProgress>();
-                sql12310325Context.BookingProgress.Remove(query);
+                if(query!=null)
+                    sql12310325Context.BookingProgress.Remove(query);
 
             }
             catch (Exception e)
             {
 
-                throw e;
+                
             }
         }
-        public void ChangeBookingStatus(Booking booking)
+        public bool ChangeBookingStatus(Booking booking)
         {
+            if (booking.Status == "Booked")
+                return false;
             booking.Status = "Booked";
             sql12310325Context.Booking.Update(booking);
             sql12310325Context.SaveChanges();
+            return true;
         }
     }
 }
