@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ConceirgeDinning.ServicesImplementation
 {
-    public class PaymentValidation
+    public class PaymentValidator
     {
         public bool CheckPointBalance(long pointBalance, long requiredPoints)
         {

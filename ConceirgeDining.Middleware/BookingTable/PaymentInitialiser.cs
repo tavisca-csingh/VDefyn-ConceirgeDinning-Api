@@ -8,12 +8,12 @@ using System.Text;
 namespace ConceirgeDining.Middleware
 {
 
-    public class PaymentInitialisation
+    public class PaymentInitialiser
     {
         private Booking booking;
         PaymentResponse paymentResponse;
         sql12310325Context sql12310325Context = new sql12310325Context();
-        public PaymentInitialisation(int bookingId)
+        public PaymentInitialiser(int bookingId)
         {
             this.booking = sql12310325Context.Booking.Find(bookingId); ;
             paymentResponse = new PaymentResponse();
@@ -23,7 +23,7 @@ namespace ConceirgeDining.Middleware
         
         public PaymentResponse Validation(long pointBalance)
         {
-            PaymentValidation paymentValidation = new PaymentValidation();
+            PaymentValidator paymentValidation = new PaymentValidator();
             bool bookingIdStatus = paymentValidation.CheckBookingId(booking);
             if (!bookingIdStatus)
             {
@@ -66,7 +66,7 @@ namespace ConceirgeDining.Middleware
         }
         public PaymentResponse Start()
         {
-            StartPayment startPayment = new StartPayment();
+            PaymentInitiator startPayment = new PaymentInitiator();
             paymentResponse.Status = booking.Status;
             paymentResponse.BookingId = booking.BookingId;
             paymentResponse.RestaurantId = booking.RestaurantId;

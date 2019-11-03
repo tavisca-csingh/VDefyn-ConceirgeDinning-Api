@@ -17,7 +17,7 @@ namespace ConceirgeDinning.API.Controllers
         [HttpGet]
         public ActionResult<BookingResponse> GetRestaurants(int noOfGuests, DateTime date, TimeSpan time,string restaurantId,string userName,string restaurantName,long perPersonPoints,long pointBalance)
         {
-            BookingInitialisation bookingInitialisation = new BookingInitialisation();
+            BookingInitialiser bookingInitialisation = new BookingInitialiser();
             BookingResponse bookingResponse = new BookingResponse();
             
             bookingResponse=bookingInitialisation.Validate(noOfGuests, date,time, restaurantId,  restaurantName,  perPersonPoints,  pointBalance);

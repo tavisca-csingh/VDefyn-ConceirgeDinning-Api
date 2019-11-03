@@ -73,7 +73,7 @@ namespace ConceirgeDinning.API.Controllers
             string restaurantName = Convert.ToString(jObject["restaurantName"]);
             sql12310325Context sql12310325Context = new sql12310325Context(); 
             
-            PaymentInitialisation paymentInitialisation = new PaymentInitialisation(bookingId);
+            PaymentInitialiser paymentInitialisation = new PaymentInitialiser(bookingId);
             PaymentResponse paymentResponse = new PaymentResponse();
             paymentResponse=  paymentInitialisation.Validation(pointBalance);
             if(paymentResponse.Status== "Booking Possible")

@@ -6,11 +6,11 @@ using System.Text;
 
 namespace ConceirgeDining.Middleware
 {
-    public class BookingInitialisation
+    public class BookingInitialiser
     {
         public BookingResponse Validate(int noOfGuests, DateTime date,TimeSpan time, string restaurantId, string restaurantName, long perPersonPoints, long pointBalance)
         {
-            BookingValidation bookingValidation = new BookingValidation();
+            BookingValidator bookingValidation = new BookingValidator();
             BookingResponse bookingResponse = new BookingResponse();
             bookingResponse.Error = new List<string>();
             bookingResponse.BookingId = 0;
@@ -49,7 +49,7 @@ namespace ConceirgeDining.Middleware
         }
         public BookingResponse Start(int noOfGuests, DateTime date, TimeSpan time, string restaurantId, string userName, string restaurantName, long perPersonPoints, long pointBalance)
         {
-            StartBooking startBooking = new StartBooking();
+            BookingInitiator startBooking = new BookingInitiator();
             BookingResponse bookingResponse = new BookingResponse();
             bookingResponse.Error = null;
             bookingResponse.Status = "BookingInitiated";

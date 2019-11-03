@@ -6,7 +6,7 @@ using System.Text;
 
 namespace ConceirgeDinning.ServicesImplementation
 {
-    public class StartPayment
+    public class PaymentInitiator
     {
         sql12310325Context sql12310325Context = new sql12310325Context();
         public void DeleteEntryInBookingProcess(int bookingId)
