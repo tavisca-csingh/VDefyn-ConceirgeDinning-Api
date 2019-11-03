@@ -6,7 +6,7 @@ using System.Text;
 
 namespace ConceirgeDinning.ServicesImplementation
 {
-    public class StartBooking
+    public class BookingInitiator
     {
         sql12310325Context sql12310325Context = new sql12310325Context();
         public int AddEntryInBookingTable(int noOfGuests, DateTime date, TimeSpan time, string restaurantId, string userName, string restaurantName, long perPersonPoints, long pointBalance)
