@@ -19,55 +19,6 @@ namespace ConceirgeDinning.API.Controllers
         [HttpPost]
         public ActionResult<PaymentResponse> StartPayment([FromBody]JObject jObject)
         {
-            /* sql12310325Context sql12310325Context = new sql12310325Context();
-             PaymentResponse paymentResponse = new PaymentResponse();
-             int bookingId = Convert.ToInt32(jObject["bookingId"]);
-             long pointBalance= Convert.ToInt64(jObject["pointBalance"]);
-             string restaurntName=Convert.ToString(jObject["restaurantName"]);
-             var booking = sql12310325Context.Booking.Find(bookingId);
-             long requiredPoints = booking.Seats * booking.PointPricePerPerson;
-             //-------------------------------------------------------------------------
-             paymentResponse.Status = booking.Status;
-             paymentResponse.BookingId = booking.BookingId;
-             paymentResponse.RestaurantId = booking.RestaurantId;
-             paymentResponse.UserName = booking.UserId;
-             paymentResponse.Error = new List<string>();
-             paymentResponse.NoOfGuests = booking.Seats;
-             paymentResponse.PerPersonPoints = booking.PointPricePerPerson;
-             paymentResponse.PointBalance = pointBalance - requiredPoints;
-             paymentResponse.Date = booking.Date;
-             paymentResponse.RestaurantName = restaurntName;
-             paymentResponse.Time = booking.Time;
-             paymentResponse.TotalPointPrice = requiredPoints;
-             //------------------------------------------------------------------------------
-             if (pointBalance>=requiredPoints)
-             {
-                 try
-                 {
-                     var query = sql12310325Context.BookingProgress
-                            .Where(b => b.BookingId == bookingId)
-                            .Last<BookingProgress>();
-                     sql12310325Context.BookingProgress.Remove(query);
-
-                 }
-                 catch (Exception e)
-                 {
-
-                     throw e;
-                 }
-
-                 booking.Status = "Booked";
-                 sql12310325Context.SaveChanges();
-             }
-             else
-             {
-                 paymentResponse.Status = "booking failed";
-
-                 paymentResponse.Error.Add("Insufficient Points");
-             }
-
-
-             return paymentResponse;*/
             int bookingId = Convert.ToInt32(jObject["bookingId"]);
             long pointBalance = Convert.ToInt64(jObject["pointBalance"]);
             string restaurantName = Convert.ToString(jObject["restaurantName"]);
