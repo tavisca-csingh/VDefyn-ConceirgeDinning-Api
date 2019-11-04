@@ -10,11 +10,7 @@ using ConceirgeDinning.Adapter.Geocoder.xyz.Models;
 
 namespace ConceirgeDinning.Core.ServicesImplementation
 {
-<<<<<<< HEAD:ConceirgeDinning.Core.ServicesImplementation/BookingTable/RestaurantList.cs
-    public class RestaurantList
-=======
     public class RestaurantList 
->>>>>>> feature/CancellationApi:ConceirgeDinning.Core.ServicesImplementation/BookingTable/RestaurantList.cs
     {
 
         List<IFetchRestaurant> restaurantByLocalityFetchers = new List<IFetchRestaurant>()

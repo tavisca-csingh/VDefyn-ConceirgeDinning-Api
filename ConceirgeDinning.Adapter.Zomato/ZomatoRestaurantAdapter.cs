@@ -16,11 +16,7 @@ namespace ConceirgeDinning.Adapter.Zomato.Translator
         public List<Restaurant> FetchRestarauntDetails(string latitude, string longitude,string category)
         {
             string ApiUrl = @"https://developers.zomato.com/api/v2.1/search?count=10&radius=2000&sort=real_distance";
-<<<<<<< HEAD:ConceirgeDinning.Adapter.Zomato/ZomatoRestaurantAdapter.cs
-            var request = System.Net.WebRequest.Create(ApiUrl + "&category =" +category + "&lat=" + latitude + "&lon=" + longitude);
-=======
             var request = System.Net.WebRequest.Create(ApiUrl + "&lat=" + latitude + "&lon=" + longitude+ "&category="+category);
->>>>>>> feature/CancellationApi:ConceirgeDinning.Adapter.Zomato/ZomatoRestarauntAdapter.cs
             request.Method = "GET";
             request.Headers.Add("user-key", "3d95592a1bf9c01986d17292db075163");
 
