@@ -23,6 +23,7 @@ namespace ConceirgeDinning.ServicesImplementation.BookingTable
                        .Last<BookingProgress>();
                 if (query != null)
                     sql12310325Context.BookingProgress.Remove(query);
+                sql12310325Context.SaveChanges();
 
             }
             catch (Exception e)
@@ -39,6 +40,22 @@ namespace ConceirgeDinning.ServicesImplementation.BookingTable
             sql12310325Context.SaveChanges();
             
         }
+        public void ChangeSeatsStatus()
+        {
+            string restauranId = booking.RestaurantId;
+            try
+            {
+                RestaurantAvailability restaurantAvailability = sql12310325Context.RestaurantAvailability.Find(restauranId,booking.Date);
+                restaurantAvailability.BookedSeats -= booking.Seats;
+                sql12310325Context.RestaurantAvailability.Update(restaurantAvailability);
+                sql12310325Context.SaveChanges();
+            }
+            catch (Exception e)
+            {
 
+                
+            }
+            
+        }
     }
 }

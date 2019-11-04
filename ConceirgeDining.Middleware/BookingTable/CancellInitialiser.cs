@@ -32,7 +32,7 @@ namespace ConceirgeDining.Middleware.BookingTable
                 cancellResponse.Status = "Invalid Booking ID";
                 cancellResponse.UpdatedPointBalance = pointBalance;
             }
-            if(!cancellValidator.CheckCancellStatus(booking))
+            else if(!cancellValidator.CheckCancellStatus(booking))
             {
                 cancellResponse.Error.Add("Booking Id: " + bookingID + " is already cancelled");
                 cancellResponse.Status = "Booking ID already cancelled";
@@ -52,6 +52,7 @@ namespace ConceirgeDining.Middleware.BookingTable
             {
                 cancellInitiator.DeleteEntryInBookingProcess();
                 cancellInitiator.ChangeBookingStatus();
+                cancellInitiator.ChangeSeatsStatus();
                 cancellResponse.Status = "Cancelled";
                 cancellResponse.Error = null;
                 cancellResponse.UpdatedPointBalance=pointBalance;
@@ -59,9 +60,10 @@ namespace ConceirgeDining.Middleware.BookingTable
             else if(booking.Status=="Booked")
             {
                 cancellInitiator.ChangeBookingStatus();
+                cancellInitiator.ChangeSeatsStatus();
                 cancellResponse.Status = "Cancelled";
                 cancellResponse.Error = null;
-                cancellResponse.UpdatedPointBalance = pointBalance- totalPointPrice;
+                cancellResponse.UpdatedPointBalance = pointBalance + totalPointPrice;
             }
             return cancellResponse;
         }
