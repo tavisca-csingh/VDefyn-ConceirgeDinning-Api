@@ -11,12 +11,12 @@ using Newtonsoft.Json;
 
 namespace ConceirgeDinning.Adapter.Zomato.Translator
 {
-    public class ZomatoRestarauntAdapter : IFetchRestaurant
+    public class ZomatoRestaurantAdapter : IFetchRestaurant
     {
-        public List<Restaurant> FetchRestarauntDetails(string latitude, string longitude)
+        public List<Restaurant> FetchRestarauntDetails(string latitude, string longitude,string category)
         {
-            string ApiUrl = @"https://developers.zomato.com/api/v2.1/search?count=10&category=2&radius=2000&sort=real_distance";
-            var request = System.Net.WebRequest.Create(ApiUrl + "&lat=" + latitude + "&lon=" + longitude);
+            string ApiUrl = @"https://developers.zomato.com/api/v2.1/search?count=10&radius=2000&sort=real_distance";
+            var request = System.Net.WebRequest.Create(ApiUrl + "&category =" +category + "&lat=" + latitude + "&lon=" + longitude);
             request.Method = "GET";
             request.Headers.Add("user-key", "3d95592a1bf9c01986d17292db075163");
 

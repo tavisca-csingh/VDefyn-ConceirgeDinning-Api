@@ -8,7 +8,7 @@ using ConceirgeDinning.ServicesImplementation;
 using ConceirgeDinning.Contracts.Models;
 using ConceirgeDining.Middleware;
 
-namespace ConceirgeDinning.API.Controllers
+namespace ConceirgeDinning.API.Controllers.BookingTable
 {
     [Route("api/[controller]")]
     [ApiController]

@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace ConceirgeDinning.API.Controllers
+namespace ConceirgeDinning.API.Controllers.BookingTable
 {
     [Route("api/[controller]")]
     [ApiController]
