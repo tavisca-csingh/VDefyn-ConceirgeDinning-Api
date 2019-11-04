@@ -4,7 +4,7 @@ namespace ConceirgeDinning.Adapter.USRestaraunt.Models
 {
     public class RestaurantDetails
     {
-        public Geo geo { get; set; }
+        public GeoCode geo { get; set; }
         
         public Address address { get; set; }
         public string restaurant_phone { get; set; }
