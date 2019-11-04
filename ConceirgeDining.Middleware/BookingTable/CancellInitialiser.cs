@@ -1,11 +1,11 @@
 ﻿using ConceirgeDiningDAL.Models;
 using ConceirgeDinning.Contracts.Models;
-using ConceirgeDinning.ServicesImplementation.TableBooking;
+using ConceirgeDinning.ServicesImplementation.BookingTable;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ConceirgeDining.Middleware.TableBooking
+namespace ConceirgeDining.Middleware.BookingTable
 {
     
     public class CancellInitialiser

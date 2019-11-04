@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ConceirgeDinning.ServicesImplementation.TableBooking
+namespace ConceirgeDinning.ServicesImplementation.BookingTable
 {
     public class CancellInitiator
     {

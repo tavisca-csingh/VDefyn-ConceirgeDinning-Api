@@ -16,7 +16,7 @@ namespace ConceirgeDinning.API.Controllers
         [HttpGet]
         public ActionResult<List<Restaurant>> GetRestaurants(string locality, string latitude, string longitude)
         {
-            BookingTable Fetch = new BookingTable();
+            RestaurantList Fetch = new RestaurantList();
             if (locality is null)
                 locality = string.Empty;
             var response = Fetch.fetchRestarauntDetails(locality,latitude,longitude);

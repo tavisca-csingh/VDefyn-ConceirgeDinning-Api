@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json.Linq;
 using ConceirgeDiningDAL.Models;
-using ConceirgeDining.Middleware.TableBooking;
+using ConceirgeDining.Middleware.BookingTable;
 
 namespace ConceirgeDinning.API.Controllers
 {

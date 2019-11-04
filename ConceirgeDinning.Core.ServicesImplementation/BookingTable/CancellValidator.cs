@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ConceirgeDinning.ServicesImplementation.TableBooking
+namespace ConceirgeDinning.ServicesImplementation.BookingTable
 {
     public class CancellValidator
     {
