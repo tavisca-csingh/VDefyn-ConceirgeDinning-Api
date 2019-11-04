@@ -23,6 +23,7 @@ namespace ConceirgeDinning.API.Controllers.FoodOrdering
             if (response == null)
                 return Ok(StatusCodes.Status404NotFound);
             List<Restaurant> sortedresponse = response.OrderByDescending(o => o.User_Rating).ToList();
+            
             return sortedresponse;
 
         }
