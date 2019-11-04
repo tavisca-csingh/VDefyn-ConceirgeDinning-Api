@@ -20,7 +20,7 @@ namespace ConceirgeDinning.API.Controllers
 
             if (locality is null)
                 locality = string.Empty;
-            var response = Fetch.fetchRestarauntDetails(locality,latitude,longitude);
+            var response = Fetch.FetchRestarauntDetails(locality,latitude,longitude,"1");
             if (response == null)
                 return Ok(StatusCodes.Status404NotFound);
             List<Restaurant> sortedresponse = response.OrderByDescending(o => o.User_Rating).ToList();

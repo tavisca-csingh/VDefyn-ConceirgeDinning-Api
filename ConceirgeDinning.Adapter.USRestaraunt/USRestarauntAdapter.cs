@@ -12,7 +12,7 @@ namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
 {
     public class USRestarauntAdapter : IFetchRestaurant
     {
-        public List<Restaurant> FetchRestarauntDetails(string latitude,string longitude)
+        public List<Restaurant> FetchRestarauntDetails(string latitude,string longitude,string category)
         {
             string ApiUri = @"https://us-restaurant-menus.p.rapidapi.com/restaurants/search?distance=2";
             var request = System.Net.WebRequest.Create(ApiUri + "&lat=" + latitude + "&lon=" + longitude);
