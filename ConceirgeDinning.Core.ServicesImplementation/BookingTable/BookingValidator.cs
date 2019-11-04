@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ConceirgeDinning.ServicesImplementation
 {
-    public class BookingValidation
+    public class BookingValidator
     {
         public bool CheckAvailability(int noOfGuests, DateTime date, string restaurantId,string restaurantName)
         {
