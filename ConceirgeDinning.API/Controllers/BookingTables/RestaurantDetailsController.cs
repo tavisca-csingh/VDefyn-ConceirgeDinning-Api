@@ -20,7 +20,7 @@ namespace ConceirgeDinning.API.Controllers
             RestaurantDetailService restaurantDetailService = new RestaurantDetailService();
             var response=restaurantDetailService.GetRestaurantDetails(restaurantId, supplierName);
             if (response == null)
-                return Ok(StatusCodes.Status404NotFound);
+                return NotFound(StatusCodes.Status404NotFound);
             return response;
             
         }

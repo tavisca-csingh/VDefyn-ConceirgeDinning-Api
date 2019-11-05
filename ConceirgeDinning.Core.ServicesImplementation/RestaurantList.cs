@@ -7,6 +7,7 @@ using ConceirgeDinning.Adapter.Zomato.Translator;
 using ConceirgeDinning.Adapter.USRestaraunt.Translator;
 using System.Threading.Tasks;
 using ConceirgeDinning.Adapter.Geocoder.xyz.Models;
+using Serilog;
 
 namespace ConceirgeDinning.Core.ServicesImplementation
 {
@@ -41,6 +42,8 @@ namespace ConceirgeDinning.Core.ServicesImplementation
 
 
             var zomatoResults = fetchFromZomato.Result;
+            Log.Information("No. of fetched restaurantlist: " + zomatoResults.Count.ToString());
+           
             //var usRestaurantResults = fetchFromUS.Result;
             if (/*(usRestaurantResults is null) && */!(zomatoResults is null))
                 return zomatoResults;

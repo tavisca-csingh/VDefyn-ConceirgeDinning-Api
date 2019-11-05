@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ConceirgeDinning.Core.Models;
 using ConceirgeDinning.Core.ServicesImplementation;
+using Serilog;
 
 namespace ConceirgeDinning.API.Controllers.BookingTables
 {
@@ -21,8 +22,9 @@ namespace ConceirgeDinning.API.Controllers.BookingTables
                 locality = string.Empty;
             var response = restaurantList.FetchRestarauntDetails(locality,latitude,longitude,"1");
             if (response == null)
-                return Ok(StatusCodes.Status404NotFound);
+                return NotFound(StatusCodes.Status404NotFound);
             List<Restaurant> sortedresponse = response.OrderByDescending(o => o.User_Rating).ToList();
+            
             return sortedresponse;
 
         }

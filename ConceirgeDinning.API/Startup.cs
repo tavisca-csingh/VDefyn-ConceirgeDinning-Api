@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Serilog;
 
 namespace ConceirgeDinning.API
 {
@@ -19,6 +20,7 @@ namespace ConceirgeDinning.API
         {
             Configuration = configuration;
         }
+        
 
         public IConfiguration Configuration { get; }
 
@@ -35,6 +37,8 @@ namespace ConceirgeDinning.API
                     );
             });
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            StartLogger();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -50,9 +54,16 @@ namespace ConceirgeDinning.API
                 app.UseHsts();
             }
             app.UseCors("MyPolicy");
-
+           
             app.UseHttpsRedirection();
             app.UseMvc();
+        }
+        private void StartLogger()
+        {
+            Log.Logger = new LoggerConfiguration()
+                         .MinimumLevel.Verbose()
+                         .WriteTo.File(@"..\Logs\log.txt", rollingInterval: RollingInterval.Day)
+                         .CreateLogger();
         }
     }
 }

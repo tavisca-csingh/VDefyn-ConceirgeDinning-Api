@@ -7,6 +7,7 @@ using ConceirgeDinning.ServicesImplementation;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json.Linq;
+using Serilog;
 
 namespace ConceirgeDinning.API.Controllers
 {
@@ -17,11 +18,28 @@ namespace ConceirgeDinning.API.Controllers
         [HttpPost]
         public ActionResult<string> GiveIntent([FromBody]JObject input)
         {
+            Log.Information("request sent from user:" + input["text"]);
             string body = "{  \"queryInput\": {  \"text\": {  \"languageCode\":\""+Convert.ToString(input["languageCode"])+"\", \"text\":\""+Convert.ToString(input["text"]).ToString()+"\"   }  }        }";
             string userName=Convert.ToString(input["userId"]);
             string key=Convert.ToString(input["key"]);
             DialougFlowResponse dialougFlowResponse = new DialougFlowResponse();
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+            if(dialougFlowResponse.GetResponse(userName, key, body)is null)
+                return NotFound(StatusCodes.Status404NotFound);
+>>>>>>> Stashed changes
             return dialougFlowResponse.GetResponse(userName,key,body);
+=======
+            var response = dialougFlowResponse.GetResponse(userName, key, body);
+            if (response is null)
+            {
+                Log.Information("NotFound");
+                return NotFound(StatusCodes.Status404NotFound);
+            }
+            Log.Information("response from DialogFlow"+response);
+            return response;
+>>>>>>> Stashed changes
         }
 }
 }

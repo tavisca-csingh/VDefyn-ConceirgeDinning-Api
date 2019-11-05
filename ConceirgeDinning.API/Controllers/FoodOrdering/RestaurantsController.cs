@@ -21,7 +21,7 @@ namespace ConceirgeDinning.API.Controllers.FoodOrdering
                 locality = string.Empty;
             var response = restaurantList.FetchRestarauntDetails(locality, latitude, longitude,"2");
             if (response == null)
-                return Ok(StatusCodes.Status404NotFound);
+                return NotFound(StatusCodes.Status404NotFound);
             List<Restaurant> sortedresponse = response.OrderByDescending(o => o.User_Rating).ToList();
             
             return sortedresponse;

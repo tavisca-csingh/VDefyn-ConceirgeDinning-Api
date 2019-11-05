@@ -7,11 +7,14 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Serilog;
+using Serilog.Formatting.Compact;
 
 namespace ConceirgeDinning.API
 {
     public class Program
     {
+
         public static void Main(string[] args)
         {
             CreateWebHostBuilder(args).Build().Run();
