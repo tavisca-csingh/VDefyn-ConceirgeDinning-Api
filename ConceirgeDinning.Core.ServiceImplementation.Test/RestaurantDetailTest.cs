@@ -6,7 +6,7 @@ using ConceirgeDinning.Core.Models;
 
 namespace ConceirgeDinning.Core.ServiceImplementation.Test
 {
-    public class RestaurantDetailService
+    public class RestaurantDetailTest
     {
         [Fact]
         public void SHOULD_RETURN_NULL_ON_PASSING_INVALID_SUPPLIER_NAME()

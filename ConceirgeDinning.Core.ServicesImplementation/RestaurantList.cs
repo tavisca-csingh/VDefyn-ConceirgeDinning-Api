@@ -13,11 +13,11 @@ namespace ConceirgeDinning.Core.ServicesImplementation
     public class RestaurantList 
     {
 
-        List<IFetchRestaurant> restaurantByLocalityFetchers = new List<IFetchRestaurant>()
+        /*List<IFetchRestaurant> restaurantByLocalityFetchers = new List<IFetchRestaurant>()
         {
             new ZomatoRestaurantAdapter(),
             new USRestarauntAdapter()
-        };
+        };*/
 
         public List<Restaurant> FetchRestarauntDetails(string locality, string latitude, string longitude,string category)
         {
