@@ -19,5 +19,19 @@ namespace ConceirgeDinning.ServicesImplementation.BookingTable
                 return true;
             return false;
         }
+        public bool CheckCancelTime(Booking booking)
+        {
+            DateTime currentDate = DateTime.Today;
+            if (booking.Date < currentDate)
+                return false;
+            if (booking.Date == currentDate)
+            {
+                TimeSpan currentTime = DateTime.Now.TimeOfDay;
+                int hours = booking.Time.Hours - currentTime.Hours;
+                if (hours < 4)
+                    return false;
+            }
+            return true;
+        }
     }
 }
