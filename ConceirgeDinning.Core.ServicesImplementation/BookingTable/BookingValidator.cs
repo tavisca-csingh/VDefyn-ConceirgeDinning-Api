@@ -10,6 +10,7 @@ namespace ConceirgeDinning.ServicesImplementation
         public bool CheckAvailability(int noOfGuests, DateTime date, string restaurantId,string restaurantName)
         {
             sql12310325Context conciergeContext = new sql12310325Context();
+            RestaurantAvailability reply2=new RestaurantAvailability();
             var reply=conciergeContext.RestaurantNames.Find(restaurantId);
             if (reply == null)
             {
@@ -26,8 +27,10 @@ namespace ConceirgeDinning.ServicesImplementation
                 restaurantAvailability.BookedSeats = 0;
                 conciergeContext.RestaurantAvailability.Add(restaurantAvailability);
                 conciergeContext.SaveChanges();
+                reply2 = restaurantAvailability;
             }
-            var reply2 = conciergeContext.RestaurantAvailability.Find(restaurantId, date);
+            else
+                reply2 = conciergeContext.RestaurantAvailability.Find(restaurantId, date);
             if(reply2==null)
             {
                 RestaurantAvailability restaurantAvailability = new RestaurantAvailability();
@@ -36,8 +39,9 @@ namespace ConceirgeDinning.ServicesImplementation
                 restaurantAvailability.BookedSeats = 0;
                 conciergeContext.RestaurantAvailability.Add(restaurantAvailability);
                 conciergeContext.SaveChanges();
+                reply2 = restaurantAvailability;
             }
-            reply2 = conciergeContext.RestaurantAvailability.Find(restaurantId, date);
+           
             if ((40 - reply2.BookedSeats) >= noOfGuests)
             {
                 return true;
