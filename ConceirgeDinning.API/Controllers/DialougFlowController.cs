@@ -21,7 +21,9 @@ namespace ConceirgeDinning.API.Controllers
             string userName=Convert.ToString(input["userId"]);
             string key=Convert.ToString(input["key"]);
             DialougFlowResponse dialougFlowResponse = new DialougFlowResponse();
-            var response = dialougFlowResponse.GetResponse(userName, key, body);
+
+            string response = dialougFlowResponse.GetResponse(userName, key, body);
+
             if (response is null)
                 return NotFound(StatusCodes.Status404NotFound);
             return response;
