@@ -16,10 +16,17 @@ namespace ConceirgeDining.Middleware
             bookingResponse.BookingId = 0;
             bookingResponse.Status = "BookingInitiated";
             bookingResponse.TotalPointPrice = 0;
-            if(!bookingValidation.CheckAvailability(noOfGuests, date, restaurantId, restaurantName))
+            int bookedSeats = bookingValidation.CheckAvailability(noOfGuests, date, restaurantId, restaurantName);
+            int availableSeats = 40 - bookedSeats;
+            if (availableSeats<noOfGuests)
             {
                 bookingResponse.Status = "BookingNotInitiated";
-                bookingResponse.Error.Add("Seats are not available");
+                if (availableSeats > 1)
+                    bookingResponse.Error.Add("Only "+availableSeats+" are available at this restaurant");
+                else if(availableSeats==1)
+                    bookingResponse.Error.Add("Only " + availableSeats + " is available at this restaurant");
+                else
+                    bookingResponse.Error.Add("Restaurant is totally booked");
             }
             if (!bookingValidation.CheckNoOfGuests(noOfGuests))
             {
