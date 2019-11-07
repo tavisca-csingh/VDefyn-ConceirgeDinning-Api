@@ -2,6 +2,7 @@
 using ConceirgeDinning.Adapter.Zomato.Translator;
 using ConceirgeDinning.Contracts.Models;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -21,6 +22,7 @@ namespace ConceirgeDinning.Adapter.Zomato
             request.Method = "GET";
 
             request.ContentType = "application/json";
+            
 
 
             using (var response = request.GetResponse())
@@ -32,8 +34,7 @@ namespace ConceirgeDinning.Adapter.Zomato
                     var result = reader.ReadToEnd();
                     try
                     {
-                        var jobject = JsonConvert.DeserializeObject<MenuItems>(result);
-
+                        MenuItems jobject = JsonConvert.DeserializeObject<MenuItems>(result);
                         return ZomatoMenuItemTranslator.GetMenuItem(jobject);
                     }
                     catch (System.Net.WebException ex)

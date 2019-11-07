@@ -37,7 +37,7 @@ namespace ConceirgeDinning.API.Controllers.BookingTable
                 bookingResponse.PerPersonPoints = perPersonPoints;
                 bookingResponse.PointBalance = pointBalance;
             }
-
+            
             return bookingResponse;
         }
     }
