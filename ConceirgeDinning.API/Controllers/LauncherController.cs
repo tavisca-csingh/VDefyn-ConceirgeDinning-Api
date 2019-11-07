@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ConceirgeDining.Middleware.Launcher;
+using ConceirgeDinning.Contracts.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json.Linq;
@@ -14,7 +15,7 @@ namespace ConceirgeDinning.API.Controllers
     public class LauncherController : ControllerBase
     {
         [HttpPost]
-        public  string Launch([FromBody]JObject jObject)
+        public  ActionResult<LaunchReply> Launch([FromBody]JObject jObject)
         {
             string userId=Convert.ToString(jObject["userId"]);
             long pointBalance= Convert.ToInt64(jObject["pointBalance"]); 
@@ -22,7 +23,9 @@ namespace ConceirgeDinning.API.Controllers
             string locale= Convert.ToString(jObject["locale"]);
             string environment = Convert.ToString(jObject["environment"]);
             LauncherInitialiser launcherInitialiser = new LauncherInitialiser();
-            return launcherInitialiser.Start(userId, pointBalance, bank, locale, environment);
+            LaunchReply launchReply = new LaunchReply();
+            launchReply.sessionId= launcherInitialiser.Start(userId, pointBalance, bank, locale, environment);
+            return launchReply;
             
         }
     }
