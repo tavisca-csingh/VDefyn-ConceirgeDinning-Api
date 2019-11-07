@@ -126,6 +126,12 @@ namespace ConceirgeDiningDAL.Models
                     .HasMaxLength(256)
                     .IsUnicode(false);
 
+                entity.Property(e => e.Environment)
+                    .IsRequired()
+                    .HasColumnName("environment")
+                    .HasMaxLength(256)
+                    .IsUnicode(false);
+
                 entity.Property(e => e.Locale)
                     .IsRequired()
                     .HasColumnName("locale")

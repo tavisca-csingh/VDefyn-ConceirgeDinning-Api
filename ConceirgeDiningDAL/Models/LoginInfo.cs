@@ -11,5 +11,6 @@ namespace ConceirgeDiningDAL.Models
         public string Bank { get; set; }
         public string Locale { get; set; }
         public DateTimeOffset Timestamp { get; set; }
+        public string Environment { get; set; }
     }
 }

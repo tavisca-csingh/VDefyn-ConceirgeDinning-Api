@@ -19,9 +19,10 @@ namespace ConceirgeDinning.API.Controllers
             string userId=Convert.ToString(jObject["userId"]);
             long pointBalance= Convert.ToInt64(jObject["pointBalance"]); 
             string bank= Convert.ToString(jObject["bank"]); 
-            string locale= Convert.ToString(jObject["locale"]); 
+            string locale= Convert.ToString(jObject["locale"]);
+            string environment = Convert.ToString(jObject["environment"]);
             LauncherInitialiser launcherInitialiser = new LauncherInitialiser();
-            return launcherInitialiser.Start(userId, pointBalance, bank, locale);
+            return launcherInitialiser.Start(userId, pointBalance, bank, locale, environment);
             
         }
     }
