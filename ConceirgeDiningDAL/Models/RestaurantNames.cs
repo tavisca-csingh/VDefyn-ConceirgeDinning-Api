@@ -8,6 +8,7 @@ namespace ConceirgeDiningDAL.Models
         public RestaurantNames()
         {
             Booking = new HashSet<Booking>();
+            Ordering = new HashSet<Ordering>();
             RestaurantAvailability = new HashSet<RestaurantAvailability>();
         }
 
@@ -15,6 +16,7 @@ namespace ConceirgeDiningDAL.Models
         public string RestaurantName { get; set; }
 
         public virtual ICollection<Booking> Booking { get; set; }
+        public virtual ICollection<Ordering> Ordering { get; set; }
         public virtual ICollection<RestaurantAvailability> RestaurantAvailability { get; set; }
     }
 }

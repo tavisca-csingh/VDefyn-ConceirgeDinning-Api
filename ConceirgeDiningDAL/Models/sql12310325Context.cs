@@ -18,6 +18,8 @@ namespace ConceirgeDiningDAL.Models
         public virtual DbSet<Booking> Booking { get; set; }
         public virtual DbSet<BookingProgress> BookingProgress { get; set; }
         public virtual DbSet<LoginInfo> LoginInfo { get; set; }
+        public virtual DbSet<OrderDetails> OrderDetails { get; set; }
+        public virtual DbSet<Ordering> Ordering { get; set; }
         public virtual DbSet<RestaurantAvailability> RestaurantAvailability { get; set; }
         public virtual DbSet<RestaurantNames> RestaurantNames { get; set; }
 
@@ -26,7 +28,7 @@ namespace ConceirgeDiningDAL.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseMySQL("Server=sql12.freesqldatabase.com; Database=sql12310325; Uid=sql12310325; Pwd=wR3wJZe8VG; Port=3306;");
+                optionsBuilder.UseMySQL("Server=sql12.freesqldatabase.com;Database=sql12310325;Uid=sql12310325;Pwd=wR3wJZe8VG;");
             }
         }
 
@@ -140,6 +142,69 @@ namespace ConceirgeDiningDAL.Models
                     .HasColumnName("userId")
                     .HasMaxLength(256)
                     .IsUnicode(false);
+            });
+
+            modelBuilder.Entity<OrderDetails>(entity =>
+            {
+                entity.HasKey(e => new { e.OrderId, e.ItemName });
+
+                entity.ToTable("OrderDetails", "sql12310325");
+
+                entity.Property(e => e.OrderId).HasColumnType("int(11)");
+
+                entity.Property(e => e.ItemName)
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Price).HasColumnType("decimal(10,5)");
+
+                entity.Property(e => e.Quantity).HasColumnType("int(11)");
+
+                entity.HasOne(d => d.Order)
+                    .WithMany(p => p.OrderDetails)
+                    .HasForeignKey(d => d.OrderId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("OrderDetails_ibfk_1");
+            });
+
+            modelBuilder.Entity<Ordering>(entity =>
+            {
+                entity.HasKey(e => e.OrderId);
+
+                entity.ToTable("Ordering", "sql12310325");
+
+                entity.HasIndex(e => e.RestaurantId)
+                    .HasName("restaurantId");
+
+                entity.Property(e => e.OrderId).HasColumnType("int(11)");
+
+                entity.Property(e => e.RestaurantId)
+                    .IsRequired()
+                    .HasColumnName("restaurantId")
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Status)
+                    .IsRequired()
+                    .HasColumnName("status")
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.TimeStamp).HasDefaultValueSql("CURRENT_TIMESTAMP");
+
+                entity.Property(e => e.TotalPoints).HasColumnType("bigint(20)");
+
+                entity.Property(e => e.UserId)
+                    .IsRequired()
+                    .HasColumnName("userId")
+                    .HasMaxLength(255)
+                    .IsUnicode(false);
+
+                entity.HasOne(d => d.Restaurant)
+                    .WithMany(p => p.Ordering)
+                    .HasForeignKey(d => d.RestaurantId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("Ordering_ibfk_1");
             });
 
             modelBuilder.Entity<RestaurantAvailability>(entity =>
