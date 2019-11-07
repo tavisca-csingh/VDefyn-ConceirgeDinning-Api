@@ -10,12 +10,13 @@ using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
+using Category = ConceirgeDinning.Contracts.Models.Category;
 
 namespace ConceirgeDinning.Adapter.Zomato
 {
     public class ZomatoMenuItemAdpter
     {
-        public List<MenuItem> GetMenuItems(string restaurantId)
+        public List<Category> GetMenuItems(string restaurantId)
         {
             string ApiUrl = @"http://demo9372501.mockable.io/menuitem";
             var request = System.Net.WebRequest.Create(ApiUrl);

@@ -6,7 +6,12 @@ namespace ConceirgeDinning.Contracts.Models
 {
     public class MenuItem
     {
-        public string Dish { get; set; }
+        public string Name { get; set; }
         public string Price { get; set; }
+    }
+    public class Category
+    {
+        public string category { get; set; }
+        public List<MenuItem> Items { get; set; }
     }
 }

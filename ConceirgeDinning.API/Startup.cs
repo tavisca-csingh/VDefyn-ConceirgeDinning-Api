@@ -62,7 +62,7 @@ namespace ConceirgeDinning.API
         {
             Log.Logger = new LoggerConfiguration()
                          .MinimumLevel.Verbose()
-                         .WriteTo.File(@"..\Logs\log.txt", rollingInterval: RollingInterval.Day)
+                         .WriteTo.File(@"..\Logs\log.csv", rollingInterval: RollingInterval.Day)
                          .CreateLogger();
         }
     }

@@ -42,7 +42,7 @@ namespace ConceirgeDinning.Core.ServicesImplementation
 
 
             var zomatoResults = fetchFromZomato.Result;
-            Log.Information("No. of fetched restaurantlist: " + zomatoResults.Count.ToString());
+            
            
             //var usRestaurantResults = fetchFromUS.Result;
             if (/*(usRestaurantResults is null) && */!(zomatoResults is null))

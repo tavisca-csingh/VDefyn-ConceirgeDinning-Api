@@ -8,6 +8,7 @@ using System.Text;
 using ConceirgeDinning.Core.Models;
 using ConceirgeDinning.Services;
 using Newtonsoft.Json;
+using Serilog;
 
 namespace ConceirgeDinning.Adapter.Zomato.Translator
 {
@@ -33,7 +34,7 @@ namespace ConceirgeDinning.Adapter.Zomato.Translator
                     try
                     {
                         var jobject = JsonConvert.DeserializeObject<Models.SearchResponse>(result);
-
+                        Log.Information(",No. of fetched restaurantlist: " + result + "\n");
                         return ZomatoRestaurantTranslator.TranslateToRestaurant(jobject);
                     }
                     catch (System.Net.WebException ex)
@@ -42,12 +43,6 @@ namespace ConceirgeDinning.Adapter.Zomato.Translator
                     }
                 }
             }
-        
-
-
-
-            
-
         }
     }
 }

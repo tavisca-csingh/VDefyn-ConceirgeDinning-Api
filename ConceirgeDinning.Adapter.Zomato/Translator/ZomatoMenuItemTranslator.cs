@@ -3,30 +3,47 @@ using ConceirgeDinning.Contracts.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Category = ConceirgeDinning.Contracts.Models.Category;
 
 namespace ConceirgeDinning.Adapter.Zomato.Translator
 {
     public static class ZomatoMenuItemTranslator
     {
-        public static List<MenuItem> GetMenuItem(Models.FoodOrdering.MenuItems menuItem)
+        public static List<Category> GetMenuItem(Models.FoodOrdering.MenuItems menuItem)
         {
 
             List<MenuItem> menuItems = new List<MenuItem>();
-
-            foreach (Models.FoodOrdering.Category item in menuItem.categories)
+            List<Contracts.Models.Category> category = new List<Contracts.Models.Category>();
+            Category cat = new Category();
+            foreach (var item in menuItem.categories)
             {
+                menuItems = new List<MenuItem>();
+                cat = new Category();
+                cat.category = item.name;
+
                 foreach (Models.FoodOrdering.Menu Item in item.menuitems)
                 {
                     menuItems.Add(new MenuItem()
                     {
-                        Dish = Item.name,
+                        Name = Item.name,
                         Price = Item.price
                     });
                 }
-                
-            }
+                cat.Items = menuItems;
+                category.Add(cat);
+               
 
-            return menuItems;
+            }
+           /* foreach(Models.FoodOrdering.Category item in menuItem.categories)
+            {
+                category.Add(new Contracts.Models.Category()
+                {
+                    category=item.name,
+                    Items=menuItems
+                });
+            }*/
+
+            return category;
         }
     }
 }

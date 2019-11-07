@@ -14,7 +14,7 @@ namespace ConceirgeDinning.API.Controllers.FoodOrdering
     public class MenuItemsController : ControllerBase
     {
         [HttpGet]
-        public ActionResult<List<MenuItem>> GetMenuItems(string restaurntId, string supplierName)
+        public ActionResult<List<Category>> GetMenuItems(string restaurntId, string supplierName)
         {
             MenuItemList menu = new MenuItemList();
             var response = menu.GetMenus(restaurntId, supplierName);
