@@ -7,7 +7,7 @@ namespace ConceirgeDinning.ServicesImplementation
 {
     public class BookingValidator
     {
-        public bool CheckAvailability(int noOfGuests, DateTime date, string restaurantId,string restaurantName)
+        public int CheckAvailability(int noOfGuests, DateTime date, string restaurantId,string restaurantName)
         {
             sql12310325Context conciergeContext = new sql12310325Context();
             var reply=conciergeContext.RestaurantNames.Find(restaurantId);
@@ -38,14 +38,7 @@ namespace ConceirgeDinning.ServicesImplementation
                 conciergeContext.SaveChanges();
             }
             reply2 = conciergeContext.RestaurantAvailability.Find(restaurantId, date);
-            if ((40 - reply2.BookedSeats) >= noOfGuests)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return reply2.BookedSeats;
         }
         public bool CheckNoOfGuests(int noOfGuests)
         {

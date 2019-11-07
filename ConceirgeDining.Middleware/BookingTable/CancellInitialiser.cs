@@ -38,6 +38,12 @@ namespace ConceirgeDining.Middleware.BookingTable
                 cancellResponse.Status = "Booking ID already cancelled";
                 cancellResponse.UpdatedPointBalance = pointBalance;
             }
+            else if(!cancellValidator.CheckCancelTime(booking))
+            {
+                cancellResponse.Error.Add("Can't cancell before 4 hours");
+                cancellResponse.Status = "Can't cancell before 4 hours";
+                cancellResponse.UpdatedPointBalance = pointBalance;
+            }
             else
             {
                 cancellResponse.Status = "Cancellation Possible";

@@ -23,6 +23,7 @@ namespace ConceirgeDinning.API.Controllers
             string userName=Convert.ToString(input["userId"]);
             string key=Convert.ToString(input["key"]);
             DialougFlowResponse dialougFlowResponse = new DialougFlowResponse();
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
 <<<<<<< Updated upstream
@@ -40,6 +41,14 @@ namespace ConceirgeDinning.API.Controllers
             Log.Information("response from DialogFlow"+response);
             return response;
 >>>>>>> Stashed changes
+=======
+
+            string response = dialougFlowResponse.GetResponse(userName, key, body);
+
+            if (response is null)
+                return NotFound(StatusCodes.Status404NotFound);
+            return response;
+>>>>>>> demo3
         }
 }
 }

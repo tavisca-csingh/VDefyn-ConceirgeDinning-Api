@@ -18,7 +18,7 @@ namespace ConceirgeDinning.Adapter.Geocoder.xyz.Translator
             var request = System.Net.WebRequest.Create(ApiUrl + locality + "&json=1");
             request.Method = "GET";
             request.ContentType = "application/json";
-
+            
 
             using (var response = request.GetResponse())
             {

@@ -27,6 +27,8 @@ namespace ConceirgeDinning.Adapter.DialougFlow.cs
                 {
                     StreamReader sr = new StreamReader(response.GetResponseStream());
                     var output=sr.ReadToEnd();
+                    if (output is null)
+                        return null;
 
                     return output;
                     //return output;
