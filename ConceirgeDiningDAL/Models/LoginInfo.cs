@@ -5,7 +5,7 @@ namespace ConceirgeDiningDAL.Models
 {
     public partial class LoginInfo
     {
-        public int SessionId { get; set; }
+        public string SessionId { get; set; }
         public string UserId { get; set; }
         public long LoyaltyPoints { get; set; }
         public string Bank { get; set; }
