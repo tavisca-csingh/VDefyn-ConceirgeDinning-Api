@@ -19,7 +19,7 @@ namespace ConceirgeDinning.Adapter.Zomato.Translator
                 {
                     menuItems.Add(new MenuItem()
                     {
-                        Dish = Item.name,
+                        Name = Item.name,
                         Price = Item.price
                     });
                 }
