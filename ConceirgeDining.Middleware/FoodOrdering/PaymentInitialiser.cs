@@ -1,4 +1,5 @@
-﻿using ConceirgeDinning.Contracts.Models;
+﻿using ConceirgeDiningDAL.Models;
+using ConceirgeDinning.Contracts.Models;
 using ConceirgeDinning.ServicesImplementation.FoodOrdering;
 using System;
 using System.Collections.Generic;
@@ -17,20 +18,19 @@ namespace ConceirgeDining.Middleware.FoodOrdering
         }
         public OrderPaymentResponse Start()
         {
-            int orderId;
-            orderId=paymentInitiator.AddEntryInOrderTable(orderResponse);
-            paymentInitiator.AddEntriesInOrderDetailTable(orderId,orderResponse.MenuItems);
+            Ordering ordering;
+            ordering = paymentInitiator.AddEntryInOrderTable(orderResponse);
+            paymentInitiator.AddEntriesInOrderDetailTable(ordering.OrderId, orderResponse.MenuItems);
             OrderPaymentResponse orderPaymentResponse = new OrderPaymentResponse();
-            orderPaymentResponse.OrderId = orderId;
+            orderPaymentResponse.OrderId = ordering.OrderId;
             orderPaymentResponse.RestaurantId = orderResponse.RestaurantId;
             orderPaymentResponse.RestaurantName = orderResponse.RestaurantName;
             orderPaymentResponse.UserId = orderResponse.UserId;
             orderPaymentResponse.TotalPoints = orderResponse.TotalPoints;
             orderPaymentResponse.MenuItems = orderResponse.MenuItems;
-            orderPaymentResponse.OrderId = orderId;
             orderPaymentResponse.Error = null;
             orderPaymentResponse.Status = "Order Successful";
-
+            orderPaymentResponse.date = ordering.TimeStamp;
 
             return orderPaymentResponse;
         }

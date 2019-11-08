@@ -9,7 +9,7 @@ namespace ConceirgeDinning.ServicesImplementation.FoodOrdering
     public class PaymentInitiator
     {
         sql12310325Context conciergeContext = new sql12310325Context();
-        public int AddEntryInOrderTable(OrderResponse orderResponse)
+        public Ordering AddEntryInOrderTable(OrderResponse orderResponse)
         {
             var restaurant = conciergeContext.RestaurantNames.Find(orderResponse.RestaurantId);
             if (restaurant == null)
@@ -26,9 +26,10 @@ namespace ConceirgeDinning.ServicesImplementation.FoodOrdering
             ordering.RestaurantId = orderResponse.RestaurantId;
             ordering.Status = "Order Placed";
             ordering.TotalPoints = orderResponse.TotalPoints;
+            ordering.TimeStamp = DateTime.Now;
             conciergeContext.Ordering.Add(ordering);
             conciergeContext.SaveChanges();
-            return ordering.OrderId;
+            return ordering;
         }
         public void AddEntriesInOrderDetailTable(int orderId,List<Item> items)
         {
@@ -40,6 +41,7 @@ namespace ConceirgeDinning.ServicesImplementation.FoodOrdering
                 orderDetails.ItemName = item.name;
                 orderDetails.Price = item.price;
                 orderDetails.Quantity = item.quantity;
+
                 conciergeContext.OrderDetails.Add(orderDetails);
             }
             conciergeContext.SaveChanges();
