@@ -8,6 +8,7 @@ using System.Text;
 using ConceirgeDinning.Core.Models;
 using ConceirgeDinning.Services;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using Serilog;
 
 namespace ConceirgeDinning.Adapter.Zomato.Translator
@@ -23,7 +24,7 @@ namespace ConceirgeDinning.Adapter.Zomato.Translator
 
             request.ContentType = "application/json";
 
-
+            Log.Information("request to supplier: "+ApiUrl + "&lat=" + latitude + "&lon=" + longitude + "&category=" + category);
             using (var response = request.GetResponse())
             {
 
@@ -34,11 +35,13 @@ namespace ConceirgeDinning.Adapter.Zomato.Translator
                     try
                     {
                         var jobject = JsonConvert.DeserializeObject<Models.SearchResponse>(result);
-                        Log.Information(",No. of fetched restaurantlist: " + result + "\n");
+                        
+                        Log.Information("response from supplier : " + JObject.Parse(result));
                         return ZomatoRestaurantTranslator.TranslateToRestaurant(jobject);
                     }
                     catch (System.Net.WebException ex)
                     {
+                        Log.Information("response from supplier : " + ex );
                         return null;
                     }
                 }
