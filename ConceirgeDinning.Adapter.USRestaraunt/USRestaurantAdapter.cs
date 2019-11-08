@@ -2,6 +2,7 @@
 using ConceirgeDinning.Core.Models;
 using ConceirgeDinning.Services;
 using Newtonsoft.Json;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -19,7 +20,7 @@ namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
             request.Method = "GET";
             request.Headers.Add("X-RapidAPI-Host", "us-restaurant-menus.p.rapidapi.com");
             request.Headers.Add("X-RapidAPI-Key", "01545b0594mshdb9591ceda3d162p1716b7jsn43e523b10b95");
-
+            Log.Information("request to supplier: " + ApiUri + "&lat=" + latitude + "&lon=" + longitude);
             request.ContentType = "application/json";
 
             try
@@ -32,7 +33,9 @@ namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
                         var result = reader.ReadToEnd();
 
                         Models.SearchResponse Response = JsonConvert.DeserializeObject<Models.SearchResponse>(result);
-                        
+
+                        Log.Information("response from supplier: " + JsonConvert.SerializeObject(result));
+
                         var searchResults = USReataurantTranslator.TranslateToRestaurant(Response);
                         return searchResults;
                     }
@@ -40,6 +43,7 @@ namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
             }
             catch(System.Net.WebException ex)
             {
+                Log.Information("response from supplier: " + ex);
                 return null;
             }
 
