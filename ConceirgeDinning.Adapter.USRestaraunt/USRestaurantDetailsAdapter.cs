@@ -1,6 +1,7 @@
 ﻿using ConceirgeDinning.Core.Models;
 using ConceirgeDinning.Services;
 using Newtonsoft.Json;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -18,21 +19,24 @@ namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
             request.Method = "GET";
             request.Headers.Add("X-RapidAPI-Host", "us-restaurant-menus.p.rapidapi.com");
             request.Headers.Add("X-RapidAPI-Key", "01545b0594mshdb9591ceda3d162p1716b7jsn43e523b10b95");
-
+            Log.Information("request to supplier: "+ ApiUri + restaurantId + "/menuitems");
             request.ContentType = "application/json";
 
 
             using (HttpWebResponse response =(HttpWebResponse)request.GetResponse())
             {
                 if (response.StatusCode == HttpStatusCode.NotFound)
+                {
+                    Log.Information("response from supplier: " + HttpStatusCode.NotFound);
                     return null;
+                }
                 using (var stream = response.GetResponseStream())
                 {
                     var reader = new StreamReader(stream, System.Text.Encoding.UTF8);
                     var result = reader.ReadToEnd();
 
                     Models.RestaurantDetailResponse Response = JsonConvert.DeserializeObject<Models.RestaurantDetailResponse>(result);
-
+                    Log.Information("response from supplier: " + JsonConvert.SerializeObject(response));
 
                     var searchResults = USRestaurantDetailsTranslator.TranslateToRestaurantDetails(Response);
                     return searchResults;
