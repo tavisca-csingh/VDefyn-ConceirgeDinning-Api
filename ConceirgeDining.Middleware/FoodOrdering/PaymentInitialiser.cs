@@ -15,11 +15,12 @@ namespace ConceirgeDining.Middleware.FoodOrdering
             this.orderResponse = orderResponse;
             paymentInitiator = new PaymentInitiator();
         }
-        public void Start()
+        public int Start()
         {
             int orderId;
             orderId=paymentInitiator.AddEntryInOrderTable(orderResponse);
             paymentInitiator.AddEntriesInOrderDetailTable(orderId,orderResponse.MenuItems);
+            return orderId;
         }
         
     }

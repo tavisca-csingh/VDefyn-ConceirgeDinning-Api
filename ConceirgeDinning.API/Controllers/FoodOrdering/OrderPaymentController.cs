@@ -15,14 +15,22 @@ namespace ConceirgeDinning.API.Controllers.FoodOrdering
     public partial class OrderPaymentController : ControllerBase
     {
         [HttpPost]
-        public ActionResult<OrderResponse> payment([FromBody]JObject jsonData)
+        public ActionResult<OrderPaymentResponse> payment([FromBody]JObject jsonData)
         {
             OrderResponse orderResponse;
+            OrderPaymentResponse orderPaymentResponse = new OrderPaymentResponse();
             try
             {
+                int orderId;
                 orderResponse = JsonConvert.DeserializeObject<OrderResponse>(jsonData.ToString());
                 PaymentInitialiser paymentInitialiser = new PaymentInitialiser(orderResponse);
-                paymentInitialiser.Start();
+                orderId=paymentInitialiser.Start();
+                orderPaymentResponse.RestaurantId = orderResponse.RestaurantId;
+                orderPaymentResponse.RestaurantName = orderResponse.RestaurantName;
+                orderPaymentResponse.UserId = orderResponse.UserId;
+                orderPaymentResponse.TotalPoints = orderResponse.TotalPoints;
+                orderPaymentResponse.MenuItems = orderResponse.MenuItems;
+                orderPaymentResponse.OrderId = orderId;
             }
             catch (Exception e)
             {
@@ -30,7 +38,7 @@ namespace ConceirgeDinning.API.Controllers.FoodOrdering
                 throw;
             }   
             
-            return orderResponse;
+            return orderPaymentResponse;
         }
     }
 }
