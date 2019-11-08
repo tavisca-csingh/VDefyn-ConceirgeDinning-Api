@@ -31,8 +31,8 @@ namespace ConceirgeDinning.API.Controllers
 
             if (response is null)
             {
-                Log.Information("response from DialogFlow : 404");
-                return NotFound(StatusCodes.Status404NotFound);
+                Log.Information("response from DialogFlow : 401");
+                return Unauthorized(StatusCodes.Status401Unauthorized);
             }
 
             Log.Information("response from DialogFlow: "+response);
