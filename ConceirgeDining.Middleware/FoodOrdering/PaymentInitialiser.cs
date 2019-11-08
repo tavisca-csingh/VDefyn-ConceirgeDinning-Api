@@ -15,12 +15,24 @@ namespace ConceirgeDining.Middleware.FoodOrdering
             this.orderResponse = orderResponse;
             paymentInitiator = new PaymentInitiator();
         }
-        public int Start()
+        public OrderPaymentResponse Start()
         {
             int orderId;
             orderId=paymentInitiator.AddEntryInOrderTable(orderResponse);
             paymentInitiator.AddEntriesInOrderDetailTable(orderId,orderResponse.MenuItems);
-            return orderId;
+            OrderPaymentResponse orderPaymentResponse = new OrderPaymentResponse();
+            orderPaymentResponse.OrderId = orderId;
+            orderPaymentResponse.RestaurantId = orderResponse.RestaurantId;
+            orderPaymentResponse.RestaurantName = orderResponse.RestaurantName;
+            orderPaymentResponse.UserId = orderResponse.UserId;
+            orderPaymentResponse.TotalPoints = orderResponse.TotalPoints;
+            orderPaymentResponse.MenuItems = orderResponse.MenuItems;
+            orderPaymentResponse.OrderId = orderId;
+            orderPaymentResponse.Error = null;
+            orderPaymentResponse.Status = "Order Successful";
+
+
+            return orderPaymentResponse;
         }
         
     }

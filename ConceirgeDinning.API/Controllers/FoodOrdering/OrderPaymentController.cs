@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ConceirgeDining.Middleware.FoodOrdering;
@@ -21,21 +22,18 @@ namespace ConceirgeDinning.API.Controllers.FoodOrdering
             OrderPaymentResponse orderPaymentResponse = new OrderPaymentResponse();
             try
             {
-                int orderId;
+                
                 orderResponse = JsonConvert.DeserializeObject<OrderResponse>(jsonData.ToString());
                 PaymentInitialiser paymentInitialiser = new PaymentInitialiser(orderResponse);
-                orderId=paymentInitialiser.Start();
-                orderPaymentResponse.RestaurantId = orderResponse.RestaurantId;
-                orderPaymentResponse.RestaurantName = orderResponse.RestaurantName;
-                orderPaymentResponse.UserId = orderResponse.UserId;
-                orderPaymentResponse.TotalPoints = orderResponse.TotalPoints;
-                orderPaymentResponse.MenuItems = orderResponse.MenuItems;
-                orderPaymentResponse.OrderId = orderId;
+                orderPaymentResponse=paymentInitialiser.Start();
+                
             }
             catch (Exception e)
             {
 
-                throw;
+                orderPaymentResponse.Status = "Order Failed";
+                orderPaymentResponse.Error = new List<string>();
+                orderPaymentResponse.Error.Add("Server Error Contact Admin");
             }   
             
             return orderPaymentResponse;
