@@ -3,9 +3,9 @@
     
     public class Item
     {
-        public string ItemName { get; set; }
+        public string name { get; set; }
         public int quantity { get; set; }
-        public int points { get; set; }
+        public int price { get; set; }
             
     }
     
