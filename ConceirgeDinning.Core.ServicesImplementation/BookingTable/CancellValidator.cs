@@ -27,8 +27,10 @@ namespace ConceirgeDinning.ServicesImplementation.BookingTable
             if (booking.Date == currentDate)
             {
                 TimeSpan currentTime = DateTime.Now.TimeOfDay;
+                int minutes = booking.Time.Minutes;
                 int hours = booking.Time.Hours - currentTime.Hours;
-                if (hours < 4)
+                minutes += hours * 60;
+                if (minutes < 240)
                     return false;
             }
             return true;
