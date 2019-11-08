@@ -17,6 +17,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ConceirgeDinning.Adapter.USRestaraunt\ConceirgeDinning.Adapter.USRestaraunt.csproj" />
     <ProjectReference Include="..\ConceirgeDinning.Adapter.Zomato\ConceirgeDinning.Adapter.Zomato.csproj" />
+    <ProjectReference Include="..\ConceirgeDinning.API\ConceirgeDinning.API.csproj" />
     <ProjectReference Include="..\ConceirgeDinning.Core.Models\ConceirgeDinning.Contracts.Models.csproj" />
     <ProjectReference Include="..\ConceirgeDinning.Core.ServicesImplementation\ConceirgeDinning.ServicesImplementation.csproj" />
     <ProjectReference Include="..\ConceiseDinning.Services\ConceirgeDinningContracts.Services.csproj" />

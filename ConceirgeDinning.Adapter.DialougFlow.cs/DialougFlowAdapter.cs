@@ -1,6 +1,7 @@
 ﻿using ConceirgeDinning.Contracts.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Serilog;
 using System;
 using System.IO;
 using System.Text;
@@ -29,13 +30,14 @@ namespace ConceirgeDinning.Adapter.DialougFlow.cs
                     var output=sr.ReadToEnd();
                     if (output is null)
                         return null;
-
+                    Log.Information("response from Dialougflow: " + output);
                     return output;
                     //return output;
                 }
             }
             catch (System.Net.WebException ex)
             {
+                Log.Information("response from Dialougflow: " + ex);
                 return null;
             }
 

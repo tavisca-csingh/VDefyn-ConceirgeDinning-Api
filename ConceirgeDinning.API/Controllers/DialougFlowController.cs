@@ -19,19 +19,23 @@ namespace ConceirgeDinning.API.Controllers
         public ActionResult<string> GiveIntent([FromBody]JObject input)
         {
             Log.Information("request sent from user:" + input["text"]);
+
             string body = "{  \"queryInput\": {  \"text\": {  \"languageCode\":\""+Convert.ToString(input["languageCode"])+"\", \"text\":\""+Convert.ToString(input["text"]).ToString()+"\"   }  }        }";
+
             string userName=Convert.ToString(input["userId"]);
             string key=Convert.ToString(input["key"]);
             DialougFlowResponse dialougFlowResponse = new DialougFlowResponse();
-            if(dialougFlowResponse.GetResponse(userName, key, body)is null)
-                return NotFound(StatusCodes.Status404NotFound);
+
             string response = dialougFlowResponse.GetResponse(userName, key, body);
+            Log.Information(", Request from user : username- "+userName+" key- "+key+"body- "+body);
+
             if (response is null)
             {
-                Log.Information("NotFound");
+                Log.Information("response from DialogFlow : 404");
                 return NotFound(StatusCodes.Status404NotFound);
             }
-            Log.Information("response from DialogFlow"+response);
+
+            Log.Information("response from DialogFlow: "+response);
             return response;
         }
 }

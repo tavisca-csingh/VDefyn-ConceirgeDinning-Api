@@ -7,6 +7,7 @@ using ConceirgeDinning.Adapter.Geocoder.xyz.Models;
 using ConceirgeDinning.Core.Models;
 using ConceirgeDinning.Services;
 using Newtonsoft.Json;
+using Serilog;
 
 namespace ConceirgeDinning.Adapter.Geocoder.xyz.Translator
 {
@@ -18,8 +19,8 @@ namespace ConceirgeDinning.Adapter.Geocoder.xyz.Translator
             var request = System.Net.WebRequest.Create(ApiUrl + locality + "&json=1");
             request.Method = "GET";
             request.ContentType = "application/json";
-            
 
+            Log.Information("request to supplier"+ ApiUrl + locality + "&json=1");
             using (var response = request.GetResponse())
             {
                 using (var stream = response.GetResponseStream())
@@ -29,12 +30,14 @@ namespace ConceirgeDinning.Adapter.Geocoder.xyz.Translator
                     try
                     {
                         var jobject = JsonConvert.DeserializeObject<LocalityVerboseGeocode>(result);
+                        Log.Information("response from supplier: " + result);
                         var searchResults = LocalityGeocodeTranslator.GetLatLong(jobject);
                         return searchResults;
                     }
 
                     catch(Exception ex)
                     {
+                        Log.Information("response from supplier :" + ex);
                         return null;
                     }
                     

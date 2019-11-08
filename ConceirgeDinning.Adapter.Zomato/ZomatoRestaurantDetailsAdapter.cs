@@ -1,6 +1,7 @@
 ﻿using ConceirgeDinning.Core.Models;
 using ConceirgeDinning.Services;
 using Newtonsoft.Json;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -26,7 +27,10 @@ namespace ConceirgeDinning.Adapter.Zomato.Translator
                 using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
                 {
                     if (response.StatusCode == HttpStatusCode.NotFound)
+                    {
+                        Log.Information("request to supplier: "+ response.StatusCode);
                         return null;
+                    }
 
                     using (var stream = response.GetResponseStream())
                     {
@@ -34,6 +38,7 @@ namespace ConceirgeDinning.Adapter.Zomato.Translator
                         var result = reader.ReadToEnd();
 
                         Models.RestaurantDetails Response = JsonConvert.DeserializeObject<Models.RestaurantDetails>(result);
+                        Log.Information("response from supplier :" + Response);
                         var searchResults = ZomatoRestaurantDetailsTranslator.TranslateToRestaurantDetails(Response);
                         return searchResults;
                     }
@@ -42,6 +47,7 @@ namespace ConceirgeDinning.Adapter.Zomato.Translator
 
             catch (System.Net.WebException ex)
             {
+                Log.Information("response from supplier: "+ex);
                 return null;
             }
 
