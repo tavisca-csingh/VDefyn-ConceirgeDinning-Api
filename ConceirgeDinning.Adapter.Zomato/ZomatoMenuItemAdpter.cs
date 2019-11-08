@@ -3,6 +3,7 @@ using ConceirgeDinning.Adapter.Zomato.Translator;
 using ConceirgeDinning.Contracts.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -21,7 +22,7 @@ namespace ConceirgeDinning.Adapter.Zomato
             string ApiUrl = @"http://demo9372501.mockable.io/menuitem";
             var request = System.Net.WebRequest.Create(ApiUrl);
             request.Method = "GET";
-
+            
             request.ContentType = "application/json";
             
 
@@ -36,10 +37,12 @@ namespace ConceirgeDinning.Adapter.Zomato
                     try
                     {
                         MenuItems jobject = JsonConvert.DeserializeObject<MenuItems>(result);
+                        Log.Information("response from supplier: "+ JsonConvert.SerializeObject(result));
                         return ZomatoMenuItemTranslator.GetMenuItem(jobject);
                     }
                     catch (System.Net.WebException ex)
                     {
+                        Log.Information("response from supplier: " + ex);
                         return null;
                     }
                 }

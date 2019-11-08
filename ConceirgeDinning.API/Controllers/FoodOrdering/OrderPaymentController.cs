@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ConceirgeDining.Middleware.FoodOrdering;
@@ -15,22 +16,27 @@ namespace ConceirgeDinning.API.Controllers.FoodOrdering
     public partial class OrderPaymentController : ControllerBase
     {
         [HttpPost]
-        public ActionResult<OrderResponse> payment([FromBody]JObject jsonData)
+        public ActionResult<OrderPaymentResponse> payment([FromBody]JObject jsonData)
         {
             OrderResponse orderResponse;
+            OrderPaymentResponse orderPaymentResponse = new OrderPaymentResponse();
             try
             {
+                
                 orderResponse = JsonConvert.DeserializeObject<OrderResponse>(jsonData.ToString());
                 PaymentInitialiser paymentInitialiser = new PaymentInitialiser(orderResponse);
-                paymentInitialiser.Start();
+                orderPaymentResponse=paymentInitialiser.Start();
+                
             }
             catch (Exception e)
             {
 
-                throw;
+                orderPaymentResponse.Status = "Order Failed";
+                orderPaymentResponse.Error = new List<string>();
+                orderPaymentResponse.Error.Add("Server Error Contact Admin");
             }   
             
-            return orderResponse;
+            return orderPaymentResponse;
         }
     }
 }

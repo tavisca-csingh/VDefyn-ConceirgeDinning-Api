@@ -33,7 +33,9 @@ namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
                         var result = reader.ReadToEnd();
 
                         Models.SearchResponse Response = JsonConvert.DeserializeObject<Models.SearchResponse>(result);
+
                         Log.Information("response from supplier: " + JsonConvert.SerializeObject(result));
+
                         var searchResults = USReataurantTranslator.TranslateToRestaurant(Response);
                         return searchResults;
                     }

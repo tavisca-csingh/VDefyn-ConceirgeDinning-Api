@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
@@ -11,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Serilog;
+using Serilog.Formatting.Json;
 
 namespace ConceirgeDinning.API
 {
@@ -61,9 +63,12 @@ namespace ConceirgeDinning.API
         private void StartLogger()
         {
             Log.Logger = new LoggerConfiguration()
+            .WriteTo.RollingFile(new JsonFormatter(), Path.Combine(@"..\Logs\", "[filename]-{Date}.json"))
+            .CreateLogger();
+           /* Log.Logger = new LoggerConfiguration()
                          .MinimumLevel.Verbose()
                          .WriteTo.File(@"..\Logs\log.csv", rollingInterval: RollingInterval.Day)
-                         .CreateLogger();
+                         .CreateLogger();*/
         }
     }
 }
