@@ -11,16 +11,14 @@ namespace ConceirgeDinning.Adapter.Zomato.Translator
     {
         public static List<Category> GetMenuItem(Models.FoodOrdering.MenuItems menuItem)
         {
-
             List<MenuItem> menuItems = new List<MenuItem>();
-            List<Contracts.Models.Category> category = new List<Contracts.Models.Category>();
-            Category cat = new Category();
+            List<Contracts.Models.Category> categoryList = new List<Contracts.Models.Category>();
+            Category category = new Category();
             foreach (var item in menuItem.categories)
             {
                 menuItems = new List<MenuItem>();
-                cat = new Category();
-                cat.category = item.name;
-
+                category = new Category();
+                
                 foreach (Models.FoodOrdering.Menu Item in item.menuitems)
                 {
                     menuItems.Add(new MenuItem()
@@ -29,21 +27,11 @@ namespace ConceirgeDinning.Adapter.Zomato.Translator
                         Price = Item.price
                     });
                 }
-                cat.Items = menuItems;
-                category.Add(cat);
-               
-
+                category.category = item.name;
+                category.Items = menuItems;
+                categoryList.Add(category);
             }
-           /* foreach(Models.FoodOrdering.Category item in menuItem.categories)
-            {
-                category.Add(new Contracts.Models.Category()
-                {
-                    category=item.name,
-                    Items=menuItems
-                });
-            }*/
-
-            return category;
+            return categoryList;
         }
     }
 }

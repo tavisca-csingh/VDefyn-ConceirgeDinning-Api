@@ -116,12 +116,19 @@ namespace ConceirgeDiningDAL.Models
 
                 entity.Property(e => e.SessionId)
                     .HasColumnName("sessionId")
-                    .HasColumnType("int(11)")
+                    .HasMaxLength(256)
+                    .IsUnicode(false)
                     .ValueGeneratedNever();
 
                 entity.Property(e => e.Bank)
                     .IsRequired()
                     .HasColumnName("bank")
+                    .HasMaxLength(256)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Environment)
+                    .IsRequired()
+                    .HasColumnName("environment")
                     .HasMaxLength(256)
                     .IsUnicode(false);
 
