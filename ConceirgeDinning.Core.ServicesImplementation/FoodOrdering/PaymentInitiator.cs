@@ -38,9 +38,9 @@ namespace ConceirgeDinning.ServicesImplementation.FoodOrdering
             {
                 OrderDetails orderDetails = new OrderDetails();
                 orderDetails.OrderId = orderId;
-                orderDetails.ItemName = item.name;
-                orderDetails.Price = item.price;
-                orderDetails.Quantity = item.quantity;
+                orderDetails.ItemName = item.Name;
+                orderDetails.Price = item.Price;
+                orderDetails.Quantity = item.Quantity;
 
                 conciergeContext.OrderDetails.Add(orderDetails);
             }
