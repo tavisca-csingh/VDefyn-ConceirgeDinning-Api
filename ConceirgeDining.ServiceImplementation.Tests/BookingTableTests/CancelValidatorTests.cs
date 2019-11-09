@@ -55,6 +55,14 @@ namespace ConceirgeDining.ServiceImplementation.Tests.BookingTableTests
         {
             booking.Date = DateTime.Now.AddDays(1);
             bool actual = cancellValidator.CheckCancelTime(booking);
+            Assert.True(actual);
+        }
+
+        [Fact]
+        public void Check_Cancel_Time_Duration_Of_Invalid_Time()
+        {
+            booking.Time = DateTime.Today.TimeOfDay.Add(new TimeSpan(1, 1, 1));
+            bool actual = cancellValidator.CheckCancelTime(booking);
             Assert.False(actual);
         }
     }
