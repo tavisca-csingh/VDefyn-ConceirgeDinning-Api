@@ -24,9 +24,9 @@ namespace ConceirgeDinning.API.Tests
         {
             //GIVEN
             RestaurantList restaurant = new RestaurantList();
-            var expected =16;
+            var expected =10;
             //WHEN
-            var actual = restaurant.FetchRestarauntDetails("delhi",string.Empty,string.Empty,"2").Capacity;
+            var actual = restaurant.FetchRestarauntDetails("delhi",string.Empty,string.Empty,"2").Count;
             //THEN
             Assert.Equal(expected, actual);
         }
@@ -35,9 +35,9 @@ namespace ConceirgeDinning.API.Tests
         {
             //given
             RestaurantList restaurant = new RestaurantList();
-            var expected = 16;
+            var expected = 10;
             //when
-            var actual=restaurant.FetchRestarauntDetails(string.Empty, "18.4", "76.5", "1").Capacity;
+            var actual=restaurant.FetchRestarauntDetails(string.Empty, "18.4", "76.5", "1").Count;
             //then
             Assert.Equal(expected,actual);
 
