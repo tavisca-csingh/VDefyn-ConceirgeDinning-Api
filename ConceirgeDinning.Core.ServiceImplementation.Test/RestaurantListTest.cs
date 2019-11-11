@@ -26,7 +26,7 @@ namespace ConceirgeDinning.API.Tests
             RestaurantList restaurant = new RestaurantList();
             var expected =10;
             //WHEN
-            var actual = restaurant.FetchRestarauntDetails("delhi",string.Empty,string.Empty,"2").Count;
+            var actual = restaurant.FetchRestarauntDetails("pune",string.Empty,string.Empty,"2").Count;
             //THEN
             Assert.Equal(expected, actual);
         }
