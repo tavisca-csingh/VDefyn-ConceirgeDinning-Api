@@ -13,6 +13,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 using Serilog;
+using Serilog.Events;
 using Serilog.Formatting.Json;
 
 namespace ConceirgeDinning.API
@@ -45,7 +46,8 @@ namespace ConceirgeDinning.API
             Log.Information("SessionId : " + GuId.ToString());
             Log.Information("timestamp: "+DateTime.Now.ToString());
             
-            
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -70,10 +72,12 @@ namespace ConceirgeDinning.API
             //var client = new MongoClient("mongodb+srv://mattapalliswarnesh:lthliCuE4xi80DOE@logs-et0xz.mongodb.net/test?retryWrites=true&w=majority");
             //var database = client.GetDatabase("ConceirgeLogs");
             //var collection = database.GetCollection<object>("ConceirgeLogs");
+            
             Log.Logger = new LoggerConfiguration()
             .MinimumLevel.Debug()
             .WriteTo.MongoDB("mongodb+srv://mattapalliswarnesh:lthliCuE4xi80DOE@logs-et0xz.mongodb.net/ConceirgeLogs?retryWrites=true&w=majority", "ConceirgeLogs")
             .CreateLogger();
+            
             /* Log.Logger = new LoggerConfiguration()
              .WriteTo.RollingFile(new JsonFormatter(), Path.Combine(@"..\Logs\", "[filename]-{Date}.json"))
              .CreateLogger();
