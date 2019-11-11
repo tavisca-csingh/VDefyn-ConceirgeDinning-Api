@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using ConceirgeDinning.ServicesImplementation;
 using ConceirgeDinning.Contracts.Models;
 using ConceirgeDining.Middleware;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
 
 namespace ConceirgeDinning.API.Controllers.BookingTable
 {
@@ -14,29 +16,20 @@ namespace ConceirgeDinning.API.Controllers.BookingTable
     [ApiController]
     public class BookingController : ControllerBase
     {
-        [HttpGet]
-        public ActionResult<BookingResponse> GetRestaurants(int noOfGuests, DateTime date, TimeSpan time,string restaurantId,string userName,string restaurantName,long perPersonPoints,long pointBalance)
+        [HttpPost]
+        public ActionResult<BookingResponse> GetRestaurants([FromBody]JObject jObject)
         {
             BookingInitialiser bookingInitialisation = new BookingInitialiser();
             BookingResponse bookingResponse = new BookingResponse();
-            
-            bookingResponse=bookingInitialisation.Validate(noOfGuests, date,time, restaurantId,  restaurantName,  perPersonPoints,  pointBalance);
+            BookingRequest bookingRequest= JsonConvert.DeserializeObject<BookingRequest>(jObject.ToString());
+
+            bookingResponse =bookingInitialisation.Validate(bookingRequest);
             if(bookingResponse.Status== "BookingInitiated")
             {
-                bookingResponse=bookingInitialisation.Start(noOfGuests, date, time, restaurantId, restaurantName, userName, perPersonPoints, pointBalance);
+                bookingResponse=bookingInitialisation.Start(bookingRequest);
 
             }
-            if (true)
-            {
-                bookingResponse.NoOfGuests = noOfGuests;
-                bookingResponse.Date = date;
-                bookingResponse.Time = time;
-                bookingResponse.RestaurantId = restaurantId;
-                bookingResponse.UserName = userName;
-                bookingResponse.RestaurantName = restaurantName;
-                bookingResponse.PerPersonPoints = perPersonPoints;
-                bookingResponse.PointBalance = pointBalance;
-            }
+            
             
             return bookingResponse;
         }
