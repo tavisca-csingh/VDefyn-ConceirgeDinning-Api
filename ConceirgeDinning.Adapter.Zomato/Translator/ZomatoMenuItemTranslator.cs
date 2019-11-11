@@ -9,7 +9,7 @@ namespace ConceirgeDinning.Adapter.Zomato.Translator
 {
     public static class ZomatoMenuItemTranslator
     {
-        public static List<Category> GetMenuItem(Models.FoodOrdering.MenuItems menuItem)
+        public static List<Category> GetMenuItem( this MenuItems menuItem)
         {
             List<MenuItem> menuItems = new List<MenuItem>();
             List<Contracts.Models.Category> categoryList = new List<Contracts.Models.Category>();
@@ -19,7 +19,7 @@ namespace ConceirgeDinning.Adapter.Zomato.Translator
                 menuItems = new List<MenuItem>();
                 category = new Category();
                 
-                foreach (Models.FoodOrdering.Menu Item in item.menuitems)
+                foreach (Menu Item in item.menuitems)
                 {
                     menuItems.Add(new MenuItem()
                     {

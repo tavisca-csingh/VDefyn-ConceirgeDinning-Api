@@ -29,10 +29,9 @@ namespace ConceirgeDinning.Adapter.Geocoder.xyz.Translator
                     var result = reader.ReadToEnd();
                     try
                     {
-                        var jobject = JsonConvert.DeserializeObject<LocalityVerboseGeocode>(result);
+                        var localityGeocodeTranslator = JsonConvert.DeserializeObject<LocalityVerboseGeocode>(result);
                         Log.Information("response from supplier: " + result);
-                        var searchResults = LocalityGeocodeTranslator.GetLatLong(jobject);
-                        return searchResults;
+                        return localityGeocodeTranslator.GetLatLong();
                     }
 
                     catch(Exception ex)

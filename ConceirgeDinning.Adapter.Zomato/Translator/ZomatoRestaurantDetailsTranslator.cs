@@ -14,7 +14,7 @@ namespace ConceirgeDinning.Adapter.Zomato.Translator
             return cuisinesList;
         }
 
-        public static RestaurantDetails TranslateToRestaurantDetails(Models.RestaurantDetails responseFromSupplier)
+        public static RestaurantDetails TranslateToRestaurantDetails(this Models.RestaurantDetails responseFromSupplier)
         {
             RestaurantDetails response = new RestaurantDetails();
             response.SupplierName = "Zomato";

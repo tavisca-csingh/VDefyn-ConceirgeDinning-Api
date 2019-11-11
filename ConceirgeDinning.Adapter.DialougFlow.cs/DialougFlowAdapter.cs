@@ -40,10 +40,6 @@ namespace ConceirgeDinning.Adapter.DialougFlow.cs
                 Log.Information("response from Dialougflow: " + ex);
                 return null;
             }
-
-
-
-
         }
     }
 }

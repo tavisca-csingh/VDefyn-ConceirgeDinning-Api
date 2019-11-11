@@ -1,4 +1,5 @@
-﻿using ConceirgeDinning.Core.Models;
+﻿using ConceirgeDinning.Adapter.USRestaraunt.Models;
+using ConceirgeDinning.Core.Models;
 using ConceirgeDinning.Services;
 using Newtonsoft.Json;
 using Serilog;
@@ -35,11 +36,10 @@ namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
                     var reader = new StreamReader(stream, System.Text.Encoding.UTF8);
                     var result = reader.ReadToEnd();
 
-                    Models.RestaurantDetailResponse Response = JsonConvert.DeserializeObject<Models.RestaurantDetailResponse>(result);
+                    RestaurantDetailResponse restaurantDetails = JsonConvert.DeserializeObject<RestaurantDetailResponse>(result);
                     Log.Information("response from supplier: " + JsonConvert.SerializeObject(response));
 
-                    var searchResults = USRestaurantDetailsTranslator.TranslateToRestaurantDetails(Response);
-                    return searchResults;
+                    return restaurantDetails.TranslateToRestaurantDetails();
                 }
             }
 
