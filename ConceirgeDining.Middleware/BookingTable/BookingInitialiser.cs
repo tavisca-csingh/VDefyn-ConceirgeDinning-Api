@@ -16,33 +16,21 @@ namespace ConceirgeDining.Middleware
             bookingResponse.BookingId = 0;
             bookingResponse.Status = "BookingInitiated";
             bookingResponse.TotalPointPrice = 0;
-            int bookedSeats = bookingValidation.CheckAvailability(bookingRequest.NoOfGuests, bookingRequest.Date, bookingRequest.RestaurantId, bookingRequest.RestaurantName);
-            int availableSeats = 40 - bookedSeats;
-            if (availableSeats< bookingRequest.NoOfGuests)
-            {
-                bookingResponse.Status = "BookingNotInitiated";
-                if (availableSeats > 1)
-                    bookingResponse.Error.Add("Only "+availableSeats+" are available at this restaurant");
-                else if(availableSeats==1)
-                    bookingResponse.Error.Add("Only " + availableSeats + " is available at this restaurant");
-                else
-                    bookingResponse.Error.Add("Restaurant is totally booked");
-            }
-            if (!bookingValidation.CheckNoOfGuests(bookingRequest.NoOfGuests))
-            {
-                bookingResponse.Status = "BookingNotInitiated";
-                bookingResponse.Error.Add("Guests should be atleast one and less than 15");
-            }
+
             if (!bookingValidation.CheckDate(bookingRequest.Date))
             {
                 bookingResponse.Status = "BookingNotInitiated";
                 bookingResponse.Error.Add("Can't book for past dates");
             }
-
-            else if(!bookingValidation.CheckTime(bookingRequest.Time) && bookingRequest .Date== DateTime.Today)
+            else if (!bookingValidation.CheckTime(bookingRequest.Time) && bookingRequest.Date == DateTime.Today)
             {
                 bookingResponse.Status = "BookingNotInitiated";
                 bookingResponse.Error.Add("Can't book for past time");
+            }
+            if (!bookingValidation.CheckNoOfGuests(bookingRequest.NoOfGuests))
+            {
+                bookingResponse.Status = "BookingNotInitiated";
+                bookingResponse.Error.Add("Guests should be atleast one and less than 15");
             }
             if (!bookingValidation.CheckPointAvailability(bookingRequest.NoOfGuests, bookingRequest.PerPersonPoints, bookingRequest.PointBalance))
             {
@@ -50,7 +38,26 @@ namespace ConceirgeDining.Middleware
                 bookingResponse.Error.Add("Insufficient Points");
             }
 
-            
+
+
+            if (bookingResponse.Error.Count == 0)
+            {
+                int bookedSeats = bookingValidation.CheckAvailability(bookingRequest.NoOfGuests, bookingRequest.Date, bookingRequest.RestaurantId, bookingRequest.RestaurantName);
+                int availableSeats = 40 - bookedSeats;
+                if (availableSeats < bookingRequest.NoOfGuests)
+                {
+                    bookingResponse.Status = "BookingNotInitiated";
+                    if (availableSeats > 1)
+                        bookingResponse.Error.Add("Only " + availableSeats + " are available at this restaurant");
+                    else if (availableSeats == 1)
+                        bookingResponse.Error.Add("Only " + availableSeats + " is available at this restaurant");
+                    else
+                        bookingResponse.Error.Add("Restaurant is totally booked");
+                }
+            }
+
+
+
             bookingResponse.NoOfGuests = bookingRequest.NoOfGuests;
             bookingResponse.Date = bookingRequest.Date;
             bookingResponse.Time = bookingRequest.Time;
@@ -59,7 +66,7 @@ namespace ConceirgeDining.Middleware
             bookingResponse.RestaurantName = bookingRequest.RestaurantName;
             bookingResponse.PerPersonPoints = bookingRequest.PerPersonPoints;
             bookingResponse.PointBalance = bookingRequest.PointBalance;
-            
+
 
             return bookingResponse;
         }
@@ -70,7 +77,7 @@ namespace ConceirgeDining.Middleware
             bookingResponse.Error = null;
             bookingResponse.Status = "BookingInitiated";
             int bookingId;
-            bookingId=startBooking.AddEntryInBookingTable(bookingRequest.NoOfGuests, bookingRequest.Date, bookingRequest.Time, bookingRequest.RestaurantId, bookingRequest.RestaurantName, bookingRequest.UserName, bookingRequest.PerPersonPoints, bookingRequest.PointBalance);
+            bookingId = startBooking.AddEntryInBookingTable(bookingRequest.NoOfGuests, bookingRequest.Date, bookingRequest.Time, bookingRequest.RestaurantId, bookingRequest.RestaurantName, bookingRequest.UserName, bookingRequest.PerPersonPoints, bookingRequest.PointBalance);
             startBooking.UpdateSeats(bookingRequest.RestaurantId, bookingRequest.NoOfGuests, bookingRequest.Date);
             startBooking.AddEntryInProgressTable(bookingId);
             bookingResponse.BookingId = bookingId;
