@@ -1,6 +1,7 @@
 ﻿using ConceirgeDinning.Adapter.Zomato.Models.FoodOrdering;
 using ConceirgeDinning.Adapter.Zomato.Translator;
 using ConceirgeDinning.Contracts.Models;
+using ConceirgeDinningContracts.Services;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Serilog;
@@ -15,7 +16,7 @@ using Category = ConceirgeDinning.Contracts.Models.Category;
 
 namespace ConceirgeDinning.Adapter.Zomato
 {
-    public class ZomatoMenuItemAdpter
+    public class ZomatoMenuItemAdpter:IFetchMenu
     {
         public List<Category> GetMenuItems(string restaurantId)
         {
