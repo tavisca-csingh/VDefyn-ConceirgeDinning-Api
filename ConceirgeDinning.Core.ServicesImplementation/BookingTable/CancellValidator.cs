@@ -24,7 +24,7 @@ namespace ConceirgeDinning.ServicesImplementation.BookingTable
             DateTime currentDate = DateTime.Today;
             if (booking.Date < currentDate)
                 return false;
-            if (booking.Date == currentDate)
+            if (booking.Date == currentDate && booking.Status!= "BookingInitiated")
             {
                 TimeSpan currentTime = DateTime.Now.TimeOfDay;
                 int minutes = booking.Time.Minutes;
