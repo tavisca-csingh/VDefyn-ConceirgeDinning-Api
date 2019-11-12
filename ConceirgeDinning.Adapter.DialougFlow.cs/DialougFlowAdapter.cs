@@ -13,10 +13,12 @@ namespace ConceirgeDinning.Adapter.DialougFlow.cs
         public string GetResponse(string userName,string key,string input)
         {
             string ApiUri = @"https://dialogflow.googleapis.com/v2/projects/v-defynbot-rkixcd/agent/sessions/"+userName+":detectIntent";
+
             var request = System.Net.WebRequest.Create(ApiUri);
             request.Method = "POST";
             request.Headers.Add("Content-Type", "application/json");
             request.Headers.Add("Authorization", "Bearer "+key);
+
             Stream stream = request.GetRequestStream();
             ASCIIEncoding encoding = new ASCIIEncoding();
             byte[] inputbyte = encoding.GetBytes(input);

@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Text;
+using RestaurantDetails = ConceirgeDinning.Core.Models.RestaurantDetails;
 
 namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
 {
