@@ -20,6 +20,8 @@ namespace ConceirgeDining.LoggerDAL.Models
             logInfo.ServiceId = "5678";
             logInfo.UserId = "Anonomus";
             logInfo.TimeStamp = DateTime.Now;
+            logInfo.LoggingLevel = "Info";
+            logInfo.Client = "UsBank";
             logInfo.RequestFromUser = "abc";
             logInfo.RequestToSupplier = "def";
             logInfo.ResponseFromSupplier = "ghi";

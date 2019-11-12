@@ -17,6 +17,10 @@ namespace ConceirgeDining.LoggerDAL.Models
         [BsonElement("TimeStamp")]
         [BsonDateTimeOptions(Kind = DateTimeKind.Local)]
         public DateTime TimeStamp { get; set; }
+        [BsonElement("LoggingLevel")]
+        public string LoggingLevel { get; set; }
+        [BsonElement("Client")]
+        public string Client { get; set; }
         [BsonElement("RequestFromUser")]
         public string RequestFromUser { get; set; }
         [BsonElement("RequestToSupplier")]
