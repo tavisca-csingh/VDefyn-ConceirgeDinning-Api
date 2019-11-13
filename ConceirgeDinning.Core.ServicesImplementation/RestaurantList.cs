@@ -40,7 +40,11 @@ namespace ConceirgeDinning.Core.ServicesImplementation
             Task[] searchTasks = { /*fetchFromUS*/ fetchFromZomato };
             Task.WaitAll(searchTasks);
 
-
+            foreach(var item in fetchFromZomato.Result)
+            {
+                if (Math.Abs(Convert.ToDouble(item.Latitude) - Convert.ToDouble(latitude)) > 1)
+                    return null;
+            }
             var zomatoResults = fetchFromZomato.Result;
             
            

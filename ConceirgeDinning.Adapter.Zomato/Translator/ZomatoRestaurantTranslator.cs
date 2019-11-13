@@ -24,7 +24,8 @@ namespace ConceirgeDinning.Adapter.Zomato.Translator
                     User_Rating = restaurant.restaurant.user_rating.aggregate_rating,
                     ThumbURL = restaurant.restaurant.thumb,
                     Cuisines = GetCuisines(restaurant.restaurant.cuisines),
-                    PricePerHead = (restaurant.restaurant.average_cost_for_two/2).ToString()
+                    PricePerHead = (restaurant.restaurant.average_cost_for_two/2).ToString(),
+                    Latitude=restaurant.restaurant.location.latitude
                 });
 
             }

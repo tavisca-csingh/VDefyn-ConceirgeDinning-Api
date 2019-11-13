@@ -15,5 +15,6 @@ namespace ConceirgeDinning.Core.Models
         public List<String> Cuisines { get; set; }
         public string ThumbURL { get; set; }
         public string PricePerHead { get; set; }
+        public string Latitude { get; set; }
     }
 }

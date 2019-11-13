@@ -35,10 +35,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConceirgeDining.Middleware"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConceirgeDinning.Adapter.DialougFlow.cs", "ConceirgeDinning.Adapter.DialougFlow.cs\ConceirgeDinning.Adapter.DialougFlow.cs.csproj", "{86BBE1EB-E3DA-4FAD-B27E-FB2FE581FD49}"
 EndProject
-
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConceirgeDining.LoggerDAL", "ConceirgeDining.LoggerDAL\ConceirgeDining.LoggerDAL.csproj", "{E01CAB7C-098A-4373-A95E-2753AD4CE060}"
-
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConceirgeDining.ServiceImplementation.Tests", "ConceirgeDining.ServiceImplementation.Tests\ConceirgeDining.ServiceImplementation.Tests.csproj", "{4C4E7885-A7D0-481E-818B-CB08280E1056}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConceirgeDining.LoggerDAL", "ConceirgeDining.LoggerDAL\ConceirgeDining.LoggerDAL.csproj", "{E01CAB7C-098A-4373-A95E-2753AD4CE060}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConceirgeDining.ServiceImplementation.Tests", "ConceirgeDining.ServiceImplementation.Tests\ConceirgeDining.ServiceImplementation.Tests.csproj", "{4C4E7885-A7D0-481E-818B-CB08280E1056}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -90,11 +89,14 @@ Global
 		{86BBE1EB-E3DA-4FAD-B27E-FB2FE581FD49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86BBE1EB-E3DA-4FAD-B27E-FB2FE581FD49}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86BBE1EB-E3DA-4FAD-B27E-FB2FE581FD49}.Release|Any CPU.Build.0 = Release|Any CPU
-
 		{E01CAB7C-098A-4373-A95E-2753AD4CE060}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E01CAB7C-098A-4373-A95E-2753AD4CE060}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E01CAB7C-098A-4373-A95E-2753AD4CE060}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E01CAB7C-098A-4373-A95E-2753AD4CE060}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C4E7885-A7D0-481E-818B-CB08280E1056}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C4E7885-A7D0-481E-818B-CB08280E1056}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C4E7885-A7D0-481E-818B-CB08280E1056}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C4E7885-A7D0-481E-818B-CB08280E1056}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -111,9 +113,7 @@ Global
 		{F4F16E9E-83B8-45A0-B495-C267FCA06EDA} = {5A094FFA-D402-4A89-AC3C-E3F52137D0E6}
 		{80DAD82B-7559-4866-9C6A-F53B3C65652D} = {A0CE9DAD-4171-4CCF-BF21-95548C6FC329}
 		{86BBE1EB-E3DA-4FAD-B27E-FB2FE581FD49} = {061827A6-BA49-4296-9551-4734E40F815A}
-
 		{E01CAB7C-098A-4373-A95E-2753AD4CE060} = {5A094FFA-D402-4A89-AC3C-E3F52137D0E6}
-
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {138378C9-B37D-499B-AB20-4E8541DD5B2D}
