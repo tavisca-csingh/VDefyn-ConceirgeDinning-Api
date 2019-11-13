@@ -35,10 +35,9 @@ namespace ConceirgeDinning.Adapter.Zomato.Translator
                     try
                     {
                         var restrauntsList = JsonConvert.DeserializeObject<Models.SearchResponse>(result);
-                        
-
+  
                         Log.Information("response from supplier : " + JsonConvert.SerializeObject(result));
-
+                        
                         return restrauntsList.TranslateToRestaurant();
                     }
                     catch (System.Net.WebException ex)

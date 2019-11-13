@@ -24,7 +24,8 @@ namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
                     ThumbURL = "https://icon-library.net/images/no-image-available-icon/no-image-available-icon-6.jpg",
                     User_Rating = GetRating(3,5),
                     LocalityVerbose = restaurant.address.street + ", " + restaurant.address.city,
-                    Cuisines = restaurant.cuisines
+                    Cuisines = restaurant.cuisines,
+                    Latitude=restaurant.geo.lat.ToString()
                 });
             }
             return restaurantList;
