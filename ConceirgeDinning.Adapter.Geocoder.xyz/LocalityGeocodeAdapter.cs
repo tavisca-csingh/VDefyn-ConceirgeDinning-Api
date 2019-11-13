@@ -15,8 +15,8 @@ namespace ConceirgeDinning.Adapter.Geocoder.xyz.Translator
     {
         public LocalityGeocode FetchCoordinates(string locality)
         {
-            string ApiUrl = "https://geocode.xyz/?locate=";
-            var request = System.Net.WebRequest.Create(ApiUrl + locality + "&json=1");
+            string ApiUrl = "https://maps.googleapis.com/maps/api/place/textsearch/json?query=";
+            var request = System.Net.WebRequest.Create(ApiUrl + locality + "&key=AIzaSyC2LnC7a1z5MDzBjx4Us9qo9Z4Yupum03A");
             request.Method = "GET";
             request.ContentType = "application/json";
 
