@@ -7,6 +7,6 @@ namespace ConceirgeDinningContracts.Services
 {
     public interface IFetchMenu
     {
-        MenuItem GetMenu(string restaurantId, string supplierName);
+        List<Category> GetMenuItems(string restaurantId);
     }
 }

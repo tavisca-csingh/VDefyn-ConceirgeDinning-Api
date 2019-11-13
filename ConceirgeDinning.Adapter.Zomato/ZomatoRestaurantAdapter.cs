@@ -34,12 +34,12 @@ namespace ConceirgeDinning.Adapter.Zomato.Translator
                     var result = reader.ReadToEnd();
                     try
                     {
-                        var jobject = JsonConvert.DeserializeObject<Models.SearchResponse>(result);
+                        var restrauntsList = JsonConvert.DeserializeObject<Models.SearchResponse>(result);
                         
 
                         Log.Information("response from supplier : " + JsonConvert.SerializeObject(result));
 
-                        return ZomatoRestaurantTranslator.TranslateToRestaurant(jobject);
+                        return restrauntsList.TranslateToRestaurant();
                     }
                     catch (System.Net.WebException ex)
                     {

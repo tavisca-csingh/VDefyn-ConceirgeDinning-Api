@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using ConceirgeDinning.Core.Models;
 using ConceirgeDinning.Core.ServicesImplementation;
 using Serilog;
+using Newtonsoft.Json;
 
 namespace ConceirgeDinning.API.Controllers.BookingTables
 {
@@ -28,7 +29,7 @@ namespace ConceirgeDinning.API.Controllers.BookingTables
                 return NotFound(StatusCodes.Status404NotFound);
             }
             List<Restaurant> sortedresponse = response.OrderByDescending(o => o.User_Rating).ToList();
-            Log.Information("response sent to user:" + sortedresponse);
+            Log.Information("response to user: "+JsonConvert.SerializeObject(sortedresponse));
             return sortedresponse;
 
         }

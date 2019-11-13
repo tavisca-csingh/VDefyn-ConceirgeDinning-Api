@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using MongoDB.Driver;
 using Serilog;
 using Serilog.Formatting.Json;
 
@@ -40,6 +41,10 @@ namespace ConceirgeDinning.API
             });
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             StartLogger();
+            Guid GuId = Guid.NewGuid();
+            Log.Information("SessionId : " + GuId.ToString());
+            Log.Information("timestamp: "+DateTime.Now.ToString());
+            
             
         }
 
@@ -62,13 +67,20 @@ namespace ConceirgeDinning.API
         }
         private void StartLogger()
         {
+            //var client = new MongoClient("mongodb+srv://mattapalliswarnesh:lthliCuE4xi80DOE@logs-et0xz.mongodb.net/test?retryWrites=true&w=majority");
+            //var database = client.GetDatabase("ConceirgeLogs");
+            //var collection = database.GetCollection<object>("ConceirgeLogs");
             Log.Logger = new LoggerConfiguration()
-            .WriteTo.RollingFile(new JsonFormatter(), Path.Combine(@"..\Logs\", "[filename]-{Date}.json"))
+            .MinimumLevel.Debug()
+            .WriteTo.MongoDB("mongodb+srv://mattapalliswarnesh:lthliCuE4xi80DOE@logs-et0xz.mongodb.net/ConceirgeLogs?retryWrites=true&w=majority", "ConceirgeLogs")
             .CreateLogger();
-           /* Log.Logger = new LoggerConfiguration()
-                         .MinimumLevel.Verbose()
-                         .WriteTo.File(@"..\Logs\log.csv", rollingInterval: RollingInterval.Day)
-                         .CreateLogger();*/
+            /* Log.Logger = new LoggerConfiguration()
+             .WriteTo.RollingFile(new JsonFormatter(), Path.Combine(@"..\Logs\", "[filename]-{Date}.json"))
+             .CreateLogger();
+            /* Log.Logger = new LoggerConfiguration()
+                          .MinimumLevel.Verbose()
+                          .WriteTo.File(@"..\Logs\log.csv", rollingInterval: RollingInterval.Day)
+                          .CreateLogger();*/
         }
     }
 }

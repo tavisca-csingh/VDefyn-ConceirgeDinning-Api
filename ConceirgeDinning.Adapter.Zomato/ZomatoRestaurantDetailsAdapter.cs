@@ -37,10 +37,10 @@ namespace ConceirgeDinning.Adapter.Zomato.Translator
                         var reader = new StreamReader(stream, System.Text.Encoding.UTF8);
                         var result = reader.ReadToEnd();
 
-                        Models.RestaurantDetails Response = JsonConvert.DeserializeObject<Models.RestaurantDetails>(result);
-                        Log.Information("response from supplier :" + Response);
-                        var searchResults = ZomatoRestaurantDetailsTranslator.TranslateToRestaurantDetails(Response);
-                        return searchResults;
+                        Models.RestaurantDetails restaurantDetails = JsonConvert.DeserializeObject<Models.RestaurantDetails>(result);
+                        Log.Information("response from supplier :" + restaurantDetails);
+                        return restaurantDetails.TranslateToRestaurantDetails();
+                        
                     }
                 }
             }

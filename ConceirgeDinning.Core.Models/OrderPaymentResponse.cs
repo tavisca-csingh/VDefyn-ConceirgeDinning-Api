@@ -14,5 +14,6 @@ namespace ConceirgeDinning.Contracts.Models
         public string UserId { get; set; }
         public long TotalPoints { get; set; }
         public List<Item> MenuItems { get; set; }
+        public DateTimeOffset date { get; set; }
     }
 }

@@ -24,11 +24,13 @@ namespace ConceirgeDinning.ServicesImplementation.BookingTable
             DateTime currentDate = DateTime.Today;
             if (booking.Date < currentDate)
                 return false;
-            if (booking.Date == currentDate)
+            if (booking.Date == currentDate && booking.Status!= "BookingInitiated")
             {
                 TimeSpan currentTime = DateTime.Now.TimeOfDay;
+                int minutes = booking.Time.Minutes;
                 int hours = booking.Time.Hours - currentTime.Hours;
-                if (hours < 4)
+                minutes += hours * 60;
+                if (minutes < 240)
                     return false;
             }
             return true;

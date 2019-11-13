@@ -8,7 +8,7 @@ namespace ConceirgeDinning.Adapter.Geocoder.xyz.Translator
 {
     public static class LocalityGeocodeTranslator
     {
-        public static LocalityGeocode GetLatLong(LocalityVerboseGeocode reply)
+        public static LocalityGeocode GetLatLong(this LocalityVerboseGeocode reply)
         {
             LocalityGeocode localityGeocode = new LocalityGeocode();
             localityGeocode.Latitude = reply.latt;

@@ -1,6 +1,7 @@
 ﻿using ConceirgeDinning.Adapter.Zomato.Models.FoodOrdering;
 using ConceirgeDinning.Adapter.Zomato.Translator;
 using ConceirgeDinning.Contracts.Models;
+using ConceirgeDinningContracts.Services;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Serilog;
@@ -15,7 +16,7 @@ using Category = ConceirgeDinning.Contracts.Models.Category;
 
 namespace ConceirgeDinning.Adapter.Zomato
 {
-    public class ZomatoMenuItemAdpter
+    public class ZomatoMenuItemAdpter:IFetchMenu
     {
         public List<Category> GetMenuItems(string restaurantId)
         {
@@ -36,9 +37,9 @@ namespace ConceirgeDinning.Adapter.Zomato
                     var result = reader.ReadToEnd();
                     try
                     {
-                        MenuItems jobject = JsonConvert.DeserializeObject<MenuItems>(result);
+                        MenuItems menuItems = JsonConvert.DeserializeObject<MenuItems>(result);
                         Log.Information("response from supplier: "+ JsonConvert.SerializeObject(result));
-                        return ZomatoMenuItemTranslator.GetMenuItem(jobject);
+                        return menuItems.GetMenuItem();
                     }
                     catch (System.Net.WebException ex)
                     {

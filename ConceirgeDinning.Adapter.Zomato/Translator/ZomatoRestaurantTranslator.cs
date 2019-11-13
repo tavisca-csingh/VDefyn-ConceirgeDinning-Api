@@ -1,13 +1,15 @@
-﻿using ConceirgeDinning.Core.Models;
+﻿using ConceirgeDinning.Adapter.Zomato.Models;
+using ConceirgeDinning.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Restaurant = ConceirgeDinning.Core.Models.Restaurant;
 
 namespace ConceirgeDinning.Adapter.Zomato.Translator
 {
     public static class ZomatoRestaurantTranslator
     {
-        public static List<Restaurant> TranslateToRestaurant(Models.SearchResponse response)
+        public static List<Restaurant> TranslateToRestaurant(this SearchResponse response)
         {
             List<Restaurant> responseObject = new List<Restaurant>();
             foreach (Models.Restaurant restaurant in response.restaurants)

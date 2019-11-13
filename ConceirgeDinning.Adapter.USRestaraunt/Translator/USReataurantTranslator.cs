@@ -9,9 +9,9 @@ using RestaurantDetails = ConceirgeDinning.Core.Models.RestaurantDetails;
 
 namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
 {
-    class USReataurantTranslator
+    public static class USReataurantTranslator
     {
-        public static List<Restaurant> TranslateToRestaurant(Models.SearchResponse response)
+        public static List<Restaurant> TranslateToRestaurant(this SearchResponse response)
         {
             List<Restaurant> restaurantList = new List<Restaurant>();
             foreach (var restaurant in response.result.data)

@@ -15,7 +15,7 @@ namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
             return (Math.Round(random.NextDouble(), 1) * (maximumValue - minimumValue) + minimumValue).ToString();
         }
 
-        public static RestaurantDetails TranslateToRestaurantDetails(RestaurantDetailResponse responseFromSupplier)
+        public static RestaurantDetails TranslateToRestaurantDetails(this RestaurantDetailResponse responseFromSupplier)
         {
             if (responseFromSupplier.result.totalResults == 0)
                 return null;
