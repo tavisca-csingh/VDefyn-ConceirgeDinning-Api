@@ -10,25 +10,23 @@ namespace ConceirgeDining.LoggerDAL.Models
     {
         [BsonElement("SessionId")]
         public string  SessionId { get; set; }
-        [BsonElement("ServiceId")]
-        public string ServiceId { get; set; }
         [BsonElement("UserId")]
         public string UserId { get; set; }
+        [BsonElement("CorelationId")]
+        public string CorelationId { get; set; }
+        [BsonElement("Client")]
+        public string Client { get; set; }
         [BsonElement("TimeStamp")]
         [BsonDateTimeOptions(Kind = DateTimeKind.Local)]
         public DateTime TimeStamp { get; set; }
-        [BsonElement("LoggingLevel")]
-        public string LoggingLevel { get; set; }
-        [BsonElement("Client")]
-        public string Client { get; set; }
-        [BsonElement("RequestFromUser")]
-        public string RequestFromUser { get; set; }
-        [BsonElement("RequestToSupplier")]
-        public string RequestToSupplier { get; set; }
-        [BsonElement("ResponseFromSupplier")]
-        public string ResponseFromSupplier { get; set; }
-        [BsonElement("ResponseToUser")]
-        public string ResponseToUser { get; set; }
+        [BsonElement("Status")]
+        public string Status { get; set; }
+        [BsonElement("Supplier")]
+        public string Supplier { get; set; }
+        [BsonElement("Request")]
+        public string Request { get; set; }
+        [BsonElement("Response")]
+        public string Response { get; set; }
         [BsonElement("ResponseTime")]
         public TimeSpan ResponseTime { get; set; }
     }

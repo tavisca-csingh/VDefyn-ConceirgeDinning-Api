@@ -3,12 +3,13 @@ using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace ConceirgeDining.LoggerDAL.Models
 {
     public class LogContext
     {
-        public void ConnectTOMongoDB()
+        public async Task ConnectTOMongoDB()
         {
             
             var connectionString = "mongodb+srv://mattapalliswarnesh:lthliCuE4xi80DOE@logs-et0xz.mongodb.net/ConceirgeLogs?retryWrites=true&w=majority";
@@ -17,17 +18,16 @@ namespace ConceirgeDining.LoggerDAL.Models
             var collection = dataBase.GetCollection<LogInfo>("Testing");
             LogInfo logInfo = new LogInfo();
             logInfo.SessionId =  Guid.NewGuid().ToString();
-            logInfo.ServiceId = "5678";
             logInfo.UserId = "Anonomus";
-            logInfo.TimeStamp = DateTime.Now;
-            logInfo.LoggingLevel = "Info";
+            logInfo.CorelationId = "123";
             logInfo.Client = "UsBank";
-            logInfo.RequestFromUser = "abc";
-            logInfo.RequestToSupplier = "def";
-            logInfo.ResponseFromSupplier = "ghi";
-            logInfo.ResponseToUser = "jkl";
+            logInfo.TimeStamp = DateTime.Now;
+            logInfo.Status = "Success";
+            logInfo.Supplier = "Zomato";
+            logInfo.Request = "Hello";
+            logInfo.Response = "World";
             logInfo.ResponseTime = new TimeSpan(1000);
-            collection.InsertOne(logInfo);
+            await collection.InsertOneAsync(logInfo);
         }
     }
 }
