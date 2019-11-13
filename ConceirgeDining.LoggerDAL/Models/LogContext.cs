@@ -9,13 +9,18 @@ namespace ConceirgeDining.LoggerDAL.Models
 {
     public class LogContext
     {
-        public async Task ConnectTOMongoDB()
+        IMongoCollection<LogInfo> collection;
+        public LogContext()
         {
-            
             var connectionString = "mongodb+srv://mattapalliswarnesh:lthliCuE4xi80DOE@logs-et0xz.mongodb.net/ConceirgeLogs?retryWrites=true&w=majority";
             var client = new MongoClient(connectionString);
             var dataBase = client.GetDatabase("ConceirgeLogs");
-            var collection = dataBase.GetCollection<LogInfo>("Testing");
+            collection = dataBase.GetCollection<LogInfo>("Testing");
+        }
+        public async Task ConnectTOMongoDB()
+        {
+            
+            
             LogInfo logInfo = new LogInfo();
             logInfo.SessionId =  Guid.NewGuid().ToString();
             logInfo.UserId = "Anonomus";
