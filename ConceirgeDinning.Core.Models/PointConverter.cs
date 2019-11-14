@@ -4,9 +4,9 @@ using System.Text;
 
 namespace ConceirgeDinning.Contracts.Models
 {
-    class PointConverter
+    public class PointConverter
     {
-        public static Dictionary<string, double> PointsConversionStandard = new Dictionary<string, double>()
+        public static Dictionary<string,int> PointsConversionStandard = new Dictionary<string,int>()
         {
             {"visa",100 },
             {"capital",200 },

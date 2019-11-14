@@ -1,4 +1,5 @@
 ﻿using ConceirgeDinning.Adapter.USRestaraunt.Models;
+using ConceirgeDinning.Contracts.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -35,7 +36,7 @@ namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
 
         private static int GetPrice(string price_range)
         {
-            return price_range.Length * 10;
+            return price_range.Length * 10*PointConverter.PointsConversionStandard["default"];
         }
     }
 }

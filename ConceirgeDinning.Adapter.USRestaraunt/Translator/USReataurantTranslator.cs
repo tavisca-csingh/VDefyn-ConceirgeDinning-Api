@@ -1,5 +1,6 @@
 ﻿
 using ConceirgeDinning.Adapter.USRestaraunt.Models;
+using ConceirgeDinning.Contracts.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -30,6 +31,7 @@ namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
 
 
         }
+        
 
         public static string GetRating(int minimumValue, int maximumValue)
         {

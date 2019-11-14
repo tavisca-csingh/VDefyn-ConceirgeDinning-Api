@@ -24,7 +24,7 @@ namespace ConceirgeDinning.Adapter.Zomato.Translator
                     menuItems.Add(new MenuItem()
                     {
                         Name = Item.name,
-                        Price = Item.price
+                        Price = (Int32.Parse(Item.price) * PointConverter.PointsConversionStandard["default"]).ToString()
                     });
                 }
                 category.category = item.name;
