@@ -1,5 +1,5 @@
-﻿using ConceirgeDinning.Core.Models;
-using ConceirgeDinning.Services;
+﻿using ConceirgeDinning.Contracts.Models;
+using ConceirgeDinningContracts.Services;
 using Newtonsoft.Json;
 using Serilog;
 using System;

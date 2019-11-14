@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ConceirgeDining.Middleware;
+using ConceirgeDining.Middleware.BookingTable;
 using ConceirgeDiningDAL.Models;
 using ConceirgeDinning.Contracts.Models;
 using Microsoft.AspNetCore.Http;

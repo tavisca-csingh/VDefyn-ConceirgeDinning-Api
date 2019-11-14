@@ -4,12 +4,13 @@ using System.IO;
 using System.Net;
 using System.Text;
 using ConceirgeDinning.Adapter.Geocoder.xyz.Models;
-using ConceirgeDinning.Core.Models;
-using ConceirgeDinning.Services;
+using ConceirgeDinning.Adapter.Geocoder.xyz.Translator;
+using ConceirgeDinning.Contracts.Models;
+using ConceirgeDinningContracts.Services;
 using Newtonsoft.Json;
 using Serilog;
 
-namespace ConceirgeDinning.Adapter.Geocoder.xyz.Translator
+namespace ConceirgeDinning.Adapter.Geocoder.xyz
 {
     public class LocalityGeocodeAdapter : IFetchGeocode
     {

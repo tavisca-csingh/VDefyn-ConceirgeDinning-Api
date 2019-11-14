@@ -1,11 +1,11 @@
 ﻿using ConceirgeDinning.Adapter.USRestaraunt.Translator;
 using ConceirgeDinning.Adapter.Zomato.Translator;
-using ConceirgeDinning.Services;
+using ConceirgeDinningContracts.Services;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ConceirgeDinning.Core.ServicesImplementation
+namespace ConceirgeDinning.ServicesImplementation.BookingTable
 {
     public class RestaurantDetailServiceFactory
     {

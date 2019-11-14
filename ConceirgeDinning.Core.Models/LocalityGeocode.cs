@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ConceirgeDinning.Core.Models
+namespace ConceirgeDinning.Contracts.Models
 {
     public class LocalityGeocode
     {

@@ -9,6 +9,7 @@ using ConceirgeDinning.Contracts.Models;
 using ConceirgeDining.Middleware;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
+using ConceirgeDining.Middleware.BookingTable;
 
 namespace ConceirgeDinning.API.Controllers.BookingTable
 {

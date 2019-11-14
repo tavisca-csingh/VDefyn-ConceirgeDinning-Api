@@ -1,6 +1,5 @@
 ﻿using ConceirgeDinning.Adapter.USRestaraunt.Models;
-using ConceirgeDinning.Core.Models;
-using ConceirgeDinning.Services;
+using ConceirgeDinningContracts.Services;
 using Newtonsoft.Json;
 using Serilog;
 using System;
@@ -8,7 +7,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Text;
-using RestaurantDetails = ConceirgeDinning.Core.Models.RestaurantDetails;
+using RestaurantDetails = ConceirgeDinning.Contracts.Models.RestaurantDetails;
 
 namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
 {

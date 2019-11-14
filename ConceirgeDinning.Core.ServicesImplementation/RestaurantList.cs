@@ -1,13 +1,12 @@
 ﻿using System;
-using ConceirgeDinning.Core.Models;
 using ConceirgeDinning.Adapter.Geocoder.xyz.Translator;
-using ConceirgeDinning.Services;
 using System.Collections.Generic;
 using ConceirgeDinning.Adapter.Zomato.Translator;
 using ConceirgeDinning.Adapter.USRestaraunt.Translator;
 using System.Threading.Tasks;
-using ConceirgeDinning.Adapter.Geocoder.xyz.Models;
-using Serilog;
+
+using ConceirgeDinning.Contracts.Models;
+using ConceirgeDinning.Adapter.Geocoder.xyz;
 
 namespace ConceirgeDinning.Core.ServicesImplementation
 {
