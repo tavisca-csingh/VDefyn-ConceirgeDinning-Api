@@ -1,4 +1,4 @@
-﻿using ConceirgeDinning.Adapter.DialougFlow.cs;
+﻿using ConceirgeDinning.Adapter.DialougFlow;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;

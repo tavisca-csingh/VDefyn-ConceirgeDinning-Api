@@ -1,9 +1,8 @@
 ﻿using ConceirgeDinning.Adapter.Zomato.Models;
-using ConceirgeDinning.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Restaurant = ConceirgeDinning.Core.Models.Restaurant;
+using Restaurant = ConceirgeDinning.Contracts.Models.Restaurant;
 
 namespace ConceirgeDinning.Adapter.Zomato.Translator
 {

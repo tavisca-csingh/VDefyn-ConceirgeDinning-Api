@@ -6,7 +6,7 @@ using System;
 using System.IO;
 using System.Text;
 
-namespace ConceirgeDinning.Adapter.DialougFlow.cs
+namespace ConceirgeDinning.Adapter.DialougFlow
 {
     public class DialougFlowAdapter
     {

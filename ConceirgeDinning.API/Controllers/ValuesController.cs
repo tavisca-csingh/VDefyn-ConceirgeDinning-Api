@@ -16,7 +16,7 @@ namespace ConceirgeDinning.API.Controllers
         public ActionResult<IEnumerable<string>> Get()
         {
             LogContext logContext = new LogContext();
-            logContext.ConnectTOMongoDB();
+            //logContext.ConnectTOMongoDB();
             return new string[] { "value1", "value2" };
 
         }

@@ -1,4 +1,4 @@
-﻿using ConceirgeDinning.Core.Models;
+﻿using ConceirgeDinning.Contracts.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;

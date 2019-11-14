@@ -4,10 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using ConceirgeDinning.Core.Models;
 using ConceirgeDinning.Core.ServicesImplementation;
 using Serilog;
 using Newtonsoft.Json;
+using ConceirgeDinning.Contracts.Models;
 
 namespace ConceirgeDinning.API.Controllers.BookingTables
 {

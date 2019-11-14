@@ -4,9 +4,8 @@ using System.IO;
 using System.Net;
 using System.Net.Http;
 using System.Text;
-
-using ConceirgeDinning.Core.Models;
-using ConceirgeDinning.Services;
+using ConceirgeDinning.Contracts.Models;
+using ConceirgeDinningContracts.Services;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Serilog;

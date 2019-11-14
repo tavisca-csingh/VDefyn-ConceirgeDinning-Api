@@ -33,7 +33,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConceirgeDiningDAL", "Conce
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConceirgeDining.Middleware", "ConceirgeDining.Middleware\ConceirgeDining.Middleware.csproj", "{80DAD82B-7559-4866-9C6A-F53B3C65652D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConceirgeDinning.Adapter.DialougFlow.cs", "ConceirgeDinning.Adapter.DialougFlow.cs\ConceirgeDinning.Adapter.DialougFlow.cs.csproj", "{86BBE1EB-E3DA-4FAD-B27E-FB2FE581FD49}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConceirgeDinning.Adapter.DialougFlow", "ConceirgeDinning.Adapter.DialougFlow.cs\ConceirgeDinning.Adapter.DialougFlow.csproj", "{86BBE1EB-E3DA-4FAD-B27E-FB2FE581FD49}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConceirgeDining.LoggerDAL", "ConceirgeDining.LoggerDAL\ConceirgeDining.LoggerDAL.csproj", "{E01CAB7C-098A-4373-A95E-2753AD4CE060}"
 EndProject

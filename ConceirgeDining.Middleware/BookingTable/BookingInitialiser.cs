@@ -1,10 +1,10 @@
 ﻿using ConceirgeDinning.Contracts.Models;
-using ConceirgeDinning.ServicesImplementation;
+using ConceirgeDinning.ServicesImplementation.BookingTable;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ConceirgeDining.Middleware
+namespace ConceirgeDining.Middleware.BookingTable
 {
     public class BookingInitialiser
     {

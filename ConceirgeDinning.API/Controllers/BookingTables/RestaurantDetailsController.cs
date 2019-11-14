@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using ConceirgeDinning.Core.Models;
-using ConceirgeDinning.Core.ServicesImplementation;
+using ConceirgeDinning.Contracts.Models;
+using ConceirgeDinning.ServicesImplementation.BookingTable;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Serilog;

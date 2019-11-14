@@ -1,11 +1,9 @@
 ﻿
 using ConceirgeDinning.Adapter.USRestaraunt.Models;
-using ConceirgeDinning.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Restaurant = ConceirgeDinning.Core.Models.Restaurant;
-using RestaurantDetails = ConceirgeDinning.Core.Models.RestaurantDetails;
+using Restaurant = ConceirgeDinning.Contracts.Models.Restaurant;
 
 namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
 {

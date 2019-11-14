@@ -1,10 +1,10 @@
-﻿using ConceirgeDinning.Core.Models;
-using ConceirgeDinning.Services;
+﻿using ConceirgeDinning.Contracts.Models;
+using ConceirgeDinningContracts.Services;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ConceirgeDinning.Core.ServicesImplementation
+namespace ConceirgeDinning.ServicesImplementation.BookingTable
 {
     public class RestaurantDetailService
     {
