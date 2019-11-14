@@ -3,7 +3,7 @@ using ConceirgeDinning.Core.ServicesImplementation;
 using System.Collections.Generic;
 using Xunit;
 
-namespace ConceirgeDining.ServiceImplementation.Tests
+namespace ConceirgeDining.Services.ServiceImplementation.Tests
 {
     public class RestaurantListTests
     {
@@ -39,13 +39,6 @@ namespace ConceirgeDining.ServiceImplementation.Tests
             bool actual = resList is List<Restaurant>;
             Assert.True(actual);
 
-        }
-        [Fact]
-        public void Get_Restaurant_List_For_Invalid_Input()
-        {
-            var resList = restaurantList.FetchRestarauntDetails("xyz", "", "", "1");
-            bool actual = resList is null;
-            Assert.True(actual);
         }
     }
 }

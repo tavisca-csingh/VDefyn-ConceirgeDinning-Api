@@ -18,6 +18,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ConceirgeDinning.Core.Models\ConceirgeDinning.Contracts.Models.csproj" />
+    <ProjectReference Include="..\ConceiseDinning.Services\ConceirgeDinningContracts.Services.csproj" />
   </ItemGroup>
+
+ 
 
 </Project>

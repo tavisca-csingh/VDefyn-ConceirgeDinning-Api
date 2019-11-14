@@ -1,10 +1,12 @@
 using System;
 using Xunit;
 using Moq;
+
 using ConceirgeDinning.ServicesImplementation.BookingTable;
 using ConceirgeDinning.Contracts.Models;
 
 namespace ConceirgeDinning.ServiceImplementation.Test
+
 {
     public class RestaurantDetailTest
     {

@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ConceirgeDining.LoggerDAL\ConceirgeDining.LoggerDAL.csproj" />
     <ProjectReference Include="..\ConceirgeDiningDAL\ConceirgeDiningDAL.csproj" />
     <ProjectReference Include="..\ConceirgeDinning.Adapter.DialougFlow\ConceirgeDinning.Adapter.DialougFlow.csproj" />
     <ProjectReference Include="..\ConceirgeDinning.Adapter.Geocoder.xyz\ConceirgeDinning.Adapter.Geocoder.xyz.csproj" />

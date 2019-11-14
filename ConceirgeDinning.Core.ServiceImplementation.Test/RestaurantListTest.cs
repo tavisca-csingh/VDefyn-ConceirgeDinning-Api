@@ -1,4 +1,4 @@
-﻿using ConceirgeDinning.Core.ServicesImplementation;
+using ConceirgeDinning.Core.ServicesImplementation;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,16 +8,6 @@ namespace ConceirgeDinning.API.Tests
 {
     public class RestaurantListTest
     {
-        [Fact]
-        public void SHOULD_GIVE_NOTHING_ON_GIVING_INVALID_LOCALITY_FOR_BOOKING()
-        {
-            //GIVEN
-            RestaurantList restaurant = new RestaurantList();
-            //WHEN
-            var expected = restaurant.FetchRestarauntDetails("xyz", string.Empty, string.Empty, "1");
-            //THEN
-            Assert.Null(expected);
-        }
         [Fact]
         public void SHOULD_GIVE_RESTAURANTS_LIST_ON_GIVING_VALID_LOCALITY_FOR_BOOKING()
         {
