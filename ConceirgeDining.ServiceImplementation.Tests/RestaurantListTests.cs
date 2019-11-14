@@ -1,4 +1,4 @@
-﻿using ConceirgeDinning.Core.Models;
+﻿using ConceirgeDinning.Contracts.Models;
 using ConceirgeDinning.Core.ServicesImplementation;
 using System;
 using System.Collections.Generic;
