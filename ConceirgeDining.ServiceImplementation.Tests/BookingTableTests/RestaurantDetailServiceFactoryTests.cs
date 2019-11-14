@@ -1,6 +1,5 @@
 ﻿using ConceirgeDinning.Adapter.USRestaraunt.Translator;
 using ConceirgeDinning.Adapter.Zomato.Translator;
-using ConceirgeDinning.Core.ServicesImplementation;
 using ConceirgeDinning.ServicesImplementation.BookingTable;
 using System;
 using System.Collections.Generic;
