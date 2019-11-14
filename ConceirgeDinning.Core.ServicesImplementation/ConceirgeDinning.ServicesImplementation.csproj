@@ -18,8 +18,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ConceirgeDining.LoggerDAL\ConceirgeDining.LoggerDAL.csproj" />
     <ProjectReference Include="..\ConceirgeDiningDAL\ConceirgeDiningDAL.csproj" />
-    <ProjectReference Include="..\ConceirgeDinning.Adapter.DialougFlow.cs\ConceirgeDinning.Adapter.DialougFlow.csproj" />
+    <ProjectReference Include="..\ConceirgeDinning.Adapter.DialougFlow\ConceirgeDinning.Adapter.DialougFlow.csproj" />
     <ProjectReference Include="..\ConceirgeDinning.Adapter.Geocoder.xyz\ConceirgeDinning.Adapter.Geocoder.xyz.csproj" />
     <ProjectReference Include="..\ConceirgeDinning.Adapter.USRestaraunt\ConceirgeDinning.Adapter.USRestaraunt.csproj" />
     <ProjectReference Include="..\ConceirgeDinning.Adapter.Zomato\ConceirgeDinning.Adapter.Zomato.csproj" />
