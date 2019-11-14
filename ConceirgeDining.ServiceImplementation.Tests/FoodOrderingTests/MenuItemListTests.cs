@@ -9,7 +9,7 @@ namespace ConceirgeDining.ServiceImplementation.Tests.FoodOrderingTests
 {
     public class MenuItemListTests
     {
-        MenuItemList menuItemList = new MenuItemList(); 
+       private MenuItemList menuItemList = new MenuItemList(); 
         [Fact]
         public void Get_Restaurant_Menu_Details_By_RestaurantId_For_Valid_Id()
         {

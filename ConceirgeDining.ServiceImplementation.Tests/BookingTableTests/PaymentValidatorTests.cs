@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Xunit;
-using ConceirgeDinning.ServicesImplementation;
+using ConceirgeDinning.ServicesImplementation.BookingTable;
 
 namespace ConceirgeDining.ServiceImplementation.Tests.BookingTableTests
 {
