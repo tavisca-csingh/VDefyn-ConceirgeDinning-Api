@@ -9,10 +9,11 @@ namespace ConceirgeDining.ServiceImplementation.Tests.FoodOrderingTests
 {
     public class MenuItemListTests
     {
-       private MenuItemList menuItemList = new MenuItemList(); 
+      
         [Fact]
         public void Get_Restaurant_Menu_Details_By_RestaurantId_For_Valid_Id()
         {
+            MenuItemList menuItemList = new MenuItemList();
             var itemList = menuItemList.GetMenus("1234","Zomato");
             bool actual = itemList is List<Category>;
             Assert.True(actual);
@@ -20,7 +21,8 @@ namespace ConceirgeDining.ServiceImplementation.Tests.FoodOrderingTests
         [Fact]
         public void Get_Restaurant_Menu_Details_By_RestaurantId_For_Invalid_Id()
         {
-            var itemList = menuItemList.GetMenus("1234", "UsRestaurant");
+            MenuItemList menuItemList = new MenuItemList();
+            var itemList = menuItemList.GetMenus("1234","UsRestaurant");
             bool actual = itemList is null;
             Assert.True(actual);
         }
