@@ -23,11 +23,11 @@ namespace ConceirgeDinning.API.Controllers.BookingTable
             BookingInitialiser bookingInitialisation = new BookingInitialiser();
             BookingResponse bookingResponse = new BookingResponse();
             BookingRequest bookingRequest= JsonConvert.DeserializeObject<BookingRequest>(jObject.ToString());
-
-            bookingResponse =bookingInitialisation.Validate(bookingRequest);
+            string UTCTime;
+            bookingResponse =bookingInitialisation.Validate(bookingRequest,out UTCTime);
             if(bookingResponse.Status== "BookingInitiated")
             {
-                bookingResponse=bookingInitialisation.Start(bookingRequest);
+                bookingResponse=bookingInitialisation.Start(bookingRequest,UTCTime);
 
             }
             
