@@ -74,7 +74,7 @@ namespace ConceirgeDining.Middleware.BookingTable
             bookingResponse.Error = null;
             bookingResponse.Status = "BookingInitiated";
             int bookingId;
-            bookingId = startBooking.AddEntryInBookingTable(bookingRequest.NoOfGuests, DateTime.Parse(bookingRequest.Date), TimeSpan.Parse(bookingRequest.Time), bookingRequest.RestaurantId, bookingRequest.RestaurantName, bookingRequest.UserName, bookingRequest.PerPersonPoints, bookingRequest.PointBalance, UTCTime);
+            bookingId = startBooking.AddEntryInBookingTable(bookingRequest.NoOfGuests, DateTime.Parse(bookingRequest.Date), TimeSpan.Parse(bookingRequest.Time), bookingRequest.RestaurantId, bookingRequest.UserName, bookingRequest.RestaurantName, bookingRequest.PerPersonPoints, bookingRequest.PointBalance, UTCTime);
             startBooking.UpdateSeats(bookingRequest.RestaurantId, bookingRequest.NoOfGuests, DateTime.Parse(bookingRequest.Date));
             startBooking.AddEntryInProgressTable(bookingId);
             bookingResponse.BookingId = bookingId;
