@@ -58,7 +58,7 @@ namespace ConceirgeDinning.ServicesImplementation.BookingTable
             else
                 return true;
         }
-        public bool CheckDateTime(string dateTime,string latitude,string longitude)
+        public bool CheckDateTime(string dateTime,string latitude,string longitude,out string UTCTime)
         {
 
             DateTime currentdateTime= DateTime.UtcNow;
@@ -66,6 +66,7 @@ namespace ConceirgeDinning.ServicesImplementation.BookingTable
             string gmtOffset = timeZoneDBAdapter.FetchTimeZone(latitude, longitude);
             dateTime += gmtOffset;
             DateTime bookingDateTime = DateTimeOffset.Parse(dateTime).UtcDateTime;
+            UTCTime = bookingDateTime.ToString();
             if (currentdateTime <= bookingDateTime)
                 return true;
             return false;

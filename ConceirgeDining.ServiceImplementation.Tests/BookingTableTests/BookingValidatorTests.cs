@@ -40,7 +40,8 @@ namespace ConceirgeDining.ServiceImplementation.Tests.BookingTableTests
         public void Check_For_Valid_Date()
         {
             DateTime dateTime = DateTime.Today;
-            bool actual = bookingValidator.CheckDateTime(dateTime.ToString(),"18.5204","73.8567");
+            string UTCTime = "0001-01-01T00:00:00+00:00";
+            bool actual = bookingValidator.CheckDateTime(dateTime.ToString(),"18.5204","73.8567",out UTCTime);
             Assert.True(actual);
         }
 
@@ -48,7 +49,8 @@ namespace ConceirgeDining.ServiceImplementation.Tests.BookingTableTests
         public void Check_For_Invalid_Date()
         {
             DateTime dateTime = DateTime.Parse("2019/02/01");
-            bool actual = bookingValidator.CheckDateTime(dateTime.ToString(), "18.5204", "73.8567");
+            string UTCTime = "0001-01-01T00:00:00+00:00";
+            bool actual = bookingValidator.CheckDateTime(dateTime.ToString(), "18.5204", "73.8567",out UTCTime);
             Assert.False(actual);
         }
 

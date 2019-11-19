@@ -79,6 +79,13 @@ namespace ConceirgeDiningDAL.Models
                     .HasMaxLength(255)
                     .IsUnicode(false);
 
+                entity.Property(e => e.Utctime)
+                    .IsRequired()
+                    .HasColumnName("UTCTime")
+                    .HasMaxLength(256)
+                    .IsUnicode(false)
+                    .HasDefaultValueSql("\"0001-01-01T00:00:00+00:00\"");
+
                 entity.HasOne(d => d.Restaurant)
                     .WithMany(p => p.Booking)
                     .HasForeignKey(d => d.RestaurantId)
