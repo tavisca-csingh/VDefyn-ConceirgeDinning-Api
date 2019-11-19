@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ConceirgeDining.Adapter.TimeZoneDB\ConceirgeDining.Adapter.TimeZoneDB.csproj" />
     <ProjectReference Include="..\ConceirgeDining.LoggerDAL\ConceirgeDining.LoggerDAL.csproj" />
     <ProjectReference Include="..\ConceirgeDiningDAL\ConceirgeDiningDAL.csproj" />
     <ProjectReference Include="..\ConceirgeDinning.Adapter.DialougFlow\ConceirgeDinning.Adapter.DialougFlow.csproj" />
