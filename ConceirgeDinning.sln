@@ -39,6 +39,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConceirgeDining.ServiceImpl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConceirgeDinning.Adapter.DialougFlow", "ConceirgeDinning.Adapter.DialougFlow\ConceirgeDinning.Adapter.DialougFlow.csproj", "{1BDD17FA-733E-446E-BB43-0E53A43FA8A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConceirgeDining.Adapter.TimeZoneDB", "ConceirgeDining.Adapter.TimeZoneDB\ConceirgeDining.Adapter.TimeZoneDB.csproj", "{3C83C77C-08A3-47CA-A6DE-E3CB060BEAAB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -97,6 +99,10 @@ Global
 		{1BDD17FA-733E-446E-BB43-0E53A43FA8A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1BDD17FA-733E-446E-BB43-0E53A43FA8A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1BDD17FA-733E-446E-BB43-0E53A43FA8A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C83C77C-08A3-47CA-A6DE-E3CB060BEAAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C83C77C-08A3-47CA-A6DE-E3CB060BEAAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C83C77C-08A3-47CA-A6DE-E3CB060BEAAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C83C77C-08A3-47CA-A6DE-E3CB060BEAAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -115,6 +121,7 @@ Global
 		{E01CAB7C-098A-4373-A95E-2753AD4CE060} = {5A094FFA-D402-4A89-AC3C-E3F52137D0E6}
 		{4C4E7885-A7D0-481E-818B-CB08280E1056} = {A0CE9DAD-4171-4CCF-BF21-95548C6FC329}
 		{1BDD17FA-733E-446E-BB43-0E53A43FA8A7} = {061827A6-BA49-4296-9551-4734E40F815A}
+		{3C83C77C-08A3-47CA-A6DE-E3CB060BEAAB} = {061827A6-BA49-4296-9551-4734E40F815A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {138378C9-B37D-499B-AB20-4E8541DD5B2D}

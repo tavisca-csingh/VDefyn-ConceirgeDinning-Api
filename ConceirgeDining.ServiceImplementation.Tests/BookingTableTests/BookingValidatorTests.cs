@@ -40,7 +40,7 @@ namespace ConceirgeDining.ServiceImplementation.Tests.BookingTableTests
         public void Check_For_Valid_Date()
         {
             DateTime dateTime = DateTime.Today;
-            bool actual = bookingValidator.CheckDate(dateTime);
+            bool actual = bookingValidator.CheckDateTime(dateTime.ToString(),"18.5204","73.8567");
             Assert.True(actual);
         }
 
@@ -48,26 +48,13 @@ namespace ConceirgeDining.ServiceImplementation.Tests.BookingTableTests
         public void Check_For_Invalid_Date()
         {
             DateTime dateTime = DateTime.Parse("2019/02/01");
-            bool actual = bookingValidator.CheckDate(dateTime);
+            bool actual = bookingValidator.CheckDateTime(dateTime.ToString(), "18.5204", "73.8567");
             Assert.False(actual);
         }
 
-        [Fact]
-        public void Check_For_Valid_Time()
-        {
-            TimeSpan timeSpan = TimeSpan.Parse("23:59:59");
-            bool actual = bookingValidator.CheckTime(timeSpan);
-            Assert.True(actual);
-        }
+        
 
-        [Fact]
-        public void Check_For_Invalid_Time()
-        {
-            TimeSpan hours = new TimeSpan(1,1,1);
-            TimeSpan timeSpan = DateTime.Today.TimeOfDay.Add(hours);
-            bool actual = bookingValidator.CheckTime(timeSpan);
-            Assert.False(actual);
-        }
+        
 
         [Fact]
         public void Check_For_Sufficient_Points()

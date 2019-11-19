@@ -1,4 +1,5 @@
-﻿using ConceirgeDiningDAL.Models;
+﻿using ConceirgeDining.Adapter.TimeZoneDB;
+using ConceirgeDiningDAL.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,8 +11,9 @@ namespace ConceirgeDinning.ServicesImplementation.BookingTable
         public int CheckAvailability(int noOfGuests, DateTime date, string restaurantId,string restaurantName)
         {
             sql12310325Context conciergeContext = new sql12310325Context();
-            var reply=conciergeContext.RestaurantNames.Find(restaurantId);
-            if (reply == null)
+            int bookedSeats;
+            var restaurantDetails=conciergeContext.RestaurantNames.Find(restaurantId);
+            if (restaurantDetails == null)
             {
                 //stores restaurent name
                 RestaurantNames restaurantNames = new RestaurantNames();
@@ -26,19 +28,28 @@ namespace ConceirgeDinning.ServicesImplementation.BookingTable
                 restaurantAvailability.BookedSeats = 0;
                 conciergeContext.RestaurantAvailability.Add(restaurantAvailability);
                 conciergeContext.SaveChanges();
+                bookedSeats = 0;
             }
-            var reply2 = conciergeContext.RestaurantAvailability.Find(restaurantId, date);
-            if(reply2==null)
+            else
             {
-                RestaurantAvailability restaurantAvailability = new RestaurantAvailability();
-                restaurantAvailability.RestaurantId = restaurantId;
-                restaurantAvailability.BookingDate = date;
-                restaurantAvailability.BookedSeats = 0;
-                conciergeContext.RestaurantAvailability.Add(restaurantAvailability);
-                conciergeContext.SaveChanges();
+
+
+                var restaurantAvailabilityDetails = conciergeContext.RestaurantAvailability.Find(restaurantId, date);
+                if (restaurantAvailabilityDetails == null)
+                {
+                    RestaurantAvailability restaurantAvailability = new RestaurantAvailability();
+                    restaurantAvailability.RestaurantId = restaurantId;
+                    restaurantAvailability.BookingDate = date;
+                    restaurantAvailability.BookedSeats = 0;
+                    conciergeContext.RestaurantAvailability.Add(restaurantAvailability);
+                    conciergeContext.SaveChanges();
+                    bookedSeats = 0;
+                }
+                else
+                    bookedSeats = conciergeContext.RestaurantAvailability.Find(restaurantId, date).BookedSeats;
             }
-            reply2 = conciergeContext.RestaurantAvailability.Find(restaurantId, date);
-            return reply2.BookedSeats;
+            
+            return bookedSeats;
         }
         public bool CheckNoOfGuests(int noOfGuests)
         {
@@ -47,17 +58,15 @@ namespace ConceirgeDinning.ServicesImplementation.BookingTable
             else
                 return true;
         }
-        public bool CheckDate(DateTime date)
+        public bool CheckDateTime(string dateTime,string latitude,string longitude)
         {
-            DateTime currentdate= DateTime.Today;
-            if (currentdate <= date)
-                return true;
-            return false;
-        }
-        public bool CheckTime(TimeSpan time)
-        {
-            TimeSpan currentTime = DateTime.Now.TimeOfDay;
-            if (currentTime < time)
+
+            DateTime currentdateTime= DateTime.UtcNow;
+            TimeZoneDBAdapter timeZoneDBAdapter = new TimeZoneDBAdapter();
+            string gmtOffset = timeZoneDBAdapter.FetchTimeZone(latitude, longitude);
+            dateTime += gmtOffset;
+            DateTime bookingDateTime = DateTimeOffset.Parse(dateTime).UtcDateTime;
+            if (currentdateTime <= bookingDateTime)
                 return true;
             return false;
         }
