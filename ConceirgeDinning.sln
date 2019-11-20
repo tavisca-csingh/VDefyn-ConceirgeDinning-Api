@@ -7,23 +7,39 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{8521F99A-CC5
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Adapter", "Adapter", "{061827A6-BA49-4296-9551-4734E40F815A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{6E28B232-C05B-428F-A9D7-CD8C6791D089}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Contracts", "Contracts", "{6E28B232-C05B-428F-A9D7-CD8C6791D089}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{A0CE9DAD-4171-4CCF-BF21-95548C6FC329}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConceirgeDinning.Adapter.Zomato", "ConceirgeDinning.Adapter.Zomato\ConceirgeDinning.Adapter.Zomato.csproj", "{6CDC17AD-DF88-446D-A99D-7FC9276C97DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConceirgeDinning.Adapter.Zomato", "ConceirgeDinning.Adapter.Zomato\ConceirgeDinning.Adapter.Zomato.csproj", "{6CDC17AD-DF88-446D-A99D-7FC9276C97DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConceirgeDinning.Adapter.USRestaraunt", "ConceirgeDinning.Adapter.USRestaraunt\ConceirgeDinning.Adapter.USRestaraunt.csproj", "{7D9538C7-0BAB-4384-8433-4F43E3120859}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConceirgeDinning.Adapter.USRestaraunt", "ConceirgeDinning.Adapter.USRestaraunt\ConceirgeDinning.Adapter.USRestaraunt.csproj", "{7D9538C7-0BAB-4384-8433-4F43E3120859}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConceirgeDinning.Adapter.Geocoder.xyz", "ConceirgeDinning.Adapter.Geocoder.xyz\ConceirgeDinning.Adapter.Geocoder.xyz.csproj", "{F0EA01C4-1360-4FD7-B885-21B149B0D410}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConceirgeDinning.Adapter.Geocoder.xyz", "ConceirgeDinning.Adapter.Geocoder.xyz\ConceirgeDinning.Adapter.Geocoder.xyz.csproj", "{F0EA01C4-1360-4FD7-B885-21B149B0D410}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConceirgeDinning.API", "ConceirgeDinning.API\ConceirgeDinning.API.csproj", "{5867FB6C-6FC8-4F39-A1CB-8FCB1C57E453}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConceirgeDinning.API", "ConceirgeDinning.API\ConceirgeDinning.API.csproj", "{5867FB6C-6FC8-4F39-A1CB-8FCB1C57E453}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConceirgeDinning.Core.Models", "ConceirgeDinning.Core.Models\ConceirgeDinning.Core.Models.csproj", "{83C13CFD-3ECD-4B6D-9B47-94D6E021F208}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConceirgeDinning.Contracts.Models", "ConceirgeDinning.Core.Models\ConceirgeDinning.Contracts.Models.csproj", "{83C13CFD-3ECD-4B6D-9B47-94D6E021F208}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConceirgeDinning.Core.ServicesImplementation", "ConceirgeDinning.Core.ServicesImplementation\ConceirgeDinning.Core.ServicesImplementation.csproj", "{01E9023F-236F-4D8B-82D7-47737C4D09A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConceirgeDinning.ServicesImplementation", "ConceirgeDinning.Core.ServicesImplementation\ConceirgeDinning.ServicesImplementation.csproj", "{01E9023F-236F-4D8B-82D7-47737C4D09A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConceiseDinning.Services", "ConceiseDinning.Services\ConceiseDinning.Services.csproj", "{045D5A28-69DB-4799-9BAF-3181F4721418}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConceirgeDinningContracts.Services", "ConceiseDinning.Services\ConceirgeDinningContracts.Services.csproj", "{045D5A28-69DB-4799-9BAF-3181F4721418}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConceirgeDinning.API.Tests", "ConceirgeDinning.Core.ServiceImplementation.Test\ConceirgeDinning.API.Tests.csproj", "{C4524B8D-1EEE-43FA-A648-90BB07295ACF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DAL", "DAL", "{5A094FFA-D402-4A89-AC3C-E3F52137D0E6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConceirgeDiningDAL", "ConceirgeDiningDAL\ConceirgeDiningDAL.csproj", "{F4F16E9E-83B8-45A0-B495-C267FCA06EDA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConceirgeDining.Middleware", "ConceirgeDining.Middleware\ConceirgeDining.Middleware.csproj", "{80DAD82B-7559-4866-9C6A-F53B3C65652D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConceirgeDining.LoggerDAL", "ConceirgeDining.LoggerDAL\ConceirgeDining.LoggerDAL.csproj", "{E01CAB7C-098A-4373-A95E-2753AD4CE060}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConceirgeDining.ServiceImplementation.Tests", "ConceirgeDining.ServiceImplementation.Tests\ConceirgeDining.ServiceImplementation.Tests.csproj", "{4C4E7885-A7D0-481E-818B-CB08280E1056}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConceirgeDinning.Adapter.DialougFlow", "ConceirgeDinning.Adapter.DialougFlow\ConceirgeDinning.Adapter.DialougFlow.csproj", "{1BDD17FA-733E-446E-BB43-0E53A43FA8A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConceirgeDining.Adapter.TimeZoneDB", "ConceirgeDining.Adapter.TimeZoneDB\ConceirgeDining.Adapter.TimeZoneDB.csproj", "{3C83C77C-08A3-47CA-A6DE-E3CB060BEAAB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +75,34 @@ Global
 		{045D5A28-69DB-4799-9BAF-3181F4721418}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{045D5A28-69DB-4799-9BAF-3181F4721418}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{045D5A28-69DB-4799-9BAF-3181F4721418}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4524B8D-1EEE-43FA-A648-90BB07295ACF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4524B8D-1EEE-43FA-A648-90BB07295ACF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4524B8D-1EEE-43FA-A648-90BB07295ACF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4524B8D-1EEE-43FA-A648-90BB07295ACF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4F16E9E-83B8-45A0-B495-C267FCA06EDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4F16E9E-83B8-45A0-B495-C267FCA06EDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4F16E9E-83B8-45A0-B495-C267FCA06EDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4F16E9E-83B8-45A0-B495-C267FCA06EDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80DAD82B-7559-4866-9C6A-F53B3C65652D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80DAD82B-7559-4866-9C6A-F53B3C65652D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80DAD82B-7559-4866-9C6A-F53B3C65652D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80DAD82B-7559-4866-9C6A-F53B3C65652D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E01CAB7C-098A-4373-A95E-2753AD4CE060}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E01CAB7C-098A-4373-A95E-2753AD4CE060}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E01CAB7C-098A-4373-A95E-2753AD4CE060}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E01CAB7C-098A-4373-A95E-2753AD4CE060}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C4E7885-A7D0-481E-818B-CB08280E1056}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C4E7885-A7D0-481E-818B-CB08280E1056}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C4E7885-A7D0-481E-818B-CB08280E1056}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C4E7885-A7D0-481E-818B-CB08280E1056}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BDD17FA-733E-446E-BB43-0E53A43FA8A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BDD17FA-733E-446E-BB43-0E53A43FA8A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BDD17FA-733E-446E-BB43-0E53A43FA8A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BDD17FA-733E-446E-BB43-0E53A43FA8A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C83C77C-08A3-47CA-A6DE-E3CB060BEAAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C83C77C-08A3-47CA-A6DE-E3CB060BEAAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C83C77C-08A3-47CA-A6DE-E3CB060BEAAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C83C77C-08A3-47CA-A6DE-E3CB060BEAAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,8 +113,15 @@ Global
 		{F0EA01C4-1360-4FD7-B885-21B149B0D410} = {061827A6-BA49-4296-9551-4734E40F815A}
 		{5867FB6C-6FC8-4F39-A1CB-8FCB1C57E453} = {8521F99A-CC51-45F0-83F8-89B3968F62E6}
 		{83C13CFD-3ECD-4B6D-9B47-94D6E021F208} = {6E28B232-C05B-428F-A9D7-CD8C6791D089}
-		{01E9023F-236F-4D8B-82D7-47737C4D09A1} = {6E28B232-C05B-428F-A9D7-CD8C6791D089}
-		{045D5A28-69DB-4799-9BAF-3181F4721418} = {A0CE9DAD-4171-4CCF-BF21-95548C6FC329}
+		{01E9023F-236F-4D8B-82D7-47737C4D09A1} = {A0CE9DAD-4171-4CCF-BF21-95548C6FC329}
+		{045D5A28-69DB-4799-9BAF-3181F4721418} = {6E28B232-C05B-428F-A9D7-CD8C6791D089}
+		{C4524B8D-1EEE-43FA-A648-90BB07295ACF} = {8521F99A-CC51-45F0-83F8-89B3968F62E6}
+		{F4F16E9E-83B8-45A0-B495-C267FCA06EDA} = {5A094FFA-D402-4A89-AC3C-E3F52137D0E6}
+		{80DAD82B-7559-4866-9C6A-F53B3C65652D} = {A0CE9DAD-4171-4CCF-BF21-95548C6FC329}
+		{E01CAB7C-098A-4373-A95E-2753AD4CE060} = {5A094FFA-D402-4A89-AC3C-E3F52137D0E6}
+		{4C4E7885-A7D0-481E-818B-CB08280E1056} = {A0CE9DAD-4171-4CCF-BF21-95548C6FC329}
+		{1BDD17FA-733E-446E-BB43-0E53A43FA8A7} = {061827A6-BA49-4296-9551-4734E40F815A}
+		{3C83C77C-08A3-47CA-A6DE-E3CB060BEAAB} = {061827A6-BA49-4296-9551-4734E40F815A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {138378C9-B37D-499B-AB20-4E8541DD5B2D}

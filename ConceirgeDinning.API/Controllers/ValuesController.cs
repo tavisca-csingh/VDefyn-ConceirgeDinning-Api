@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ConceirgeDining.LoggerDAL.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ConceirgeDinning.API.Controllers
@@ -14,7 +15,10 @@ namespace ConceirgeDinning.API.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
+            LogContext logContext = new LogContext();
+            //logContext.ConnectTOMongoDB();
             return new string[] { "value1", "value2" };
+
         }
 
         // GET api/values/5
