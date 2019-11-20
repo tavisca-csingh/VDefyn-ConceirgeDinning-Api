@@ -18,13 +18,13 @@ namespace ConceirgeDinning.API.Controllers.FoodOrdering
         [HttpPost]
         public ActionResult<OrderPaymentResponse> payment([FromBody]JObject jsonData)
         {
-            OrderResponse orderResponse;
+            OrderPaymentRequest orderPaymentRequest;
             OrderPaymentResponse orderPaymentResponse = new OrderPaymentResponse();
             try
             {
                 
-                orderResponse = JsonConvert.DeserializeObject<OrderResponse>(jsonData.ToString());
-                PaymentInitialiser paymentInitialiser = new PaymentInitialiser(orderResponse);
+                orderPaymentRequest = JsonConvert.DeserializeObject<OrderPaymentRequest>(jsonData.ToString());
+                PaymentInitialiser paymentInitialiser = new PaymentInitialiser(orderPaymentRequest);
                 orderPaymentResponse=paymentInitialiser.Start();
                 
             }
