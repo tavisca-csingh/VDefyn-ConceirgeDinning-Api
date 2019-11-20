@@ -20,10 +20,10 @@ namespace ConceirgeDinning.ServicesImplementation.History
             }
             return true;
         }
-        public List<TableBookingHistory> GetBookingDetailsFromBookingTableByUserId(string userId, string corelationId)
+        public TableBookingHistoryResponse GetBookingDetailsFromBookingTableByUserId(string userId, string corelationId)
         {
-            List<TableBookingHistory> tableBookingHistories = new List<TableBookingHistory>();
-            
+            TableBookingHistoryResponse tableBookingHistoryResponse = new TableBookingHistoryResponse();
+            tableBookingHistoryResponse.bookingHistories = new List<TableBookingHistory>();
             sql12310325Context conciergeContext = new sql12310325Context();
             var bookingResults = from b in conciergeContext.Booking
                                  join rn in conciergeContext.RestaurantNames
@@ -51,10 +51,15 @@ namespace ConceirgeDinning.ServicesImplementation.History
                 tableBookingHistory.PerPersonPoints = item.PointPerPerson;
                 tableBookingHistory.FinalBill = item.noOfGuests * item.PointPerPerson;
                 tableBookingHistory.IsCancellable = CheckCancelTime(item.utcTime,item.status);
-                tableBookingHistories.Add(tableBookingHistory);
-                
+                tableBookingHistoryResponse.bookingHistories.Add(tableBookingHistory);
+
             }
-            return tableBookingHistories;
+            tableBookingHistoryResponse.bookingHistories=tableBookingHistoryResponse.bookingHistories.OrderByDescending(o => o.Date).ThenByDescending(o => o.Time).ToList();
+            if (tableBookingHistoryResponse.bookingHistories.Count > 0)
+                tableBookingHistoryResponse.IsDataAvailable = true;
+            else
+                tableBookingHistoryResponse.IsDataAvailable = false;
+            return tableBookingHistoryResponse;
         }
     }
 }

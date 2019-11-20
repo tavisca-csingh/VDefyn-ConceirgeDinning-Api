@@ -17,11 +17,8 @@ namespace ConceirgeDinning.API.Controllers.History
         {
             BookingHistory bookingHistory = new BookingHistory();
             TableBookingHistoryResponse tableBookingHistoryResponse = new TableBookingHistoryResponse();
-            tableBookingHistoryResponse.bookingHistories= (bookingHistory.GetBookingDetailsFromBookingTableByUserId(userId, corelationId)).OrderByDescending(o=>o.Date).ThenBy(o=>o.Time).ToList();
-            if (tableBookingHistoryResponse.bookingHistories.Count > 0)
-                tableBookingHistoryResponse.IsDataAvailable = true;
-            else
-                tableBookingHistoryResponse.IsDataAvailable = false;
+            tableBookingHistoryResponse= bookingHistory.GetBookingDetailsFromBookingTableByUserId(userId, corelationId);
+            
             return tableBookingHistoryResponse;
         }
     }
