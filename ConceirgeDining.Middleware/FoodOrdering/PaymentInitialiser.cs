@@ -9,25 +9,25 @@ namespace ConceirgeDining.Middleware.FoodOrdering
 {
     public class PaymentInitialiser
     {
-        OrderResponse orderResponse;
+        OrderPaymentRequest orderPaymentRequest;
         PaymentInitiator paymentInitiator;
-        public PaymentInitialiser(OrderResponse orderResponse)
+        public PaymentInitialiser(OrderPaymentRequest orderPaymentRequest)
         {
-            this.orderResponse = orderResponse;
+            this.orderPaymentRequest = orderPaymentRequest;
             paymentInitiator = new PaymentInitiator();
         }
         public OrderPaymentResponse Start()
         {
             Ordering ordering;
-            ordering = paymentInitiator.AddEntryInOrderTable(orderResponse);
-            paymentInitiator.AddEntriesInOrderDetailTable(ordering.OrderId, orderResponse.MenuItems);
+            ordering = paymentInitiator.AddEntryInOrderTable(orderPaymentRequest);
+            paymentInitiator.AddEntriesInOrderDetailTable(ordering.OrderId, orderPaymentRequest.MenuItems);
             OrderPaymentResponse orderPaymentResponse = new OrderPaymentResponse();
             orderPaymentResponse.OrderId = ordering.OrderId;
-            orderPaymentResponse.RestaurantId = orderResponse.RestaurantId;
-            orderPaymentResponse.RestaurantName = orderResponse.RestaurantName;
-            orderPaymentResponse.UserId = orderResponse.UserId;
-            orderPaymentResponse.TotalPoints = orderResponse.TotalPoints;
-            orderPaymentResponse.MenuItems = orderResponse.MenuItems;
+            orderPaymentResponse.RestaurantId = orderPaymentRequest.RestaurantId;
+            orderPaymentResponse.RestaurantName = orderPaymentRequest.RestaurantName;
+            orderPaymentResponse.UserId = orderPaymentRequest.UserId;
+            orderPaymentResponse.TotalPoints = orderPaymentRequest.TotalPoints;
+            orderPaymentResponse.MenuItems = orderPaymentRequest.MenuItems;
             orderPaymentResponse.Error = null;
             orderPaymentResponse.Status = "Order Successful";
             orderPaymentResponse.date = ordering.TimeStamp;
