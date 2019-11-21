@@ -16,16 +16,13 @@ namespace ConceirgeDinning.API.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get(string apiKey)
         {
-            ValidateAPIKey validateAPIKey = new ValidateAPIKey();
-            AddAPICalls addAPICalls = new AddAPICalls();
-            if (validateAPIKey.CheckKeyInClientsTable(apiKey))
-            {
+           
+          
                 LogContext logContext = new LogContext();
-                addAPICalls.UpdateCallsInClientCallLogsTable(apiKey);
+                
                 //logContext.ConnectTOMongoDB();
                 return new string[] { "value1", "value2" };
-            }
-            return Unauthorized("please provide a valid key");
+          
 
         }
 

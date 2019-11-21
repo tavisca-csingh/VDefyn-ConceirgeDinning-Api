@@ -65,9 +65,9 @@ namespace ConceirgeDinning.API
             app.UseCors("MyPolicy");
            
             app.UseHttpsRedirection();
-           
-           
-        
+
+            app.UseMiddleware<AuthValidation>();
+
             app.UseMvc();
         }
 
