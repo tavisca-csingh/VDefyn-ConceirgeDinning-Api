@@ -13,6 +13,8 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 using Serilog;
+using ConceirgeDining.Middleware;
+using Microsoft.AspNetCore.Http;
 using Serilog.Formatting.Json;
 
 namespace ConceirgeDinning.API
@@ -63,6 +65,9 @@ namespace ConceirgeDinning.API
             app.UseCors("MyPolicy");
            
             app.UseHttpsRedirection();
+           
+           
+        
             app.UseMvc();
         }
 
