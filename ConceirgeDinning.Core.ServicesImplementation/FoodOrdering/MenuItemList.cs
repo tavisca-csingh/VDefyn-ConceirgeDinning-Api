@@ -16,11 +16,11 @@ namespace ConceirgeDinning.ServicesImplementation.FoodOrdering
                 ZomatoMenuItemAdpter zomatoMenu = new ZomatoMenuItemAdpter();
                 return zomatoMenu.GetMenuItems(restaurantId);
             }
-            else if(supplierName is "USRestaraunt")
+            /*else if(supplierName is "USRestaraunt")
             {
                 USRestaurantMenuItemAdapter usRestaurantAdapter = new USRestaurantMenuItemAdapter();
                 return usRestaurantAdapter.GetMenuItems(restaurantId);
-            }
+            }*/
             return null;
         }
     }

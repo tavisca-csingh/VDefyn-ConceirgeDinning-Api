@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ConceirgeDining.LoggerDAL.Models;
+using ConceirgeDinning.ServicesImplementation.APIAuthentication;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ConceirgeDinning.API.Controllers
@@ -13,11 +14,18 @@ namespace ConceirgeDinning.API.Controllers
     {
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public ActionResult<IEnumerable<string>> Get(string apiKey)
         {
-            LogContext logContext = new LogContext();
-            //logContext.ConnectTOMongoDB();
-            return new string[] { "value1", "value2" };
+            ValidateAPIKey validateAPIKey = new ValidateAPIKey();
+            AddAPICalls addAPICalls = new AddAPICalls();
+            if (validateAPIKey.CheckKeyInClientsTable(apiKey))
+            {
+                LogContext logContext = new LogContext();
+                addAPICalls.UpdateCallsInClientCallLogsTable(apiKey);
+                //logContext.ConnectTOMongoDB();
+                return new string[] { "value1", "value2" };
+            }
+            return Unauthorized("please provide a valid key");
 
         }
 
