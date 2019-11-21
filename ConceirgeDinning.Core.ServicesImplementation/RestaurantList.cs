@@ -10,7 +10,7 @@ using ConceirgeDinning.Adapter.Geocoder.xyz;
 
 namespace ConceirgeDinning.Core.ServicesImplementation
 {
-    public class RestaurantList 
+    public class RestaurantList
     {
 
         /*List<IFetchRestaurant> restaurantByLocalityFetchers = new List<IFetchRestaurant>()
@@ -19,7 +19,7 @@ namespace ConceirgeDinning.Core.ServicesImplementation
             new USRestarauntAdapter()
         };*/
 
-        public List<Restaurant> FetchRestarauntDetails(string locality, string latitude, string longitude,string category)
+        public List<Restaurant> FetchRestarauntDetails(string locality, string latitude, string longitude, string category)
         {
             if (locality != string.Empty)
             {
@@ -34,23 +34,23 @@ namespace ConceirgeDinning.Core.ServicesImplementation
 
             ZomatoRestaurantAdapter zomatoRestaurantList = new ZomatoRestaurantAdapter();
             USRestarauntAdapter usRestaurantList = new USRestarauntAdapter();
-            Task<List<Restaurant>> fetchFromZomato = Task<List<Restaurant>>.Run(() => zomatoRestaurantList.FetchRestarauntDetails(latitude, longitude,"1"));
-            Task<List<Restaurant>> fetchFromUS = Task<List<Restaurant>>.Run(() => usRestaurantList.FetchRestarauntDetails(latitude,longitude,"1"));
-            Task[] searchTasks = { fetchFromUS ,fetchFromZomato };
+            Task<List<Restaurant>> fetchFromZomato = Task<List<Restaurant>>.Run(() => zomatoRestaurantList.FetchRestarauntDetails(latitude, longitude, "1"));
+            Task<List<Restaurant>> fetchFromUS = Task<List<Restaurant>>.Run(() => usRestaurantList.FetchRestarauntDetails(latitude, longitude, "1"));
+            Task[] searchTasks = { fetchFromUS, fetchFromZomato };
             Task.WaitAll(searchTasks);
 
-            foreach(var item in fetchFromZomato.Result)
+            foreach (var item in fetchFromZomato.Result)
             {
                 if (Math.Abs(Convert.ToDouble(item.Latitude) - Convert.ToDouble(latitude)) > 1)
                     return null;
             }
+
             var zomatoResults = fetchFromZomato.Result;
-            
-           
             var usRestaurantResults = fetchFromUS.Result;
+
             if ((usRestaurantResults is null) && !(zomatoResults is null))
                 return zomatoResults;
-           if ( (zomatoResults is null) && !(usRestaurantResults is null))
+            if ((zomatoResults is null) && !(usRestaurantResults is null))
                 return usRestaurantResults;
             if (!(usRestaurantResults is null) && !(zomatoResults is null))
             {
@@ -61,6 +61,6 @@ namespace ConceirgeDinning.Core.ServicesImplementation
                 return null;
         }
 
-       
+
     }
 }

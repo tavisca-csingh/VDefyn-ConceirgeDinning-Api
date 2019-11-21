@@ -13,22 +13,29 @@ namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
             List<MenuItem> menuItems = new List<MenuItem>();
             List<Category> categoryList = new List<Category>();
             Category category = new Category();
+            var cuisine = new List<string>();
             foreach (var item in menuItem.result.data)
             {
-                menuItems = new List<MenuItem>();
-                category = new Category();
-
-                foreach (var Item in item.menu_item_pricing)
+                int flag = 0;
+                if (!cuisine.Contains(item.subsection))
                 {
-                    menuItems.Add(new MenuItem()
-                    {
-                        Name = item.menu_item_name,
-                        Price = Item.price.ToString()
-                    });
+                    menuItems = new List<MenuItem>();
+                    category = new Category();
+                    flag = 1;
                 }
-                category.category = item.subsection;
-                category.Items = menuItems;
-                categoryList.Add(category);
+
+                menuItems.Add(new MenuItem()
+                {
+                    Name = item.menu_item_name,
+                    Price = item.menu_item_pricing[0].price.ToString()
+                });
+                cuisine.Add(item.subsection);
+                if (flag == 1)
+                {
+                    category.category = item.subsection;
+                    category.Items = menuItems;
+                    categoryList.Add(category);
+                }
             }
             return categoryList;
         }
