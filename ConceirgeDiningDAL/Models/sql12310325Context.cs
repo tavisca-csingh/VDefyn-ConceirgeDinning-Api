@@ -17,6 +17,8 @@ namespace ConceirgeDiningDAL.Models
 
         public virtual DbSet<Booking> Booking { get; set; }
         public virtual DbSet<BookingProgress> BookingProgress { get; set; }
+        public virtual DbSet<Client> Client { get; set; }
+        public virtual DbSet<ClientCallLogs> ClientCallLogs { get; set; }
         public virtual DbSet<LoginInfo> LoginInfo { get; set; }
         public virtual DbSet<OrderDetails> OrderDetails { get; set; }
         public virtual DbSet<Ordering> Ordering { get; set; }
@@ -113,6 +115,59 @@ namespace ConceirgeDiningDAL.Models
                     .HasForeignKey(d => d.BookingId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("BookingProgress_ibfk_1");
+            });
+
+            modelBuilder.Entity<Client>(entity =>
+            {
+                entity.HasKey(e => e.Apikey);
+
+                entity.ToTable("Client", "sql12310325");
+
+                entity.HasIndex(e => e.ClientName)
+                    .HasName("clientName")
+                    .IsUnique();
+
+                entity.Property(e => e.Apikey)
+                    .HasColumnName("APIkey")
+                    .HasMaxLength(256)
+                    .IsUnicode(false)
+                    .ValueGeneratedNever();
+
+                entity.Property(e => e.ClientName)
+                    .IsRequired()
+                    .HasColumnName("clientName")
+                    .HasMaxLength(256)
+                    .IsUnicode(false);
+            });
+
+            modelBuilder.Entity<ClientCallLogs>(entity =>
+            {
+                entity.HasKey(e => new { e.Apikey, e.Date });
+
+                entity.ToTable("ClientCallLogs", "sql12310325");
+
+                entity.HasIndex(e => e.Apikey)
+                    .HasName("APIkey");
+
+                entity.Property(e => e.Apikey)
+                    .HasColumnName("APIkey")
+                    .HasMaxLength(256)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Date)
+                    .HasColumnName("date")
+                    .HasMaxLength(256)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Calls)
+                    .HasColumnName("calls")
+                    .HasColumnType("bigint(255)");
+
+                entity.HasOne(d => d.ApikeyNavigation)
+                    .WithMany(p => p.ClientCallLogs)
+                    .HasForeignKey(d => d.Apikey)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FOREIGN");
             });
 
             modelBuilder.Entity<LoginInfo>(entity =>
