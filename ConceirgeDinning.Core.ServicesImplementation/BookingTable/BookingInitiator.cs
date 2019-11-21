@@ -44,6 +44,7 @@ namespace ConceirgeDinning.ServicesImplementation.BookingTable
         {
             BookingProgress bookingProgress = new BookingProgress();
             bookingProgress.BookingId = bookingId;
+            bookingProgress.TimeStamp = DateTime.UtcNow;
             sql12310325Context.BookingProgress.Add(bookingProgress);
             sql12310325Context.SaveChanges();
         }
