@@ -21,17 +21,17 @@ namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
                     RestaurantId = restaurant.restaurant_id,
                     RestaurantName = restaurant.restaurant_name,
                     ThumbURL = "https://icon-library.net/images/no-image-available-icon/no-image-available-icon-6.jpg",
-                    User_Rating = GetRating(3,5),
+                    User_Rating = GetRating(3, 5),
                     LocalityVerbose = restaurant.address.street + ", " + restaurant.address.city,
                     Cuisines = restaurant.cuisines,
-                    Latitude=restaurant.geo.lat.ToString()
+                    Latitude = restaurant.geo.lat.ToString(),
+                    PricePerHead = GetPrice(restaurant.price_range).ToString()
                 });
             }
             return restaurantList;
 
 
         }
-        
 
         public static string GetRating(int minimumValue, int maximumValue)
         {
@@ -39,7 +39,11 @@ namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
             return (Math.Round(random.NextDouble(), 1) * (maximumValue - minimumValue) + minimumValue).ToString();
         }
 
-        
+        private static int GetPrice(string price_range)
+        {
+            return (price_range.Length+1) * 10 * PointConverter.PointsConversionStandard["default"];
+        }
+
     }
 }
 

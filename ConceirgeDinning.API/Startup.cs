@@ -23,9 +23,10 @@ namespace ConceirgeDinning.API
         {
             Configuration = configuration;
         }
-        
 
+        
         public IConfiguration Configuration { get; }
+
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -43,11 +44,10 @@ namespace ConceirgeDinning.API
             StartLogger();
             Guid GuId = Guid.NewGuid();
             Log.Information("SessionId : " + GuId.ToString());
-            Log.Information("timestamp: "+DateTime.Now.ToString());
-            
-            
+            Log.Information("timestamp: "+DateTime.Now.ToString());    
         }
 
+        
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
@@ -65,6 +65,8 @@ namespace ConceirgeDinning.API
             app.UseHttpsRedirection();
             app.UseMvc();
         }
+
+
         private void StartLogger()
         {
             //var client = new MongoClient("mongodb+srv://mattapalliswarnesh:lthliCuE4xi80DOE@logs-et0xz.mongodb.net/test?retryWrites=true&w=majority");

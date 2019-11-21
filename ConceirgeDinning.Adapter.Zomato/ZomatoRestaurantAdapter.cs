@@ -10,6 +10,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Serilog;
 
+
 namespace ConceirgeDinning.Adapter.Zomato.Translator
 {
     public class ZomatoRestaurantAdapter : IFetchRestaurant

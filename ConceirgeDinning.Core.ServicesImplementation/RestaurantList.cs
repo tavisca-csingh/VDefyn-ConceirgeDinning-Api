@@ -35,8 +35,8 @@ namespace ConceirgeDinning.Core.ServicesImplementation
             ZomatoRestaurantAdapter zomatoRestaurantList = new ZomatoRestaurantAdapter();
             USRestarauntAdapter usRestaurantList = new USRestarauntAdapter();
             Task<List<Restaurant>> fetchFromZomato = Task<List<Restaurant>>.Run(() => zomatoRestaurantList.FetchRestarauntDetails(latitude, longitude,"1"));
-            //Task<List<Restaurant>> fetchFromUS = Task<List<Restaurant>>.Run(() => usRestaurantList.FetchRestarauntDetails(latitude,longitude));
-            Task[] searchTasks = { /*fetchFromUS*/ fetchFromZomato };
+            Task<List<Restaurant>> fetchFromUS = Task<List<Restaurant>>.Run(() => usRestaurantList.FetchRestarauntDetails(latitude,longitude,"1"));
+            Task[] searchTasks = { fetchFromUS ,fetchFromZomato };
             Task.WaitAll(searchTasks);
 
             foreach(var item in fetchFromZomato.Result)
@@ -47,16 +47,16 @@ namespace ConceirgeDinning.Core.ServicesImplementation
             var zomatoResults = fetchFromZomato.Result;
             
            
-            //var usRestaurantResults = fetchFromUS.Result;
-            if (/*(usRestaurantResults is null) && */!(zomatoResults is null))
+            var usRestaurantResults = fetchFromUS.Result;
+            if ((usRestaurantResults is null) && !(zomatoResults is null))
                 return zomatoResults;
-           /* if ( (zomatoResults is null) && !(usRestaurantResults is null))
+           if ( (zomatoResults is null) && !(usRestaurantResults is null))
                 return usRestaurantResults;
             if (!(usRestaurantResults is null) && !(zomatoResults is null))
             {
                 zomatoResults.AddRange(usRestaurantResults);
                 return zomatoResults;
-            }*/
+            }
             else
                 return null;
         }
