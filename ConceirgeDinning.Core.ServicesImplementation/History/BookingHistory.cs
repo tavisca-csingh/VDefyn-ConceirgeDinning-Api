@@ -14,11 +14,11 @@ namespace ConceirgeDinning.ServicesImplementation.History
             DateTime currentDate = DateTime.UtcNow;
             DateTime bookingDateTime = DateTime.Parse(utcTime);
             var timeDifference = (bookingDateTime - currentDate).TotalMinutes;
-            if (timeDifference <= 240 && status != "BookingInitiated")
+            if (timeDifference > 240 && status == "Booked")
             {
-                return false;
+                return true;
             }
-            return true;
+            return false;
         }
         public TableBookingHistoryResponse GetBookingDetailsFromBookingTableByUserId(string userId, string corelationId)
         {
@@ -54,7 +54,7 @@ namespace ConceirgeDinning.ServicesImplementation.History
                 tableBookingHistoryResponse.bookingHistories.Add(tableBookingHistory);
 
             }
-            tableBookingHistoryResponse.bookingHistories=tableBookingHistoryResponse.bookingHistories.OrderByDescending(o => o.Date).ThenByDescending(o => o.Time).ToList();
+            tableBookingHistoryResponse.bookingHistories=tableBookingHistoryResponse.bookingHistories.OrderByDescending(o => o.BookingId).ToList();
             if (tableBookingHistoryResponse.bookingHistories.Count > 0)
                 tableBookingHistoryResponse.IsDataAvailable = true;
             else
