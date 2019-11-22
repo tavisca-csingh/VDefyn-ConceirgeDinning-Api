@@ -16,6 +16,7 @@ using Serilog;
 using ConceirgeDining.Middleware;
 using Microsoft.AspNetCore.Http;
 using Serilog.Formatting.Json;
+using ConceirgeDinning.Contracts.Models;
 
 namespace ConceirgeDinning.API
 {
@@ -42,6 +43,7 @@ namespace ConceirgeDinning.API
                     }
                     );
             });
+            services.Configure<AppSettingsModel>(Configuration.GetSection("MySettings"));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             StartLogger();
             Guid GuId = Guid.NewGuid();

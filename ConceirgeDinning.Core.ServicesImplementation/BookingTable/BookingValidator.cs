@@ -9,12 +9,19 @@ namespace ConceirgeDinning.ServicesImplementation.BookingTable
 {
     public class BookingValidator
     {
-        sql12310325Context conciergeContext = new sql12310325Context();
-        public int CheckAvailability(int noOfGuests, DateTime date, string restaurantId,string restaurantName)
+        private readonly string _key;
+        private readonly string _url;
+        public BookingValidator(string url,string key)
         {
-           
+            this._key = key;
+            this._url = url;
+        }
+        sql12310325Context conciergeContext = new sql12310325Context();
+        public int CheckAvailability(int noOfGuests, DateTime date, string restaurantId, string restaurantName)
+        {
+
             int bookedSeats;
-            var restaurantDetails=conciergeContext.RestaurantNames.Find(restaurantId);
+            var restaurantDetails = conciergeContext.RestaurantNames.Find(restaurantId);
             if (restaurantDetails == null)
             {
                 //stores restaurent name
@@ -34,7 +41,7 @@ namespace ConceirgeDinning.ServicesImplementation.BookingTable
             }
             else
             {
-                
+
 
 
                 var restaurantAvailabilityDetails = conciergeContext.RestaurantAvailability.Find(restaurantId, date);
@@ -54,13 +61,12 @@ namespace ConceirgeDinning.ServicesImplementation.BookingTable
                     bookedSeats = conciergeContext.RestaurantAvailability.Find(restaurantId, date).BookedSeats;
                 }
             }
-            
+
             return bookedSeats;
         }
-
         private void UnBlockExpiredSeats(string restaurantId, DateTime date)
         {
-            DateTimeOffset timePastFiveMinutes = Convert.ToDateTime(DateTime.UtcNow.Subtract(new TimeSpan(0,5,0) ));
+            DateTimeOffset timePastFiveMinutes = Convert.ToDateTime(DateTime.UtcNow.Subtract(new TimeSpan(0, 5, 0)));
             var result = from b in conciergeContext.Booking
                          join p in conciergeContext.BookingProgress on b.BookingId equals p.BookingId
                          where b.RestaurantId == restaurantId & b.Date == date & p.TimeStamp < timePastFiveMinutes
@@ -68,7 +74,7 @@ namespace ConceirgeDinning.ServicesImplementation.BookingTable
                          {
                              booking = b
                          };
-            foreach(var item in result)
+            foreach (var item in result)
             {
                 CancellInitiator cancelInitiator = new CancellInitiator(item.booking);
                 cancelInitiator.DeleteEntryInBookingProcess();
@@ -76,7 +82,7 @@ namespace ConceirgeDinning.ServicesImplementation.BookingTable
                 cancelInitiator.ChangeSeatsStatus();
             }
 
-                       
+
         }
         public bool CheckNoOfGuests(int noOfGuests)
         {
@@ -85,11 +91,11 @@ namespace ConceirgeDinning.ServicesImplementation.BookingTable
             else
                 return true;
         }
-        public bool CheckDateTime(string dateTime,string latitude,string longitude,out string UTCTime)
+        public bool CheckDateTime(string dateTime, string latitude, string longitude, out string UTCTime)
         {
 
-            DateTime currentdateTime= DateTime.UtcNow;
-            TimeZoneDBAdapter timeZoneDBAdapter = new TimeZoneDBAdapter();
+            DateTime currentdateTime = DateTime.UtcNow;
+            TimeZoneDBAdapter timeZoneDBAdapter = new TimeZoneDBAdapter(_url,_key);
             string gmtOffset = timeZoneDBAdapter.FetchTimeZone(latitude, longitude);
             dateTime += gmtOffset;
             DateTime bookingDateTime = DateTimeOffset.Parse(dateTime).UtcDateTime;
@@ -98,7 +104,7 @@ namespace ConceirgeDinning.ServicesImplementation.BookingTable
                 return true;
             return false;
         }
-        public bool CheckPointAvailability(int noOfGuests,long perPersonPoints, long pointBalance)
+        public bool CheckPointAvailability(int noOfGuests, long perPersonPoints, long pointBalance)
         {
             long totalPointsRequired = noOfGuests * perPersonPoints;
             if (totalPointsRequired <= pointBalance)

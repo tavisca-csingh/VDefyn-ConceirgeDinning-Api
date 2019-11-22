@@ -6,6 +6,7 @@ using ConceirgeDinning.Contracts.Models;
 using ConceirgeDinning.Core.ServicesImplementation;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 using Serilog;
 
 namespace ConceirgeDinning.API.Controllers.FoodOrdering
@@ -14,6 +15,11 @@ namespace ConceirgeDinning.API.Controllers.FoodOrdering
     [ApiController]
     public class RestaurantsController : ControllerBase
     {
+        private readonly IOptions<AppSettingsModel> appSettings;
+        public RestaurantsController(IOptions<AppSettingsModel> app)
+        {
+            appSettings = app;
+        }
         [HttpGet]
         public ActionResult<List<Restaurant>> GetRestaurants(string locality, string latitude, string longitude)
         {
@@ -21,7 +27,7 @@ namespace ConceirgeDinning.API.Controllers.FoodOrdering
             if (locality is null)
                 locality = string.Empty;
             Log.Information("request from user : locality -" + locality + " latitude-" + latitude + " longitude- " + longitude);
-            var response = restaurantList.FetchRestarauntDetails(locality, latitude, longitude,"2");
+            var response = restaurantList.FetchRestarauntDetails(locality, latitude, longitude,"2",appSettings);
             if (response == null)
             {
                 Log.Information("response to user : 404");

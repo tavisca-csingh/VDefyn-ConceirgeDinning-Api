@@ -13,14 +13,21 @@ namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
 {
     public class USRestaurantDetailsAdapter : IFetchRestaurantDetails
     {
+        private readonly string _usrestaurantURL;
+        private readonly string _usrestaurantKey;
+        public USRestaurantDetailsAdapter(string url, string key)
+        {
+            this._usrestaurantKey = url;
+            this._usrestaurantURL = key;
+        }
         public RestaurantDetails GetRestaurantDetails(int restaurantId)
         {
-            string ApiUri = @"https://us-restaurant-menus.p.rapidapi.com/restaurant/";
-            var request = System.Net.WebRequest.Create(ApiUri + restaurantId + "/menuitems");
+            
+            var request = System.Net.WebRequest.Create(_usrestaurantURL + restaurantId + "/menuitems");
             request.Method = "GET";
             request.Headers.Add("X-RapidAPI-Host", "us-restaurant-menus.p.rapidapi.com");
-            request.Headers.Add("X-RapidAPI-Key", "01545b0594mshdb9591ceda3d162p1716b7jsn43e523b10b95");
-            Log.Information("request to supplier: "+ ApiUri + restaurantId + "/menuitems");
+            request.Headers.Add("X-RapidAPI-Key", _usrestaurantKey);
+            Log.Information("request to supplier: "+ _usrestaurantURL + restaurantId + "/menuitems");
             request.ContentType = "application/json";
 
 

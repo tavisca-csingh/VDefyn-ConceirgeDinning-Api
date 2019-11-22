@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 
 using ConceirgeDinning.Contracts.Models;
 using ConceirgeDinning.Adapter.Geocoder.xyz;
+using System.Configuration;
+using Microsoft.Extensions.Options;
 
 namespace ConceirgeDinning.Core.ServicesImplementation
 {
@@ -19,11 +21,11 @@ namespace ConceirgeDinning.Core.ServicesImplementation
             new USRestarauntAdapter()
         };*/
 
-        public List<Restaurant> FetchRestarauntDetails(string locality, string latitude, string longitude, string category)
+        public List<Restaurant> FetchRestarauntDetails(string locality, string latitude, string longitude, string category, IOptions<AppSettingsModel> appSettings)
         {
             if (locality != string.Empty)
             {
-                LocalityGeocodeAdapter restarauntGeocodeFetcher = new LocalityGeocodeAdapter();
+                LocalityGeocodeAdapter restarauntGeocodeFetcher = new LocalityGeocodeAdapter(appSettings.Value.GoogleGeocodeURL,appSettings.Value.GoogleGeocodeKey);
                 var coordinates = restarauntGeocodeFetcher.FetchCoordinates(locality);
                 if (coordinates is null)
                     return null;
@@ -32,11 +34,11 @@ namespace ConceirgeDinning.Core.ServicesImplementation
             }
 
 
-            ZomatoRestaurantAdapter zomatoRestaurantList = new ZomatoRestaurantAdapter();
-            USRestarauntAdapter usRestaurantList = new USRestarauntAdapter();
+            ZomatoRestaurantAdapter zomatoRestaurantList = new ZomatoRestaurantAdapter(appSettings.Value.ZomatoURL,appSettings.Value.ZomatoKey);
+            //USRestarauntAdapter usRestaurantList = new USRestarauntAdapter(appSettings.Value.USRestaurantURL,appSettings.Value.USRestaurantKey);
             Task<List<Restaurant>> fetchFromZomato = Task<List<Restaurant>>.Run(() => zomatoRestaurantList.FetchRestarauntDetails(latitude, longitude, "1"));
-            Task<List<Restaurant>> fetchFromUS = Task<List<Restaurant>>.Run(() => usRestaurantList.FetchRestarauntDetails(latitude, longitude, "1"));
-            Task[] searchTasks = { fetchFromUS, fetchFromZomato };
+           // Task<List<Restaurant>> fetchFromUS = Task<List<Restaurant>>.Run(() => usRestaurantList.FetchRestarauntDetails(latitude, longitude, "1"));
+            Task[] searchTasks = { /*fetchFromUS,*/ fetchFromZomato };
             Task.WaitAll(searchTasks);
 
             foreach (var item in fetchFromZomato.Result)
@@ -46,7 +48,7 @@ namespace ConceirgeDinning.Core.ServicesImplementation
             }
 
             var zomatoResults = fetchFromZomato.Result;
-            var usRestaurantResults = fetchFromUS.Result;
+            /*var usRestaurantResults = fetchFromUS.Result;
 
             if ((usRestaurantResults is null) && !(zomatoResults is null))
                 return zomatoResults;
@@ -56,11 +58,13 @@ namespace ConceirgeDinning.Core.ServicesImplementation
             {
                 zomatoResults.AddRange(usRestaurantResults);
                 return zomatoResults;
-            }
+            }*/
+            if (!(zomatoResults is null))
+                return zomatoResults;
             else
                 return null;
         }
 
-
+        
     }
 }

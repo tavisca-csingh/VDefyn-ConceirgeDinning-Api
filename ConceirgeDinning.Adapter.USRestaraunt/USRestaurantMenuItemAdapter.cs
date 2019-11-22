@@ -12,13 +12,19 @@ namespace ConceirgeDinning.Adapter.USRestaraunt
 {
     public class USRestaurantMenuItemAdapter
     {
+        private readonly string _usrestaurantURL;
+        private readonly string _usrestaurantKey;
+        public USRestaurantMenuItemAdapter(string url, string key)
+        {
+            this._usrestaurantKey = url;
+            this._usrestaurantURL = key;
+        }
         public List<Category> GetMenuItems(string restaurantId)
         {
-            string ApiUrl = @"https://us-restaurant-menus.p.rapidapi.com/menuitems/search";
-            var request = System.Net.WebRequest.Create(ApiUrl);
+            var request = System.Net.WebRequest.Create(_usrestaurantURL);
             request.Method = "GET";
             request.Headers.Add("X-RapidAPI-Host", "us-restaurant-menus.p.rapidapi.com");
-            request.Headers.Add("X-RapidAPI-Key", "01545b0594mshdb9591ceda3d162p1716b7jsn43e523b10b95");
+            request.Headers.Add("X-RapidAPI-Key", _usrestaurantKey);
 
             request.ContentType = "application/json";
 

@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json.Linq;
 using ConceirgeDiningDAL.Models;
 using ConceirgeDining.Middleware.BookingTable;
+using Microsoft.Extensions.Options;
 
 namespace ConceirgeDinning.API.Controllers
 {
@@ -16,6 +17,11 @@ namespace ConceirgeDinning.API.Controllers
     [ApiController]
     public class CancellController : ControllerBase
     {
+        private readonly IOptions<AppSettingsModel> _appsetting;
+        public CancellController(IOptions<AppSettingsModel> app)
+        {
+            this._appsetting = app;
+        }
         [HttpPost]
         public ActionResult<CancellResponse> StartPayment([FromBody]JObject jObject)
         {

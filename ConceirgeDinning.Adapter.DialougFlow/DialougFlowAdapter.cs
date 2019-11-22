@@ -10,9 +10,14 @@ namespace ConceirgeDinning.Adapter.DialougFlow
 {
     public class DialougFlowAdapter
     {
+        private readonly string _dialogFlowURl;
+        public DialougFlowAdapter(string url)
+        {
+            this._dialogFlowURl = url;
+        }
         public string GetResponse(string userName,string key,string input)
         {
-            string ApiUri = @"https://dialogflow.googleapis.com/v2/projects/v-defynbot-rkixcd/agent/sessions/"+userName+":detectIntent";
+            string ApiUri = _dialogFlowURl+userName+":detectIntent";
 
             var request = System.Net.WebRequest.Create(ApiUri);
             request.Method = "POST";

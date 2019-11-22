@@ -1,5 +1,6 @@
 ﻿using ConceirgeDinning.Contracts.Models;
 using ConceirgeDinning.ServicesImplementation.BookingTable;
+using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,10 +9,10 @@ namespace ConceirgeDining.Middleware.BookingTable
 {
     public class BookingInitialiser
     {
-        public BookingResponse Validate(BookingRequest bookingRequest,out string UTCTime)
+        public BookingResponse Validate(BookingRequest bookingRequest,out string UTCTime,IOptions<AppSettingsModel> appsetting)
         {
             
-            BookingValidator bookingValidation = new BookingValidator();
+            BookingValidator bookingValidation = new BookingValidator(appsetting.Value.TimeZoneURL,appsetting.Value.TimeZoneApiKey);
             BookingResponse bookingResponse = new BookingResponse();
             bookingResponse.Error = new List<string>();
             bookingResponse.BookingId = 0;

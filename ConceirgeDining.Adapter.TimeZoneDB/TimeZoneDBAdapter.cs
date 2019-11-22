@@ -10,10 +10,17 @@ namespace ConceirgeDining.Adapter.TimeZoneDB
 {
     public class TimeZoneDBAdapter
     {
+        private readonly string _timezoneUrl;
+        private readonly string _timeZoneKey;
+        public TimeZoneDBAdapter(string url,string key)
+        {
+            this._timezoneUrl = url;
+            this._timeZoneKey = key;
+        }
         public string FetchTimeZone(string latitude, string longitude)
         {
-            string ApiUrl = "http://api.timezonedb.com/v2.1/get-time-zone?format=json&by=position&lat=" + latitude + "&lng=" + longitude;
-            var request = System.Net.WebRequest.Create(ApiUrl + "&key=Q62ZT7QSP0O6");
+            string ApiUrl = _timezoneUrl + latitude + "&lng=" + longitude;
+            var request = System.Net.WebRequest.Create(ApiUrl + "&key="+_timeZoneKey);
             request.Method = "GET";
             request.ContentType = "application/json";
 

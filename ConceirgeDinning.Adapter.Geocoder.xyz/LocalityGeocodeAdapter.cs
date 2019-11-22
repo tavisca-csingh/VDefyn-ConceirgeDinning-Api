@@ -14,14 +14,20 @@ namespace ConceirgeDinning.Adapter.Geocoder.xyz
 {
     public class LocalityGeocodeAdapter : IFetchGeocode
     {
+        private readonly string _googleGeocodeUrl;
+        private readonly string _googleGeocodeKey;
+        public LocalityGeocodeAdapter(string url,string key)
+        {
+            this._googleGeocodeUrl = url;
+            this._googleGeocodeKey = key;
+        }
         public LocalityGeocode FetchCoordinates(string locality)
         {
-            string ApiUrl = "https://maps.googleapis.com/maps/api/place/textsearch/json?query=";
-            var request = System.Net.WebRequest.Create(ApiUrl + locality + "&key=AIzaSyC2LnC7a1z5MDzBjx4Us9qo9Z4Yupum03A");
+            var request = System.Net.WebRequest.Create(_googleGeocodeUrl + locality + "&key="+_googleGeocodeKey);
             request.Method = "GET";
             request.ContentType = "application/json";
 
-            Log.Information("request to supplier"+ ApiUrl + locality + "&json=1");
+            Log.Information("request to supplier"+ _googleGeocodeUrl + locality + "&json=1");
             using (var response = request.GetResponse())
             {
                 using (var stream = response.GetResponseStream())

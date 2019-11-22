@@ -18,10 +18,15 @@ namespace ConceirgeDinning.Adapter.Zomato
 {
     public class ZomatoMenuItemAdpter:IFetchMenu
     {
+        private readonly string _menuUrl;
+        public ZomatoMenuItemAdpter(string url)
+        {
+            this._menuUrl = url;
+        }
         public List<Category> GetMenuItems(string restaurantId)
         {
-            string ApiUrl = @"http://demo9372501.mockable.io/menuitem";
-            var request = System.Net.WebRequest.Create(ApiUrl);
+           
+            var request = System.Net.WebRequest.Create(_menuUrl);
             request.Method = "GET";
             
             request.ContentType = "application/json";
