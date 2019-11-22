@@ -14,7 +14,7 @@ namespace ConceirgeDinning.ServicesImplementation.History
             DateTime currentDate = DateTime.UtcNow;
             DateTime bookingDateTime = DateTime.Parse(utcTime);
             var timeDifference = (bookingDateTime - currentDate).TotalMinutes;
-            if (timeDifference > 240 && status == "Booked")
+            if ((timeDifference > 240 && status == "Booked" )|| status== "BookingInitiated")
             {
                 return true;
             }
