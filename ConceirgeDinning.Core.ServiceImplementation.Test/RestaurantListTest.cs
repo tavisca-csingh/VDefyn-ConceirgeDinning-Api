@@ -1,4 +1,6 @@
+using ConceirgeDinning.Contracts.Models;
 using ConceirgeDinning.Core.ServicesImplementation;
+using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,6 +10,11 @@ namespace ConceirgeDinning.API.Tests
 {
     public class RestaurantListTest
     {
+        private readonly IOptions<AppSettingsModel> appSettings;
+        public RestaurantListTest(IOptions<AppSettingsModel> app)
+        {
+            appSettings = app;
+        }
         [Fact]
         public void SHOULD_GIVE_RESTAURANTS_LIST_ON_GIVING_VALID_LOCALITY_FOR_BOOKING()
         {
@@ -15,7 +22,7 @@ namespace ConceirgeDinning.API.Tests
             RestaurantList restaurant = new RestaurantList();
             var expected =10;
             //WHEN
-            var actual = restaurant.FetchRestarauntDetails("pune",string.Empty,string.Empty,"2").Count;
+            var actual = restaurant.FetchRestarauntDetails("pune",string.Empty,string.Empty,"2",appSettings).Count;
             //THEN
             Assert.Equal(expected, actual);
         }
@@ -26,7 +33,7 @@ namespace ConceirgeDinning.API.Tests
             RestaurantList restaurant = new RestaurantList();
             var expected = 10;
             //when
-            var actual=restaurant.FetchRestarauntDetails(string.Empty, "18.4", "76.5", "1").Count;
+            var actual=restaurant.FetchRestarauntDetails(string.Empty, "18.4", "76.5", "1",appSettings).Count;
             //then
             Assert.Equal(expected,actual);
 

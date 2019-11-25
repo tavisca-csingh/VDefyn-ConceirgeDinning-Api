@@ -4,17 +4,22 @@ using System.Text;
 using Xunit;
 using ConceirgeDinning.ServicesImplementation.FoodOrdering;
 using ConceirgeDinning.Contracts.Models;
+using Microsoft.Extensions.Options;
 
 namespace ConceirgeDining.ServiceImplementation.Tests.FoodOrderingTests
 {
     public class MenuItemListTests
     {
-      
+        private readonly IOptions<AppSettingsModel> appSettings;
+        public MenuItemListTests(IOptions<AppSettingsModel> app)
+        {
+            appSettings = app;
+        }
         [Fact]
         public void Get_Restaurant_Menu_Details_By_RestaurantId_For_Valid_Id()
         {
             MenuItemList menuItemList = new MenuItemList();
-            var itemList = menuItemList.GetMenus("1234","Zomato");
+            var itemList = menuItemList.GetMenus("1234","Zomato",appSettings);
             bool actual = itemList is List<Category>;
             Assert.True(actual);
         }
@@ -22,7 +27,7 @@ namespace ConceirgeDining.ServiceImplementation.Tests.FoodOrderingTests
         public void Get_Restaurant_Menu_Details_By_RestaurantId_For_Invalid_Id()
         {
             MenuItemList menuItemList = new MenuItemList();
-            var itemList = menuItemList.GetMenus("1234","UsRestaurant");
+            var itemList = menuItemList.GetMenus("1234","UsRestaurant",appSettings);
             bool actual = itemList is null;
             Assert.True(actual);
         }

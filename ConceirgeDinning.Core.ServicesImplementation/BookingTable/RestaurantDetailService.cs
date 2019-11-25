@@ -9,6 +9,7 @@ namespace ConceirgeDinning.ServicesImplementation.BookingTable
 {
     public class RestaurantDetailService
     {
+        
         public RestaurantDetails GetRestaurantDetails(int restaurantId,string supplierName,IOptions<AppSettingsModel> appsettings)
         {
             RestaurantDetailServiceFactory Factory = new RestaurantDetailServiceFactory();

@@ -11,6 +11,10 @@ namespace ConceirgeDinning.ServicesImplementation.BookingTable
     {
         private readonly string _key;
         private readonly string _url;
+        public BookingValidator()
+        {
+
+        }
         public BookingValidator(string url,string key)
         {
             this._key = key;

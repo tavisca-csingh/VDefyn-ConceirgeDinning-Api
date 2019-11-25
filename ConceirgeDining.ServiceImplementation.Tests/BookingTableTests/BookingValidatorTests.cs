@@ -1,4 +1,6 @@
+using ConceirgeDinning.Contracts.Models;
 using ConceirgeDinning.ServicesImplementation.BookingTable;
+using Microsoft.Extensions.Options;
 using System;
 using Xunit;
 
@@ -7,6 +9,11 @@ namespace ConceirgeDining.ServiceImplementation.Tests.BookingTableTests
     public class BookingValidatorTests
     {
         BookingValidator bookingValidator = new BookingValidator();
+        private readonly IOptions<AppSettingsModel> appSettings;
+        public BookingValidatorTests(IOptions<AppSettingsModel> app)
+        {
+            appSettings = app;
+        }
 
         [Fact]
         public void Check_Number_Of_Guests_For_Negative_Guest_Count()
