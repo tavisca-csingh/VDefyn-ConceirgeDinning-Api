@@ -14,16 +14,11 @@ namespace ConceirgeDinning.API.Controllers
     {
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get(string apiKey)
+        public ActionResult<IEnumerable<string>> Get()
         {
-           
-          
-                LogContext logContext = new LogContext();
-                
-                //logContext.ConnectTOMongoDB();
-                return new string[] { "value1", "value2" };
-          
-
+            LogContext logContext = new LogContext();
+            //logContext.ConnectTOMongoDB();
+            return new string[] { "value1", "value2" };
         }
 
         // GET api/values/5
