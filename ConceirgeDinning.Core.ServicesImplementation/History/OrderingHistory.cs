@@ -15,63 +15,54 @@ namespace ConceirgeDinning.ServicesImplementation.History
         public FoodOrderingHistoryResponse GetHistory(string userId, string corelationId)
         {
             FoodOrderingHistoryResponse historyResponse = new FoodOrderingHistoryResponse();
-            List<FoodOrderingHistory> foodOrderingHistory = new List<FoodOrderingHistory>();
-            var response = from o in conceirgeContext.Ordering
-                          join res in conceirgeContext.RestaurantNames on o.RestaurantId equals res.RestaurantId
-                          join od in conceirgeContext.OrderDetails on o.OrderId equals od.OrderId
-                          where o.UserId == userId
-                          select new
-                          {
-                              orderId = o.OrderId,
-                              date = o.TimeStamp.ToString(),
-                              restaurantName = res.RestaurantName,
-                              totalPoints = o.TotalPoints,
-                              item = od.ItemName,
-                              quanntity = od.Quantity,
-                              price = od.Price
+            List<FoodOrderingHistory> foodOrderingHistories = new List<FoodOrderingHistory>();
+            var response = (from o in conceirgeContext.Ordering
+                            join res in conceirgeContext.RestaurantNames on o.RestaurantId equals res.RestaurantId
+                            join od in conceirgeContext.OrderDetails on o.OrderId equals od.OrderId
+                            where o.UserId == userId
+                            select new
+                            {
+                                orderId = o.OrderId,
+                                date = o.TimeStamp,
+                                restaurantName = o.Restaurant.RestaurantName,
+                                totalPoints = o.TotalPoints,
 
-                          };
+                                orderDetails =o.OrderDetails
+
+                            }).Distinct();
 
 
             historyResponse.IsDataAvailable = true;
             foreach (var item in response)
             {
-                List<Item> menuItems = new List<Item>();
-                if (!foodOrderingHistory.Exists(o => o.OrderId == item.orderId))
+                FoodOrderingHistory foodOrderingHistory = new FoodOrderingHistory();
+                foodOrderingHistory.OrderId = item.orderId;
+                foodOrderingHistory.Date = item.date.ToString();
+                foodOrderingHistory.RestaurantName = item.restaurantName;
+                foodOrderingHistory.TotalPoints = item.totalPoints;
+                foodOrderingHistory.Time = item.date.ToString();
+                foodOrderingHistory.MenuItems = new List<Item>();
+                var enuItems = item.orderDetails.ToList();
+                
+                foreach (var item1 in enuItems)
                 {
-                    foreach (var order in response)
-                    {
-                        if (item.orderId == order.orderId)
-                        {
-                            menuItems.Add(new Item()
-                            {
-                                Name = order.item,
-                                Quantity = order.quanntity,
-                                Price = order.price
-                            });
-                        }
-                    }
-                    foodOrderingHistory.Add(new FoodOrderingHistory()
-                    {
-                        OrderId = item.orderId,
-                        Date = item.date.Split(' ')[0],
-                        Time = getTime(item.date),
-                        RestaurantName = item.restaurantName,
-                        TotalPoints = item.totalPoints,
-                        MenuItems = menuItems
-
-
-
-                    });
-
-                   
+                    Item foodItem = new Item();
+                    foodItem.Name = item1.ItemName;
+                    foodItem.Price = item1.Price;
+                    foodItem.Quantity = item1.Quantity;
+                    foodOrderingHistory.MenuItems.Add(foodItem);
                 }
+                
+                
+
+                foodOrderingHistories.Add(foodOrderingHistory);
             }
-            if(foodOrderingHistory.Count==0)
+
+            if(foodOrderingHistories.Count==0)
             {
                 historyResponse.IsDataAvailable = false;
             }
-            historyResponse.Data = foodOrderingHistory.OrderByDescending(o=>o.Date).ThenByDescending(o=>o.Time).ToList();
+            historyResponse.Data = foodOrderingHistories.OrderByDescending(o=>o.Date).ThenByDescending(o=>o.Date).ToList();
             return historyResponse;
         }
 
