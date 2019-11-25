@@ -26,22 +26,30 @@ namespace ConceirgeDinning.API.Controllers
         public ActionResult<JObject> GiveIntent([FromBody]JObject input)
         {
             //Log.Information("request sent from user:" + input["text"]);
-
-            string sessionId=Convert.ToString(input["userId"]);
-            string userInputText= Convert.ToString(input["text"]); 
-            string languageCode = Convert.ToString(input["languageCode"]);
-            DialougFlowResponse dialougFlowResponse = new DialougFlowResponse();
-
-            string response = dialougFlowResponse.GetResponse(sessionId, userInputText, languageCode, appSettings);
-
-            if (response is null)
+            try
             {
-                Log.Information("response from DialogFlow : 401");
-                return Unauthorized(StatusCodes.Status401Unauthorized);
-            }
+                string sessionId = Convert.ToString(input["userId"]);
+                string userInputText = Convert.ToString(input["text"]);
+                string languageCode = Convert.ToString(input["languageCode"]);
+                DialougFlowResponse dialougFlowResponse = new DialougFlowResponse();
 
-            Log.Information("response from DialogFlow: "+response);
-            return JObject.Parse(response);
+                string response = dialougFlowResponse.GetResponse(sessionId, userInputText, languageCode, appSettings);
+
+                if (response is null)
+                {
+                    Log.Information("response from DialogFlow : 401");
+                    return Unauthorized(StatusCodes.Status401Unauthorized);
+                }
+
+                Log.Information("response from DialogFlow: " + response);
+                return JObject.Parse(response);
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+            
         }
 }
 }
