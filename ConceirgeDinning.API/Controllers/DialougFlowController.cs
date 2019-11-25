@@ -23,18 +23,16 @@ namespace ConceirgeDinning.API.Controllers
         }
 
         [HttpPost]
-        public ActionResult<string> GiveIntent([FromBody]JObject input)
+        public ActionResult<JObject> GiveIntent([FromBody]JObject input)
         {
-            Log.Information("request sent from user:" + input["text"]);
+            //Log.Information("request sent from user:" + input["text"]);
 
-            string body = "{  \"queryInput\": {  \"text\": {  \"languageCode\":\""+Convert.ToString(input["languageCode"])+"\", \"text\":\""+Convert.ToString(input["text"]).ToString()+"\"   }  }        }";
-
-            string userName=Convert.ToString(input["userId"]);
-            string key=Convert.ToString(input["key"]);
+            string sessionId=Convert.ToString(input["userId"]);
+            string userInputText= Convert.ToString(input["text"]); 
+            string languageCode = Convert.ToString(input["languageCode"]);
             DialougFlowResponse dialougFlowResponse = new DialougFlowResponse();
 
-            string response = dialougFlowResponse.GetResponse(userName, key, body,appSettings);
-            Log.Information(", Request from user : username- "+userName+" key- "+key+"body- "+body);
+            string response = dialougFlowResponse.GetResponse(sessionId, userInputText, languageCode, appSettings);
 
             if (response is null)
             {
@@ -43,7 +41,7 @@ namespace ConceirgeDinning.API.Controllers
             }
 
             Log.Information("response from DialogFlow: "+response);
-            return response;
+            return JObject.Parse(response);
         }
 }
 }

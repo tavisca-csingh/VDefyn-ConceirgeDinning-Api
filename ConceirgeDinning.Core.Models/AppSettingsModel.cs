@@ -19,5 +19,6 @@ namespace ConceirgeDinning.Contracts.Models
         public string ZomatoRestrauntdetailsUrl { get; set; }
         public string ZomatoKey { get; set; }
         public string ZomatoMenuItemUrl { get; set; }
+        public string DialogflowProjectId { get; set; }
     }
 }
