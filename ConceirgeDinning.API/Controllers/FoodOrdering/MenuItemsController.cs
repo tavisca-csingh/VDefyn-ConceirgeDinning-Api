@@ -15,7 +15,7 @@ namespace ConceirgeDinning.API.Controllers.FoodOrdering
     [ApiController]
     public class MenuItemsController : ControllerBase
     {
-        private readonly IOptions<AppSettingsModel> appSettings;
+        public readonly IOptions<AppSettingsModel> appSettings;
         public MenuItemsController(IOptions<AppSettingsModel> app)
         {
             appSettings = app;

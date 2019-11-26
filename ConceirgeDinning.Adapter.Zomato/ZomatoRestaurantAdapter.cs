@@ -11,8 +11,7 @@ using Newtonsoft.Json.Linq;
 using Serilog;
 using Microsoft.Extensions.Configuration;
 using Unity.Injection;
-
-
+using System.Linq;
 
 namespace ConceirgeDinning.Adapter.Zomato.Translator
 {

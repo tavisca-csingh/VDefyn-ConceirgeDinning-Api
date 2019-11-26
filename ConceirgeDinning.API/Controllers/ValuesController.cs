@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ConceirgeDining.LoggerDAL.Models;
+using ConceirgeDinning.Contracts.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 
 namespace ConceirgeDinning.API.Controllers
 {
@@ -11,6 +13,11 @@ namespace ConceirgeDinning.API.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        public readonly IOptions<AppSettingsModel> appSettings;
+        public ValuesController(IOptions<AppSettingsModel> app)
+        {
+           appSettings = app;
+        }
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()

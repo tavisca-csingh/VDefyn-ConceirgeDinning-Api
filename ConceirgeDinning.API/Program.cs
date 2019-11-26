@@ -25,8 +25,10 @@ namespace ConceirgeDinning.API
                 .ConfigureAppConfiguration((webHostBuilderContext, configurationbuilder) =>
                 {
                     var environment = webHostBuilderContext.HostingEnvironment;
+
                     configurationbuilder
                             .AddJsonFile("appSettings.json", optional: true);
+
                     configurationbuilder.AddEnvironmentVariables();
                 })
                 .UseStartup<Startup>();

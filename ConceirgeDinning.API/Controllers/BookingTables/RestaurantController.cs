@@ -17,6 +17,7 @@ namespace ConceirgeDinning.API.Controllers.BookingTables
     public class RestaurantController : ControllerBase
     {
         private readonly IOptions<AppSettingsModel> appSettings;
+
         public RestaurantController(IOptions<AppSettingsModel> app)
         {
             appSettings = app;

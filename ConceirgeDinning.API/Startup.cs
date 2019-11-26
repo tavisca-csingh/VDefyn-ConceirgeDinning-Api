@@ -43,7 +43,9 @@ namespace ConceirgeDinning.API
                     }
                     );
             });
+
             services.Configure<AppSettingsModel>(Configuration.GetSection("MySettings"));
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             StartLogger();
             Guid GuId = Guid.NewGuid();

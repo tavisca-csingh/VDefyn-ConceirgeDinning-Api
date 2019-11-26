@@ -14,13 +14,6 @@ namespace ConceirgeDinning.Core.ServicesImplementation
 {
     public class RestaurantList
     {
-
-        /*List<IFetchRestaurant> restaurantByLocalityFetchers = new List<IFetchRestaurant>()
-        {
-            new ZomatoRestaurantAdapter(),
-            new USRestarauntAdapter()
-        };*/
-
         public List<Restaurant> FetchRestarauntDetails(string locality, string latitude, string longitude, string category, IOptions<AppSettingsModel> appSettings)
         {
             if (locality != string.Empty)
@@ -32,7 +25,6 @@ namespace ConceirgeDinning.Core.ServicesImplementation
                 latitude = coordinates.Latitude;
                 longitude = coordinates.Longitude;
             }
-
 
             ZomatoRestaurantAdapter zomatoRestaurantList = new ZomatoRestaurantAdapter(appSettings.Value.ZomatoURL,appSettings.Value.ZomatoKey);
             //USRestarauntAdapter usRestaurantList = new USRestarauntAdapter(appSettings.Value.USRestaurantURL,appSettings.Value.USRestaurantKey);
