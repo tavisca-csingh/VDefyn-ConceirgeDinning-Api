@@ -82,7 +82,7 @@ namespace ConceirgeDining.Middleware.BookingTable
             bookingResponse.TotalPointPrice = bookingRequest.NoOfGuests * bookingRequest.PerPersonPoints;
             bookingResponse.NoOfGuests = bookingRequest.NoOfGuests;
             bookingResponse.Date = DateTime.Parse(bookingRequest.Date);
-            bookingResponse.Time = TimeSpan.Parse(bookingRequest.Time);
+            bookingResponse.Time = TimeSpan.Parse(bookingRequest.Time).Add(new TimeSpan(1,0,0));
             bookingResponse.RestaurantId = bookingRequest.RestaurantId;
             bookingResponse.UserName = bookingRequest.UserName;
             bookingResponse.RestaurantName = bookingRequest.RestaurantName;

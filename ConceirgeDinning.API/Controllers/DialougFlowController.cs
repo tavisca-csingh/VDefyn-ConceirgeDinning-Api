@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ConceirgeDinning.Contracts.Models;
-using ConceirgeDinning.ServicesImplementation;
+using ConceirgeDinning.ServicesImplementation.DialogFlow;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;

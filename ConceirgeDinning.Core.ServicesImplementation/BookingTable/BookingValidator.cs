@@ -103,6 +103,7 @@ namespace ConceirgeDinning.ServicesImplementation.BookingTable
             string gmtOffset = timeZoneDBAdapter.FetchTimeZone(latitude, longitude);
             dateTime += gmtOffset;
             DateTime bookingDateTime = DateTimeOffset.Parse(dateTime).UtcDateTime;
+            bookingDateTime = bookingDateTime.AddHours(1);
             UTCTime = bookingDateTime.ToString();
             if (currentdateTime <= bookingDateTime)
                 return true;

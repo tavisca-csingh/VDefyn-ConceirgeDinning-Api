@@ -17,7 +17,7 @@ namespace ConceirgeDinning.ServicesImplementation.BookingTable
             booking.UserId = userName;
             booking.Seats = noOfGuests;
             booking.Date = date;
-            booking.Time = time;
+            booking.Time = time.Add(new TimeSpan(1,0,0));
             booking.LoyaltyPoints = pointBalance;
             booking.PointPricePerPerson = perPersonPoints;
             booking.Utctime = UTCTime;
