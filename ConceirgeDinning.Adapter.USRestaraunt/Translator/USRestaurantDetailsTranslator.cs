@@ -30,7 +30,7 @@ namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
             response.Images = new List<string>() { "https://icon-library.net/images/no-image-available-icon/no-image-available-icon-6.jpg" };
             response.Lat = responseFromSupplier.result.data[0].geo.lat.ToString();
             response.Lon = responseFromSupplier.result.data[0].geo.lon.ToString();
-
+ 
             return response;
         }
 

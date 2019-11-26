@@ -22,7 +22,7 @@ namespace ConceirgeDinning.Adapter.Zomato.Translator
                     RestaurantName = restaurant.restaurant.name,
                     LocalityVerbose = restaurant.restaurant.location.locality_verbose,
                     User_Rating = restaurant.restaurant.user_rating.aggregate_rating,
-                    ThumbURL = restaurant.restaurant.thumb,
+                    ThumbURL = restaurant.restaurant.thumb==""?"https://icon-library.net/images/no-image-available-icon/no-image-available-icon-6.jpg":restaurant.restaurant.thumb,
                     Cuisines = GetCuisines(restaurant.restaurant.cuisines),
                     PricePerHead = ((restaurant.restaurant.average_cost_for_two/2)*PointConvertor.PointsConversionStandard["default"]).ToString(),
                     Latitude=restaurant.restaurant.location.latitude
