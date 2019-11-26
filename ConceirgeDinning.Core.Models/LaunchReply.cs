@@ -6,6 +6,6 @@ namespace ConceirgeDinning.Contracts.Models
 {
     public class LaunchReply
     {
-        public string sessionId;
+        public string corelationId;
     }
 }

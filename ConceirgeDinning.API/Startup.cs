@@ -17,6 +17,7 @@ using ConceirgeDining.Middleware;
 using Microsoft.AspNetCore.Http;
 using Serilog.Formatting.Json;
 using ConceirgeDinning.Contracts.Models;
+using ConceirgeDining.LoggerDAL.Models;
 
 namespace ConceirgeDinning.API
 {
@@ -45,12 +46,12 @@ namespace ConceirgeDinning.API
             });
 
             services.Configure<AppSettingsModel>(Configuration.GetSection("MySettings"));
+            LogContext.connect();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             StartLogger();
-            Guid GuId = Guid.NewGuid();
-            Log.Information("SessionId : " + GuId.ToString());
-            Log.Information("timestamp: "+DateTime.Now.ToString());    
+            
+           
         }
 
         

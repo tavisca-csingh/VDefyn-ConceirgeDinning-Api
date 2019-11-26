@@ -8,9 +8,9 @@ namespace ConceirgeDining.Middleware.Launcher
     public class LauncherInitialiser
     {
         private LauncherInitiator launcherInitiator = new LauncherInitiator();
-        public string Start(string userId, long pointBalance, string bank, string locale,string environment)
+        public void Start(string corelationid,string userId, long pointBalance, string bank, string locale,string environment)
         {
-            return launcherInitiator.AddEntryIntoLoginInfo(userId, pointBalance, bank, locale, environment);
+            launcherInitiator.AddEntryIntoLoginInfo(corelationid,userId, pointBalance, bank, locale, environment);
         }
     }
 }

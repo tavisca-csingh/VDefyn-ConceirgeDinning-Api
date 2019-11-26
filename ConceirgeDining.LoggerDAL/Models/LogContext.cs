@@ -7,32 +7,19 @@ using System.Threading.Tasks;
 
 namespace ConceirgeDining.LoggerDAL.Models
 {
-    public class LogContext
+    public static  class LogContext
     {
-        IMongoCollection<LogInfo> collection;
-        public LogContext()
+        public static IMongoCollection<LogInfo> collection;
+        public static void connect()
         {
             var connectionString = "mongodb+srv://mattapalliswarnesh:lthliCuE4xi80DOE@logs-et0xz.mongodb.net/ConceirgeLogs?retryWrites=true&w=majority";
             var client = new MongoClient(connectionString);
             var dataBase = client.GetDatabase("ConceirgeLogs");
             collection = dataBase.GetCollection<LogInfo>("Testing");
         }
-        public async Task ConnectTOMongoDB()
+        public static async Task Write(LogInfo info)
         {
-            
-            
-            LogInfo logInfo = new LogInfo();
-            logInfo.SessionId =  Guid.NewGuid().ToString();
-            logInfo.UserId = "Anonomus";
-            logInfo.CorelationId = "123";
-            logInfo.Client = "UsBank";
-            logInfo.TimeStamp = DateTime.Now;
-            logInfo.Status = "Success";
-            logInfo.Supplier = "Zomato";
-            logInfo.Request = "Hello";
-            logInfo.Response = "World";
-            logInfo.ResponseTime = new TimeSpan(1000);
-            await collection.InsertOneAsync(logInfo);
+            await collection.InsertOneAsync(info);
         }
     }
 }

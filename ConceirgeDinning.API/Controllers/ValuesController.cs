@@ -22,7 +22,7 @@ namespace ConceirgeDinning.API.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            LogContext logContext = new LogContext();
+            
             //logContext.ConnectTOMongoDB();
             return new string[] { "value1", "value2" };
 
