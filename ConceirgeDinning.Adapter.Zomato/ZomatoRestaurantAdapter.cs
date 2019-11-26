@@ -4,27 +4,37 @@ using System.IO;
 using System.Net;
 using System.Net.Http;
 using System.Text;
-
-using ConceirgeDinning.Core.Models;
-using ConceirgeDinning.Services;
+using ConceirgeDinning.Contracts.Models;
+using ConceirgeDinningContracts.Services;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Serilog;
+using Microsoft.Extensions.Configuration;
+using Unity.Injection;
+using System.Linq;
 
 namespace ConceirgeDinning.Adapter.Zomato.Translator
 {
     public class ZomatoRestaurantAdapter : IFetchRestaurant
     {
+        private readonly string _zomatoURL;
+        private readonly string _zomatokey;
+
+        public ZomatoRestaurantAdapter(string url,string key)
+        {
+            this._zomatoURL=url;
+            this._zomatokey = key;
+        }
+
         public List<Restaurant> FetchRestarauntDetails(string latitude, string longitude,string category)
         {
-            string ApiUrl = @"https://developers.zomato.com/api/v2.1/search?count=10&radius=2000&sort=real_distance";
-            var request = System.Net.WebRequest.Create(ApiUrl + "&lat=" + latitude + "&lon=" + longitude+ "&category="+category);
+            var request = System.Net.WebRequest.Create(_zomatoURL + "&lat=" + latitude + "&lon=" + longitude+ "&category="+category);
             request.Method = "GET";
-            request.Headers.Add("user-key", "3d95592a1bf9c01986d17292db075163");
+            request.Headers.Add("user-key", _zomatokey);
 
             request.ContentType = "application/json";
 
-            Log.Information("request to supplier: "+ApiUrl + "&lat=" + latitude + "&lon=" + longitude + "&category=" + category);
+            Log.Information("request to supplier: "+_zomatoURL + "&lat=" + latitude + "&lon=" + longitude + "&category=" + category);
             using (var response = request.GetResponse())
             {
 
@@ -35,10 +45,9 @@ namespace ConceirgeDinning.Adapter.Zomato.Translator
                     try
                     {
                         var restrauntsList = JsonConvert.DeserializeObject<Models.SearchResponse>(result);
-                        
-
+  
                         Log.Information("response from supplier : " + JsonConvert.SerializeObject(result));
-
+                        
                         return restrauntsList.TranslateToRestaurant();
                     }
                     catch (System.Net.WebException ex)

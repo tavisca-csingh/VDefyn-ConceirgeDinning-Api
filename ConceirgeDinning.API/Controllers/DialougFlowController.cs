@@ -6,6 +6,7 @@ using ConceirgeDinning.Contracts.Models;
 using ConceirgeDinning.ServicesImplementation;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 using Newtonsoft.Json.Linq;
 using Serilog;
 
@@ -15,6 +16,12 @@ namespace ConceirgeDinning.API.Controllers
     [ApiController]
     public class DialougFlowController : ControllerBase
     {
+        private readonly IOptions<AppSettingsModel> appSettings;
+        public DialougFlowController(IOptions<AppSettingsModel> app)
+        {
+            appSettings = app;
+        }
+
         [HttpPost]
         public ActionResult<string> GiveIntent([FromBody]JObject input)
         {
@@ -26,7 +33,7 @@ namespace ConceirgeDinning.API.Controllers
             string key=Convert.ToString(input["key"]);
             DialougFlowResponse dialougFlowResponse = new DialougFlowResponse();
 
-            string response = dialougFlowResponse.GetResponse(userName, key, body);
+            string response = dialougFlowResponse.GetResponse(userName, key, body,appSettings);
             Log.Information(", Request from user : username- "+userName+" key- "+key+"body- "+body);
 
             if (response is null)

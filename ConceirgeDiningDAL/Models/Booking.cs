@@ -19,6 +19,7 @@ namespace ConceirgeDiningDAL.Models
         public TimeSpan Time { get; set; }
         public long LoyaltyPoints { get; set; }
         public long PointPricePerPerson { get; set; }
+        public string Utctime { get; set; }
 
         public virtual RestaurantNames Restaurant { get; set; }
         public virtual ICollection<BookingProgress> BookingProgress { get; set; }

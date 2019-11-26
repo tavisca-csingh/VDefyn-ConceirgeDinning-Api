@@ -4,12 +4,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ConceirgeDinning.ServicesImplementation
+namespace ConceirgeDinning.ServicesImplementation.BookingTable
 {
     public class BookingInitiator
     {
         sql12310325Context sql12310325Context = new sql12310325Context();
-        public int AddEntryInBookingTable(int noOfGuests, DateTime date, TimeSpan time, string restaurantId, string userName, string restaurantName, long perPersonPoints, long pointBalance)
+        public int AddEntryInBookingTable(int noOfGuests, DateTime date, TimeSpan time, string restaurantId, string userName, string restaurantName, long perPersonPoints, long pointBalance,string UTCTime)
         {
             Booking booking = new Booking();
             booking.Status = "BookingInitiated";
@@ -20,6 +20,7 @@ namespace ConceirgeDinning.ServicesImplementation
             booking.Time = time;
             booking.LoyaltyPoints = pointBalance;
             booking.PointPricePerPerson = perPersonPoints;
+            booking.Utctime = UTCTime;
 
             sql12310325Context.Booking.Add(booking);
 
@@ -43,6 +44,7 @@ namespace ConceirgeDinning.ServicesImplementation
         {
             BookingProgress bookingProgress = new BookingProgress();
             bookingProgress.BookingId = bookingId;
+            bookingProgress.TimeStamp = DateTime.UtcNow;
             sql12310325Context.BookingProgress.Add(bookingProgress);
             sql12310325Context.SaveChanges();
         }

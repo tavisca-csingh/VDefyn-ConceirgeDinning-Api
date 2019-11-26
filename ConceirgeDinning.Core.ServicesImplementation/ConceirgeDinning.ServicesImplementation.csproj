@@ -7,6 +7,7 @@
   <ItemGroup>
     <PackageReference Include="log4net" Version="2.0.8" />
     <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.2.0" />
     <PackageReference Include="MongoDB.Driver" Version="2.9.3" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
     <PackageReference Include="Serilog" Version="2.9.0" />
@@ -18,8 +19,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ConceirgeDining.Adapter.TimeZoneDB\ConceirgeDining.Adapter.TimeZoneDB.csproj" />
+    <ProjectReference Include="..\ConceirgeDining.LoggerDAL\ConceirgeDining.LoggerDAL.csproj" />
     <ProjectReference Include="..\ConceirgeDiningDAL\ConceirgeDiningDAL.csproj" />
-    <ProjectReference Include="..\ConceirgeDinning.Adapter.DialougFlow.cs\ConceirgeDinning.Adapter.DialougFlow.cs.csproj" />
+    <ProjectReference Include="..\ConceirgeDinning.Adapter.DialougFlow\ConceirgeDinning.Adapter.DialougFlow.csproj" />
     <ProjectReference Include="..\ConceirgeDinning.Adapter.Geocoder.xyz\ConceirgeDinning.Adapter.Geocoder.xyz.csproj" />
     <ProjectReference Include="..\ConceirgeDinning.Adapter.USRestaraunt\ConceirgeDinning.Adapter.USRestaraunt.csproj" />
     <ProjectReference Include="..\ConceirgeDinning.Adapter.Zomato\ConceirgeDinning.Adapter.Zomato.csproj" />

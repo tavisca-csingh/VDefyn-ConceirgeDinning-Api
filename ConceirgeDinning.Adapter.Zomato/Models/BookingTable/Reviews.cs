@@ -2,6 +2,6 @@
 {
     public class Reviews
     {
-        public ReviewDetails review { get; set; }
+        public object review { get; set; }
     }
 }

@@ -1,6 +1,7 @@
-﻿using ConceirgeDinning.Core.Models;
+﻿using ConceirgeDinning.Contracts.Models;
 using System;
 using System.Collections.Generic;
+using PointConvertor = ConceirgeDinning.Contracts.Models.PointConverter;
 using System.Text;
 
 namespace ConceirgeDinning.Adapter.Zomato.Translator
@@ -23,7 +24,7 @@ namespace ConceirgeDinning.Adapter.Zomato.Translator
             response.Address = responseFromSupplier.location.address;
             response.Cuisines = GetCuisines(responseFromSupplier.cuisines);
             response.User_Rating = responseFromSupplier.user_rating.aggregate_rating;
-            response.PricePerHead = (responseFromSupplier.average_cost_for_two) / 2;
+            response.PricePerHead = ((responseFromSupplier.average_cost_for_two) / 2)*PointConvertor.PointsConversionStandard["default"];
             response.Images = GetImages(responseFromSupplier);
             response.Lat = responseFromSupplier.location.latitude;
             response.Lon = responseFromSupplier.location.longitude;

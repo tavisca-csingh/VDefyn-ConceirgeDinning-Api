@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ConceirgeDinning.ServicesImplementation
+namespace ConceirgeDinning.ServicesImplementation.BookingTable
 {
     public class PaymentValidator
     {

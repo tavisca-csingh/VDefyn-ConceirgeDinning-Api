@@ -1,11 +1,10 @@
 ﻿
 using ConceirgeDinning.Adapter.USRestaraunt.Models;
-using ConceirgeDinning.Core.Models;
+using ConceirgeDinning.Contracts.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Restaurant = ConceirgeDinning.Core.Models.Restaurant;
-using RestaurantDetails = ConceirgeDinning.Core.Models.RestaurantDetails;
+using Restaurant = ConceirgeDinning.Contracts.Models.Restaurant;
 
 namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
 {
@@ -22,9 +21,11 @@ namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
                     RestaurantId = restaurant.restaurant_id,
                     RestaurantName = restaurant.restaurant_name,
                     ThumbURL = "https://icon-library.net/images/no-image-available-icon/no-image-available-icon-6.jpg",
-                    User_Rating = GetRating(3,5),
+                    User_Rating = GetRating(3, 5),
                     LocalityVerbose = restaurant.address.street + ", " + restaurant.address.city,
-                    Cuisines = restaurant.cuisines
+                    Cuisines = restaurant.cuisines,
+                    Latitude = restaurant.geo.lat.ToString(),
+                    PricePerHead = GetPrice(restaurant.price_range).ToString()
                 });
             }
             return restaurantList;
@@ -38,7 +39,11 @@ namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
             return (Math.Round(random.NextDouble(), 1) * (maximumValue - minimumValue) + minimumValue).ToString();
         }
 
-        
+        private static int GetPrice(string price_range)
+        {
+            return (price_range.Length+1) * 10 * PointConverter.PointsConversionStandard["default"];
+        }
+
     }
 }
 

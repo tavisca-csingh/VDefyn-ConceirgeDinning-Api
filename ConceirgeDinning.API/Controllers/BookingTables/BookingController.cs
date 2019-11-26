@@ -9,6 +9,8 @@ using ConceirgeDinning.Contracts.Models;
 using ConceirgeDining.Middleware;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
+using ConceirgeDining.Middleware.BookingTable;
+using Microsoft.Extensions.Options;
 
 namespace ConceirgeDinning.API.Controllers.BookingTable
 {
@@ -16,17 +18,22 @@ namespace ConceirgeDinning.API.Controllers.BookingTable
     [ApiController]
     public class BookingController : ControllerBase
     {
+        private readonly IOptions<AppSettingsModel> appSettings;
+        public BookingController(IOptions<AppSettingsModel> app)
+        {
+            appSettings = app;
+        }
         [HttpPost]
         public ActionResult<BookingResponse> GetRestaurants([FromBody]JObject jObject)
         {
             BookingInitialiser bookingInitialisation = new BookingInitialiser();
             BookingResponse bookingResponse = new BookingResponse();
             BookingRequest bookingRequest= JsonConvert.DeserializeObject<BookingRequest>(jObject.ToString());
-
-            bookingResponse =bookingInitialisation.Validate(bookingRequest);
+            string UTCTime;
+            bookingResponse =bookingInitialisation.Validate(bookingRequest,out UTCTime,appSettings);
             if(bookingResponse.Status== "BookingInitiated")
             {
-                bookingResponse=bookingInitialisation.Start(bookingRequest);
+                bookingResponse=bookingInitialisation.Start(bookingRequest,UTCTime);
 
             }
             

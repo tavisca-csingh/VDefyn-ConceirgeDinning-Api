@@ -46,6 +46,7 @@ namespace ConceirgeDining.ServiceImplementation.Tests.BookingTableTests
         public void Check_Cancel_Time_Duration_Of_Previous_Date()
         {
             booking.Date = DateTime.Parse("2019/02/01");
+            booking.Utctime = DateTime.Today.ToString();
             bool actual = cancellValidator.CheckCancelTime(booking);
             Assert.False(actual);
         }
@@ -54,6 +55,7 @@ namespace ConceirgeDining.ServiceImplementation.Tests.BookingTableTests
         public void Check_Cancel_Time_Duration_Of_Valid_Date()
         {
             booking.Date = DateTime.Now.AddDays(1);
+            booking.Utctime = DateTime.Today.AddDays(1).ToString();
             bool actual = cancellValidator.CheckCancelTime(booking);
             Assert.True(actual);
         }
@@ -62,6 +64,7 @@ namespace ConceirgeDining.ServiceImplementation.Tests.BookingTableTests
         public void Check_Cancel_Time_Duration_Of_Invalid_Time()
         {
             booking.Time = DateTime.Today.TimeOfDay.Add(new TimeSpan(1, 1, 1));
+            booking.Utctime = DateTime.Today.ToString();
             bool actual = cancellValidator.CheckCancelTime(booking);
             Assert.False(actual);
         }

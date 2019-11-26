@@ -1,7 +1,6 @@
 ﻿
 using ConceirgeDinning.Adapter.USRestaraunt.Models;
-using ConceirgeDinning.Core.Models;
-using ConceirgeDinning.Services;
+using ConceirgeDinningContracts.Services;
 using Newtonsoft.Json;
 using Serilog;
 using System;
@@ -9,20 +8,26 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Text;
-using Restaurant = ConceirgeDinning.Core.Models.Restaurant;
+using Restaurant = ConceirgeDinning.Contracts.Models.Restaurant;
 
 namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
 {
     public class USRestarauntAdapter : IFetchRestaurant
     {
+        private readonly string _usrestaurantURL;
+        private readonly string _usrestaurantKey;
+        public USRestarauntAdapter(string url,string key)
+        {
+            this._usrestaurantKey = url;
+            this._usrestaurantURL = key;
+        }
         public List<Restaurant> FetchRestarauntDetails(string latitude,string longitude,string category)
         {
-            string ApiUri = @"https://us-restaurant-menus.p.rapidapi.com/restaurants/search?distance=2";
-            var request = System.Net.WebRequest.Create(ApiUri + "&lat=" + latitude + "&lon=" + longitude);
+            var request = System.Net.WebRequest.Create(_usrestaurantURL + "&lat=" + latitude + "&lon=" + longitude);
             request.Method = "GET";
             request.Headers.Add("X-RapidAPI-Host", "us-restaurant-menus.p.rapidapi.com");
-            request.Headers.Add("X-RapidAPI-Key", "01545b0594mshdb9591ceda3d162p1716b7jsn43e523b10b95");
-            Log.Information("request to supplier: " + ApiUri + "&lat=" + latitude + "&lon=" + longitude);
+            request.Headers.Add("X-RapidAPI-Key", _usrestaurantKey);
+            Log.Information("request to supplier: " + _usrestaurantURL + "&lat=" + latitude + "&lon=" + longitude);
             request.ContentType = "application/json";
 
             try

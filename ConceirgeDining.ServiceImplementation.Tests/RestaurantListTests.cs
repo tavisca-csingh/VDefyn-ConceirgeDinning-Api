@@ -1,19 +1,31 @@
-﻿using ConceirgeDinning.Core.Models;
+﻿using ConceirgeDinning.Contracts.Models;
 using ConceirgeDinning.Core.ServicesImplementation;
-using System;
+using Microsoft.Extensions.Options;
 using System.Collections.Generic;
-using System.Text;
+using Microsoft.Extensions.Configuration;
+//using Microsoft.Extensions.Options.Options;
 using Xunit;
+using System.Configuration;
 
-namespace ConceirgeDining.ServiceImplementation.Tests
+namespace ConceirgeDining.Services.ServiceImplementation.Tests
 {
     public class RestaurantListTests
     {
+        //private readonly IOptions<AppSettingsModel> appSettings;
+        
         RestaurantList restaurantList = new RestaurantList();
         [Fact]
         public void Get_Restaurant_List_By_Locality_For_Table_Booking()
         {
-            var resList=restaurantList.FetchRestarauntDetails("Pune", "", "", "2");
+            AppSettingsModel appSettings = new AppSettingsModel()
+            {
+                GoogleGeocodeURL = "https://maps.googleapis.com/maps/api/place/textsearch/json?query=",
+                GoogleGeocodeKey = "AIzaSyDk4DLNBHpQUDvLmRYcPVrq3uwNmGesZT4",
+                ZomatoURL = "https://developers.zomato.com/api/v2.1/search?count=10&radius=2000&sort=real_distance",
+                ZomatoKey = "2fb776134a7bcd1eaaacd639a90f87e7"
+            };
+            IOptions<AppSettingsModel> options = Options.Create(appSettings);
+            var resList=restaurantList.FetchRestarauntDetails("Pune", "", "", "2",options);
             bool actual = resList is List<Restaurant>;
             Assert.True(actual);
 
@@ -21,7 +33,9 @@ namespace ConceirgeDining.ServiceImplementation.Tests
         [Fact]
         public void Get_Restaurant_List_By_LatLng_For_Table_Booking()
         {
-            var resList = restaurantList.FetchRestarauntDetails("", "77.5011", "77.5011", "2");
+            AppSettingsModel appSettings = new AppSettingsModel() { ZomatoURL = "https://developers.zomato.com/api/v2.1/search?count=10&radius=2000&sort=real_distance", ZomatoKey = "2fb776134a7bcd1eaaacd639a90f87e7" };
+            IOptions<AppSettingsModel> options = Options.Create(appSettings);
+            var resList = restaurantList.FetchRestarauntDetails("", "77.5011", "77.5011", "2",options);
             bool actual = resList is List<Restaurant>;
             Assert.True(actual);
 
@@ -29,25 +43,29 @@ namespace ConceirgeDining.ServiceImplementation.Tests
         [Fact]
         public void Get_Restaurant_List_By_Locality_For_Food_Ordering()
         {
-            var resList = restaurantList.FetchRestarauntDetails("Pune", "", "", "1");
+            AppSettingsModel appSettings = new AppSettingsModel() { GoogleGeocodeURL="https://maps.googleapis.com/maps/api/place/textsearch/json?query=",
+                                                                    GoogleGeocodeKey= "AIzaSyDk4DLNBHpQUDvLmRYcPVrq3uwNmGesZT4",
+                                                                    ZomatoURL = "https://developers.zomato.com/api/v2.1/search?count=10&radius=2000&sort=real_distance",
+                                                                    ZomatoKey = "2fb776134a7bcd1eaaacd639a90f87e7" };
+            IOptions<AppSettingsModel> options = Options.Create(appSettings);
+            var resList = restaurantList.FetchRestarauntDetails("Pune", "", "", "1", options);
             bool actual = resList is List<Restaurant>;
             Assert.True(actual);
-
         }
+        
         [Fact]
         public void Get_Restaurant_List_By_LatLng_For_Food_Ordering()
         {
-            var resList = restaurantList.FetchRestarauntDetails("", "27.2038", "77.5011", "1");
+            AppSettingsModel appSettings = new AppSettingsModel()
+            { 
+                ZomatoURL = "https://developers.zomato.com/api/v2.1/search?count=10&radius=2000&sort=real_distance",
+                ZomatoKey = "2fb776134a7bcd1eaaacd639a90f87e7"
+            };
+            IOptions<AppSettingsModel> options = Options.Create(appSettings);
+            var resList = restaurantList.FetchRestarauntDetails("", "27.2038", "77.5011", "1",options);
             bool actual = resList is List<Restaurant>;
             Assert.True(actual);
 
-        }
-        [Fact]
-        public void Get_Restaurant_List_For_Invalid_Input()
-        {
-            var resList = restaurantList.FetchRestarauntDetails("xyz", "", "", "1");
-            bool actual = resList is null;
-            Assert.True(actual);
         }
     }
 }

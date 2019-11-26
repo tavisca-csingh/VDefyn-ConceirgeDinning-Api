@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ConceirgeDinning.Core.Models
+namespace ConceirgeDinning.Contracts.Models
 {
     public class Restaurant
 
@@ -15,5 +15,6 @@ namespace ConceirgeDinning.Core.Models
         public List<String> Cuisines { get; set; }
         public string ThumbURL { get; set; }
         public string PricePerHead { get; set; }
+        public string Latitude { get; set; }
     }
 }

@@ -1,15 +1,15 @@
-﻿using ConceirgeDinning.Adapter.Zomato.Models;
-using ConceirgeDinning.Core.Models;
+﻿using ConceirgeDinning.Adapter.Zomato;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Restaurant = ConceirgeDinning.Core.Models.Restaurant;
+using ConceirgeDinning.Contracts.Models;
+using PointConvertor = ConceirgeDinning.Contracts.Models.PointConverter;
 
 namespace ConceirgeDinning.Adapter.Zomato.Translator
 {
     public static class ZomatoRestaurantTranslator
     {
-        public static List<Restaurant> TranslateToRestaurant(this SearchResponse response)
+        public static List<Restaurant> TranslateToRestaurant(this Models.SearchResponse response)
         {
             List<Restaurant> responseObject = new List<Restaurant>();
             foreach (Models.Restaurant restaurant in response.restaurants)
@@ -24,7 +24,8 @@ namespace ConceirgeDinning.Adapter.Zomato.Translator
                     User_Rating = restaurant.restaurant.user_rating.aggregate_rating,
                     ThumbURL = restaurant.restaurant.thumb,
                     Cuisines = GetCuisines(restaurant.restaurant.cuisines),
-                    PricePerHead = (restaurant.restaurant.average_cost_for_two/2).ToString()
+                    PricePerHead = ((restaurant.restaurant.average_cost_for_two/2)*PointConvertor.PointsConversionStandard["default"]).ToString(),
+                    Latitude=restaurant.restaurant.location.latitude
                 });
 
             }

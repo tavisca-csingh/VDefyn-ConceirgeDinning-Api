@@ -1,32 +1,30 @@
 ﻿using ConceirgeDinning.Contracts.Models;
-using ConceirgeDinning.ServicesImplementation;
+using ConceirgeDinning.ServicesImplementation.BookingTable;
+using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ConceirgeDining.Middleware
+namespace ConceirgeDining.Middleware.BookingTable
 {
     public class BookingInitialiser
     {
-        public BookingResponse Validate(BookingRequest bookingRequest)
+        public BookingResponse Validate(BookingRequest bookingRequest,out string UTCTime,IOptions<AppSettingsModel> appsetting)
         {
-            BookingValidator bookingValidation = new BookingValidator();
+            
+            BookingValidator bookingValidation = new BookingValidator(appsetting.Value.TimeZoneURL,appsetting.Value.TimeZoneApiKey);
             BookingResponse bookingResponse = new BookingResponse();
             bookingResponse.Error = new List<string>();
             bookingResponse.BookingId = 0;
             bookingResponse.Status = "BookingInitiated";
             bookingResponse.TotalPointPrice = 0;
 
-            if (!bookingValidation.CheckDate(bookingRequest.Date))
+            if (!bookingValidation.CheckDateTime(bookingRequest.Date+"T"+bookingRequest.Time,bookingRequest.Latitude,bookingRequest.Longitude,out UTCTime))
             {
                 bookingResponse.Status = "BookingNotInitiated";
                 bookingResponse.Error.Add("Can't book for past dates");
             }
-            else if (!bookingValidation.CheckTime(bookingRequest.Time) && bookingRequest.Date == DateTime.Today)
-            {
-                bookingResponse.Status = "BookingNotInitiated";
-                bookingResponse.Error.Add("Can't book for past time");
-            }
+            
             if (!bookingValidation.CheckNoOfGuests(bookingRequest.NoOfGuests))
             {
                 bookingResponse.Status = "BookingNotInitiated";
@@ -42,7 +40,7 @@ namespace ConceirgeDining.Middleware
 
             if (bookingResponse.Error.Count == 0)
             {
-                int bookedSeats = bookingValidation.CheckAvailability(bookingRequest.NoOfGuests, bookingRequest.Date, bookingRequest.RestaurantId, bookingRequest.RestaurantName);
+                int bookedSeats = bookingValidation.CheckAvailability(bookingRequest.NoOfGuests, DateTime.Parse(bookingRequest.Date), bookingRequest.RestaurantId, bookingRequest.RestaurantName);
                 int availableSeats = 40 - bookedSeats;
                 if (availableSeats < bookingRequest.NoOfGuests)
                 {
@@ -59,8 +57,8 @@ namespace ConceirgeDining.Middleware
 
 
             bookingResponse.NoOfGuests = bookingRequest.NoOfGuests;
-            bookingResponse.Date = bookingRequest.Date;
-            bookingResponse.Time = bookingRequest.Time;
+            bookingResponse.Date = DateTime.Parse(bookingRequest.Date);
+            bookingResponse.Time = TimeSpan.Parse(bookingRequest.Time);
             bookingResponse.RestaurantId = bookingRequest.RestaurantId;
             bookingResponse.UserName = bookingRequest.UserName;
             bookingResponse.RestaurantName = bookingRequest.RestaurantName;
@@ -70,21 +68,21 @@ namespace ConceirgeDining.Middleware
 
             return bookingResponse;
         }
-        public BookingResponse Start(BookingRequest bookingRequest)
+        public BookingResponse Start(BookingRequest bookingRequest,string UTCTime)
         {
             BookingInitiator startBooking = new BookingInitiator();
             BookingResponse bookingResponse = new BookingResponse();
             bookingResponse.Error = null;
             bookingResponse.Status = "BookingInitiated";
             int bookingId;
-            bookingId = startBooking.AddEntryInBookingTable(bookingRequest.NoOfGuests, bookingRequest.Date, bookingRequest.Time, bookingRequest.RestaurantId, bookingRequest.RestaurantName, bookingRequest.UserName, bookingRequest.PerPersonPoints, bookingRequest.PointBalance);
-            startBooking.UpdateSeats(bookingRequest.RestaurantId, bookingRequest.NoOfGuests, bookingRequest.Date);
+            bookingId = startBooking.AddEntryInBookingTable(bookingRequest.NoOfGuests, DateTime.Parse(bookingRequest.Date), TimeSpan.Parse(bookingRequest.Time), bookingRequest.RestaurantId, bookingRequest.UserName, bookingRequest.RestaurantName, bookingRequest.PerPersonPoints, bookingRequest.PointBalance, UTCTime);
+            startBooking.UpdateSeats(bookingRequest.RestaurantId, bookingRequest.NoOfGuests, DateTime.Parse(bookingRequest.Date));
             startBooking.AddEntryInProgressTable(bookingId);
             bookingResponse.BookingId = bookingId;
             bookingResponse.TotalPointPrice = bookingRequest.NoOfGuests * bookingRequest.PerPersonPoints;
             bookingResponse.NoOfGuests = bookingRequest.NoOfGuests;
-            bookingResponse.Date = bookingRequest.Date;
-            bookingResponse.Time = bookingRequest.Time;
+            bookingResponse.Date = DateTime.Parse(bookingRequest.Date);
+            bookingResponse.Time = TimeSpan.Parse(bookingRequest.Time);
             bookingResponse.RestaurantId = bookingRequest.RestaurantId;
             bookingResponse.UserName = bookingRequest.UserName;
             bookingResponse.RestaurantName = bookingRequest.RestaurantName;

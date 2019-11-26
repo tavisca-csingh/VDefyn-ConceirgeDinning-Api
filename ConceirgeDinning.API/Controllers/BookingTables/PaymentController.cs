@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ConceirgeDining.Middleware;
+using ConceirgeDining.Middleware.BookingTable;
 using ConceirgeDiningDAL.Models;
 using ConceirgeDinning.Contracts.Models;
 using Microsoft.AspNetCore.Http;
@@ -22,7 +23,6 @@ namespace ConceirgeDinning.API.Controllers.BookingTable
             int bookingId = Convert.ToInt32(jObject["bookingId"]);
             long pointBalance = Convert.ToInt64(jObject["pointBalance"]);
             string restaurantName = Convert.ToString(jObject["restaurantName"]);
-            sql12310325Context sql12310325Context = new sql12310325Context(); 
             
             PaymentInitialiser paymentInitialisation = new PaymentInitialiser(bookingId);
             PaymentResponse paymentResponse = new PaymentResponse();

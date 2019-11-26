@@ -1,5 +1,5 @@
-﻿using ConceirgeDinning.Core.Models;
-using ConceirgeDinning.Services;
+﻿using ConceirgeDinning.Contracts.Models;
+using ConceirgeDinningContracts.Services;
 using Newtonsoft.Json;
 using Serilog;
 using System;
@@ -12,12 +12,19 @@ namespace ConceirgeDinning.Adapter.Zomato.Translator
 {
     public class ZomatoRestaurantDetailsAdapter : IFetchRestaurantDetails
     {
+        private readonly string _zomatoURL;
+        private readonly string _zomatoKey;
+
+        public ZomatoRestaurantDetailsAdapter(string url,string key)
+        {
+            this._zomatoURL = url;
+            this._zomatoKey = key;
+        }
         public RestaurantDetails GetRestaurantDetails(int restaurantId)
         {
-            string ApiUri = @"https://developers.zomato.com/api/v2.1/restaurant?res_id=";
-            var request = System.Net.WebRequest.Create(ApiUri + restaurantId);
+            var request = System.Net.WebRequest.Create(_zomatoURL + restaurantId);
             request.Method = "GET";
-            request.Headers.Add("user-key", "3d95592a1bf9c01986d17292db075163");
+            request.Headers.Add("user-key", _zomatoKey);
 
             request.ContentType = "application/json";
 

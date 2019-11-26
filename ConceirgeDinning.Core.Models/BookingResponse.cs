@@ -18,5 +18,6 @@ namespace ConceirgeDinning.Contracts.Models
         public string RestaurantName { get; set; }
         public long PerPersonPoints { get; set; }
         public long PointBalance { get; set; }
+        
     }
 }

@@ -1,13 +1,14 @@
-﻿using ConceirgeDinning.ServicesImplementation;
+using ConceirgeDinning.Contracts.Models;
+using ConceirgeDinning.ServicesImplementation.BookingTable;
+using Microsoft.Extensions.Options;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using Xunit;
 
 namespace ConceirgeDining.ServiceImplementation.Tests.BookingTableTests
 {
     public class BookingValidatorTests
     {
+
         BookingValidator bookingValidator = new BookingValidator();
 
         [Fact]
@@ -41,33 +42,32 @@ namespace ConceirgeDining.ServiceImplementation.Tests.BookingTableTests
         [Fact]
         public void Check_For_Valid_Date()
         {
-            DateTime dateTime = DateTime.Today;
-            bool actual = bookingValidator.CheckDate(dateTime);
+            AppSettingsModel appSettings = new AppSettingsModel()
+            {
+                TimeZoneURL = "http://api.timezonedb.com/v2.1/get-time-zone?format=json&by=position&lat=",
+                TimeZoneApiKey = "Q62ZT7QSP0O6"
+            };
+            IOptions<AppSettingsModel> options = Options.Create(appSettings);
+            BookingValidator bookingValidator = new BookingValidator(options.Value.TimeZoneURL, options.Value.TimeZoneApiKey);
+            DateTime dateTime = DateTime.Today.AddDays(1);
+            string UTCTime = "0001-01-01T00:00:00+00:00";
+            bool actual = bookingValidator.CheckDateTime(dateTime.ToString(), "18.5204", "73.8567", out UTCTime);
             Assert.True(actual);
         }
 
         [Fact]
         public void Check_For_Invalid_Date()
         {
+            AppSettingsModel appSettings = new AppSettingsModel()
+            {
+                TimeZoneURL = "http://api.timezonedb.com/v2.1/get-time-zone?format=json&by=position&lat=",
+                TimeZoneApiKey = "Q62ZT7QSP0O6"
+            };
+            IOptions<AppSettingsModel> options = Options.Create(appSettings);
+            BookingValidator bookingValidator = new BookingValidator(options.Value.TimeZoneURL,options.Value.TimeZoneApiKey);
             DateTime dateTime = DateTime.Parse("2019/02/01");
-            bool actual = bookingValidator.CheckDate(dateTime);
-            Assert.False(actual);
-        }
-
-        [Fact]
-        public void Check_For_Valid_Time()
-        {
-            TimeSpan timeSpan = TimeSpan.Parse("23:59:59");
-            bool actual = bookingValidator.CheckTime(timeSpan);
-            Assert.True(actual);
-        }
-
-        [Fact]
-        public void Check_For_Invalid_Time()
-        {
-            TimeSpan hours = new TimeSpan(1,1,1);
-            TimeSpan timeSpan = DateTime.Today.TimeOfDay.Add(hours);
-            bool actual = bookingValidator.CheckTime(timeSpan);
+            string UTCTime = "0001-01-01T00:00:00+00:00";
+            bool actual = bookingValidator.CheckDateTime(dateTime.ToString(), "18.5204", "73.8567", out UTCTime);
             Assert.False(actual);
         }
 
