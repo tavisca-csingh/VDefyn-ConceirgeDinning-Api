@@ -28,7 +28,8 @@ namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
                     menuItems.Add(new MenuItem()
                     {
                         Name = item.menu_item_name,
-                        Price = Double.Parse(item.menu_item_pricing[0].price)*100
+                        Price = Math.Round(Double.Parse(item.menu_item_pricing[0].price)*100,2)
+                        
                     });
 
                     cuisine.Add(item.subsection);
