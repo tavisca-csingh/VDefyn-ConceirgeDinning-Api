@@ -27,6 +27,7 @@ namespace ConceirgeDinning.Adapter.Geocoder.xyz
             request.Method = "GET";
             request.ContentType = "application/json";
 
+
             Log.Information("request to supplier"+ _googleGeocodeUrl + locality + "&json=1");
             using (var response = request.GetResponse())
             {

@@ -18,8 +18,8 @@ namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
         private readonly string _usrestaurantKey;
         public USRestarauntAdapter(string url,string key)
         {
-            this._usrestaurantKey = url;
-            this._usrestaurantURL = key;
+            this._usrestaurantURL = url;
+            this._usrestaurantKey = key;
         }
         public List<Restaurant> FetchRestarauntDetails(string latitude,string longitude,string category)
         {
