@@ -23,7 +23,7 @@ namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
             response.SupplierName = "USRestaurant";
             response.RestaurantName = responseFromSupplier.result.data[0].restaurant_name;
             response.RestaurantId = responseFromSupplier.result.data[0].restaurant_id;
-            response.PricePerHead = GetPrice(responseFromSupplier.result.data[0].price_range);
+            response.PricePerHead = GetPrice(responseFromSupplier.result.data[0].price_range)==0?100: GetPrice(responseFromSupplier.result.data[0].price_range);
             response.User_Rating = GetRating(3, 5);
             response.Cuisines = responseFromSupplier.result.data[0].cuisines;
             response.Address = responseFromSupplier.result.data[0].address.formatted;

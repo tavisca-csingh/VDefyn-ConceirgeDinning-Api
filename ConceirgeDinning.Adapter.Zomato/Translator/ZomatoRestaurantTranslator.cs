@@ -14,7 +14,7 @@ namespace ConceirgeDinning.Adapter.Zomato.Translator
             List<Restaurant> responseObject = new List<Restaurant>();
             foreach (Models.Restaurant restaurant in response.restaurants)
             {
-
+                var price= ((restaurant.restaurant.average_cost_for_two / 2) * PointConvertor.PointsConversionStandard["default"]).ToString();
                 responseObject.Add(new Restaurant()
                 {
                     SupplierName = "Zomato",
@@ -24,7 +24,7 @@ namespace ConceirgeDinning.Adapter.Zomato.Translator
                     User_Rating = restaurant.restaurant.user_rating.aggregate_rating,
                     ThumbURL = restaurant.restaurant.thumb==""?"https://icon-library.net/images/no-image-available-icon/no-image-available-icon-6.jpg":restaurant.restaurant.thumb,
                     Cuisines = GetCuisines(restaurant.restaurant.cuisines),
-                    PricePerHead = ((restaurant.restaurant.average_cost_for_two/2)*PointConvertor.PointsConversionStandard["default"]).ToString(),
+                    PricePerHead = price=="0"?"100":price,
                     Latitude=restaurant.restaurant.location.latitude
                 });
 

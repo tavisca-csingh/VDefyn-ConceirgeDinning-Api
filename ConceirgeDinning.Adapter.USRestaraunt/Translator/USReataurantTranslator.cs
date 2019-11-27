@@ -25,7 +25,7 @@ namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
                     LocalityVerbose = restaurant.address.street + ", " + restaurant.address.city,
                     Cuisines = restaurant.cuisines,
                     Latitude = restaurant.geo.lat.ToString(),
-                    PricePerHead = GetPrice(restaurant.price_range).ToString()
+                    PricePerHead = GetPrice(restaurant.price_range).ToString()=="0"?"100": GetPrice(restaurant.price_range).ToString()
                 });
             }
             return restaurantList;

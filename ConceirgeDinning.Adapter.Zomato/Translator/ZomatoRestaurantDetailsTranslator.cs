@@ -17,6 +17,8 @@ namespace ConceirgeDinning.Adapter.Zomato.Translator
 
         public static RestaurantDetails TranslateToRestaurantDetails(this Models.RestaurantDetails responseFromSupplier)
         {
+            int price = ((responseFromSupplier.average_cost_for_two) / 2) * PointConvertor.PointsConversionStandard["default"];
+
             RestaurantDetails response = new RestaurantDetails();
             response.SupplierName = "Zomato";
             response.RestaurantName = responseFromSupplier.name;
@@ -24,7 +26,7 @@ namespace ConceirgeDinning.Adapter.Zomato.Translator
             response.Address = responseFromSupplier.location.address;
             response.Cuisines = GetCuisines(responseFromSupplier.cuisines);
             response.User_Rating = responseFromSupplier.user_rating.aggregate_rating;
-            response.PricePerHead = ((responseFromSupplier.average_cost_for_two) / 2)*PointConvertor.PointsConversionStandard["default"];
+            response.PricePerHead = price==0?100:price;
             response.Images = GetImages(responseFromSupplier);
             response.Lat = responseFromSupplier.location.latitude;
             response.Lon = responseFromSupplier.location.longitude;
