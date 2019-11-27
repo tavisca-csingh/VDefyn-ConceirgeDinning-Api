@@ -1,1 +1,0 @@
-2019-11-07 13:57:46.785 +05:30 [INF] No. of fetched restaurantlist: 10

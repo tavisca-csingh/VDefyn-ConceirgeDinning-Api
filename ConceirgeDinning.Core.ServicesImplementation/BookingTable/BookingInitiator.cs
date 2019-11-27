@@ -29,7 +29,6 @@ namespace ConceirgeDinning.ServicesImplementation.BookingTable
             var query = sql12310325Context.Booking
                        .Where(b => b.Status == "BookingInitiated" && b.UserId == userName && b.RestaurantId == restaurantId && b.Time == time && b.Date == date)
                        .Last<Booking>();
-           // sql12310325Context.Query;
             return query.BookingId;
         }
         public void UpdateSeats(string restaurantId,int noOfGuests, DateTime date)

@@ -51,8 +51,7 @@ namespace ConceirgeDinning.Core.ServicesImplementation
                 zomatoResults.AddRange(usRestaurantResults);
                 return zomatoResults;
             }
-            /*if (!(zomatoResults is null))
-                return zomatoResults;*/
+            
             else
                 return null;
         }

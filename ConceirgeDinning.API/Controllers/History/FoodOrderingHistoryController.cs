@@ -13,7 +13,6 @@ namespace ConceirgeDinning.API.Controllers.History
     [ApiController]
     public class FoodOrderingHistoryController : ControllerBase
     {
-        // GET: api/FoodOrderingHistory
         [HttpGet]
         public FoodOrderingHistoryResponse Get(string userId,string corelationID)
         {
@@ -22,29 +21,6 @@ namespace ConceirgeDinning.API.Controllers.History
             
         }
 
-        // GET: api/FoodOrderingHistory/5
-        [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST: api/FoodOrderingHistory
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
-
-        // PUT: api/FoodOrderingHistory/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
+        
     }
 }
