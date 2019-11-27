@@ -16,8 +16,8 @@ namespace ConceirgeDinning.Adapter.USRestaraunt
         private readonly string _usrestaurantKey;
         public USRestaurantMenuItemAdapter(string url, string key)
         {
-            this._usrestaurantKey = url;
-            this._usrestaurantURL = key;
+            this._usrestaurantURL = url;
+            this._usrestaurantKey = key;
         }
         public List<Category> GetMenuItems(string restaurantId)
         {

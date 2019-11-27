@@ -17,8 +17,8 @@ namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
         private readonly string _usrestaurantKey;
         public USRestaurantDetailsAdapter(string url, string key)
         {
-            this._usrestaurantKey = url;
-            this._usrestaurantURL = key;
+            this._usrestaurantURL = url;
+            this._usrestaurantKey= key;
         }
         public RestaurantDetails GetRestaurantDetails(int restaurantId)
         {
