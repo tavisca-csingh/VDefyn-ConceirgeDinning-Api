@@ -7,7 +7,7 @@ namespace ConceirgeDinning.Contracts.Models
     public class MenuItem
     {
         public string Name { get; set; }
-        public string Price { get; set; }
+        public object Price { get; set; }
     }
     public class Category
     {

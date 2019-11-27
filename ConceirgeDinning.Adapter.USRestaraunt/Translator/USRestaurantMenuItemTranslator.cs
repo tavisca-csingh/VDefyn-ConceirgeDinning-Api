@@ -23,18 +23,21 @@ namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
                     category = new Category();
                     flag = 1;
                 }
+                if (item.menu_item_pricing.Count != 0)
+                {
+                    menuItems.Add(new MenuItem()
+                    {
+                        Name = item.menu_item_name,
+                        Price = Double.Parse(item.menu_item_pricing[0].price)*100
+                    });
 
-                menuItems.Add(new MenuItem()
-                {
-                    Name = item.menu_item_name,
-                    Price = item.menu_item_pricing[0].price.ToString()
-                });
-                cuisine.Add(item.subsection);
-                if (flag == 1)
-                {
-                    category.category = item.subsection;
-                    category.Items = menuItems;
-                    categoryList.Add(category);
+                    cuisine.Add(item.subsection);
+                    if (flag == 1)
+                    {
+                        category.category = item.subsection;
+                        category.Items = menuItems;
+                        categoryList.Add(category);
+                    }
                 }
             }
             return categoryList;

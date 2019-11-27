@@ -5,7 +5,7 @@ namespace ConceirgeDinning.Adapter.USRestaraunt.Models.FoodOrdering
     public class Datum
     {
         public Address address { get; set; }
-        public List<string> cuisines { get; set; }
+        public List<object> cuisines { get; set; }
         public Geo geo { get; set; }
         public int item_id { get; set; }
         public string menu_item_description { get; set; }

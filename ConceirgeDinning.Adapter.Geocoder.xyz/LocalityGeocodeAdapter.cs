@@ -21,9 +21,9 @@ namespace ConceirgeDinning.Adapter.Geocoder.xyz
             this._googleGeocodeUrl = url;
             this._googleGeocodeKey = key;
         }
-        public LocalityGeocode FetchCoordinates(string locality)
+        public LocalityGeocode FetchCoordinates(string locality,string latitude,string longitude)
         {
-            var request = System.Net.WebRequest.Create(_googleGeocodeUrl + locality + "&key="+_googleGeocodeKey);
+            var request = System.Net.WebRequest.Create(_googleGeocodeUrl + locality+"&bounds="+latitude+','+longitude+"|"+ latitude + ',' + longitude + "&key="+_googleGeocodeKey);
             request.Method = "GET";
             request.ContentType = "application/json";
 

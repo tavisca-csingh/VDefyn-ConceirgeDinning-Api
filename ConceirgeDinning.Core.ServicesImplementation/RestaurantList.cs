@@ -19,7 +19,7 @@ namespace ConceirgeDinning.Core.ServicesImplementation
             if (locality != string.Empty)
             {
                 LocalityGeocodeAdapter restarauntGeocodeFetcher = new LocalityGeocodeAdapter(appSettings.Value.GoogleGeocodeURL,appSettings.Value.GoogleGeocodeKey);
-                var coordinates = restarauntGeocodeFetcher.FetchCoordinates(locality);
+                var coordinates = restarauntGeocodeFetcher.FetchCoordinates(locality,latitude,longitude);
                 if (coordinates is null)
                     return null;
                 latitude = coordinates.Latitude;
@@ -29,7 +29,7 @@ namespace ConceirgeDinning.Core.ServicesImplementation
             ZomatoRestaurantAdapter zomatoRestaurantList = new ZomatoRestaurantAdapter(appSettings.Value.ZomatoURL,appSettings.Value.ZomatoKey);
             USRestarauntAdapter usRestaurantList = new USRestarauntAdapter(appSettings.Value.USRestaurantURL,appSettings.Value.USRestaurantKey);
             Task<List<Restaurant>> fetchFromZomato = Task<List<Restaurant>>.Run(() => zomatoRestaurantList.FetchRestarauntDetails(latitude, longitude, "1"));
-           Task<List<Restaurant>> fetchFromUS = Task<List<Restaurant>>.Run(() => usRestaurantList.FetchRestarauntDetails(latitude, longitude, "1"));
+            Task<List<Restaurant>> fetchFromUS = Task<List<Restaurant>>.Run(() => usRestaurantList.FetchRestarauntDetails(latitude, longitude, "1"));
             Task[] searchTasks = { fetchFromUS, fetchFromZomato };
             Task.WaitAll(searchTasks);
 

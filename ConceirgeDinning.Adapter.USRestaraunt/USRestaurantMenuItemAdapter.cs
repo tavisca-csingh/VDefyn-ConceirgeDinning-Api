@@ -21,7 +21,7 @@ namespace ConceirgeDinning.Adapter.USRestaraunt
         }
         public List<Category> GetMenuItems(string restaurantId)
         {
-            var request = System.Net.WebRequest.Create(_usrestaurantURL);
+            var request = System.Net.WebRequest.Create(_usrestaurantURL+restaurantId);
             request.Method = "GET";
             request.Headers.Add("X-RapidAPI-Host", "us-restaurant-menus.p.rapidapi.com");
             request.Headers.Add("X-RapidAPI-Key", _usrestaurantKey);

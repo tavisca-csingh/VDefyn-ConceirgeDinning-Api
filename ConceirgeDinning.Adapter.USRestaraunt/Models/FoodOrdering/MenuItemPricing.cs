@@ -3,7 +3,7 @@
     public class MenuItemPricing
     {
         public string currency { get; set; }
-        public double price { get; set; }
+        public string price { get; set; }
         public string priceString { get; set; }
     }
 }
