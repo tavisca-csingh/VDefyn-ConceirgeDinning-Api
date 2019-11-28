@@ -10,7 +10,16 @@ namespace ConceirgeDining.Middleware.Launcher
         private LauncherInitiator launcherInitiator = new LauncherInitiator();
         public string Start(string userId, long pointBalance, string bank, string locale,string environment)
         {
-            return launcherInitiator.AddEntryIntoLoginInfo(userId, pointBalance, bank, locale, environment);
+            try
+            {
+                return launcherInitiator.AddEntryIntoLoginInfo(userId, pointBalance, bank, locale, environment);
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+            
         }
     }
 }

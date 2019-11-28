@@ -25,25 +25,34 @@ namespace ConceirgeDinning.API.Controllers
         [HttpPost]
         public ActionResult<string> GiveIntent([FromBody]JObject input)
         {
-            Log.Information("request sent from user:" + input["text"]);
-
-            string body = "{  \"queryInput\": {  \"text\": {  \"languageCode\":\""+Convert.ToString(input["languageCode"])+"\", \"text\":\""+Convert.ToString(input["text"]).ToString()+"\"   }  }        }";
-
-            string userName=Convert.ToString(input["userId"]);
-            string key=Convert.ToString(input["key"]);
-            DialougFlowResponse dialougFlowResponse = new DialougFlowResponse();
-
-            string response = dialougFlowResponse.GetResponse(userName, key, body,appSettings);
-            Log.Information(", Request from user : username- "+userName+" key- "+key+"body- "+body);
-
-            if (response is null)
+            try
             {
-                Log.Information("response from DialogFlow : 401");
-                return Unauthorized(StatusCodes.Status401Unauthorized);
-            }
+                
 
-            Log.Information("response from DialogFlow: "+response);
-            return response;
+                string body = "{  \"queryInput\": {  \"text\": {  \"languageCode\":\"" + Convert.ToString(input["languageCode"]) + "\", \"text\":\"" + Convert.ToString(input["text"]).ToString() + "\"   }  }        }";
+
+                string userName = Convert.ToString(input["userId"]);
+                string key = Convert.ToString(input["key"]);
+                DialougFlowResponse dialougFlowResponse = new DialougFlowResponse();
+
+                string response = dialougFlowResponse.GetResponse(userName, key, body, appSettings);
+
+                if (response is null)
+                {
+                    Log.Warning("Status : Dialogflow key expired  \nRequest from user : "+input + "\nResponse to User : " + response);
+                    return Unauthorized(StatusCodes.Status401Unauthorized);
+                }
+                Log.Information("Status : Dialogflow active  \nRequest from user : "+input+"\nResponse to user : "+response);
+
+                return response;
+            }
+            catch (Exception e)
+            {
+                Log.Error("Status :Dialogflow error  \nRequest from user : "+ "\n Response to user : null \n Error : "+e.Message);
+                
+                return Conflict();
+            }
+            
         }
 }
 }

@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Serilog;
 
 namespace ConceirgeDinning.API.Controllers.FoodOrdering
 {
@@ -26,7 +27,8 @@ namespace ConceirgeDinning.API.Controllers.FoodOrdering
                 orderPaymentRequest = JsonConvert.DeserializeObject<OrderPaymentRequest>(jsonData.ToString());
                 PaymentInitialiser paymentInitialiser = new PaymentInitialiser(orderPaymentRequest);
                 orderPaymentResponse=paymentInitialiser.Start();
-                
+                Log.Information("Status : Food Payment Done  \nRequest from user : " + jsonData + "Response to User :" + JsonConvert.SerializeObject(orderPaymentResponse));
+
             }
             catch (Exception e)
             {
@@ -34,8 +36,10 @@ namespace ConceirgeDinning.API.Controllers.FoodOrdering
                 orderPaymentResponse.Status = "Order Failed";
                 orderPaymentResponse.Error = new List<string>();
                 orderPaymentResponse.Error.Add("Server Error Contact Admin");
-            }   
-            
+                Log.Error("Status : Food Payment Error  \nRequest from user : " + jsonData + "\nResponse to User :" + JsonConvert.SerializeObject(orderPaymentResponse)+"\nError : "+e.Message);
+               
+            }
+
             return orderPaymentResponse;
         }
     }

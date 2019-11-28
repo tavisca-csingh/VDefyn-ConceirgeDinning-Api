@@ -11,6 +11,7 @@ using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using ConceirgeDining.Middleware.BookingTable;
 using Microsoft.Extensions.Options;
+using Serilog;
 
 namespace ConceirgeDinning.API.Controllers.BookingTable
 {
@@ -26,19 +27,28 @@ namespace ConceirgeDinning.API.Controllers.BookingTable
         [HttpPost]
         public ActionResult<BookingResponse> GetRestaurants([FromBody]JObject jObject)
         {
-            BookingInitialiser bookingInitialisation = new BookingInitialiser();
-            BookingResponse bookingResponse = new BookingResponse();
-            BookingRequest bookingRequest= JsonConvert.DeserializeObject<BookingRequest>(jObject.ToString());
-            string UTCTime;
-            bookingResponse =bookingInitialisation.Validate(bookingRequest,out UTCTime,appSettings);
-            if(bookingResponse.Status== "BookingInitiated")
+            try
             {
-                bookingResponse=bookingInitialisation.Start(bookingRequest,UTCTime);
+                BookingInitialiser bookingInitialisation = new BookingInitialiser();
+                BookingResponse bookingResponse = new BookingResponse();
+                BookingRequest bookingRequest = JsonConvert.DeserializeObject<BookingRequest>(jObject.ToString());
+                string UTCTime;
+                bookingResponse = bookingInitialisation.Validate(bookingRequest, out UTCTime, appSettings);
+                if (bookingResponse.Status == "BookingInitiated")
+                {
+                    bookingResponse = bookingInitialisation.Start(bookingRequest, UTCTime);
 
+                }
+
+                Log.Information("Status : Booking Initiated \nRequest from user : " + jObject + "\nResponse to User :" + JsonConvert.SerializeObject(bookingResponse));
+                return bookingResponse;
+            }
+            catch (Exception e)
+            {
+                Log.Error("Status : Booking Initialisation Failed \nRequest from user : " + jObject + "\nResponse to User : null"+"\nError :" + e.Message);
+                return Conflict();
             }
             
-            
-            return bookingResponse;
         }
     }
 }

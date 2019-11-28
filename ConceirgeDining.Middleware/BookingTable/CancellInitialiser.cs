@@ -21,57 +21,74 @@ namespace ConceirgeDining.Middleware.BookingTable
         }
         public CancellResponse Validation(int bookingID,long pointBalance)
         {
-            
-            CancellValidator cancellValidator = new CancellValidator();
-            cancellResponse.Error = new List<string>();
-            cancellResponse.BookingId = bookingID;
-            if (!cancellValidator.CheckBookingId(booking))
+            try
             {
-                
-                cancellResponse.Error.Add("Booking Id: "+bookingID+" is invalid");
-                cancellResponse.Status = "Invalid Booking ID";
-                cancellResponse.UpdatedPointBalance = pointBalance;
-            }
-            else if(!cancellValidator.CheckCancellStatus(booking))
-            {
-                cancellResponse.Error.Add("Booking Id: " + bookingID + " is already cancelled");
-                cancellResponse.Status = "Booking ID already cancelled";
-                cancellResponse.UpdatedPointBalance = pointBalance;
-            }
-            else if(!cancellValidator.CheckCancelTime(booking))
-            {
-                cancellResponse.Error.Add("Can't cancell before 4 hours");
-                cancellResponse.Status = "Can't cancell before 4 hours";
-                cancellResponse.UpdatedPointBalance = pointBalance;
-            }
-            else
-            {
-                cancellResponse.Status = "Cancellation Possible";
-            }
+                CancellValidator cancellValidator = new CancellValidator();
+                cancellResponse.Error = new List<string>();
+                cancellResponse.BookingId = bookingID;
+                if (!cancellValidator.CheckBookingId(booking))
+                {
 
-            return cancellResponse;
+                    cancellResponse.Error.Add("Booking Id: " + bookingID + " is invalid");
+                    cancellResponse.Status = "Invalid Booking ID";
+                    cancellResponse.UpdatedPointBalance = pointBalance;
+                }
+                else if (!cancellValidator.CheckCancellStatus(booking))
+                {
+                    cancellResponse.Error.Add("Booking Id: " + bookingID + " is already cancelled");
+                    cancellResponse.Status = "Booking ID already cancelled";
+                    cancellResponse.UpdatedPointBalance = pointBalance;
+                }
+                else if (!cancellValidator.CheckCancelTime(booking))
+                {
+                    cancellResponse.Error.Add("Can't cancell before 4 hours");
+                    cancellResponse.Status = "Can't cancell before 4 hours";
+                    cancellResponse.UpdatedPointBalance = pointBalance;
+                }
+                else
+                {
+                    cancellResponse.Status = "Cancellation Possible";
+                }
+
+                return cancellResponse;
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+            
         }
         public CancellResponse Start(long pointBalance,long totalPointPrice)
         {
-            CancellInitiator cancellInitiator = new CancellInitiator(booking);
-            if(booking.Status== "BookingInitiated")
+            try
             {
-                cancellInitiator.DeleteEntryInBookingProcess();
-                cancellInitiator.ChangeBookingStatus();
-                cancellInitiator.ChangeSeatsStatus();
-                cancellResponse.Status = "Cancelled";
-                cancellResponse.Error = null;
-                cancellResponse.UpdatedPointBalance=pointBalance;
+                CancellInitiator cancellInitiator = new CancellInitiator(booking);
+                if (booking.Status == "BookingInitiated")
+                {
+                    cancellInitiator.DeleteEntryInBookingProcess();
+                    cancellInitiator.ChangeBookingStatus();
+                    cancellInitiator.ChangeSeatsStatus();
+                    cancellResponse.Status = "Cancelled";
+                    cancellResponse.Error = null;
+                    cancellResponse.UpdatedPointBalance = pointBalance;
+                }
+                else if (booking.Status == "Booked")
+                {
+                    cancellInitiator.ChangeBookingStatus();
+                    cancellInitiator.ChangeSeatsStatus();
+                    cancellResponse.Status = "Cancelled";
+                    cancellResponse.Error = null;
+                    cancellResponse.UpdatedPointBalance = pointBalance + totalPointPrice;
+                }
+                return cancellResponse;
             }
-            else if(booking.Status=="Booked")
+            catch (Exception e)
             {
-                cancellInitiator.ChangeBookingStatus();
-                cancellInitiator.ChangeSeatsStatus();
-                cancellResponse.Status = "Cancelled";
-                cancellResponse.Error = null;
-                cancellResponse.UpdatedPointBalance = pointBalance + totalPointPrice;
+
+                throw e;
             }
-            return cancellResponse;
+           
         }
     }
 }

@@ -10,6 +10,8 @@ using Newtonsoft.Json.Linq;
 using ConceirgeDiningDAL.Models;
 using ConceirgeDining.Middleware.BookingTable;
 using Microsoft.Extensions.Options;
+using Serilog;
+using Newtonsoft.Json;
 
 namespace ConceirgeDinning.API.Controllers
 {
@@ -34,19 +36,21 @@ namespace ConceirgeDinning.API.Controllers
             try
             {
                 booking = sql12310325Context.Booking.Find(bookingId);
+                CancellInitialiser cancellInitialiser = new CancellInitialiser(booking);
+                CancellResponse cancellResponse = new CancellResponse();
+                cancellResponse = cancellInitialiser.Validation(bookingId, pointBalance);
+                if (cancellResponse.Status == "Cancellation Possible")
+                    cancellResponse = cancellInitialiser.Start(pointBalance, totalPointPrice);
+                Log.Information("Status : Cancellation  \nRequest from user : " + jObject + "\nResponse to User :" + JsonConvert.SerializeObject(cancellResponse));
+                return cancellResponse;
             }
-            catch (Exception)
+            catch (Exception e)
             {
 
-                
+                Log.Error("Status : Cancellation Failed \nRequest from user : " + jObject + "\nResponse to User :  null" + "\nError :" + e.Message);
+                return Conflict();
             }
-            CancellInitialiser cancellInitialiser = new CancellInitialiser(booking);
-            CancellResponse cancellResponse = new CancellResponse();
-            cancellResponse = cancellInitialiser.Validation(bookingId,pointBalance);
-            if (cancellResponse.Status == "Cancellation Possible")
-                cancellResponse = cancellInitialiser.Start(pointBalance,totalPointPrice);
             
-            return cancellResponse;
         }
     }
 }

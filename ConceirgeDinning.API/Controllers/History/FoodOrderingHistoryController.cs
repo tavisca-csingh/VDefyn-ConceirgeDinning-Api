@@ -6,6 +6,8 @@ using ConceirgeDinning.Contracts.Models;
 using ConceirgeDinning.ServicesImplementation.History;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using Serilog;
 
 namespace ConceirgeDinning.API.Controllers.History
 {
@@ -14,13 +16,25 @@ namespace ConceirgeDinning.API.Controllers.History
     public class FoodOrderingHistoryController : ControllerBase
     {
         [HttpGet]
-        public FoodOrderingHistoryResponse Get(string userId,string corelationID)
+        public ActionResult<FoodOrderingHistoryResponse> Get(string userId,string corelationID)
         {
-            OrderingHistory orderHistory = new OrderingHistory();
-            return orderHistory.GetHistory(userId, corelationID);
+            try
+            {
+                OrderingHistory orderHistory = new OrderingHistory();
+                FoodOrderingHistoryResponse foodOrderingHistoryResponse= orderHistory.GetHistory(userId, corelationID);
+                Log.Information("Status : Food Order history  result  \nRequest from user : { userId : " + userId +",\ncorelationId :" +corelationID+" }" + "\nResponse to User :" + JsonConvert.SerializeObject(foodOrderingHistoryResponse) );
+                return foodOrderingHistoryResponse;
+            }
+            catch (Exception e)
+            {
+                Log.Error("Status : Food Order history Error  \nRequest from user : { userId : " + userId + ",\ncorelationId :" + corelationID + " }" + "\nResponse to User : null" + "\nError : " + e.Message);
+                return Conflict();
+            }
             
+
+
         }
 
-        
+
     }
 }
