@@ -29,7 +29,7 @@ namespace ConceirgeDinning.ServicesImplementation.BookingTable
             catch (Exception e)
             {
 
-
+                throw e;
             }
         }
         public void ChangeBookingStatus()
@@ -53,7 +53,7 @@ namespace ConceirgeDinning.ServicesImplementation.BookingTable
             catch (Exception e)
             {
 
-                
+                throw e;
             }
             
         }

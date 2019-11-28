@@ -16,46 +16,55 @@ namespace ConceirgeDinning.Core.ServicesImplementation
     {
         public List<Restaurant> FetchRestarauntDetails(string locality, string latitude, string longitude, string category, IOptions<AppSettingsModel> appSettings)
         {
-            if (locality != string.Empty)
+            try
             {
-                LocalityGeocodeAdapter restarauntGeocodeFetcher = new LocalityGeocodeAdapter(appSettings.Value.GoogleGeocodeURL,appSettings.Value.GoogleGeocodeKey);
-                var coordinates = restarauntGeocodeFetcher.FetchCoordinates(locality,latitude,longitude);
-                if (coordinates is null)
+                if (locality != string.Empty)
+                {
+                    LocalityGeocodeAdapter restarauntGeocodeFetcher = new LocalityGeocodeAdapter(appSettings.Value.GoogleGeocodeURL, appSettings.Value.GoogleGeocodeKey);
+                    var coordinates = restarauntGeocodeFetcher.FetchCoordinates(locality, latitude, longitude);
+                    if (coordinates is null)
+                        return null;
+                    latitude = coordinates.Latitude;
+                    longitude = coordinates.Longitude;
+                }
+
+                ZomatoRestaurantAdapter zomatoRestaurantList = new ZomatoRestaurantAdapter(appSettings.Value.ZomatoURL, appSettings.Value.ZomatoKey);
+                USRestarauntAdapter usRestaurantList = new USRestarauntAdapter(appSettings.Value.USRestaurantURL, appSettings.Value.USRestaurantKey);
+                Task<List<Restaurant>> fetchFromZomato = Task<List<Restaurant>>.Run(() => zomatoRestaurantList.FetchRestarauntDetails(latitude, longitude, "1"));
+                Task<List<Restaurant>> fetchFromUS = Task<List<Restaurant>>.Run(() => usRestaurantList.FetchRestarauntDetails(latitude, longitude, "1"));
+                Task[] searchTasks = { fetchFromUS, fetchFromZomato };
+                Task.WaitAll(searchTasks);
+
+                foreach (var item in fetchFromZomato.Result)
+                {
+                    if (Math.Abs(Convert.ToDouble(item.Latitude) - Convert.ToDouble(latitude)) > 1)
+                        return null;
+                }
+
+                var zomatoResults = fetchFromZomato.Result;
+                var usRestaurantResults = fetchFromUS.Result;
+
+                if ((usRestaurantResults is null) && !(zomatoResults is null))
+                    return zomatoResults;
+                if ((zomatoResults is null) && !(usRestaurantResults is null))
+                    return usRestaurantResults;
+                if (!(usRestaurantResults is null) && !(zomatoResults is null))
+                {
+                    zomatoResults.AddRange(usRestaurantResults);
+                    return zomatoResults;
+                }
+
+                else
                     return null;
-                latitude = coordinates.Latitude;
-                longitude = coordinates.Longitude;
+
             }
-
-            ZomatoRestaurantAdapter zomatoRestaurantList = new ZomatoRestaurantAdapter(appSettings.Value.ZomatoURL,appSettings.Value.ZomatoKey);
-            USRestarauntAdapter usRestaurantList = new USRestarauntAdapter(appSettings.Value.USRestaurantURL,appSettings.Value.USRestaurantKey);
-            Task<List<Restaurant>> fetchFromZomato = Task<List<Restaurant>>.Run(() => zomatoRestaurantList.FetchRestarauntDetails(latitude, longitude, "1"));
-            Task<List<Restaurant>> fetchFromUS = Task<List<Restaurant>>.Run(() => usRestaurantList.FetchRestarauntDetails(latitude, longitude, "1"));
-            Task[] searchTasks = { fetchFromUS, fetchFromZomato };
-            Task.WaitAll(searchTasks);
-
-            foreach (var item in fetchFromZomato.Result)
+            catch (Exception e)
             {
-                if (Math.Abs(Convert.ToDouble(item.Latitude) - Convert.ToDouble(latitude)) > 1)
-                    return null;
+
+                throw e;
             }
 
-            var zomatoResults = fetchFromZomato.Result;
-            var usRestaurantResults = fetchFromUS.Result;
-
-            if ((usRestaurantResults is null) && !(zomatoResults is null))
-                return zomatoResults;
-            if ((zomatoResults is null) && !(usRestaurantResults is null))
-                return usRestaurantResults;
-            if (!(usRestaurantResults is null) && !(zomatoResults is null))
-            {
-                zomatoResults.AddRange(usRestaurantResults);
-                return zomatoResults;
-            }
-            
-            else
-                return null;
         }
-
         
     }
 }

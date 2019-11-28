@@ -70,7 +70,7 @@ namespace ConceirgeDinning.ServicesImplementation.BookingTable
             catch (Exception e)
             {
 
-                throw;
+                throw e;
             }
             
         }

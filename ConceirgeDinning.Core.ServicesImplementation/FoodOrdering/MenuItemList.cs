@@ -12,17 +12,26 @@ namespace ConceirgeDinning.ServicesImplementation.FoodOrdering
     {
         public List<Category> GetMenus(string restaurantId, string supplierName, IOptions<AppSettingsModel> appSettings)
         {
-            if (supplierName is "Zomato")
+            try
             {
-                ZomatoMenuItemAdpter zomatoMenu = new ZomatoMenuItemAdpter(appSettings.Value.ZomatoMenuItemUrl);
-                return zomatoMenu.GetMenuItems(restaurantId);
+                if (supplierName is "Zomato")
+                {
+                    ZomatoMenuItemAdpter zomatoMenu = new ZomatoMenuItemAdpter(appSettings.Value.ZomatoMenuItemUrl);
+                    return zomatoMenu.GetMenuItems(restaurantId);
+                }
+                else if (supplierName is "USRestaurant")
+                {
+                    USRestaurantMenuItemAdapter usRestaurantAdapter = new USRestaurantMenuItemAdapter(appSettings.Value.USrestaurantMenuUrl, appSettings.Value.USRestaurantKey);
+                    return usRestaurantAdapter.GetMenuItems(restaurantId);
+                }
+                return null;
             }
-            else if(supplierName is "USRestaurant")
+            catch (Exception e)
             {
-                USRestaurantMenuItemAdapter usRestaurantAdapter = new USRestaurantMenuItemAdapter(appSettings.Value.USrestaurantMenuUrl,appSettings.Value.USRestaurantKey);
-                return usRestaurantAdapter.GetMenuItems(restaurantId);
+
+                throw e;
             }
-            return null;
+            
         }
     }
 }

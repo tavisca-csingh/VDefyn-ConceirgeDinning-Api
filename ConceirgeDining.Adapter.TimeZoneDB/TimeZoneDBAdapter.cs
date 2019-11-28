@@ -19,6 +19,7 @@ namespace ConceirgeDining.Adapter.TimeZoneDB
         }
         public string FetchTimeZone(string latitude, string longitude)
         {
+
             string ApiUrl = _timezoneUrl + latitude + "&lng=" + longitude;
             var request = System.Net.WebRequest.Create(ApiUrl + "&key="+_timeZoneKey);
             request.Method = "GET";
@@ -38,10 +39,10 @@ namespace ConceirgeDining.Adapter.TimeZoneDB
                         return gmtTimeZone;
                     }
 
-                    catch (Exception ex)
+                    catch (Exception e)
                     {
 
-                        return null;
+                        throw e;
                     }
                 }
 

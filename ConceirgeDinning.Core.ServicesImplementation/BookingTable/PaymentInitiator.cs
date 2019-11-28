@@ -24,17 +24,26 @@ namespace ConceirgeDinning.ServicesImplementation.BookingTable
             catch (Exception e)
             {
 
-                
+                throw e;
             }
         }
         public bool ChangeBookingStatus(Booking booking)
         {
-            if (booking.Status == "Booked")
-                return false;
-            booking.Status = "Booked";
-            sql12310325Context.Booking.Update(booking);
-            sql12310325Context.SaveChanges();
-            return true;
+            try
+            {
+                if (booking.Status == "Booked")
+                    return false;
+                booking.Status = "Booked";
+                sql12310325Context.Booking.Update(booking);
+                sql12310325Context.SaveChanges();
+                return true;
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+            
         }
     }
 }

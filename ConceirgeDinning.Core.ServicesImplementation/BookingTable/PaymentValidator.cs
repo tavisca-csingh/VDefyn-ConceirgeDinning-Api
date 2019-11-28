@@ -9,19 +9,37 @@ namespace ConceirgeDinning.ServicesImplementation.BookingTable
     {
         public bool CheckPointBalance(long pointBalance, long requiredPoints)
         {
-            if (pointBalance >= requiredPoints)
+            try
             {
-                return true;
+                if (pointBalance >= requiredPoints)
+                {
+                    return true;
+                }
+                return false;
             }
-            return false;
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+            
         }
         public bool CheckBookingId(Booking booking)
         {
-            if (booking !=null)
+            try
             {
-                return true;
+                if (booking != null)
+                {
+                    return true;
+                }
+                return false;
             }
-            return false;
+            catch (Exception e )
+            {
+
+                throw e;
+            }
+            
         }
     }
 }

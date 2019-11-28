@@ -9,26 +9,53 @@ namespace ConceirgeDinning.ServicesImplementation.BookingTable
     {
         public bool CheckBookingId(Booking booking)
         {
-            if (booking != null)
-                return true;
-            return false;
+            try
+            {
+                if (booking != null)
+                    return true;
+                return false;
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+            
         }
         public bool CheckCancellStatus(Booking booking)
         {
-            if (booking.Status != "Cancelled")
-                return true;
-            return false;
+            try
+            {
+                if (booking.Status != "Cancelled")
+                    return true;
+                return false;
+            }
+            catch (Exception e )
+            {
+
+                throw e;
+            }
+            
         }
         public bool CheckCancelTime(Booking booking)
         {
-            DateTime currentDate = DateTime.UtcNow;
-            DateTime bookingDateTime =DateTime.Parse(booking.Utctime);
-            var timeDifference = (bookingDateTime - currentDate).TotalMinutes;
-            if (timeDifference<=240 && booking.Status!= "BookingInitiated")
+            try
             {
-                return false;
+                DateTime currentDate = DateTime.UtcNow;
+                DateTime bookingDateTime = DateTime.Parse(booking.Utctime);
+                var timeDifference = (bookingDateTime - currentDate).TotalMinutes;
+                if (timeDifference <= 240 && booking.Status != "BookingInitiated")
+                {
+                    return false;
+                }
+                return true;
             }
-            return true;
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+            
         }
     }
 }

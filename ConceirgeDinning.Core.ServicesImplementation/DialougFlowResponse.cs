@@ -12,8 +12,17 @@ namespace ConceirgeDinning.ServicesImplementation
     {
         public string GetResponse(string userName,string key,string input, IOptions<AppSettingsModel> appSettings)
         {
-            DialougFlowAdapter dialoug = new DialougFlowAdapter(appSettings.Value.DialogFlowUrl);
-            return dialoug.GetResponse(userName, key, input);
+            try
+            {
+                DialougFlowAdapter dialoug = new DialougFlowAdapter(appSettings.Value.DialogFlowUrl);
+                return dialoug.GetResponse(userName, key, input);
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+            
         }
     }
 }

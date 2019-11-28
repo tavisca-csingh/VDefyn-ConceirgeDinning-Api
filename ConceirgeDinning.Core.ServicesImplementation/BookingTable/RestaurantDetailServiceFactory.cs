@@ -13,13 +13,21 @@ namespace ConceirgeDinning.ServicesImplementation.BookingTable
     {
         public IFetchRestaurantDetails GetRestaurantDetailService(string supplierName,IOptions<AppSettingsModel> appsetting)
         {
+            try
+            {
+                if (supplierName == "Zomato")
+                    return new ZomatoRestaurantDetailsAdapter(appsetting.Value.ZomatoRestrauntdetailsUrl, appsetting.Value.ZomatoKey);
+                else if (supplierName == "USRestaurant")
+                    return new USRestaurantDetailsAdapter(appsetting.Value.USrestaurantDetailsUrl, appsetting.Value.USRestaurantKey);
+                else
+                    return null;
+            }
+            catch (Exception e )
+            {
 
-            if (supplierName == "Zomato")
-                return new ZomatoRestaurantDetailsAdapter(appsetting.Value.ZomatoRestrauntdetailsUrl,appsetting.Value.ZomatoKey);
-            else if (supplierName == "USRestaurant")
-                return new USRestaurantDetailsAdapter(appsetting.Value.USrestaurantDetailsUrl,appsetting.Value.USRestaurantKey);
-            else
-                return null;
+                throw e;
+            }
+            
         }
     }
 }

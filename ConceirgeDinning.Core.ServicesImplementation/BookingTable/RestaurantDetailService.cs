@@ -12,13 +12,22 @@ namespace ConceirgeDinning.ServicesImplementation.BookingTable
         
         public RestaurantDetails GetRestaurantDetails(int restaurantId,string supplierName,IOptions<AppSettingsModel> appsettings)
         {
-            RestaurantDetailServiceFactory Factory = new RestaurantDetailServiceFactory();
-           
-            IFetchRestaurantDetails RestaurantDetailService = Factory.GetRestaurantDetailService(supplierName,appsettings);
-            if (RestaurantDetailService == null)
-                return null;
-            else
-                return RestaurantDetailService.GetRestaurantDetails(restaurantId);
+            try
+            {
+                RestaurantDetailServiceFactory Factory = new RestaurantDetailServiceFactory();
+
+                IFetchRestaurantDetails RestaurantDetailService = Factory.GetRestaurantDetailService(supplierName, appsettings);
+                if (RestaurantDetailService == null)
+                    return null;
+                else
+                    return RestaurantDetailService.GetRestaurantDetails(restaurantId);
+            }
+            catch (Exception e )
+            {
+
+                throw e;
+            }
+            
             
         }
     }
