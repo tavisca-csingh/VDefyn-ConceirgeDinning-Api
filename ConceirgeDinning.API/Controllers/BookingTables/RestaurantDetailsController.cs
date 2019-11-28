@@ -7,6 +7,7 @@ using ConceirgeDinning.ServicesImplementation.BookingTable;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
+using Newtonsoft.Json;
 using Serilog;
 
 namespace ConceirgeDinning.API.Controllers
@@ -31,7 +32,7 @@ namespace ConceirgeDinning.API.Controllers
                 Log.Information("response to user: 404");
                 return NotFound(StatusCodes.Status404NotFound);
             }
-            Log.Information("response to user: " + response);
+            Log.Information("response to user: " + JsonConvert.SerializeObject(response));
             return response;
 
         }

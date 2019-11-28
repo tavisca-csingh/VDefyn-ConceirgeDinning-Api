@@ -40,12 +40,12 @@ namespace ConceirgeDinning.Adapter.USRestaraunt
                     try
                     {
                         MenuItems menuItems = JsonConvert.DeserializeObject<MenuItems>(result);
-                        Log.Information("response from supplier: " + JsonConvert.SerializeObject(result));
+                        Log.Information("request to UsResaturant:"+restaurantId+"\n response from USRestaurant: " + JsonConvert.SerializeObject(result));
                         return menuItems.GetMenuItem();
                     }
                     catch (System.Net.WebException ex)
                     {
-                        Log.Information("response from supplier: " + ex);
+                        Log.Error("request to UsResaturant:" + restaurantId + "\n response from USRestaurant: " + ex);
                         return null;
                     }
                 }

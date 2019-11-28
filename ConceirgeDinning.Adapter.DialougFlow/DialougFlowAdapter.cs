@@ -44,7 +44,7 @@ namespace ConceirgeDinning.Adapter.DialougFlow
             }
             catch (System.Net.WebException ex)
             {
-                Log.Information("response from Dialougflow: " + ex);
+                Log.Error("response from Dialougflow: " + ex);
                 return null;
             }
         }

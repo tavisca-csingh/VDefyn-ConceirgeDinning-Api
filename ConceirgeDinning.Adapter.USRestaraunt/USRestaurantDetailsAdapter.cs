@@ -27,7 +27,6 @@ namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
             request.Method = "GET";
             request.Headers.Add("X-RapidAPI-Host", "us-restaurant-menus.p.rapidapi.com");
             request.Headers.Add("X-RapidAPI-Key", _usrestaurantKey);
-            Log.Information("request to supplier: "+ _usrestaurantURL + restaurantId + "/menuitems");
             request.ContentType = "application/json";
 
 
@@ -35,7 +34,7 @@ namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
             {
                 if (response.StatusCode == HttpStatusCode.NotFound)
                 {
-                    Log.Information("response from supplier: " + HttpStatusCode.NotFound);
+                    Log.Error("request to supplier: " + _usrestaurantURL + restaurantId + "/menuitems"+"\n response from USResaturant: " + HttpStatusCode.NotFound);
                     return null;
                 }
                 using (var stream = response.GetResponseStream())
@@ -44,9 +43,10 @@ namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
                     var result = reader.ReadToEnd();
 
                     RestaurantDetailResponse restaurantDetails = JsonConvert.DeserializeObject<RestaurantDetailResponse>(result);
-                    Log.Information("response from supplier: " + JsonConvert.SerializeObject(response));
+                    var UsRestaurantreresponse = restaurantDetails.TranslateToRestaurantDetails();
+                    Log.Information("request to supplier: " + _usrestaurantURL + restaurantId +"response from UsRestaurant: " + JsonConvert.SerializeObject(UsRestaurantreresponse));
 
-                    return restaurantDetails.TranslateToRestaurantDetails();
+                    return UsRestaurantreresponse;
                 }
             }
 

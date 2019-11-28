@@ -7,6 +7,7 @@ using ConceirgeDinning.Contracts.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json.Linq;
+using Serilog;
 
 namespace ConceirgeDinning.API.Controllers
 {
@@ -25,6 +26,7 @@ namespace ConceirgeDinning.API.Controllers
             LauncherInitialiser launcherInitialiser = new LauncherInitialiser();
             LaunchReply launchReply = new LaunchReply();
             launchReply.sessionId= launcherInitialiser.Start(userId, pointBalance, bank, locale, environment);
+            Log.Information("Data Provided by User : " + userId + " , " + pointBalance+" , "+bank+" , "+locale+", "+environment);
             return launchReply;
             
         }

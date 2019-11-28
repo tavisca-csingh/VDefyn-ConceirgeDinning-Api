@@ -27,8 +27,6 @@ namespace ConceirgeDinning.Adapter.Geocoder.xyz
             request.Method = "GET";
             request.ContentType = "application/json";
 
-
-            Log.Information("request to supplier"+ _googleGeocodeUrl + locality + "&json=1");
             using (var response = request.GetResponse())
             {
                 using (var stream = response.GetResponseStream())
@@ -38,13 +36,13 @@ namespace ConceirgeDinning.Adapter.Geocoder.xyz
                     try
                     {
                         var localityGeocodeTranslator = JsonConvert.DeserializeObject<LocalityVerboseGeocode>(result);
-                        Log.Information("response from supplier: " + result);
+                        Log.Information("request to supplier" + _googleGeocodeUrl + locality + "&json=1"+"\n response from Google Geocode: " + result);
                         return localityGeocodeTranslator.GetLatLong();
                     }
 
                     catch(Exception ex)
                     {
-                        Log.Information("response from supplier :" + ex);
+                        Log.Error("request to supplier" + _googleGeocodeUrl + locality + "&json=1"+"\n response from GoogleGeocode :" + ex);
                         return null;
                     }
                     

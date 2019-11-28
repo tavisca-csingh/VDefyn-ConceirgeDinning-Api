@@ -7,6 +7,7 @@ using ConceirgeDinning.ServicesImplementation.FoodOrdering;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
+using Newtonsoft.Json;
 using Serilog;
 
 namespace ConceirgeDinning.API.Controllers.FoodOrdering
@@ -24,14 +25,13 @@ namespace ConceirgeDinning.API.Controllers.FoodOrdering
         public ActionResult<List<Category>> GetMenuItems(string restaurantId, string supplierName)
         {
             MenuItemList menu = new MenuItemList();
-            Log.Information("request from user: restaurantId- " + restaurantId + " supplierName- " + supplierName);
             var response = menu.GetMenus(restaurantId, supplierName,appSettings);
             if (response == null)
             {
-                Log.Information("response to user : 404");
+                Log.Information("request from user: restaurantId- " + restaurantId + " supplierName- " + supplierName+" \n response to user : 404");
                 return NotFound(StatusCodes.Status404NotFound);
             }
-            Log.Information("response sent to user: " + response);
+            Log.Information("request from user: restaurantId- " + restaurantId + " supplierName- " + supplierName+" \n response to user: " + JsonConvert.SerializeObject(response));
             return response;
         }
     }

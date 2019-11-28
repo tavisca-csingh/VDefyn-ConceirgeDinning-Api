@@ -33,8 +33,6 @@ namespace ConceirgeDinning.Adapter.Zomato.Translator
             request.Headers.Add("user-key", _zomatokey);
 
             request.ContentType = "application/json";
-
-            Log.Information("request to supplier: "+_zomatoURL + "&lat=" + latitude + "&lon=" + longitude + "&category=" + category);
             using (var response = request.GetResponse())
             {
 
@@ -46,13 +44,13 @@ namespace ConceirgeDinning.Adapter.Zomato.Translator
                     {
                         var restrauntsList = JsonConvert.DeserializeObject<Models.SearchResponse>(result);
   
-                        Log.Information("response from supplier : " + JsonConvert.SerializeObject(result));
+                        Log.Information("request to zomato: " + _zomatoURL + "&lat=" + latitude + "&lon=" + longitude + "&category=" + category+"\n response from supplier : " + JsonConvert.SerializeObject(result));
                         
                         return restrauntsList.TranslateToRestaurant();
                     }
                     catch (System.Net.WebException ex)
                     {
-                        Log.Information("response from supplier : " + ex );
+                        Log.Information("request to zomato: " + _zomatoURL + "&lat=" + latitude + "&lon=" + longitude + "&category=" + category+"\n response from supplier : " + ex );
                         return null;
                     }
                 }
