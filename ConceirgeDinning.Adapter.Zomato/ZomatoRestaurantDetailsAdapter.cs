@@ -35,7 +35,7 @@ namespace ConceirgeDinning.Adapter.Zomato.Translator
                 {
                     if (response.StatusCode == HttpStatusCode.NotFound)
                     {
-                        Log.Information("request to supplier: "+ response.StatusCode);
+                        Log.Information("request from user: "+restaurantId+"\n response to Zomato: "+ response.StatusCode);
                         return null;
                     }
 
@@ -45,8 +45,9 @@ namespace ConceirgeDinning.Adapter.Zomato.Translator
                         var result = reader.ReadToEnd();
 
                         Models.RestaurantDetails restaurantDetails = JsonConvert.DeserializeObject<Models.RestaurantDetails>(result);
-                        Log.Information("response from supplier :" + restaurantDetails);
-                        return restaurantDetails.TranslateToRestaurantDetails();
+                        var zomatoresponse = restaurantDetails.TranslateToRestaurantDetails();
+                        Log.Information("request from user: " + restaurantId + "\n response from Zomato : " + JsonConvert.SerializeObject(zomatoresponse));
+                        return zomatoresponse;
                         
                     }
                 }
@@ -54,7 +55,7 @@ namespace ConceirgeDinning.Adapter.Zomato.Translator
 
             catch (System.Net.WebException ex)
             {
-                Log.Information("response from supplier: "+ex);
+                Log.Information("request from user: " + restaurantId + "\n response from Zomato: " + ex);
                 return null;
             }
 

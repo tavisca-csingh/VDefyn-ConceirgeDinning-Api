@@ -43,12 +43,12 @@ namespace ConceirgeDinning.Adapter.Zomato
                     try
                     {
                         MenuItems menuItems = JsonConvert.DeserializeObject<MenuItems>(result);
-                        Log.Information("response from supplier: "+ JsonConvert.SerializeObject(result));
+                        Log.Information("request from user: "+restaurantId+"\n response from Zomato: "+ JsonConvert.SerializeObject(result));
                         return menuItems.GetMenuItem();
                     }
                     catch (System.Net.WebException ex)
                     {
-                        Log.Information("response from supplier: " + ex);
+                        Log.Information("request from user: " + restaurantId+"\n response from Zomato: " + ex);
                         return null;
                     }
                 }

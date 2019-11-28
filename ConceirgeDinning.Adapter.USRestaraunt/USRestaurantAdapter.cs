@@ -27,7 +27,6 @@ namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
             request.Method = "GET";
             request.Headers.Add("X-RapidAPI-Host", "us-restaurant-menus.p.rapidapi.com");
             request.Headers.Add("X-RapidAPI-Key", _usrestaurantKey);
-            Log.Information("request to supplier: " + _usrestaurantURL + "&lat=" + latitude + "&lon=" + longitude);
             request.ContentType = "application/json";
 
             try
@@ -41,7 +40,7 @@ namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
 
                         SearchResponse restaurantDetails = JsonConvert.DeserializeObject<SearchResponse>(result);
 
-                        Log.Information("response from supplier: " + JsonConvert.SerializeObject(result));
+                        Log.Information("request to USRestaurant: " + _usrestaurantURL + "&lat=" + latitude + "&lon=" + longitude+"\n response from USRestaurant: " + JsonConvert.SerializeObject(result));
 
                         return restaurantDetails.TranslateToRestaurant();
                        
@@ -50,7 +49,7 @@ namespace ConceirgeDinning.Adapter.USRestaraunt.Translator
             }
             catch(System.Net.WebException ex)
             {
-                Log.Information("response from supplier: " + ex);
+                Log.Error("request to USRestaurant: " + _usrestaurantURL + "&lat=" + latitude + "&lon=" + longitude + "\n response from USrestaurant: " + ex);
                 return null;
             }
 

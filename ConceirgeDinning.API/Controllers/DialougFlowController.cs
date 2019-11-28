@@ -34,15 +34,14 @@ namespace ConceirgeDinning.API.Controllers
             DialougFlowResponse dialougFlowResponse = new DialougFlowResponse();
 
             string response = dialougFlowResponse.GetResponse(userName, key, body,appSettings);
-            Log.Information(", Request from user : username- "+userName+" key- "+key+"body- "+body);
 
             if (response is null)
             {
-                Log.Information("response from DialogFlow : 401");
+                Log.Information(" Request from user : username- " + userName + " key- " + key + "body- " + body+"\n response from DialogFlow : 401");
                 return Unauthorized(StatusCodes.Status401Unauthorized);
             }
 
-            Log.Information("response from DialogFlow: "+response);
+            Log.Information(" Request from user : username- " + userName + " key- " + key + "body- " + body+"\n response from DialogFlow: " +response);
             return response;
         }
 }
