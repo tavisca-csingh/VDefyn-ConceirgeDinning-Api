@@ -28,7 +28,7 @@ namespace ConceirgeDiningDAL.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseMySQL("Server=sql12.freesqldatabase.com;Database=sql12310325;Uid=sql12310325;Pwd=wR3wJZe8VG;");
+                optionsBuilder.UseMySQL("Server=sql12.freesqldatabase.com;Database=sql12314818;Uid=sql12314818;Pwd=7rfcP1ytE3;");
             }
         }
 
@@ -38,7 +38,7 @@ namespace ConceirgeDiningDAL.Models
 
             modelBuilder.Entity<Booking>(entity =>
             {
-                entity.ToTable("Booking", "sql12310325");
+                entity.ToTable("Booking", "sql12314818");
 
                 entity.HasIndex(e => e.RestaurantId)
                     .HasName("restaurantId");
@@ -81,10 +81,8 @@ namespace ConceirgeDiningDAL.Models
 
                 entity.Property(e => e.Utctime)
                     .IsRequired()
-                    .HasColumnName("UTCTime")
                     .HasMaxLength(256)
-                    .IsUnicode(false)
-                    .HasDefaultValueSql("\"0001-01-01T00:00:00+00:00\"");
+                    .IsUnicode(false);
 
                 entity.HasOne(d => d.Restaurant)
                     .WithMany(p => p.Booking)
@@ -97,7 +95,7 @@ namespace ConceirgeDiningDAL.Models
             {
                 entity.HasKey(e => e.BookingProgreeId);
 
-                entity.ToTable("BookingProgress", "sql12310325");
+                entity.ToTable("BookingProgress", "sql12314818");
 
                 entity.HasIndex(e => e.BookingId)
                     .HasName("BookingId");
@@ -119,7 +117,7 @@ namespace ConceirgeDiningDAL.Models
             {
                 entity.HasKey(e => e.SessionId);
 
-                entity.ToTable("LoginInfo", "sql12310325");
+                entity.ToTable("LoginInfo", "sql12314818");
 
                 entity.Property(e => e.SessionId)
                     .HasColumnName("sessionId")
@@ -130,7 +128,7 @@ namespace ConceirgeDiningDAL.Models
                 entity.Property(e => e.Bank)
                     .IsRequired()
                     .HasColumnName("bank")
-                    .HasMaxLength(256)
+                    .HasMaxLength(255)
                     .IsUnicode(false);
 
                 entity.Property(e => e.Environment)
@@ -142,7 +140,7 @@ namespace ConceirgeDiningDAL.Models
                 entity.Property(e => e.Locale)
                     .IsRequired()
                     .HasColumnName("locale")
-                    .HasMaxLength(256)
+                    .HasMaxLength(255)
                     .IsUnicode(false);
 
                 entity.Property(e => e.LoyaltyPoints)
@@ -154,7 +152,7 @@ namespace ConceirgeDiningDAL.Models
                 entity.Property(e => e.UserId)
                     .IsRequired()
                     .HasColumnName("userId")
-                    .HasMaxLength(256)
+                    .HasMaxLength(255)
                     .IsUnicode(false);
             });
 
@@ -162,15 +160,15 @@ namespace ConceirgeDiningDAL.Models
             {
                 entity.HasKey(e => new { e.OrderId, e.ItemName });
 
-                entity.ToTable("OrderDetails", "sql12310325");
+                entity.ToTable("OrderDetails", "sql12314818");
 
                 entity.Property(e => e.OrderId).HasColumnType("int(11)");
 
                 entity.Property(e => e.ItemName)
-                    .HasMaxLength(255)
+                    .HasMaxLength(256)
                     .IsUnicode(false);
 
-                entity.Property(e => e.Price).HasColumnType("decimal(10,5)");
+                entity.Property(e => e.Price).HasColumnType("decimal(15,4)");
 
                 entity.Property(e => e.Quantity).HasColumnType("int(11)");
 
@@ -185,7 +183,7 @@ namespace ConceirgeDiningDAL.Models
             {
                 entity.HasKey(e => e.OrderId);
 
-                entity.ToTable("Ordering", "sql12310325");
+                entity.ToTable("Ordering", "sql12314818");
 
                 entity.HasIndex(e => e.RestaurantId)
                     .HasName("restaurantId");
@@ -225,7 +223,7 @@ namespace ConceirgeDiningDAL.Models
             {
                 entity.HasKey(e => new { e.RestaurantId, e.BookingDate });
 
-                entity.ToTable("RestaurantAvailability", "sql12310325");
+                entity.ToTable("RestaurantAvailability", "sql12314818");
 
                 entity.Property(e => e.RestaurantId)
                     .HasColumnName("restaurantId")
@@ -247,7 +245,7 @@ namespace ConceirgeDiningDAL.Models
             {
                 entity.HasKey(e => e.RestaurantId);
 
-                entity.ToTable("RestaurantNames", "sql12310325");
+                entity.ToTable("RestaurantNames", "sql12314818");
 
                 entity.Property(e => e.RestaurantId)
                     .HasMaxLength(255)
